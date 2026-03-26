@@ -5,7 +5,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StatsSection from "@/components/StatsSection";
 import Image from "next/image";
+import kannadhasan from "../../../public/images/kannadhassun.webp"
+import kaushik from "../../../public/images/kaushik-vora-removebg-preview.webp";
+import divyansh from "../../../public/images/divyansh.webp";
+import devi from "../../../public/images/debisarangi1removebgpreview.webp"
 import { Users, Target, Rocket, Award } from "lucide-react";
+import { Kosugi } from "next/font/google";
 
 const timeline = [
   { year: "2015", title: "Founding", desc: "Warehouster established with a vision to digitize industrial space." },
@@ -15,9 +20,10 @@ const timeline = [
 ];
 
 const team = [
-  { name: "John Doe", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop" },
-  { name: "Jane Smith", role: "Head of Operations", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop" },
-  { name: "David Chen", role: "Chief Technology Officer", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2000&auto=format&fit=crop" },
+  { name: "Kanadhasan", role: "Head Const & Projects", image: kannadhasan },
+  { name: "Kaushik Vora", role: "Investments", image: kaushik },
+  { name: "Divyansh Jain", role: "Leasing & Asset Management", image: divyansh },
+   { name: "Debi Sarangi", role: "Head Legal", image: devi },
 ];
 
 export default function AboutPage() {
@@ -134,7 +140,7 @@ export default function AboutPage() {
                 <h2 className="text-4xl md:text-5xl font-display font-black text-primary uppercase tracking-tighter">The <span className="text-accent underline decoration-4 underline-offset-8">Visionaries</span> Behind Warehouster</h2>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-12">
+            <div className="grid md:grid-cols-4 gap-12">
                 {team.map((member, index) => (
                     <motion.div 
                         key={member.name}

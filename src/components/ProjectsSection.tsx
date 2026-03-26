@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-
+import asset_management from "../../public/images/asset-management-banner.webp"
 const projects = [
   {
     title: "Metro Industrial Hub",
@@ -24,7 +24,7 @@ const projects = [
     title: "Tech-Savy Distribution Center",
     location: "Gurugram, NCR",
     size: "300,000 Sq Ft",
-    image: "https://images.unsplash.com/photo-1590684153482-d273767e7819?q=80&w=2070&auto=format&fit=crop",
+    image: asset_management,
     category: "Smart Center"
   }
 ];

@@ -26,59 +26,65 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
+    <section className="py-32 bg-[#fafafa] relative overflow-hidden">
         {/* Background Accents */}
-        <div className="absolute -top-24 -left-24 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+            <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-accent/10 rounded-full blur-[120px]" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]" />
+        </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-24">
           <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-7xl font-display font-black text-primary tracking-tighter"
+          >
+            What Our <span className="text-accent underline decoration-accent/20 decoration-8 underline-offset-8">Partners</span> Say
+          </motion.h2>
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-display font-black text-primary"
+            transition={{ delay: 0.2 }}
+            className="mt-8 text-xl text-primary/40 font-bold uppercase tracking-[0.4em]"
           >
-            What Our <span className="text-accent">Partners</span> Say
-          </motion.h2>
-          <motion.div 
-            initial={{ width: 0 }}
-            whileInView={{ width: 80 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="h-1.5 bg-accent mx-auto mt-6 rounded-full"
-          />
+            Voice of Excellence
+          </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-10">
           {testimonials.map((t, index) => (
             <motion.div
               key={t.name}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="p-10 rounded-3xl bg-white border border-gray-100 shadow-xl shadow-gray-200/40 relative group"
+              transition={{ delay: index * 0.15, duration: 0.8 }}
+              className="p-12 rounded-[2.5rem] bg-white border border-gray-100 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.05)] relative group hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2"
             >
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-primary/5 group-hover:text-accent/10 transition-colors" />
+              <div className="absolute top-0 left-12 w-16 h-1 w-0 group-hover:w-20 bg-accent transition-all duration-700 rounded-full" />
               
-              <div className="flex gap-1 mb-6">
+              <Quote className="absolute top-12 right-12 w-16 h-16 text-primary/5 group-hover:text-accent/10 transition-colors duration-500" />
+              
+              <div className="flex gap-1.5 mb-8">
                 {[...Array(t.stars)].map((_, i) => (
-                    <Star key={i} size={18} className="fill-accent text-accent" />
+                    <Star key={i} size={20} className="fill-accent text-accent" />
                 ))}
               </div>
 
-              <p className="text-primary/70 font-medium leading-relaxed italic mb-8 text-lg">
+              <p className="text-primary/70 font-medium leading-[1.8] italic mb-12 text-xl">
                 "{t.content}"
               </p>
 
-              <div className="flex items-center gap-4">
-                 <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-black text-xl">
+              <div className="flex items-center gap-6 mt-auto">
+                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-primary/20 rotate-3 group-hover:rotate-0 transition-transform duration-500">
                     {t.name[0]}
                  </div>
                  <div>
-                    <h4 className="font-display font-black text-primary leading-tight">{t.name}</h4>
-                    <p className="text-primary/40 font-bold text-xs uppercase tracking-widest">{t.role}</p>
+                    <h4 className="font-display font-black text-primary text-xl leading-tight">{t.name}</h4>
+                    <p className="text-accent font-black text-xs uppercase tracking-widest mt-1.5">{t.role}</p>
                  </div>
               </div>
             </motion.div>

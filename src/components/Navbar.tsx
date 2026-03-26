@@ -6,7 +6,7 @@ import { Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-
+import logo from "../../public/images/logo.webp"
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }

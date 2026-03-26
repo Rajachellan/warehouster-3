@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-[90vh] w-full overflow-hidden flex items-center justify-center py-20">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -18,87 +18,88 @@ export default function HeroSection() {
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
-        {/* Dark Blue Overlay */}
-        <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-primary/40" />
+        {/* Deep Blue/Black Gradient Overlay */}
+        <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-primary/80" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center lg:text-left w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 text-accent font-bold text-sm mb-6 uppercase tracking-wider backdrop-blur-sm"
+              className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-accent/20 border border-accent/40 text-accent font-bold text-xs uppercase tracking-[0.3em] mb-8 backdrop-blur-md shadow-lg shadow-accent/10"
             >
-              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              Empowering Modern Logistics
+              <div className="w-2.5 h-2.5 rounded-full bg-accent animate-ping" />
+              Global Logistic Excellence
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[1.1] mb-6 tracking-tight">
-              Smart <span className="text-accent underline decoration-4 underline-offset-8">Warehousing</span> Solutions
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[1] mb-8 tracking-tighter">
+              Future of <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white underline decoration-accent/50 decoration-4 underline-offset-[12px]">Warehousing</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/80 font-medium mb-10 max-w-2xl leading-relaxed">
-              Premium infrastructure and tech-driven logistics management for the next generation of global businesses.
+            <p className="text-xl md:text-2xl text-white/70 font-medium mb-12 max-w-xl leading-relaxed">
+              Engineering premium infrastructure and intelligence-driven logistics ecosystems for tomorrow's market leaders.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
               <Link
                 href="/contact"
-                className="group px-8 py-5 rounded-full bg-accent text-white font-black text-lg shadow-2xl hover:bg-accent/90 transition-all flex items-center justify-center gap-3 overflow-hidden relative"
+                className="group px-10 py-6 rounded-2xl bg-accent text-white font-black text-xl shadow-[0_20px_50px_rgba(242,101,34,0.3)] hover:shadow-[0_20px_60px_rgba(242,101,34,0.5)] hover:-translate-y-1 transition-all flex items-center justify-center gap-4 overflow-hidden relative active:scale-95"
               >
-                <span>Get a Quote</span>
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                <span className="relative z-10">Get Started</span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform relative z-10" />
               </Link>
               <Link
                 href="/services"
-                className="px-8 py-5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-black text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-3"
+                className="px-10 py-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 text-white font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-4 active:scale-95 group shadow-2xl"
               >
-                <Play className="w-5 h-5 fill-current" />
-                Explore Services
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all">
+                    <Play className="w-5 h-5 fill-current ml-1" />
+                </div>
+                Explore More
               </Link>
             </div>
           </motion.div>
 
-          {/* Optional Right Side Graphical Element or just empty for balance */}
+          {/* Graphical Element */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="hidden lg:flex justify-end"
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 1.2 }}
+            className="hidden lg:flex justify-end relative"
           >
-             <div className="relative w-96 h-96 rounded-3xl border-2 border-white/10 bg-white/5 backdrop-blur-3xl overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent" />
+             <div className="relative w-[450px] h-[450px]">
+                {/* Rotating ring */}
+                <div className="absolute inset-0 border-[1px] border-white/5 rounded-full animate-[spin_20s_linear_infinite]" />
+                <div className="absolute inset-8 border-[1px] border-accent/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
-                    <div className="text-white font-display text-8xl font-black mb-2 flex flex-col uppercase">
-                        <span>10M+</span>
-                        <span className="text-2xl font-sans tracking-[0.4em] text-accent">SQ FT</span>
+                    <div className="bg-white/5 backdrop-blur-3xl rounded-[4rem] p-16 border border-white/10 shadow-2xl skew-y-3 hover:skew-y-0 transition-transform duration-700">
+                        <div className="text-white font-display text-8xl font-black mb-2 flex flex-col uppercase leading-none">
+                            <span className="text-accent">10M+</span>
+                            <span className="text-xl font-sans tracking-[0.6em] text-white/40 mt-4">SQ FT SPACE</span>
+                        </div>
+                        <div className="h-1 w-20 bg-accent mt-8 mx-auto rounded-full" />
                     </div>
-                    <p className="text-white/60 font-semibold uppercase tracking-widest text-sm translate-y-4 group-hover:translate-y-0 transition-transform">Industrial Space Developed</p>
                 </div>
              </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/40 font-bold text-xs uppercase tracking-widest"
-      >
-        <span>Scroll</span>
-        <div className="w-1 h-12 rounded-full bg-white/20 relative">
-          <div className="absolute top-0 left-0 w-full h-1/3 bg-accent rounded-full" />
-        </div>
-      </motion.div>
     </section>
   );
 }
