@@ -1,105 +1,89 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] w-full overflow-hidden flex items-center justify-center py-20">
-      {/* Video Background */}
+    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center md:pt-20 pt-60">
+      {/* Background Video with Dark Blue Overlay */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
-          muted
           loop
+          muted
           playsInline
-          className="w-full h-full object-cover scale-105"
+          className="h-full w-full object-cover scale-105"
         >
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          <source
+            src="/videos/Warehouster_Web_Banner_Vid_1.mp4"
+            type="video/mp4"
+          />
         </video>
-        {/* Deep Blue/Black Gradient Overlay */}
-        <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-primary/80" />
+        <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-transparent to-primary/60" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center lg:text-left w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeOut" }}
+      {/* Hero Content - Centered */}
+      <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="pill-tag border-accent/30 text-accent bg-accent/5 mb-10 mx-auto"
+        >
+          South India’s premier Grade-A logistics park network
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-7xl font-serif font-black text-white leading-[1.1] uppercase tracking-tighter mb-10"
+        >
+          Logistics <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-gold-light to-white italic"> Parks in South India</span> Warehouster 
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-xl md:text-2xl text-white/50 font-sans font-medium mb-16 max-w-3xl mx-auto leading-relaxed"
+        >
+        Warehouster delivers premium Grade-A logistics parks across South India, offering strategically located, scalable, and high-performance warehouse infrastructure built for modern supply chains.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-8"
+        >
+          <Link
+            href="/projects"
+            className="group px-14 py-6 bg-accent text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.3em] hover:bg-white hover:text-primary transition-all shadow-3xl shadow-accent/20 flex items-center gap-4 active:scale-95"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-accent/20 border border-accent/40 text-accent font-bold text-xs uppercase tracking-[0.3em] mb-8 backdrop-blur-md shadow-lg shadow-accent/10"
-            >
-              <div className="w-2.5 h-2.5 rounded-full bg-accent animate-ping" />
-              Global Logistic Excellence
-            </motion.div>
-
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[1] mb-8 tracking-tighter">
-              Future of <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white underline decoration-accent/50 decoration-4 underline-offset-[12px]">Warehousing</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-white/70 font-medium mb-12 max-w-xl leading-relaxed">
-              Engineering premium infrastructure and intelligence-driven logistics ecosystems for tomorrow's market leaders.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-              <Link
-                href="/contact"
-                className="group px-10 py-6 rounded-2xl bg-accent text-white font-black text-xl shadow-[0_20px_50px_rgba(242,101,34,0.3)] hover:shadow-[0_20px_60px_rgba(242,101,34,0.5)] hover:-translate-y-1 transition-all flex items-center justify-center gap-4 overflow-hidden relative active:scale-95"
-              >
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                <span className="relative z-10">Get Started</span>
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform relative z-10" />
-              </Link>
-              <Link
-                href="/services"
-                className="px-10 py-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 text-white font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center gap-4 active:scale-95 group shadow-2xl"
-              >
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all">
-                    <Play className="w-5 h-5 fill-current ml-1" />
-                </div>
-                Explore More
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Graphical Element */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 1.2 }}
-            className="hidden lg:flex justify-end relative"
+            Explore Portfolio <ArrowRight size={18} className="group-hover:translate-x-3 transition-transform" />
+          </Link>
+          <Link
+            href="/contact"
+            className="group px-14 py-6 bg-white/5 border border-white/20 text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.3em] hover:bg-white/10 transition-all flex items-center gap-4 backdrop-blur-sm"
           >
-             <div className="relative w-[450px] h-[450px]">
-                {/* Rotating ring */}
-                <div className="absolute inset-0 border-[1px] border-white/5 rounded-full animate-[spin_20s_linear_infinite]" />
-                <div className="absolute inset-8 border-[1px] border-accent/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
-                
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
-                    <div className="bg-white/5 backdrop-blur-3xl rounded-[4rem] p-16 border border-white/10 shadow-2xl skew-y-3 hover:skew-y-0 transition-transform duration-700">
-                        <div className="text-white font-display text-8xl font-black mb-2 flex flex-col uppercase leading-none">
-                            <span className="text-accent">10M+</span>
-                            <span className="text-xl font-sans tracking-[0.6em] text-white/40 mt-4">SQ FT SPACE</span>
-                        </div>
-                        <div className="h-1 w-20 bg-accent mt-8 mx-auto rounded-full" />
-                    </div>
-                </div>
-             </div>
-          </motion.div>
-        </div>
+            Speak to an Expert <Play size={16} fill="currentColor" />
+          </Link>
+        </motion.div>
       </div>
+
+      {/* Floating Scroll Indicator */}
+      <motion.div
+        animate={{ y: [0, 15, 0] }}
+        transition={{ repeat: Infinity, duration: 4 }}
+        className="absolute bottom-16 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-4 opacity-30"
+      >
+        <div className="w-[1px] h-20 bg-gradient-to-b from-accent to-transparent" />
+        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white">Scroll</span>
+      </motion.div>
     </section>
   );
 }

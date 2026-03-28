@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
+import Navbar from "@/components/Navbar";
+const playfair = Playfair_Display({
   subsets: ["latin"],
+  variable: "--font-serif",
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Warehouster | Smart Warehousing Solutions",
-  description: "Modern warehousing and logistics solutions for modern businesses.",
+  title: "Warehouster | Premium Industrial Solutions",
+  description: "Ultra-premium warehousing and industrial real estate solutions.",
 };
 
 export default function RootLayout({
@@ -26,9 +26,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${inter.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-inter">{children}</body>
+      <Navbar/>
+      <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );
 }

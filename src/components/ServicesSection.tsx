@@ -1,132 +1,116 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, ShieldCheck, Settings, Warehouse, BarChart3, ArrowRight } from "lucide-react";
+import { Building2, Hammer, ShieldCheck, Users, ArrowRight } from "lucide-react";
 import Link from "next/link";
-
+import Image from "next/image";
+import land from "../assets/approv-process-img-2.webp"
+import development from "../assets/parks-banner.webp";
+import industry from "../assets/ourcover-values-1.webp";
+import construction from "../assets/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg"
 const services = [
   {
     title: "Land Acquisition",
-    description: "Expert identification and procurement of prime industrial land for development.",
+    description: "Multi-parameter strategic sourcing of high-yield industrial locations across India's leading logistics corridors.",
     icon: Building2,
-    color: "bg-blue-500",
-  },
-  {
-    title: "Approvals & Compliance",
-    description: "Navigating complex regulatory frameworks to ensure seamless legal approval.",
-    icon: ShieldCheck,
-    color: "bg-orange-500",
+    href: "/services/land-acquisition",
+    image: land,
   },
   {
     title: "Development Management",
-    description: "End-to-end oversight of warehouse construction and infrastructure projects.",
-    icon: Settings,
-    color: "bg-indigo-500",
+    description: "End-to-end management of industrial projects from feasibility studies and master planning to construction and delivery.",
+    icon: Hammer,
+    href: "/services/development-management",
+    image: development,
   },
   {
-    title: "Strategic Warehousing",
-    description: "Localized and scalable storage solutions optimized for distribution efficiency.",
-    icon: Warehouse,
-    color: "bg-emerald-500",
+    title: "Warehouse Construction",
+    description: "Setting the Gold Standard with Grade-A shell construction and energy-efficient warehouse infrastructures.",
+    icon: ShieldCheck,
+    href: "/services/warehouse-construction",
+    image: construction,
   },
   {
-    title: "Asset Management",
-    description: "Maximizing ROI through professional maintenance and strategic leasing.",
-    icon: BarChart3,
-    color: "bg-rose-500",
+    title: "Industrial Consulting",
+    description: "Expert advice on supply chain optimization, network design, and high-performance industrial asset management.",
+    icon: Users,
+    href: "/services/industrial-consulting",
+    image: industry,
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gray-50 rounded-bl-[10rem] -z-10" />
-
+    <section className="py-24 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-accent font-black tracking-widest uppercase text-sm mb-4 block"
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+          <div className="max-w-2xl">
+            <motion.p 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="pill-tag mb-6"
+            >
+              Our Core Expertise
+            </motion.p>
+            <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
+              Integrated industrial <br />
+              <span className="text-accent italic">Capabilities</span>
+            </h2>
+          </div>
+          <Link 
+            href="/services" 
+            className="group flex items-center gap-4 text-[11px] font-black uppercase tracking-[0.3em] text-primary hover:text-accent transition-all pb-2 border-b-2 border-primary hover:border-accent"
           >
-            Our Core Offerings
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-primary leading-tight"
-          >
-            Integrated <span className="text-accent">Logistics</span> Ecosystem
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="mt-6 text-xl text-primary/60 max-w-3xl mx-auto font-medium"
-          >
-            We provide comprehensive, tech-enabled infrastructure solutions that power the global supply chain.
-          </motion.p>
+            Explore All Services <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+          </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative p-10 rounded-3xl bg-white border border-gray-100 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+              className="group relative h-[500px] flex flex-col justify-end p-8 rounded-[2.5rem] overflow-hidden hover-lift border border-gray-100 bg-white"
             >
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <service.icon className="w-8 h-8 text-primary group-hover:text-accent transition-colors" />
+              {/* Image Background (Animated on Hover) */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                    src={service.image} 
+                    alt={service.title}
+                    fill
+                    className="w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent group-hover:from-primary transition-all duration-500" />
               </div>
 
-              <h3 className="text-2xl font-display font-black text-primary mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent transition-all">
-                {service.title}
-              </h3>
-              
-              <p className="text-primary/60 font-medium leading-relaxed mb-8">
-                {service.description}
-              </p>
+              {/* Icon Overlay */}
+              <div className="absolute top-8 left-8 w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-primary shadow-xl group-hover:bg-accent group-hover:text-primary transition-all duration-500 z-10">
+                <service.icon size={26} />
+              </div>
 
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 font-black text-primary group-hover:text-accent transition-colors tracking-tight"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              {/* Content */}
+              <div className="relative z-10 space-y-4">
+                <h3 className="text-2xl font-serif font-black text-white group-hover:text-accent transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-white/50 text-xs leading-relaxed font-medium group-hover:text-white/80 transition-colors">
+                  {service.description}
+                </p>
+                <Link 
+                    href={service.href}
+                    className="inline-flex items-center gap-2 px-6 py-2 bg-white/10 hover:bg-accent text-white hover:text-primary rounded-full text-[9px] font-black uppercase tracking-widest transition-all backdrop-blur-md"
+                >
+                    Learn More <ArrowRight size={12} />
+                </Link>
+              </div>
+              
+              {/* Bottom Glow Effect */}
+              <div className="absolute -bottom-10 left-0 right-0 h-20 bg-accent/20 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
-
-          {/* Featured CTA Card */}
-          <motion.div
-             initial={{ opacity: 0, scale: 0.95 }}
-             whileInView={{ opacity: 1, scale: 1 }}
-             viewport={{ once: true }}
-             transition={{ delay: 0.5 }}
-             className="p-10 rounded-3xl bg-primary text-white flex flex-col justify-between shadow-2xl relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700" />
-            <div>
-                 <h3 className="text-3xl font-display font-black mb-4">Request a <span className="text-accent">Custom</span> Build</h3>
-                 <p className="text-white/70 font-medium mb-8">Have unique requirements? We specialize in built-to-suit warehousing solutions.</p>
-            </div>
-            <Link
-                href="/contact"
-                className="w-full py-4 rounded-xl bg-accent text-white font-black text-center hover:bg-white hover:text-primary transition-all shadow-lg"
-              >
-                Get Started
-            </Link>
-          </motion.div>
         </div>
       </div>
     </section>

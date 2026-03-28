@@ -53,7 +53,7 @@ const posts = [
 export default function BlogPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <Navbar />
+      
       
       {/* Page Header */}
       <section className="relative pt-48 pb-24 bg-white overflow-hidden">
