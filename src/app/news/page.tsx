@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar, User } from "lucide-react";
+import blog3 from "../../assets/building-strategic-alliances-in-warehousing-park.webp"
 
 const news = [
   {
@@ -28,7 +29,7 @@ const news = [
     excerpt: "Warehouster gears up for the next phase of expansion with a massive capital infusion focused on Tier-2 cities.",
     date: "March 15, 2026",
     category: "Investment",
-    image: "https://images.unsplash.com/photo-1590674000185-188b056158ec?auto=format&fit=crop&q=80&w=800",
+    image:blog3,
   },
 ];
 
@@ -67,7 +68,7 @@ export default function NewsPage() {
                 className="group flex flex-col bg-white rounded-[2.5rem] border border-gray-100 overflow-hidden hover:shadow-2xl transition-all"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <Image src={item.image} alt={item.title} fill className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                  <Image src={item.image} alt={item.title} fill className="object-cover  group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute top-6 left-6 px-4 py-1.5 bg-accent/90 text-primary text-[8px] font-black uppercase tracking-widest rounded">
                     {item.category}
                   </div>

@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone, TrendingUp, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo-wt.png";
-
+import blog3 from "../assets/building-strategic-alliances-in-warehousing-park.webp"
+import news from "../assets/strategic-banner.webp"
 const navLinks = [
   { name: "Home", href: "/" },
   {
@@ -61,12 +62,12 @@ const trendingItems = [
   {
     title: "Eco-Hubs",
     desc: "New Green Policy 2026",
-    img: "https://images.unsplash.com/photo-1590674000185-188b056158ec?auto=format&fit=crop&q=80&w=200",
+    img: news,
   },
   {
     title: "Expansion",
     desc: "2.5M sqft Hub Launch",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=200",
+    img: blog3,
   },
 ];
 
@@ -214,23 +215,24 @@ export default function Navbar() {
 
       <nav
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${isScrolled
-            ? "bg-primary/95 backdrop-blur-xl shadow-2xl py-6 border-b border-white/5"
+            ? "bg-primary/95 shadow-2xl py-6 border-b border-white/5"
             : "bg-transparent py-6"
           }`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 items-center">
 
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-4 group">
-            <div className="relative w-36 h-8 overflow-hidden transition-transform duration-500 group-hover:scale-105">
-              <Image src={logo} alt="Warehouster Logo" fill className="object-contain" priority />
-            </div>
-          </Link>
+          {/* Logo - Column 1 */}
+          <div className="flex justify-start">
+            <Link href="/" className="flex items-center gap-4 group">
+              <div className="relative w-36 h-8 overflow-hidden transition-transform duration-500 group-hover:scale-105">
+                <Image src={logo} alt="Warehouster Logo" fill className="object-contain" priority />
+              </div>
+            </Link>
+          </div>
 
-          {/* Nav & Contact Cluster */}
-          <div className="flex items-center text-white gap-8">
-            {/* Desktop Link Grid */}
-            <div className="hidden lg:flex items-center text-white gap-1">
+          {/* Desktop Nav Links - Column 2 (Centered) */}
+          <div className="hidden lg:flex justify-center">
+            <div className="flex items-center text-white gap-1">
               {navLinks.map((link) => (
                 <div
                   key={link.name}
@@ -277,7 +279,10 @@ export default function Navbar() {
                 </div>
               ))}
             </div>
+          </div>
 
+          {/* CTA & Mobile Toggle - Column 3 */}
+          <div className="flex items-center justify-end gap-3 sm:gap-8 text-white">
             {/* CTA Cluster */}
             <div className="hidden sm:flex items-center gap-3">
               <a
@@ -308,7 +313,7 @@ export default function Navbar() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="lg:hidden absolute top-full left-0 right-0 bg-primary/95 backdrop-blur-3xl border-t border-white/5 shadow-3xl overflow-hidden"
+              className="lg:hidden absolute top-full left-0 right-0 bg-primary/95 border-t border-white/5 shadow-3xl overflow-hidden"
             >
               <div className="px-6 py-10 flex flex-col gap-8 max-h-[85vh] overflow-y-auto">
                 {navLinks.map((link) => (
@@ -337,7 +342,7 @@ export default function Navbar() {
                 {/* Mobile CTA */}
                 <div className="mt-4 pt-8 border-t border-white/5 flex flex-col gap-4">
                   <a
-                    href="tel:+911800123456"
+                    href="tel:+919560011696"
                     className="flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white active:bg-white active:text-primary transition-all shadow-xl"
                   >
                     <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
@@ -345,7 +350,7 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col">
                       <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest">Call our experts</span>
-                      <span className="text-sm font-black uppercase tracking-widest">+91 1800 123 456</span>
+                      <span className="text-sm font-black uppercase tracking-widest">+91 95600 11696</span>
                     </div>
                   </a>
                 </div>

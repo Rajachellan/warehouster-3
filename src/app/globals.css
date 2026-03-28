@@ -34,7 +34,7 @@
   }
   
   .glass-dark {
-    @apply bg-primary/80 backdrop-blur-xl border border-white/5 shadow-2xl;
+    @apply bg-primary/80 border border-white/5 shadow-2xl;
   }
 
   .btn-gold {

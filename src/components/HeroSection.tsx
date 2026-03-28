@@ -39,10 +39,10 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-serif font-black text-white leading-[1.1] uppercase tracking-tighter mb-10"
+          className="text-5xl md:text-7xl font-serif font-black text-white leading-[1.1] uppercase tracking-wide mb-10"
         >
-          Logistics <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-gold-light to-white italic"> Parks in South India</span> Warehouster 
+          Transforming 19 <br /> Acres into an  <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-gold-light to-white italic"> Institutional Grade-A Asset</span> 
         </motion.h1>
 
         <motion.p
@@ -51,7 +51,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-xl md:text-2xl text-white/50 font-sans font-medium mb-16 max-w-3xl mx-auto leading-relaxed"
         >
-        Warehouster delivers premium Grade-A logistics parks across South India, offering strategically located, scalable, and high-performance warehouse infrastructure built for modern supply chains.
+       A Strategic Development Manageent & Leasing for Tiruvallur.
         </motion.p>
 
         <motion.div
@@ -64,7 +64,7 @@ export default function HeroSection() {
             href="/projects"
             className="group px-14 py-6 bg-accent text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.3em] hover:bg-white hover:text-primary transition-all shadow-3xl shadow-accent/20 flex items-center gap-4 active:scale-95"
           >
-            Explore Portfolio <ArrowRight size={18} className="group-hover:translate-x-3 transition-transform" />
+            Explore Projects <ArrowRight size={18} className="group-hover:translate-x-3 transition-transform" />
           </Link>
           <Link
             href="/contact"

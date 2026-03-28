@@ -40,11 +40,11 @@ export default function OverviewSection() {
             <div className="pill-tag border-accent/20 text-accent bg-accent/5 mb-8">
              Strategic Industrial Excellence
             </div>
-            <h2 className="text-5xl md:text-7xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-12">
-            Defining the Future of  <br />
+            <h2 className="text-3xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-12">
+            Defining the Future of  
               <span className="text-accent italic"> Industrial Warehousing</span> 
             </h2>
-            <p className="text-xl text-primary/50 font-medium leading-relaxed mb-12 max-w-xl">
+            <p className="text-xl text-primary/50 font-medium leading-relaxed mb-12 max-w-xl text-justify ">
               Warehouster is a leading provider of Grade-A industrial warehousing and logistics infrastructure in India, delivering strategically located, high-performance spaces designed for modern supply chain operations. With a strong presence across key economic corridors in South India, we enable scalable growth, operational efficiency, and seamless distribution for enterprises and 3PL leaders.
             </p>
             <Link
