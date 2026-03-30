@@ -36,7 +36,14 @@ export default function Footer() {
            {/* Logo */}
           <Link href="/" className="flex items-center gap-4 group">
             <div className="relative w-36 h-8 overflow-hidden transition-transform duration-500 group-hover:scale-105">
-              <Image src={logo} alt="Warehouster Logo" fill className="object-contain" priority />
+              <Image 
+                src={logo} 
+                alt="Warehouster Logo" 
+                fill 
+                sizes="144px"
+                className="object-contain" 
+                priority 
+              />
             </div>
           </Link>
             <p className="text-white/60 text-[11px] font-bold uppercase tracking-widest leading-relaxed">

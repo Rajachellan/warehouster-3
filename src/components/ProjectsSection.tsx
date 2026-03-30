@@ -96,7 +96,7 @@ export default function ProjectsSection() {
               Strategic Scale
             </motion.div>
             <h2 className="text-5xl md:text-7xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
-              Industrial <span className="text-accent italic">Landmarks</span> <br />
+              Industrial <span className="text-accent">Landmarks</span> <br />
               Portfolio
             </h2>
           </div>
@@ -114,15 +114,15 @@ export default function ProjectsSection() {
               {/* Category Header */}
               <div className="flex items-center gap-6 mb-16 group">
                 <div className="relative">
-                    <h3 className="text-2xl md:text-4xl font-serif font-black text-primary uppercase tracking-tight italic">
+                    <h3 className="text-2xl md:text-4xl font-serif font-black text-primary uppercase tracking-tight">
                         {group.status} <br />
-                        <span className="not-italic text-accent">Projects</span>
+                        <span className="text-accent">Projects</span>
                     </h3>
                 </div>
                 <div className="h-px flex-1 bg-gray-100" />
                 <div className="flex flex-col items-end">
                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/30">Sub-Sector</span>
-                    <span className="text-sm font-bold text-primary italic">Distribution & Parks</span>
+                    <span className="text-sm font-bold text-primary">Distribution & Parks</span>
                 </div>
               </div>
 
@@ -144,6 +144,7 @@ export default function ProjectsSection() {
                         src={project.image}
                         alt={project.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-50 group-hover:opacity-100"
                       />
 
@@ -165,7 +166,7 @@ export default function ProjectsSection() {
                             {project.location}
                           </span>
                         </div>
-                        <h3 className="text-3xl md:text-4xl font-serif font-black text-white mb-8 uppercase tracking-tight leading-none italic group-hover:not-italic group-hover:text-accent transition-all duration-500">
+                        <h3 className="text-3xl md:text-4xl font-serif font-black text-white mb-8 uppercase tracking-tight leading-none group-hover:text-accent transition-all duration-500">
                           {project.title}
                         </h3>
 
@@ -194,7 +195,7 @@ export default function ProjectsSection() {
             className="mt-40 pt-24 border-t border-gray-100 flex flex-col items-center text-center"
         >
             <h4 className="text-2xl font-serif font-black text-primary mb-12 uppercase tracking-wide">
-                Experience the Full <span className="text-accent italic">Ecosystem</span>
+                Experience the Full <span className="text-accent">Ecosystem</span>
             </h4>
             <Link
                 href="/projects"

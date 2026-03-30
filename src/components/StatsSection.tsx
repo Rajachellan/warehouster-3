@@ -27,7 +27,7 @@ export default function StatsSection() {
               transition={{ delay: index * 0.1, duration: 0.8 }}
               className="text-center group"
             >
-              <div className="text-4xl md:text-5xl lg:text-7xl font-serif font-black text-accent mb-6 group-hover:scale-110 transition-transform duration-700 italic group-hover:not-italic">
+              <div className="text-4xl md:text-5xl lg:text-7xl font-serif font-black text-accent mb-6 group-hover:scale-110 transition-transform duration-700">
                 {stat.value}
               </div>
               <div className="text-sm font-sans font-black uppercase tracking-[0.4em] mb-3 text-white/70 group-hover:text-white transition-colors">

@@ -242,7 +242,7 @@ export default function ProjectDetailPage() {
             className="text-6xl md:text-8xl font-serif font-black text-white uppercase tracking-tighter leading-none mb-8"
           >
             {data.title.split(' ')[0]} <br />
-            <span className="text-accent italic">{data.title.split(' ').slice(1).join(' ')}</span>
+            <span className="text-accent">{data.title.split(' ').slice(1).join(' ')}</span>
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -267,7 +267,7 @@ export default function ProjectDetailPage() {
                 <div className="pill-tag border-primary/10 text-primary/40 bg-gray-50 mb-8 lowercase">
                     /01 Overview
                 </div>
-                <p className="text-3xl md:text-4xl font-serif font-medium text-primary leading-tight mb-12 italic">
+                <p className="text-3xl md:text-4xl font-serif font-medium text-primary leading-tight mb-12">
                   {data.overview}
                 </p>
                 <p className="text-lg text-primary/60 leading-relaxed font-medium">
@@ -278,7 +278,7 @@ export default function ProjectDetailPage() {
               {/* 2. Strategic Advantages */}
               <section>
                 <h2 className="text-4xl font-serif font-black text-primary uppercase tracking-tight mb-12">
-                   Strategic <span className="text-accent italic">Advantages</span>
+                   Strategic <span className="text-accent">Advantages</span>
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   {data.advantages.map((adv, i) => (
@@ -347,7 +347,7 @@ export default function ProjectDetailPage() {
                 {/* CTA Box */}
                 <div className="p-10 rounded-[3rem] bg-accent text-primary relative overflow-hidden group">
                    <div className="relative z-10">
-                      <h4 className="text-2xl font-serif font-black uppercase tracking-tight mb-4 italic">Lease This Space</h4>
+                      <h4 className="text-2xl font-serif font-black uppercase tracking-tight mb-4">Lease This Space</h4>
                       <p className="text-sm font-bold opacity-60 mb-8 leading-relaxed">Secure your position in India&apos;s most strategic industrial park today.</p>
                       <button className="w-full py-5 bg-primary text-white rounded-2xl text-[10px] font-black uppercase tracking-widest hover:scale-105 transition-all shadow-xl">
                          Download Brochure

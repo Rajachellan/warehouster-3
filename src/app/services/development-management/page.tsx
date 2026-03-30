@@ -46,7 +46,7 @@ export default function DevelopmentManagementPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8">Management Excellence</motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter">Development <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italic">Management</span></motion.h1>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter">Development <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Management</span></motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl text-white/50 font-sans font-medium max-w-2xl mt-8 leading-relaxed">End-to-end oversight of complex industrial projects with a focus on precision, transparency, and high-performance delivery.</motion.p>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function DevelopmentManagementPage() {
             <div key={section.title} className={`flex flex-col lg:flex-row items-center gap-16 lg:gap-32 py-24 border-b border-gray-100 last:border-0 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="flex-1 space-y-8">
                     <div className="flex items-center gap-4 text-accent"><Zap size={20} /><span className="text-[10px] font-black uppercase tracking-[0.4em] font-sans">Section {i + 1}</span></div>
-                    <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter italic">{section.title}</h2>
+                    <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">{section.title}</h2>
                     <p className="text-lg text-primary/60 font-medium leading-relaxed">{section.content}</p>
                     <div className="grid grid-cols-2 gap-6">
                         {section.points.map((point) => (

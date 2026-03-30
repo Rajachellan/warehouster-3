@@ -99,7 +99,7 @@ export default function ProjectsPage() {
             className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter"
           >
             Industrial <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italics italic">Landmarks</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Landmarks</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
                             {project.location}
                         </div>
                         <h3 className="text-2xl font-serif font-bold text-primary mb-2 group-hover:text-accent transition-colors truncate">{project.title}</h3>
-                        <div className="text-xl font-serif font-black text-primary/40 italic">{project.size}</div>
+                        <div className="text-xl font-serif font-black text-primary/40">{project.size}</div>
                     </div>
                 </motion.div>
                 ))}

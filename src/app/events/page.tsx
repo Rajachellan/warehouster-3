@@ -48,7 +48,7 @@ export default function EventsPage() {
           </motion.div>
           <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter">
             Industry <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italics italic">Events</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Events</span>
           </h1>
         </div>
       </section>

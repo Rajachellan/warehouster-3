@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import StatsSection from "@/components/StatsSection";
 import ContactSection from "@/components/ContactSection";
+import JourneySection from "@/components/JourneySection";
 import Image from "next/image";
 import { Users, Target, Rocket, Award, ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -80,7 +81,7 @@ export default function AboutPage() {
       className="text-6xl font-serif font-black text-white leading-none uppercase tracking-tighter"
     >
       Defining the <br />
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italic">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">
         Industrial
       </span> Edge
     </motion.h1>
@@ -115,14 +116,14 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
               <div className="absolute bottom-12 left-12 right-12 bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20">
-                 <p className="text-white font-serif italic text-xl">&quot;We don&apos;t just build warehouses; we architect the growth corridors of a rising nation.&quot;</p>
+                 <p className="text-white font-serif text-xl">&quot;We don&apos;t just build warehouses; we architect the growth corridors of a rising nation.&quot;</p>
                  <div className="mt-4 text-accent font-black text-[10px] uppercase tracking-widest">— Sandeep Chadha, CEO</div>
               </div>
             </div>
             <div className="space-y-12">
-                <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter italic">
+                <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
                     Our Strategic <br />
-                    <span className="not-italic text-accent">Commitment</span>
+                    <span className="text-accent">Commitment</span>
                 </h2>
                 <div className="space-y-8">
                     {[
@@ -135,7 +136,7 @@ export default function AboutPage() {
                                 <item.icon size={28} />
                             </div>
                             <div>
-                                <h4 className="text-xl font-serif font-black text-primary uppercase tracking-tight mb-2 italic">{item.title}</h4>
+                                <h4 className="text-xl font-serif font-black text-primary uppercase tracking-tight mb-2">{item.title}</h4>
                                 <p className="text-primary/50 font-medium leading-relaxed">{item.desc}</p>
                             </div>
                         </div>
@@ -147,45 +148,47 @@ export default function AboutPage() {
       </section>
 
       <StatsSection />
-
-      {/* CEO Profile Section */}
-      <section className="py-32 bg-white overflow-hidden relative">
+    <JourneySection />      {/* 2. CEO Profile: Executive Balance */}
+      <section className="py-24 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Left: Image with Premium Frame */}
+            
+            {/* Left: Elite Portrait */}
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative group"
+               initial={{ opacity: 0, x: -30 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               viewport={{ once: true }}
+               className="relative"
             >
-              <div className="relative aspect-[4/5] rounded-[4rem] overflow-hidden shadow-3xl z-10 transition-all duration-1000">
+              <div className="relative aspect-[4/5] overflow-hidden shadow-2xl z-10 border border-gray-100 rounded-sm bg-gray-50">
                 <Image 
                   src={sandeep}
                   alt="Sandeep Chadha"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-[2s]"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              {/* Decorative Elements */}
-              <div className="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-accent/30 rounded-tl-[4rem] pointer-events-none" />
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Minimalist Gold Detail */}
+              <div className="absolute -top-6 -left-6 w-32 h-32 border-t border-l border-[#D4AF37]/30 pointer-events-none" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-[2px] bg-[#D4AF37] pointer-events-none" />
+              <div className="absolute -bottom-6 -right-6 w-[2px] h-48 bg-[#D4AF37] pointer-events-none" />
             </motion.div>
 
-            {/* Right: Content */}
+            {/* Right: Executive Narrative */}
             <div className="space-y-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="pill-tag border-accent/20 text-accent bg-accent/5 mb-8">
-                   Founder&apos;s Vision
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="h-[2px] w-10 bg-[#D4AF37]" />
+                   <span className="text-[10px] font-black uppercase tracking-[0.6em] text-[#D4AF37]">Foundational Vision</span>
                 </div>
-                <h2 className="text-5xl font-serif font-black text-primary uppercase tracking-tighter leading-tight italic">
+                <h2 className="text-4xl md:text-5xl font-serif font-black text-primary uppercase tracking-tighter leading-[1.1]">
                   Architecting <br />
-                  <span className="not-italic text-accent">India&apos;s Industrial Evolution</span>
+                  <span className="text-[#D4AF37]">India&apos;s Industrial Evolution</span>
                 </h2>
               </motion.div>
 
@@ -194,85 +197,102 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="space-y-6 text-md text-justify text-primary/60 font-medium leading-relaxed"
+                className="space-y-6"
               >
-                <p>
-                 Sandeep has 20+ years of leadership experience in real estate sector with a track record of managing and exiting a warehousing portfolio to Blackstone and 4 Private REIT funds. He successfully developed the warehousing business for All cargo and Milestone Capital in the capacity of CEO and Senior Partner. He founded Warehouster Capital in 2019 – an Integrated solution provider for the acquisition, development and management of logistics asset in India. 
+                <p className="text-[15px] text-primary/60 font-medium leading-relaxed text-justify tracking-tight max-w-xl">
+                  Sandeep Chadha brings 20+ years of sector-leading experience in managing and exiting warehousing portfolios to global institutional investors like Blackstone. 
                 </p>
-                <p>
-                  The company not only owns logistics assets in India but also suitably positioned to partner with international investors in managing their asset portfolios. Prior to this, Sandeep was the CEO of All Cargo Logistics Parks and from 2014-2017 Partner for Milestone Capital. He holds a postgraduate degree from Ivy league Cornell University fand a B.E. in Production & Industrial Engineering from Delhi University
+                <p className="text-[15px] text-primary/60 font-medium leading-relaxed text-justify tracking-tight max-w-xl">
+                  As the strategist behind Warehouster Capital, he has built a scaled platform for the acquisition and management of high-performance logistics assets across India. A Cornell Alumnus and former CEO of All Cargo Logistics Parks.
                 </p>
-                <div className="pt-8 flex flex-col gap-2">
-                   <span className="text-3xl font-serif font-black text-primary italic uppercase tracking-tight">Sandeep Chadha</span>
-                   <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent">Founder & Managing Director</span>
+                
+                <div className="pt-6 flex flex-col gap-1 border-t border-gray-50">
+                   <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter">Sandeep Chadha</h3>
+                   <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#D4AF37]">Founder & Managing Director</span>
                 </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="pt-12 grid grid-cols-2 gap-12 border-t border-gray-100"
-              >
+              {/* Balanced Stats */}
+              <div className="grid grid-cols-2 gap-10 pt-10 border-t border-gray-100">
                  <div>
-                    <div className="text-4xl font-serif font-black text-primary italic mb-2">20+</div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-primary/30">Years Experience</div>
+                    <div className="text-3xl font-serif font-black text-primary mb-1">20+</div>
+                    <div className="text-[9px] font-black uppercase tracking-widest text-[#D4AF37]">Years of Excellence</div>
                  </div>
                  <div>
-                    <div className="text-4xl font-serif font-black text-primary italic mb-2">10M+</div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-primary/30">Sq. Ft. Delivered</div>
+                    <div className="text-3xl font-serif font-black text-primary mb-1">10M+</div>
+                    <div className="text-[9px] font-black uppercase tracking-widest text-[#D4AF37]">Sq. Ft. Asset Base</div>
                  </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Leadership Section */}
-      <section id="leadership" className="py-32 bg-gray-50 overflow-hidden relative border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="pill-tag border-accent/20 text-accent bg-accent/5 mb-8 mx-auto"
-          >
-            Visionaries
-          </motion.div>
-          <h2 className="text-5xl md:text-7xl font-serif font-black text-primary mb-24 uppercase tracking-tighter italic">
-            Strategic <span className="not-italic text-accent">Leadership</span>
-          </h2>
+      {/* 3. Leadership Section: Standard Roster */}
+      <section id="leadership" className="py-24 bg-gray-50/50 overflow-hidden relative border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           
-          <div className="grid md:grid-cols-4 gap-12">
+          {/* Header */}
+          <div className="text-center mb-20">
+             <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="h-[1px] w-10 bg-[#D4AF37]" />
+                <span className="text-[10px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">Management Board</span>
+                <div className="h-[1px] w-10 bg-[#D4AF37]" />
+             </div>
+             <h2 className="text-4xl md:text-6xl font-serif font-black text-primary uppercase tracking-tighter">
+               Strategic <span className="text-[#D4AF37]">Leadership</span>
+             </h2>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {team.map((member, i) => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group text-center"
+                transition={{ delay: i * 0.1, duration: 0.8 }}
+                className="group relative"
               >
-                <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden mb-8 shadow-2xl transition-all duration-700 group-hover:-translate-y-4">
-                  <Image src={member.image} alt={member.name} fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Executive Portrait with Hover Overlay */}
+                <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-lg border border-white bg-white transition-all duration-700">
+                   <Image 
+                     src={member.image} 
+                     alt={member.name} 
+                     fill 
+                     className="object-cover group-hover:scale-105 transition-transform duration-1000" 
+                   />
+                   
+                   {/* Minimalist Hover Overlay */}
+                   <motion.div 
+                     className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center p-6 text-center backdrop-blur-[2px]"
+                   >
+                     <div className="h-[1px] w-8 bg-[#D4AF37] mb-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 delay-100" />
+                     <h3 className="text-xl font-serif font-black text-white uppercase tracking-tighter mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                        {member.name}
+                     </h3>
+                     <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[#D4AF37] translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-150">
+                        {member.role}
+                     </p>
+                   </motion.div>
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-primary group-hover:text-accent transition-colors mb-2 italic">{member.name}</h3>
-                <p className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40">{member.role}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+
+
+
+
       {/* 4. Purpose Section */}
-      <section id="purpose" className="py-32 bg-white flex flex-col items-center text-center">
+      <section id="purpose" className="py-24 bg-white flex flex-col items-center text-center">
           <div className="max-w-4xl mx-auto px-6">
-             <h2 className="text-5xl md:text-7xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-10 italic">
-                Driven by <span className="not-italic text-accent">Purpose</span>
+             <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-10">
+                Driven by <span className="text-accent">Purpose</span>
              </h2>
-             <p className="text-xl md:text-2xl text-primary/60 font-medium leading-relaxed mb-16">
+             <p className="text-lg md:text-xl text-primary/60 font-medium leading-relaxed mb-16">
                 We believe in creating high-performance environments that don&apos;t just house goods, but fuel the economic engines of tomorrow. Through transparency, innovation, and unwavering integrity.
              </p>
              <Link 

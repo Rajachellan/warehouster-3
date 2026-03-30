@@ -146,6 +146,7 @@ export default function Navbar() {
               src={trendingItems[newsIndex].img}
               alt="Trending"
               fill
+              sizes="(max-width: 768px) 100vw, 160px"
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </motion.div>
@@ -225,7 +226,14 @@ export default function Navbar() {
           <div className="flex justify-start">
             <Link href="/" className="flex items-center gap-4 group">
               <div className="relative w-36 h-8 overflow-hidden transition-transform duration-500 group-hover:scale-105">
-                <Image src={logo} alt="Warehouster Logo" fill className="object-contain" priority />
+                <Image 
+                  src={logo} 
+                  alt="Warehouster Logo" 
+                  fill 
+                  sizes="144px"
+                  className="object-contain" 
+                  priority 
+                />
               </div>
             </Link>
           </div>

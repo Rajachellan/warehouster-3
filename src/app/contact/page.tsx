@@ -23,7 +23,7 @@ export default function ContactPage() {
           </motion.div>
           <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter">
             Contact <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italics italic">Warehouster</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Warehouster</span>
           </h1>
         </div>
       </section>

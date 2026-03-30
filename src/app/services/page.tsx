@@ -91,7 +91,7 @@ export default function ServicesPage() {
             className="text-6xl  font-serif font-black text-white leading-none uppercase tracking-tighter"
           >
             Industrial <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italics italic">Capabilities</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Capabilities</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

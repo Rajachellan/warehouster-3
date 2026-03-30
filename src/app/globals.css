@@ -5,8 +5,8 @@
   --color-accent: #D4AF37;
   --color-gold-light: #F0E2A1;
   --color-gold-dark: #9A7B4F;
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+  --font-serif: var(--font-poppins), sans-serif;
+  --font-sans: var(--font-poppins), sans-serif;
 }
 
 :root {

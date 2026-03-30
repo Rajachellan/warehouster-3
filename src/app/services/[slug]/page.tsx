@@ -138,6 +138,7 @@ export default function ServiceDetailPage() {
           src={service.image}
           alt={service.title}
           fill
+          sizes="100vw"
           className="object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000"
           priority
         />
@@ -158,7 +159,7 @@ export default function ServiceDetailPage() {
             className="text-6xl md:text-8xl font-serif font-black text-white uppercase tracking-tighter leading-none mb-8"
           >
             {service.title.split(' ')[0]} <br />
-            <span className="text-accent italic">{service.title.split(' ').slice(1).join(' ')}</span>
+            <span className="text-accent">{service.title.split(' ').slice(1).join(' ')}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -177,12 +178,12 @@ export default function ServiceDetailPage() {
           <div className="grid lg:grid-cols-2 gap-24 items-start">
              <div>
                 <div className="pill-tag mb-12">Deep Technical Expertise</div>
-                <h2 className="text-4xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tight italic mb-12">
+                <h2 className="text-4xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tight mb-12">
                    Institutional Grade <br />
-                   <span className="not-italic text-accent">Process & Excellence</span>
+                   <span className="text-accent">Process & Excellence</span>
                 </h2>
                 <div className="prose prose-xl prose-primary text-primary/60 font-medium leading-[1.8] space-y-8">
-                   <p className="text-2xl text-primary italic font-serif leading-relaxed">
+                   <p className="text-2xl text-primary font-serif leading-relaxed">
                       &quot;{service.detailedContent}&quot;
                    </p>
                    <p>
@@ -247,7 +248,7 @@ export default function ServiceDetailPage() {
          <div className="max-w-4xl mx-auto px-6 text-center">
             <h3 className="text-4xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tight mb-12">
                Ready to architect your <br />
-               <span className="text-accent italic">Logistics Future?</span>
+               <span className="text-accent">Logistics Future?</span>
             </h3>
             <Link 
                 href="/contact"

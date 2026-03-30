@@ -51,62 +51,114 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <motion.p 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="pill-tag mb-6"
-          >
-            Insights & Support
-          </motion.p>
-          <h2 className="text-4xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter italic">
-            Common Inquiries
-          </h2>
-        </div>
-
-        <div className="space-y-4">
-          {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className={`border rounded-3xl transition-all duration-300 ${
-                openIndex === i ? 'border-accent bg-gray-50 shadow-lg' : 'border-gray-100 bg-white hover:border-accent/40'
-              }`}
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full px-8 py-7 flex items-center justify-between text-left group"
+    <section className="py-32 bg-white relative overflow-hidden">
+      {/* Background Architectural Grid */}
+      <div className="absolute inset-0 opacity-[0.015] pointer-events-none" 
+           style={{ backgroundImage: 'linear-gradient(#000 0.5px, transparent 0.5px), linear-gradient(90deg, #000 0.5px, transparent 0.5px)', backgroundSize: '120px 120px' }} />
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24">
+          
+          {/* Left Column: Institutional Header */}
+          <div className="lg:col-span-5">
+            <div className="sticky top-32">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="flex items-center gap-6 mb-12"
               >
-                <span className={`text-lg font-serif font-black transition-colors ${openIndex === i ? 'text-accent' : 'text-primary'}`}>
-                  {faq.question}
+                <div className="h-[1px] w-12 bg-accent" />
+                <span className="text-[10px] font-black uppercase tracking-[0.6em] text-accent">
+                  Support Center
                 </span>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${openIndex === i ? 'bg-accent text-primary rotate-180' : 'bg-gray-100 text-primary group-hover:bg-accent/10'}`}>
-                    {openIndex === i ? <Minus size={16} /> : <Plus size={16} />}
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="text-5xl md:text-7xl font-serif font-black text-primary leading-[0.95] uppercase tracking-tighter mb-12"
+              >
+                Common <br />
+                <span className="text-accent underline decoration-accent/10 underline-offset-[16px] decoration-1">
+                  Inquiries
+                </span>
+              </motion.h2>
+
+              <div className="flex flex-col gap-10">
+                <motion.div
+                    initial={{ opacity: 0, scaleY: 0 }}
+                    whileInView={{ opacity: 1, scaleY: 1 }}
+                    className="w-[1.5px] h-24 bg-gradient-to-b from-accent/40 via-accent/5 to-transparent origin-top hidden lg:block"
+                />
+                
+                <div className="max-w-xs">
+                  <p className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/30 leading-relaxed">
+                    Access deep-dive technical insights into our <br/>
+                    institutional development and <br/>
+                    transaction protocols.
+                  </p>
                 </div>
-              </button>
-              
-              <AnimatePresence>
-                {openIndex === i && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden"
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Structured Accordion Cards */}
+          <div className="lg:col-span-7">
+            <div className="space-y-4">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  viewport={{ once: true }}
+                  className={`group border-l-[3px] transition-all duration-500 overflow-hidden ${
+                    openIndex === i 
+                    ? 'border-accent bg-[#F9FAFB] shadow-xl shadow-accent/5' 
+                    : 'border-transparent bg-white hover:bg-gray-50/50 hover:border-gray-200'
+                  }`}
+                >
+                  <button
+                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                    className="w-full px-10 py-10 flex items-center justify-between text-left"
                   >
-                    <div className="px-8 pb-8 text-primary/60 leading-relaxed font-medium">
-                      {faq.answer}
+                    <div className="flex items-center gap-8">
+                       <span className={`text-[11px] font-black tracking-widest transition-colors ${openIndex === i ? 'text-accent' : 'text-primary/10'}`}>
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className={`text-base md:text-lg font-sans font-bold uppercase tracking-wide transition-all duration-300 ${openIndex === i ? 'text-primary' : 'text-primary/70 group-hover:text-primary'}`}>
+                        {faq.question}
+                      </span>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+                    <div className={`shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-500 ${
+                      openIndex === i 
+                      ? 'border-accent bg-accent text-white rotate-180' 
+                      : 'border-gray-100 text-gray-300 group-hover:border-accent/40 group-hover:text-accent'
+                    }`}>
+                        {openIndex === i ? <Minus size={14} /> : <Plus size={14} />}
+                    </div>
+                  </button>
+                  
+                  <AnimatePresence>
+                    {openIndex === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                      >
+                        <div className="px-10 pb-10 ml-12 border-t border-gray-100/50 pt-8 mt-2">
+                          <p className="text-primary/50 text-[13px] font-medium leading-[1.8] tracking-wide uppercase max-w-xl">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

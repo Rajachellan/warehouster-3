@@ -25,7 +25,7 @@ export default function ContactSection() {
               </motion.p>
               <h2 className="text-4xl  font-serif font-black text-white leading-tight uppercase ">
                 Architecture  <br />Your Next <br />
-                <span className="text-accent italic">Logistics Consultation</span>
+                <span className="text-accent">Logistics Consultation</span>
               </h2>
             </div>
 
@@ -56,7 +56,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-white/30 mb-1">Corporate Office</p>
-                  <p className="text-md font-bold text-white/70 transition-colors group-hover:text-accent italic">Warehouster <br />
+                  <p className="text-md font-bold text-white/70 transition-colors group-hover:text-accent">Warehouster <br />
                     3rd Floor, 17, 3rd Cross Street East, <br />
                     Venkatasamy Nagar, Shenoy Nagar, <br />
                     Chennai,
@@ -102,8 +102,11 @@ export default function ContactSection() {
               <div className="space-y-2">
   <label className="text-[10px] font-black uppercase tracking-widest text-white ml-2">Type of Enquiry</label>
   <div className="relative">
-    <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-accent transition-all appearance-none cursor-pointer">
-      <option value="" disabled selected className="bg-gray-900 text-gray-400 ">Choose an option</option>
+    <select 
+      defaultValue=""
+      className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-accent transition-all appearance-none cursor-pointer"
+    >
+      <option value="" disabled className="bg-gray-900 text-gray-400 ">Choose an option</option>
       <option value="general" className="bg-gray-900 text-white">Leasing</option>
       <option value="support" className="bg-gray-900 text-white">Land & Warehouse Investments</option>
       <option value="billing" className="bg-gray-900 text-white">HR & Admin</option>

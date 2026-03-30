@@ -50,7 +50,7 @@ export default function NewsPage() {
           </motion.div>
           <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter">
             Corporate <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italics italic">Updates</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Updates</span>
           </h1>
         </div>
       </section>

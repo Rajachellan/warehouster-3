@@ -57,7 +57,7 @@ export default function BlogsPage() {
             className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter"
           >
             Strategic <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italics italic">Intelligence</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Intelligence</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export default function BlogsPage() {
                                 <div className="flex items-center gap-3"><Calendar size={14} className="text-accent" /> {blog.date}</div>
                                 <div className="flex items-center gap-3"><User size={14} className="text-accent" /> {blog.author}</div>
                              </div>
-                             <h3 className="text-3xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-accent transition-all duration-500 italic group-hover:not-italic">
+                             <h3 className="text-3xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-accent transition-all duration-500">
                                 {blog.title}
                              </h3>
                              <Link 

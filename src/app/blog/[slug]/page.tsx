@@ -84,7 +84,7 @@ export default function BlogPostDetail() {
                 <p>
                     The integration of Artificial Intelligence and robotics is no longer a futuristic concept; it's a present-day reality that is redefining operational efficiency. At Warehouster, we've seen first-hand how smart-hubs can process orders 40% faster than traditional facilities while reducing energy consumption through intelligent thermal management.
                 </p>
-                <h2 className="text-4xl font-display font-black text-primary pt-8 uppercase tracking-tighter border-t border-gray-100 italic">
+                <h2 className="text-4xl font-display font-black text-primary pt-8 uppercase tracking-tighter border-t border-gray-100">
                     The Rise of the <span className="text-accent underline decoration-accent/30 decoration-8 underline-offset-[12px]">Smart</span> Grid
                 </h2>
                 <p>
@@ -92,7 +92,7 @@ export default function BlogPostDetail() {
                 </p>
                 <div className="p-12 bg-primary rounded-[2.5rem] text-white my-16 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-accent rounded-full -translate-y-1/2 translate-x-1/2" />
-                    <p className="text-3xl font-display font-black italic leading-tight mb-0">
+                    <p className="text-3xl font-display font-black leading-tight mb-0">
                         "The next decade of logistics won't be won by those with the most space, but by those with the smartest space."
                     </p>
                     <p className="mt-6 text-white/50 font-bold uppercase tracking-widest text-sm">— Warehouster Design Philosophy</p>

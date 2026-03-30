@@ -66,7 +66,7 @@ export default function LandAcquisitionPage() {
                 className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter"
             >
                 Land <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italic">Acquisition</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Acquisition</span>
             </motion.h1>
             <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -99,7 +99,7 @@ export default function LandAcquisitionPage() {
                         <Zap size={20} />
                         <span className="text-[10px] font-black uppercase tracking-[0.4em] font-sans">Section {i + 1}</span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter italic">
+                    <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
                         {section.title}
                     </h2>
                     <p className="text-lg text-primary/60 font-medium leading-relaxed">

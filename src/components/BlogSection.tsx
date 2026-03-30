@@ -47,9 +47,9 @@ export default function BlogSection() {
             >
               Latest Insights
             </motion.div>
-            <h2 className="text-5xl md:text-7xl font-serif font-black text-primary uppercase tracking-tighter leading-tight italic">
+            <h2 className="text-5xl md:text-7xl font-serif font-black text-primary uppercase tracking-tighter leading-tight">
               Industrial <br />
-              <span className="not-italic text-accent">Intelligence</span>
+              <span className="text-accent">Intelligence</span>
             </h2>
           </div>
 
@@ -77,6 +77,7 @@ export default function BlogSection() {
                   src={blog.image}
                   alt={blog.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-1000   group-hover:opacity-100"
                 />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -94,11 +95,11 @@ export default function BlogSection() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-accent transition-colors italic group-hover:not-italic">
+                <h3 className="text-2xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-accent transition-colors">
                   {blog.title}
                 </h3>
 
-                <p className="text-primary/50 font-medium leading-relaxed mb-10 line-clamp-2 text-sm italic">
+                <p className="text-primary/50 font-medium leading-relaxed mb-10 line-clamp-2 text-sm">
                   {blog.excerpt}
                 </p>
 

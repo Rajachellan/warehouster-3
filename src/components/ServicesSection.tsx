@@ -54,7 +54,7 @@ export default function ServicesSection() {
             </motion.p>
             <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
               Integrated industrial <br />
-              <span className="text-accent italic">Capabilities</span>
+              <span className="text-accent">Capabilities</span>
             </h2>
           </div>
           <Link 
@@ -81,6 +81,7 @@ export default function ServicesSection() {
                     src={service.image} 
                     alt={service.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="w-full h-full object-cover grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent group-hover:from-primary transition-all duration-500" />

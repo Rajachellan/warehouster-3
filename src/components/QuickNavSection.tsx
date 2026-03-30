@@ -26,7 +26,7 @@ export default function QuickNavSection() {
                 Quick Navigation
             </motion.p>
             <h2 className="text-4xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
-               Explore Our  <span className="text-accent italic">Connections</span>
+               Explore Our  <span className="text-accent">Connections</span>
             </h2>
         </div>
 

@@ -42,7 +42,7 @@ export default function OverviewSection() {
             </div>
             <h2 className="text-3xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-12">
             Defining the Future of  
-              <span className="text-accent italic"> Industrial Warehousing</span> 
+              <span className="text-accent"> Industrial Warehousing</span> 
             </h2>
             <p className="text-xl text-primary/50 font-medium leading-relaxed mb-12 max-w-xl text-justify ">
               Warehouster is a leading provider of Grade-A industrial warehousing and logistics infrastructure in India, delivering strategically located, high-performance spaces designed for modern supply chain operations. With a strong presence across key economic corridors in South India, we enable scalable growth, operational efficiency, and seamless distribution for enterprises and 3PL leaders.
@@ -68,7 +68,7 @@ export default function OverviewSection() {
                 <div className="w-14 h-14 rounded-2xl bg-white shadow-xl flex items-center justify-center mb-8 border border-gray-100 group-hover:bg-accent group-hover:text-white transition-all">
                   <pillar.icon size={28} className="text-accent group-hover:text-white transition-colors" />
                 </div>
-                <h4 className="text-xl font-serif font-bold text-primary mb-4 group-hover:text-white transition-colors italic group-hover:not-italic">
+                <h4 className="text-xl font-serif font-bold text-primary mb-4 group-hover:text-white transition-colors">
                   {pillar.title}
                 </h4>
                 <p className="text-primary/40 text-[10px] font-bold uppercase tracking-widest leading-relaxed group-hover:text-white/40 transition-colors">

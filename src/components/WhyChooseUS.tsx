@@ -62,19 +62,12 @@ export default function WhyUsSection() {
   const [hoveredBullet, setHoveredBullet] = useState<number | null>(null);
 
   return (
-    <section
-      className="py-20 md:py-28 overflow-hidden relative "
+    <section className="py-32 bg-white relative overflow-hidden">
+      {/* Background Architectural Grid */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+           style={{ backgroundImage: 'linear-gradient(#000 0.5px, transparent 0.5px), linear-gradient(90deg, #000 0.5px, transparent 0.5px)', backgroundSize: '100px 100px' }} />
       
-    >
-      {/* Ambient radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        
-      />
-
-    
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* ══ LEFT ══ */}
@@ -88,54 +81,29 @@ export default function WhyUsSection() {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-3 mb-6"
+              className="flex items-center gap-6 mb-10"
             >
-              <motion.div
-                initial={{ scaleX: 0, originX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-                viewport={{ once: true }}
-                style={{
-                  height: "1px",
-                  width: "32px",
-                  background: `linear-gradient(90deg, ${GOLD}, transparent)`,
-                }}
-              />
-              <span
-                className="text-[10px] font-black uppercase tracking-[0.45em] font-sans"
-                style={{ color: `${GOLD}90` }}
-              >
-                Why Us
+              <div className="h-[1px] w-12 bg-accent shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
+              <span className="text-[10px] font-black uppercase tracking-[0.6em] text-accent/80">
+                Strategic Excellence
               </span>
             </motion.div>
 
             {/* Heading */}
-            <h2
-              className="font-serif font-black italic leading-tight tracking-tight mb-5"
-              style={{ fontSize: "clamp(2.4rem, 5vw, 3.4rem)",  }}
-            >
-              Why{" "}
-              <motion.span
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                viewport={{ once: true }}
-                style={{ color: GOLD, display: "inline-block" }}
-              >
-              Warehouster?
-              </motion.span>
+            <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-[1.05] uppercase tracking-tighter mb-10">
+              Why <br />
+              <span className="text-accent underline decoration-accent/10 underline-offset-[12px] decoration-1">
+                Warehouster?
+              </span>
             </h2>
 
             {/* Sub-text */}
-            <motion.p
+             <motion.p
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.38 }}
               viewport={{ once: true }}
-              className="text-sm leading-relaxed mb-10 max-w-sm font-sans"
-             
+              className="text-[11px] leading-[1.7] flex-1 mb-12 uppercase opacity-60 tracking-wide font-sans font-medium max-w-md"
             >
               We bring an unmatched combination of institutional-grade expertise, occupier
               relationships, and execution discipline to every mandate we undertake.
@@ -186,7 +154,7 @@ export default function WhyUsSection() {
                   <div className="flex items-center gap-4 mb-3">
                     <div>
                       <p
-                        className="font-serif font-black italic"
+                        className="font-serif font-black"
                         style={{ fontSize: "1.75rem", color: GOLD, lineHeight: 1 }}
                       >
                         <CountUp end={25} suffix="acre" />
@@ -201,7 +169,7 @@ export default function WhyUsSection() {
                     <TrendingUp size={14} style={{ color: GOLD_40, flexShrink: 0 }} />
                     <div>
                       <p
-                        className="font-serif font-black italic"
+                        className="font-serif font-black"
                         style={{ fontSize: "1.75rem", color: GOLD, lineHeight: 1 }}
                       >
                         <CountUp end={14} suffix="month" />

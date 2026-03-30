@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
 
-              <p className="text-primary/70 font-medium leading-[1.8] italic mb-12 text-xl">
+              <p className="text-primary/70 font-medium leading-[1.8] mb-12 text-xl">
                 "{t.content}"
               </p>
 

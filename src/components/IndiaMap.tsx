@@ -152,7 +152,7 @@ export default function IndiaMap() {
               style={{ color: PRIMARY }}
             >
               Strategic{" "}
-              <em className="not-italic text-accent"  >Network</em>
+              <span className="text-accent">Network</span>
               <br />Architecture
             </h2>
           </div>
@@ -409,8 +409,9 @@ export default function IndiaMap() {
                   <Image
                     src={selected.image}
                     alt={selected.name}
-                    
-                    className=" transition-transform duration-[1.2s] group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover transition-transform duration-[1.2s] group-hover:scale-105"
                   />
                   <div
                     className="absolute inset-0"

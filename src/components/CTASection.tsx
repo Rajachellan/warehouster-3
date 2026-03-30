@@ -27,7 +27,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           className="text-5xl md:text-6xl font-serif font-black text-white leading-tight uppercase tracking-tighter mb-12"
         >
-          Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white italic">Optimize</span> <br />
+          Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Optimize</span> <br />
           Your Industrial Footprint?
         </motion.h2>
 
