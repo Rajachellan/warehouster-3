@@ -41,7 +41,7 @@ export interface ProjectContent {
     scale: string;
     client: string;
     type: string;
-    image: string;
+    image: string | StaticImageData;
     metrics: ProjectMetric[];
     overview: string;
     story: {
