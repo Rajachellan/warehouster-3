@@ -530,7 +530,7 @@ export default function VisionMissionSection() {
 
           <blockquote
             className="font-serif font-black leading-[1.2] tracking-[-0.02em] mb-8 italic"
-            style={{ fontSize: "clamp(22px,3.2vw,44px)", color: P }}
+          
           >
             We don't just build warehouses.
             <br />
@@ -550,7 +550,7 @@ export default function VisionMissionSection() {
             transition={{ duration: 0.9, delay: 0.3, ease: EASE }}
             viewport={{ once: true }}
             className="mx-auto mb-6 h-px w-12"
-            style={{ background: G, opacity: 0.5 }}
+            
           />
 
           <p
