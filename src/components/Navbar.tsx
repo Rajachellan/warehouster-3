@@ -4,12 +4,29 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Phone, TrendingUp, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, TrendingUp, ArrowRight, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo-wt.png";
 import blog3 from "../assets/building-strategic-alliances-in-warehousing-park.webp"
 import news from "../assets/strategic-banner.webp"
-const navLinks = [
+interface SubmenuItem {
+  name: string;
+  href: string;
+}
+
+interface DropdownItem {
+  name: string;
+  href: string;
+  submenu?: SubmenuItem[];
+}
+
+interface NavItem {
+  name: string;
+  href: string;
+  dropdown?: DropdownItem[];
+}
+
+const navLinks: NavItem[] = [
   { name: "Home", href: "/" },
   {
     name: "About",
@@ -35,9 +52,28 @@ const navLinks = [
     name: "Projects",
     href: "/projects",
     dropdown: [
-      { name: "Completed", href: "/projects#completed" },
-      { name: "In Progress", href: "/projects#inprogress" },
-      { name: "Pipeline", href: "/projects#pipeline" },
+      {
+        name: "Completed",
+        href: "/projects#completed",
+        submenu: [
+          { name: "Redhills Development", href: "/projects/redhills-development" },
+        ]
+      },
+      {
+        name: "In Progress",
+        href: "/projects#in-progress",
+        submenu: [
+          { name: "Chengalpattu Development", href: "/projects/chengalpattu-development" },
+          { name: "Pondicherry BTS Facility", href: "/projects/pondicherry-bts" },
+        ]
+      },
+      {
+        name: "Pipeline",
+        href: "/projects#pipeline",
+        submenu: [
+          { name: "Jaisalmer BTS Facility", href: "/projects/jaisalmer-bts" },
+        ]
+      },
     ],
   },
   {
@@ -99,125 +135,125 @@ export default function Navbar() {
 
   return (
     <>
-   {/* Top Corner: Enhanced Trending Insights Card */}
-<div className="fixed top-28 right-5 z-[110] hidden md:block">
-  <Link href="/news">
-    <motion.div
-      className="group relative bg-[#0A1428] border border-yellow-400/50 rounded-xl overflow-hidden flex flex-col items-start w-40 cursor-pointer z-10"
-      whileHover={{ scale: 1.03 }}
-      animate={{ y: [0, -6, 0] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {/* Rotating golden border */}
-      <motion.div
-        className="absolute -inset-[1px] rounded-xl z-0 pointer-events-none"
-        style={{
-          background:
-            "conic-gradient(from 0deg, rgba(250,204,21,0.8), transparent, rgba(250,204,21,0.8))",
-        }}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-      />
-      {/* Mask inner background */}
-      <div className="absolute inset-[1px] rounded-xl bg-[#0A1428] z-[1]" />
-
-      {/* LIVE badge */}
-      <motion.div
-        className="absolute top-1.5 right-1.5 flex items-center gap-0.5 bg-yellow-400 text-[#0A1428] text-[6px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full z-30"
-        animate={{ x: [2, -2, 2] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <span className="w-1 h-1 rounded-full bg-[#0A1428] inline-block" />
-        Live
-      </motion.div>
-
-      {/* Thumbnail */}
-      <div className="relative w-full h-24 overflow-hidden flex-shrink-0 z-[2]">
-        <AnimatePresence mode="wait">
+      {/* Top Corner: Enhanced Trending Insights Card */}
+      <div className="fixed top-28 right-5 z-[110] hidden md:block">
+        <Link href="/news">
           <motion.div
-            key={newsIndex}
-            initial={{ scale: 1.3, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 1.1, opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0"
+            className="group relative bg-[#0A1428] border border-yellow-400/50 rounded-xl overflow-hidden flex flex-col items-start w-40 cursor-pointer z-10"
+            whileHover={{ scale: 1.03 }}
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           >
-            <Image
-              src={trendingItems[newsIndex].img}
-              alt="Trending"
-              fill
-              sizes="(max-width: 768px) 100vw, 160px"
-              className="object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Shimmer sweep */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none z-10"
-          animate={{ x: ["-100%", "100%"] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 0.5 }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative w-full px-2.5 py-2 flex flex-col gap-1 z-[2]">
-        {/* Label */}
-        <div className="flex items-center gap-1">
-          <motion.div
-            animate={{ rotate: [0, 15, -15, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <TrendingUp size={9} className="text-yellow-400" />
-          </motion.div>
-          <span className="text-[6px] font-black uppercase tracking-[0.25em] text-yellow-400">
-            Trending
-          </span>
-        </div>
-
-        {/* Title + Description */}
-        <div className="h-9 relative overflow-hidden">
-          <AnimatePresence mode="wait">
+            {/* Rotating golden border */}
             <motion.div
-              key={newsIndex}
-              initial={{ y: 12, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -12, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="absolute inset-0 flex flex-col justify-center gap-0.5"
+              className="absolute -inset-[1px] rounded-xl z-0 pointer-events-none"
+              style={{
+                background:
+                  "conic-gradient(from 0deg, rgba(250,204,21,0.8), transparent, rgba(250,204,21,0.8))",
+              }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            />
+            {/* Mask inner background */}
+            <div className="absolute inset-[1px] rounded-xl bg-[#0A1428] z-[1]" />
+
+            {/* LIVE badge */}
+            <motion.div
+              className="absolute top-1.5 right-1.5 flex items-center gap-0.5 bg-yellow-400 text-[#0A1428] text-[6px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full z-30"
+              animate={{ x: [2, -2, 2] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <h5 className="text-[9px] font-black text-white uppercase tracking-tight truncate leading-tight">
-                {trendingItems[newsIndex].title}
-              </h5>
-              <p className="text-[7px] font-medium text-white/55 truncate leading-tight">
-                {trendingItems[newsIndex].desc}
-              </p>
+              <span className="w-1 h-1 rounded-full bg-[#0A1428] inline-block" />
+              Live
             </motion.div>
-          </AnimatePresence>
-        </div>
 
-        {/* Bottom row */}
-        <div className="flex items-center justify-between">
-          <span className="text-[6px] text-white/25">tap to read</span>
-          <motion.div
-            className="w-4 h-4 rounded-full border border-yellow-400/60 flex items-center justify-center"
-            animate={{ x: [0, 4, 0] }}
-            transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <ArrowRight size={8} className="text-yellow-400" />
+            {/* Thumbnail */}
+            <div className="relative w-full h-24 overflow-hidden flex-shrink-0 z-[2]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={newsIndex}
+                  initial={{ scale: 1.3, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 1.1, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={trendingItems[newsIndex].img}
+                    alt="Trending"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 160px"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Shimmer sweep */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none z-10"
+                animate={{ x: ["-100%", "100%"] }}
+                transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 0.5 }}
+              />
+            </div>
+
+            {/* Content */}
+            <div className="relative w-full px-2.5 py-2 flex flex-col gap-1 z-[2]">
+              {/* Label */}
+              <div className="flex items-center gap-1">
+                <motion.div
+                  animate={{ rotate: [0, 15, -15, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <TrendingUp size={9} className="text-yellow-400" />
+                </motion.div>
+                <span className="text-[6px] font-black uppercase tracking-[0.25em] text-yellow-400">
+                  Trending
+                </span>
+              </div>
+
+              {/* Title + Description */}
+              <div className="h-9 relative overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={newsIndex}
+                    initial={{ y: 12, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -12, opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="absolute inset-0 flex flex-col justify-center gap-0.5"
+                  >
+                    <h5 className="text-[9px] font-black text-white uppercase tracking-tight truncate leading-tight">
+                      {trendingItems[newsIndex].title}
+                    </h5>
+                    <p className="text-[7px] font-medium text-white/55 truncate leading-tight">
+                      {trendingItems[newsIndex].desc}
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Bottom row */}
+              <div className="flex items-center justify-between">
+                <span className="text-[6px] text-white/25">tap to read</span>
+                <motion.div
+                  className="w-4 h-4 rounded-full border border-yellow-400/60 flex items-center justify-center"
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <ArrowRight size={8} className="text-yellow-400" />
+                </motion.div>
+              </div>
+            </div>
           </motion.div>
-        </div>
+        </Link>
       </div>
-    </motion.div>
-  </Link>
-</div>
 
-    
+
 
       <nav
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${isScrolled
-            ? "bg-primary/95 shadow-2xl py-6 border-b border-white/5"
-            : "bg-transparent py-6"
+          ? "bg-primary/95 shadow-2xl py-6 border-b border-white/5"
+          : "bg-transparent py-6"
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 items-center">
@@ -226,13 +262,13 @@ export default function Navbar() {
           <div className="flex justify-start">
             <Link href="/" className="flex items-center gap-4 group">
               <div className="relative w-36 h-8 overflow-hidden transition-transform duration-500 group-hover:scale-105">
-                <Image 
-                  src={logo} 
-                  alt="Warehouster Logo" 
-                  fill 
+                <Image
+                  src={logo}
+                  alt="Warehouster Logo"
+                  fill
                   sizes="144px"
-                  className="object-contain" 
-                  priority 
+                  className="object-contain"
+                  priority
                 />
               </div>
             </Link>
@@ -270,15 +306,35 @@ export default function Navbar() {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         className="absolute top-full left-0 glass-dark rounded-[1.5rem] border border-white/10 p-2 shadow-3xl w-56 mt-4"
                       >
-                        <div className="flex flex-col">
+                        <div className="flex flex-col gap-1 p-1">
                           {link.dropdown.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="font-black text-[8px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl uppercase tracking-widest"
-                            >
-                              {sub.name}
-                            </Link>
+                            <div key={sub.name} className="relative group/sub">
+                              <Link
+                                href={sub.href}
+                                className="flex items-center justify-between font-black text-[8px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl uppercase tracking-widest"
+                              >
+                                {sub.name}
+                                {sub.submenu && <ChevronRight size={10} className="opacity-30 group-hover/sub:opacity-100 group-hover/sub:translate-x-1 transition-all" />}
+                              </Link>
+
+                              {sub.submenu && (
+                                <div className="absolute left-full top-0 ml-2 hidden group-hover/sub:block">
+                                  <div className="glass-dark rounded-[1.2rem] border border-white/10 p-2 shadow-3xl w-56">
+                                    <div className="flex flex-col gap-1">
+                                      {sub.submenu.map((item) => (
+                                        <Link
+                                          key={item.name}
+                                          href={item.href}
+                                          className="font-black text-[8px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl uppercase tracking-widest"
+                                        >
+                                          {item.name}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
                           ))}
                         </div>
                       </motion.div>
@@ -333,15 +389,29 @@ export default function Navbar() {
                       {link.name}
                     </Link>
                     {link.dropdown && (
-                      <div className="grid grid-cols-1 gap-3 pl-4 border-l border-white/10">
-                        {link.dropdown.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            href={sub.href}
-                            className="text-[9px] font-bold text-white/70 hover:text-white uppercase tracking-[0.2em] transition-colors"
-                          >
-                            {sub.name}
-                          </Link>
+                      <div className="grid grid-cols-1 gap-4 pl-4 border-l border-white/10">
+                        {link.dropdown.map((sub: DropdownItem) => (
+                          <div key={sub.name} className="flex flex-col gap-3">
+                            <Link
+                              href={sub.href}
+                              className="text-[10px] font-black text-accent uppercase tracking-[0.2em] transition-colors"
+                            >
+                              {sub.name}
+                            </Link>
+                            {sub.submenu && (
+                              <div className="flex flex-col gap-3 pl-4 border-l border-white/5">
+                                {sub.submenu.map((item: SubmenuItem) => (
+                                  <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className="text-[9px] font-bold text-white/50 hover:text-white uppercase tracking-[0.2em] transition-colors"
+                                  >
+                                    {item.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         ))}
                       </div>
                     )}

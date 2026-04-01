@@ -6,7 +6,8 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import { Briefcase, MapPin, Clock, ArrowRight, Zap } from "lucide-react";
 import Link from "next/link";
-
+import Image from "next/image";
+import banner from "../../assets/career-growth.jpg"
 const jobs = [
   {
     title: "Director - Infrastructure",
@@ -35,6 +36,18 @@ export default function CareersPage() {
       
       {/* 1. Page Header */}
       <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
+               <div className="absolute inset-0 z-0">
+            <Image 
+              src={banner}
+              alt="Careers Background"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+          </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div

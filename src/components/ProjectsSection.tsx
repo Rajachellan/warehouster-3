@@ -10,71 +10,21 @@ import chennai from "../assets/chennai.jpg";
 import madurai from "../assets/madurai.jpg";
 import land from "../assets/land.jpg";
 
-/**
- * Categorized Project Data
- * Categorization requested:
- * Completed: Redhills, Chengalpattu
- * In Progress: Pondicherry
- * Pipeline: Sholagiri, Madurai, Ponneri
- */
+import { projects as allProjects } from "@/data/projects";
+
 const projectCategories = [
   {
     status: "Completed",
-    projects: [
-      {
-        slug: "redhills",
-        title: "Redhills Logistics Park",
-        location: "Chennai, TN",
-        image: chennai,
-        stats: "1.2M Sq. Ft. Operational",
-      },
-      {
-        slug: "chengalpattu",
-        title: "Chengalpattu Hub",
-        location: "Chennai, TN",
-        image: chennai,
-        stats: "450,000 Sq. Ft. Delivered",
-      },
-    ],
+    projects: allProjects.filter(p => p.category === "Completed").slice(0, 3)
   },
   {
     status: "In Progress",
-    projects: [
-      {
-        slug: "pondicherry",
-        title: "Pondicherry Logistics Center",
-        location: "Pondicherry, PY",
-        image: land,
-        stats: "Under Construction",
-      },
-    ],
+    projects: allProjects.filter(p => p.category === "In Progress").slice(0, 3)
   },
   {
     status: "Pipeline",
-    projects: [
-      {
-        slug: "sholagiri",
-        title: "Sholagiri Strategic Hub",
-        location: "Sholagiri, TN",
-        image: land,
-        stats: "Acquisition Phase",
-      },
-      {
-        slug: "madurai",
-        title: "Madurai Logistics Park",
-        location: "Madurai, TN",
-        image: madurai,
-        stats: "Planning Phase",
-      },
-      {
-        slug: "ponneri",
-        title: "Ponneri Smart Port Hub",
-        location: "Chennai, TN",
-        image: chennai,
-        stats: "Strategy Phase",
-      },
-    ],
-  },
+    projects: allProjects.filter(p => p.category === "Pipeline").slice(0, 3)
+  }
 ];
 
 export default function ProjectsSection() {
@@ -101,10 +51,10 @@ export default function ProjectsSection() {
             </h2>
           </div>
           <div className="flex flex-col items-start lg:items-end gap-4 max-w-xs text-left lg:text-right">
-             <div className="w-12 h-1 bg-accent mb-4" />
-             <p className="text-primary/50 font-medium text-sm leading-relaxed">
-                Delivering institutional-grade infrastructure across India&apos;s most critical economic corridors.
-             </p>
+            <div className="w-12 h-1 bg-accent mb-4" />
+            <p className="text-primary/50 font-medium text-sm leading-relaxed">
+              Delivering institutional-grade infrastructure across India&apos;s most critical economic corridors.
+            </p>
           </div>
         </div>
 
@@ -114,15 +64,15 @@ export default function ProjectsSection() {
               {/* Category Header */}
               <div className="flex items-center gap-6 mb-16 group">
                 <div className="relative">
-                    <h3 className="text-2xl md:text-4xl font-serif font-black text-primary uppercase tracking-tight">
-                        {group.status} <br />
-                        <span className="text-accent">Projects</span>
-                    </h3>
+                  <h3 className="text-2xl md:text-4xl font-serif font-black text-primary uppercase tracking-tight">
+                    {group.status} <br />
+                    <span className="text-accent">Projects</span>
+                  </h3>
                 </div>
                 <div className="h-px flex-1 bg-gray-100" />
                 <div className="flex flex-col items-end">
-                    <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/30">Sub-Sector</span>
-                    <span className="text-sm font-bold text-primary">Distribution & Parks</span>
+                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/30">Sub-Sector</span>
+                  <span className="text-sm font-bold text-primary">Distribution & Parks</span>
                 </div>
               </div>
 
@@ -153,9 +103,9 @@ export default function ProjectsSection() {
 
                       {/* Top Action */}
                       <div className="absolute top-10 left-10 z-20">
-                         <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-all duration-500">
-                            <Zap size={20} className="text-accent" />
-                         </div>
+                        <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-all duration-500">
+                          <Zap size={20} className="text-accent" />
+                        </div>
                       </div>
 
                       {/* Content */}
@@ -172,10 +122,10 @@ export default function ProjectsSection() {
 
                         <div className="flex items-center justify-between pt-10 border-t border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-10 group-hover:translate-y-0">
                           <div className="text-white/40 font-bold uppercase text-[9px] tracking-[0.4em]">
-                            {project.stats}
+                            {project.scale}
                           </div>
                           <div className="flex items-center gap-3 text-accent font-black text-[10px] uppercase tracking-widest">
-                             Architecture Details <ArrowUpRight size={16} />
+                            Architecture Details <ArrowUpRight size={16} />
                           </div>
                         </div>
                       </div>
@@ -188,25 +138,25 @@ export default function ProjectsSection() {
         </div>
 
         {/* View All CTA */}
-        <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-40 pt-24 border-t border-gray-100 flex flex-col items-center text-center"
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-40 pt-24 border-t border-gray-100 flex flex-col items-center text-center"
         >
-            <h4 className="text-2xl font-serif font-black text-primary mb-12 uppercase tracking-wide">
-                Experience the Full <span className="text-accent">Ecosystem</span>
-            </h4>
-            <Link
-                href="/projects"
-                className="group relative inline-flex items-center gap-8 px-16 py-8 bg-primary text-white rounded-[2.5rem] overflow-hidden hover:bg-accent transition-all duration-500 shadow-3xl shadow-primary/20"
-            >
-                <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                <span className="relative z-10 text-[11px] font-black uppercase tracking-[0.4em] group-hover:text-primary transition-colors">
-                   Explore Full Portfolio
-                </span>
-                <ArrowRight size={22} className="relative z-10 group-hover:translate-x-3 transition-transform group-hover:text-primary" />
-            </Link>
+          <h4 className="text-2xl font-serif font-black text-primary mb-12 uppercase tracking-wide">
+            Experience the Full <span className="text-accent">Ecosystem</span>
+          </h4>
+          <Link
+            href="/projects"
+            className="group relative inline-flex items-center gap-8 px-16 py-8 bg-primary text-white rounded-[2.5rem] overflow-hidden hover:bg-accent transition-all duration-500 shadow-3xl shadow-primary/20"
+          >
+            <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+            <span className="relative z-10 text-[11px] font-black uppercase tracking-[0.4em] group-hover:text-primary transition-colors">
+              Explore Full Portfolio
+            </span>
+            <ArrowRight size={22} className="relative z-10 group-hover:translate-x-3 transition-transform group-hover:text-primary" />
+          </Link>
         </motion.div>
       </div>
     </section>

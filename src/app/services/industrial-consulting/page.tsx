@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import Image from "next/image";
 import { CheckCircle2, Zap } from "lucide-react";
-
+import banner from "../../../assets/aerial-view-factory-trucks-parked-near-warehouse-daytime.jpg"
 const sections = [
   {
     title: "What we do",

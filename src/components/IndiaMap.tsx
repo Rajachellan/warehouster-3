@@ -213,7 +213,7 @@ export default function IndiaMap() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-5 flex-wrap px-7 py-4 border-t border-black/5 bg-gray-50/50">
+              {/* <div className="flex items-center gap-5 flex-wrap px-7 py-4 border-t border-black/5 bg-gray-50/50">
                 {locations.map((loc) => (
                   <button
                     key={loc.id}
@@ -231,7 +231,7 @@ export default function IndiaMap() {
                     </span>
                   </button>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
 

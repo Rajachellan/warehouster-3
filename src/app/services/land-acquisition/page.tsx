@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight, Zap, Target, TrendingUp } from "lucide-react";
-
+import banner from "../../../assets/high-view-village-taken-by-drone.jpg"
 const sections = [
   {
     title: "What we do",
@@ -46,7 +46,6 @@ export default function LandAcquisitionPage() {
             src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1920" 
             alt="Land Acquisition" 
             fill 
-            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />

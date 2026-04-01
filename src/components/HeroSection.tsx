@@ -123,7 +123,7 @@ export default function HeroSection() {
       </div>
 
       {/* Global Stat / Context Bar - Sophisticated minimalist footer */}
-      <motion.div 
+      {/* <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1.5 }}
@@ -139,10 +139,10 @@ export default function HeroSection() {
         <div className="text-[8px] font-black uppercase tracking-[0.5em] text-accent/40">
             Designing Future Logistics
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Refined Geometric Scroll Tab */}
-      <motion.div
+      {/* <motion.div
         animate={{ opacity: [0.2, 0.6, 0.2] }}
         transition={{ repeat: Infinity, duration: 4 }}
         className="absolute bottom-0 right-12 flex flex-col items-center gap-10"
@@ -151,7 +151,7 @@ export default function HeroSection() {
             Scroll to Navigate
         </div>
         <div className="w-[1px] h-32 bg-gradient-to-b from-accent via-accent/5 to-transparent" />
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

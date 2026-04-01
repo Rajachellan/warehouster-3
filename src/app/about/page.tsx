@@ -10,12 +10,15 @@ import JourneySection from "@/components/JourneySection";
 import Image from "next/image";
 import { Users, Target, Rocket, Award, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import banner from "../../assets/park-exterior.webp"
+import banner from "../../assets/warehouse-about.jpg"
 import sandeep from "../../assets/Sandeep.webp"
 import kanadhasan from "../../assets/kannadhassun.webp"
 import kaushik from "../../assets/kaushik-vora-removebg-preview.webp"
 import debi from "../../assets/debisarangi1removebgpreview.webp"
 import divyash from "../../assets/divyansh.webp"
+import Aboutsection from "./About_us"
+import VisionMission from "./VisionMission"
+import DevelopmentProcess from "./DevelopmentProcess"
 const team = [
   {
     name: "Kannadhassun",
@@ -58,7 +61,8 @@ export default function AboutPage() {
     />
     
     {/* Dark Overlay for readability */}
-    <div className="absolute inset-0 bg-primary/50" />
+    <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
+    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent" />
   </div>
 
   {/* Glow Effect */}
@@ -97,9 +101,11 @@ export default function AboutPage() {
 
   </div>
 </section>
-
+<VisionMission/>
+<DevelopmentProcess/>
+{/* <Aboutsection/> */}
       {/* ... rest of the content ... */}
-      <section id="overview" className="py-32 bg-white relative">
+      {/* <section id="overview" className="py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0 }}
@@ -145,7 +151,7 @@ export default function AboutPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       <StatsSection />
     <JourneySection />      {/* 2. CEO Profile: Executive Balance */}

@@ -4,7 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
+import banner from "../../assets/bmi-strategic-alliance-banner.webp"
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -12,6 +13,18 @@ export default function ContactPage() {
       
       {/* Header */}
       <section className="relative pt-60 pb-24 bg-primary overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src={banner}
+              alt="Land Acquisition Background"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+          </div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div

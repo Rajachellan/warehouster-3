@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import blog3 from "../../assets/building-strategic-alliances-in-warehousing-park.webp"
-
+import banner from "../../assets/building-strategic-alliances-in-warehousing-park.webp"
 const news = [
   {
     title: "Warehouster Surpasses 20 Million Sq Ft Managed Assets",
@@ -39,7 +39,18 @@ export default function NewsPage() {
      
       
       <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] -translate-x-1/2 pointer-events-none" />
+              <div className="absolute inset-0 z-0">
+                   <Image 
+                     src={banner}
+                     alt="Land Acquisition Background"
+                     fill
+                     priority
+                     sizes="100vw"
+                     className="object-cover object-center"
+                   />
+                   <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
+                   <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+                 </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

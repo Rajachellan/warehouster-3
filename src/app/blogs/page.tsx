@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import Image from "next/image";
 import { Calendar, User, ArrowRight, Search, Zap } from "lucide-react";
 import Link from "next/link";
-
+import banner from "../../assets/building-strategic-alliances-in-warehousing-park.webp"
 const blogs = [
   {
     title: "The Rise of Grade A Industrial Assets",
@@ -42,7 +42,18 @@ export default function BlogsPage() {
       
       {/* 1. Page Header */}
       <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
+    <div className="absolute inset-0 z-0">
+                   <Image 
+                     src={banner}
+                     alt="Land Acquisition Background"
+                     fill
+                     priority
+                     sizes="100vw"
+                     className="object-cover object-center"
+                   />
+                   <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
+                   <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+                 </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
