@@ -68,7 +68,13 @@ export default function NewsPage() {
                 className="group flex flex-col bg-white rounded-[2.5rem] border border-gray-100 overflow-hidden hover:shadow-2xl transition-all"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <Image src={item.image} alt={item.title} fill className="object-cover  group-hover:scale-105 transition-all duration-700" />
+                  <Image 
+                    src={item.image} 
+                    alt={item.title} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-all duration-700" 
+                  />
                   <div className="absolute top-6 left-6 px-4 py-1.5 bg-accent/90 text-primary text-[8px] font-black uppercase tracking-widest rounded">
                     {item.category}
                   </div>

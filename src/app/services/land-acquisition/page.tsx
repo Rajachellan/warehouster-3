@@ -46,6 +46,7 @@ export default function LandAcquisitionPage() {
             src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1920" 
             alt="Land Acquisition" 
             fill 
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
@@ -125,6 +126,7 @@ export default function LandAcquisitionPage() {
                         src={section.image} 
                         alt={section.title} 
                         fill 
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover"
                     />
                 </motion.div>

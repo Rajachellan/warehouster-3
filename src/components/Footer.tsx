@@ -24,12 +24,12 @@ const socialLinks = [
 ];
 export default function Footer() {
   return (
-    <footer className="bg-primary pt-24 pb-12 border-t border-white/5 overflow-hidden relative">
-      <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-[100px] translate-y-1/2 translate-x-1/2" />
+    <footer suppressHydrationWarning className="bg-primary pt-24 pb-12 border-t border-white/5 overflow-hidden relative">
+      <div suppressHydrationWarning className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+        <div suppressHydrationWarning className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-[100px] translate-y-1/2 translate-x-1/2" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div suppressHydrationWarning className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           {/* Brand */}
           <div className="space-y-8">
@@ -58,6 +58,7 @@ export default function Footer() {
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
+        suppressHydrationWarning
         className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-accent hover:border-accent hover:bg-accent/5 transition-all"
       >
         <Icon size={18} />
@@ -134,11 +135,16 @@ export default function Footer() {
             © 2026 Warehouster. Industrial Integrity. All rights reserved.
           </p>
           <div className="flex gap-12">
-            {["Privacy Policy", "Terms of Service", "Cookies"].map((item) => (
-              <Link key={item} href="#" className="text-white/20 hover:text-accent text-[9px] font-black uppercase tracking-[0.4em] transition-all">
-                {item}
-              </Link>
-            ))}
+              {["Privacy Policy", "Terms of Service", "Cookies"].map((item) => (
+                <Link 
+                  key={item} 
+                  href="#" 
+                  suppressHydrationWarning
+                  className="text-white/20 hover:text-accent text-[9px] font-black uppercase tracking-[0.4em] transition-all"
+                >
+                  {item}
+                </Link>
+              ))}
           </div>
         </div>
       </div>

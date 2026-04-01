@@ -134,7 +134,10 @@ function LogoChip({ name, src }: { name: string; src: any }) {
         padding: "clamp(16px, 2.5vw, 32px)",
       }}
     >
-      <div className="relative w-full h-full filter grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+      <div 
+        suppressHydrationWarning
+        className="relative w-full h-full filter grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+      >
         <Image
           src={src}
           alt={name}

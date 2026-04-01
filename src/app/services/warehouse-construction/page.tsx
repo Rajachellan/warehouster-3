@@ -40,7 +40,13 @@ export default function WarehouseConstructionPage() {
      
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1920" alt="Warehouse Construction" fill className="object-cover" />
+          <Image 
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1920" 
+            alt="Warehouse Construction" 
+            fill 
+            sizes="100vw"
+            className="object-cover" 
+          />
           <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
         </div>
@@ -67,7 +73,13 @@ export default function WarehouseConstructionPage() {
                     </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="flex-1 relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl">
-                    <Image src={section.image} alt={section.title} fill className="object-cover" />
+                    <Image 
+                      src={section.image} 
+                      alt={section.title} 
+                      fill 
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover" 
+                    />
                 </motion.div>
             </div>
           ))}
