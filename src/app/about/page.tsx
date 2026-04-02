@@ -57,6 +57,7 @@ export default function AboutPage() {
       alt="Warehousing Infrastructure"
       fill
       priority
+      sizes="100vw"
       className="object-cover opacity-30"
     />
     
@@ -171,6 +172,7 @@ export default function AboutPage() {
                   src={sandeep}
                   alt="Sandeep Chadha"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -266,6 +268,7 @@ export default function AboutPage() {
                      src={member.image} 
                      alt={member.name} 
                      fill 
+                     sizes="(max-width: 768px) 50vw, 25vw"
                      className="object-cover group-hover:scale-105 transition-transform duration-1000" 
                    />
                    

@@ -32,7 +32,7 @@ export default function CTASection() {
         </motion.h2>
 
         <p className="text-xl text-white/50 font-sans font-medium mb-16 max-w-2xl mx-auto leading-relaxed">
-        From Chennai to Bengaluru, Hosur to Madurai, we deliver high-performance industrial spaces tailored for e-commerce, manufacturing, FMCG, and 3PL operations.
+          From Chennai to Bengaluru, Hosur to Madurai, we deliver high-performance industrial spaces tailored for e-commerce, manufacturing, FMCG, and 3PL operations.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-20">

@@ -53,6 +53,7 @@ export default function ManagementSection() {
                       src={sandeep}
                       alt="Sandeep Chadha" 
                       fill 
+                      sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                  </div>

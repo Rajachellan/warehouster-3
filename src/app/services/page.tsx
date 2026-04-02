@@ -135,6 +135,7 @@ export default function ServicesPage() {
                             src={service.image} 
                             alt={service.title} 
                             fill 
+                            sizes="(max-width: 1024px) 100vw, 50vw"
                             className="group-hover:scale-105 transition-transform duration-1000 " 
                         />
                         <div className="absolute inset-0 bg-primary/20 transition-colors group-hover:bg-primary/5" />

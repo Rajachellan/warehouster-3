@@ -4,8 +4,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { CheckCircle2, Building2, Shield, TrendingUp } from "lucide-react";
 
-const NAVY    = "#0f1f3d";
-const GOLD    = "#D4AF37";
+const NAVY = "#0f1f3d";
+const GOLD = "#D4AF37";
 const GOLD_08 = "rgba(212,175,55,0.08)";
 const GOLD_15 = "rgba(212,175,55,0.25)";
 const GOLD_25 = "rgba(212,175,55,0.25)";
@@ -23,7 +23,7 @@ const bullets = [
 
 const trustedBy = [
   { icon: <Building2 size={13} />, name: "Blackstone" },
-  { icon: <Shield size={13} />,    name: "ESR" },
+  { icon: <Shield size={13} />, name: "ESR" },
   { icon: <Building2 size={13} />, name: "Indospace" },
 ];
 
@@ -64,9 +64,9 @@ export default function WhyUsSection() {
   return (
     <section className="py-32 bg-white relative overflow-hidden">
       {/* Background Architectural Grid */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
-           style={{ backgroundImage: 'linear-gradient(#000 0.5px, transparent 0.5px), linear-gradient(90deg, #000 0.5px, transparent 0.5px)', backgroundSize: '100px 100px' }} />
-      
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
+        style={{ backgroundImage: 'linear-gradient(#000 0.5px, transparent 0.5px), linear-gradient(90deg, #000 0.5px, transparent 0.5px)', backgroundSize: '100px 100px' }} />
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
@@ -98,7 +98,7 @@ export default function WhyUsSection() {
             </h2>
 
             {/* Sub-text */}
-             <motion.p
+            <motion.p
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.38 }}
@@ -161,7 +161,7 @@ export default function WhyUsSection() {
                       </p>
                       <p
                         className="text-[9px] uppercase tracking-[0.3em] font-sans mt-0.5"
-                        
+
                       >
                         Greenfield
                       </p>
@@ -176,7 +176,7 @@ export default function WhyUsSection() {
                       </p>
                       <p
                         className="text-[9px] uppercase tracking-[0.3em] font-sans mt-0.5"
-                        
+
                       >
                         Fully leased
                       </p>
@@ -239,7 +239,7 @@ export default function WhyUsSection() {
 
                   {/* Label */}
                   <motion.span
-                    
+
                     transition={{ duration: 0.18 }}
                     className="text-sm leading-snug font-sans relative z-10 flex-1"
                   >
@@ -307,7 +307,7 @@ export default function WhyUsSection() {
                       whileHover={{ color: "#ffffff" }}
                       transition={{ duration: 0.18 }}
                       className="text-sm font-black font-sans uppercase tracking-[0.15em]"
-                      
+
                     >
                       {t.name}
                     </motion.span>

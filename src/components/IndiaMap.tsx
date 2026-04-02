@@ -11,7 +11,7 @@ import hosurImg from "../assets/houser.jpg";
 
 // ─── BRAND COLORS ─────────────────────────────────────────────────────────────
 const PRIMARY = "#0A1428";
-const ACCENT  = "#F59E0B";
+const ACCENT = "#F59E0B";
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 const locations = [
@@ -22,7 +22,7 @@ const locations = [
     acres: 55,
     sqft: "1.1 Mn",
     status: "Expansion",
-    x: 75.5, 
+    x: 75.5,
     y: 33.7,
     description: "Primary industrial gateway in Chennai North, currently undergoing strategic expansion to meet rising demand for 1.1 million square feet of premium space.",
     image: chennai,
@@ -85,13 +85,13 @@ export default function IndiaMap() {
   const selected = locations.find((l) => l.id === selectedId) || locations[0];
 
   return (
-    <section 
+    <section
       suppressHydrationWarning
-      className="py-20 relative overflow-hidden" 
+      className="py-20 relative overflow-hidden"
       style={{ backgroundColor: "#F8F7F4" }}
     >
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
+
         {/* ── HEADER ── */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
@@ -113,7 +113,7 @@ export default function IndiaMap() {
 
         {/* ── MAIN CONTENT ── */}
         <div className="grid lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* LEFT COLUMN: THE MAP */}
           <div className="lg:col-span-12 xl:col-span-7 flex flex-col">
             <div
@@ -134,7 +134,7 @@ export default function IndiaMap() {
                 style={{ minHeight: "520px", background: "#050B18" }}
               >
                 <div className="absolute inset-0 overflow-hidden">
-                  <motion.div 
+                  <motion.div
                     className="relative w-full h-full"
                     animate={{
                       scale: hoveredId ? 1.4 : 1,
@@ -154,16 +154,15 @@ export default function IndiaMap() {
                     />
                   </motion.div>
                 </div>
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A1428] via-transparent to-transparent opacity-60 pointer-events-none" />
-                
+
                 <div className="absolute inset-0 z-20">
                   {locations.map((loc) => (
                     <div
                       key={loc.id}
-                      className={`absolute cursor-pointer transition-all duration-300 group/marker ${
-                        hoveredId && hoveredId !== loc.id ? "opacity-40 scale-90" : "opacity-100 scale-100"
-                      }`}
+                      className={`absolute cursor-pointer transition-all duration-300 group/marker ${hoveredId && hoveredId !== loc.id ? "opacity-40 scale-90" : "opacity-100 scale-100"
+                        }`}
                       style={{
                         left: `${loc.x}%`,
                         top: `${loc.y}%`,
@@ -177,31 +176,27 @@ export default function IndiaMap() {
                       onClick={() => setSelectedId(loc.id)}
                     >
                       {/* Pulse Effect - Inside Hitbox */}
-                      <div 
-                        className={`absolute inset-0 rounded-full animate-ping opacity-40 pointer-events-none ${
-                          selectedId === loc.id ? "bg-accent" : "bg-accent/20"
-                        }`}
+                      <div
+                        className={`absolute inset-0 rounded-full animate-ping opacity-40 pointer-events-none ${selectedId === loc.id ? "bg-accent" : "bg-accent/20"
+                          }`}
                         style={{ animationDuration: "3s" }}
                       />
-                      
+
                       {/* Core Dot & Label Container */}
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div className={`relative flex flex-col items-center transition-transform duration-500 ${
-                          hoveredId === loc.id || selectedId === loc.id ? "scale-125" : "scale-100"
-                        }`}>
+                        <div className={`relative flex flex-col items-center transition-transform duration-500 ${hoveredId === loc.id || selectedId === loc.id ? "scale-125" : "scale-100"
+                          }`}>
                           {/* The Visual Circle */}
                           <div
-                            className={`w-4 h-4 rounded-full border-2 transition-all duration-500 shadow-[0_0_20px_rgba(245,158,11,0.6)] ${
-                              selectedId === loc.id ? "bg-accent border-white" : "bg-[#0A1428] border-accent"
-                            }`}
+                            className={`w-4 h-4 rounded-full border-2 transition-all duration-500 shadow-[0_0_20px_rgba(245,158,11,0.6)] ${selectedId === loc.id ? "bg-accent border-white" : "bg-[#0A1428] border-accent"
+                              }`}
                           />
-                          
+
                           {/* The Label - Shifted down and made non-blocking */}
                           <div className="absolute top-full mt-2 text-center whitespace-nowrap">
-                            <span 
-                              className={`inline-block text-[9px] font-black tracking-widest px-2 py-0.5 rounded transition-all duration-500 shadow-xl ${
-                                selectedId === loc.id ? "bg-accent text-white" : "text-accent/60 bg-black/60 backdrop-blur-md"
-                              }`}
+                            <span
+                              className={`inline-block text-[9px] font-black tracking-widest px-2 py-0.5 rounded transition-all duration-500 shadow-xl ${selectedId === loc.id ? "bg-accent text-white" : "text-accent/60 bg-black/60 backdrop-blur-md"
+                                }`}
                             >
                               {loc.name.toUpperCase()}
                             </span>
@@ -269,7 +264,7 @@ export default function IndiaMap() {
                     </h3>
                     <p className="text-sm leading-relaxed text-white/50">{selected.description}</p>
                   </div>
-                  
+
                   <div className="grid gap-3">
                     <div className="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10">
                       <span className="text-[10px] uppercase font-bold text-white/40">Total Area</span>
@@ -299,9 +294,8 @@ export default function IndiaMap() {
             <button
               key={loc.id}
               onClick={() => setSelectedId(loc.id)}
-              className={`px-6 py-3 rounded-2xl border transition-all font-black uppercase text-[10px] tracking-widest ${
-                selectedId === loc.id ? "bg-accent border-transparent text-white shadow-xl shadow-accent/20" : "bg-white border-black/5 text-primary/40 hover:bg-gray-50"
-              }`}
+              className={`px-6 py-3 rounded-2xl border transition-all font-black uppercase text-[10px] tracking-widest ${selectedId === loc.id ? "bg-accent border-transparent text-white shadow-xl shadow-accent/20" : "bg-white border-black/5 text-primary/40 hover:bg-gray-50"
+                }`}
             >
               {loc.name} <span className="opacity-30 ml-2">/ {String(i + 1).padStart(2, "0")}</span>
             </button>
