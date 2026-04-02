@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 
 // ─── BRAND TOKENS ──────────────────────────────────────────────────────────────
-const P   = "#0A1428";          // primary navy
-const G   = "#D4AF37";          // gold
+const P = "#0A1428";          // primary navy
+const G = "#D4AF37";          // gold
 const G60 = "rgba(212,175,55,0.60)";
 const G35 = "rgba(212,175,55,0.35)";
 const G20 = "rgba(212,175,55,0.20)";
@@ -60,12 +60,12 @@ const CARDS = [
 ];
 
 const VALUES = [
-  { num: "01", Icon: ShieldCheck, title: "Integrity First",  desc: "Every transaction and relationship built on transparency, trust, and uncompromising ethical standards." },
-  { num: "02", Icon: Star,        title: "Excellence",       desc: "Grade-A quality is not a target — it's the minimum standard we hold on every single project." },
-  { num: "03", Icon: Users,       title: "Partnership",      desc: "Deep, long-term relationships with occupiers, investors, and communities at the heart of all we build." },
-  { num: "04", Icon: TrendingUp,  title: "Innovation",       desc: "Applying data intelligence and forward-thinking design to create infrastructure ahead of market demand." },
-  { num: "05", Icon: Globe,       title: "Scale",            desc: "Building platforms with the capacity and architecture to grow with India's expanding industrial economy." },
-  { num: "06", Icon: MapPin,      title: "Community",        desc: "Developing infrastructure that drives local employment, regional growth, and lasting economic impact." },
+  { num: "01", Icon: ShieldCheck, title: "Integrity First", desc: "Every transaction and relationship built on transparency, trust, and uncompromising ethical standards." },
+  { num: "02", Icon: Star, title: "Excellence", desc: "Grade-A quality is not a target — it's the minimum standard we hold on every single project." },
+  { num: "03", Icon: Users, title: "Partnership", desc: "Deep, long-term relationships with occupiers, investors, and communities at the heart of all we build." },
+  { num: "04", Icon: TrendingUp, title: "Innovation", desc: "Applying data intelligence and forward-thinking design to create infrastructure ahead of market demand." },
+  { num: "05", Icon: Globe, title: "Scale", desc: "Building platforms with the capacity and architecture to grow with India's expanding industrial economy." },
+  { num: "06", Icon: MapPin, title: "Community", desc: "Developing infrastructure that drives local employment, regional growth, and lasting economic impact." },
 ];
 
 // ─── PILL COMPONENT ────────────────────────────────────────────────────────────
@@ -83,8 +83,8 @@ function Pill({
       className={`inline-flex items-center gap-[7px] px-[14px] py-[6px] rounded-full border text-[9px] font-black uppercase tracking-[0.35em] font-sans ${className}`}
       style={{
         borderColor: gold ? G35 : N12,
-        background:  gold ? G07  : N04,
-        color:       gold ? G    : N50,
+        background: gold ? G07 : N04,
+        color: gold ? G : N50,
       }}
     >
       {/* Animated dot */}
@@ -180,8 +180,8 @@ function VMCard({
           className="inline-flex items-center gap-[7px] px-[12px] py-[5px] rounded-full border text-[9px] font-black uppercase tracking-[0.35em] font-sans transition-all duration-300"
           style={{
             borderColor: lit ? G35 : N12,
-            background:  lit ? G07  : N04,
-            color:       lit ? G    : N50,
+            background: lit ? G07 : N04,
+            color: lit ? G : N50,
           }}
         >
           <Icon size={11} strokeWidth={2} />
@@ -403,10 +403,10 @@ export default function VisionMissionSection() {
                 onClick={() => setActiveId(c.id)}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border font-black uppercase text-[10px] tracking-[0.3em] transition-all duration-300"
                 style={{
-                  background:   active ? G    : "white",
-                  borderColor:  active ? "transparent" : N08,
-                  color:        active ? "white" : N50,
-                  boxShadow:    active ? `0 8px 24px ${G35}` : "none",
+                  background: active ? G : "white",
+                  borderColor: active ? "transparent" : N08,
+                  color: active ? "white" : N50,
+                  boxShadow: active ? `0 8px 24px ${G35}` : "none",
                 }}
               >
                 <c.Icon size={12} strokeWidth={2} />
@@ -469,98 +469,7 @@ export default function VisionMissionSection() {
         </div>
       </div>
 
-      {/* ═══ 3. MANIFESTO ════════════════════════════════════════════════════ */}
-      <div className="relative overflow-hidden py-28 px-6 text-center bg-white">
 
-        {/* Hatch — top right navy */}
-        <svg
-          className="absolute top-0 right-0 w-72 h-72 pointer-events-none"
-          style={{ opacity: 0.035 }}
-          viewBox="0 0 288 288"
-        >
-          <defs>
-            <pattern id="hatch-tl" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <line x1="0" y1="0" x2="0" y2="16" stroke="#0A1428" strokeWidth="0.8" />
-            </pattern>
-          </defs>
-          <rect width="288" height="288" fill="url(#hatch-tl)" />
-        </svg>
-        {/* Hatch — bottom left gold */}
-        <svg
-          className="absolute bottom-0 left-0 w-56 h-56 pointer-events-none"
-          style={{ opacity: 0.03 }}
-          viewBox="0 0 224 224"
-        >
-          <defs>
-            <pattern id="hatch-gold" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-              <line x1="0" y1="0" x2="0" y2="16" stroke="#D4AF37" strokeWidth="0.8" />
-            </pattern>
-          </defs>
-          <rect width="224" height="224" fill="url(#hatch-gold)" />
-        </svg>
-
-        {/* Ghost watermark */}
-        <span
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif font-black select-none pointer-events-none leading-none whitespace-nowrap"
-          style={{
-            fontSize: "clamp(56px,12vw,140px)",
-            color: "rgba(10,20,40,0.03)",
-            letterSpacing: "-0.04em",
-          }}
-        >
-          MANIFESTO
-        </span>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, ease: EASE }}
-          viewport={{ once: true }}
-          className="relative z-10 max-w-[760px] mx-auto"
-        >
-          <Pill label="Our Manifesto" gold className="mb-8 mx-auto" />
-
-          {/* Decorative quote mark */}
-          <div
-            className="font-serif font-black leading-none mb-1 select-none"
-            style={{ fontSize: 80, color: G20, lineHeight: 1 }}
-          >
-            "
-          </div>
-
-          <blockquote
-            className="font-serif font-black leading-[1.2] tracking-[-0.02em] mb-8 italic"
-          
-          >
-            We don't just build warehouses.
-            <br />
-            We engineer{" "}
-            <em className="not-italic" style={{ color: G }}>
-              the backbone of commerce
-            </em>{" "}
-            —
-            <br />
-            one institutional asset at a time.
-          </blockquote>
-
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            style={{ originX: "50%" }}
-            transition={{ duration: 0.9, delay: 0.3, ease: EASE }}
-            viewport={{ once: true }}
-            className="mx-auto mb-6 h-px w-12"
-            
-          />
-
-          <p
-            className="text-[9px] font-black uppercase tracking-[0.48em] font-sans"
-            style={{ color: G60 }}
-          >
-            — Warehouster · South India's Institutional Logistics Platform
-          </p>
-        </motion.div>
-      </div>
 
     </section>
   );

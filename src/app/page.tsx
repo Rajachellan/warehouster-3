@@ -15,6 +15,8 @@ import CTASection from "@/components/CTASection";
 import WhyChooseUS from "@/components/WhyChooseUS";
 import Intergrated from "@/components/IntegratedIndustrial"
 import TrustedPartners from "@/components/TrustedPartners"
+import Developmentline from "../components/DevelopmentLine"
+import Compatative from "../components/compatative"
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -23,20 +25,21 @@ export default function Home() {
 
       <StatsSection />
       <WhyChooseUS />
-      <OverviewSection />
+      {/* <OverviewSection /> */}
 
       {/* Interactive Map Section */}
       <IndiaMap />
+      <Developmentline/>
       <Intergrated />
       {/* <ServicesSection /> */}
-
+<Compatative/>
       {/* Additional Sections */}
       <BlogSection />
       {/* Premium CTA before footer items */}
       <CTASection />
 
       {/* Quick Navigation Cards */}
-      <QuickNavSection />
+      
       <FAQSection />
       <TrustedPartners />
       {/* Unified Contact Form */}
