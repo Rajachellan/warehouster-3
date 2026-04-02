@@ -77,18 +77,18 @@ export default function EcosystemSection() {
       </div>
 
       {/* ── Marquee ── */}
-      <div className="relative w-full z-10 group">
+      <div className="relative w-full z-10 group flex overflow-hidden py-10">
         {/* Soft White Fade edges */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-48 z-10 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-48 z-10 bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-48 z-20 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-48 z-20 bg-gradient-to-l from-white to-transparent" />
 
-        <div className="flex overflow-hidden py-10">
-          <ul className="flex shrink-0 list-none m-0 p-0 gap-10 ecosystem-marquee">
+        <div className="flex flex-nowrap">
+          <ul className="flex shrink-0 list-none m-0 p-0 gap-10 ecosystem-marquee pr-10">
             {loopList.map((p, i) => (
               <LogoChip key={`a-${i}`} name={p.name} src={p.src} />
             ))}
           </ul>
-          <ul className="flex shrink-0 list-none m-0 p-0 gap-10 ecosystem-marquee" aria-hidden>
+          <ul className="flex shrink-0 list-none m-0 p-0 gap-10 ecosystem-marquee pr-10" aria-hidden>
             {loopList.map((p, i) => (
               <LogoChip key={`b-${i}`} name={p.name} src={p.src} />
             ))}
@@ -99,12 +99,12 @@ export default function EcosystemSection() {
       <style jsx global>{`
         @keyframes ecosystemScroll {
           0%   { transform: translateX(0); }
-          100% { transform: translateX(calc(-100% - 40px)); }
+          100% { transform: translateX(-100%); }
         }
         .ecosystem-marquee {
-          animation: ecosystemScroll 45s linear infinite;
+          animation: ecosystemScroll 50s linear infinite;
         }
-        .ecosystem-marquee:hover {
+        .group:hover .ecosystem-marquee {
           animation-play-state: paused;
         }
       `}</style>
