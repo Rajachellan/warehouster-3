@@ -84,7 +84,7 @@ export default function ProjectDetailPage() {
     <main ref={containerRef} className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
 
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
         <motion.div

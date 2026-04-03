@@ -17,6 +17,7 @@ import Intergrated from "@/components/IntegratedIndustrial"
 import TrustedPartners from "@/components/TrustedPartners"
 import Developmentline from "../components/DevelopmentLine"
 import Compatative from "../components/compatative"
+import CaseStudy from "../components/CaseStudy"
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -29,17 +30,18 @@ export default function Home() {
 
       {/* Interactive Map Section */}
       <IndiaMap />
-      <Developmentline/>
+      <Developmentline />
+      <CaseStudy/>
       <Intergrated />
       {/* <ServicesSection /> */}
-<Compatative/>
+      <Compatative />
       {/* Additional Sections */}
       <BlogSection />
       {/* Premium CTA before footer items */}
       <CTASection />
 
       {/* Quick Navigation Cards */}
-      
+
       <FAQSection />
       <TrustedPartners />
       {/* Unified Contact Form */}

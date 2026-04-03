@@ -1,20 +1,8 @@
 "use client";
 
-import { useState } from "react";
-
-<<<<<<< Updated upstream
-// ─── TOKENS ────────────────────────────────────────────────────────────────────
-const P    = "#0A1428";
-const G    = "#D4AF37";
-const G_LIGHT = "rgba(212,175,55,0.08)";
-const G_BORDER = "rgba(212,175,55,0.3)";
-const LINE = "rgba(10,20,40,0.06)";
-const TEXT_MUTED = "rgba(10,20,40,0.5)";
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { useState, useEffect, useRef } from "react";
 
 // ─── DATA ──────────────────────────────────────────────────────────────────────
-=======
->>>>>>> Stashed changes
 const STEPS = [
   {
     num: "01",
@@ -23,6 +11,13 @@ const STEPS = [
     title: "Identify Logistics",
     accent: "Corridor",
     desc: "Analyze high-growth zones and strategic connectivity for maximum logistics potential.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+        <circle cx="17" cy="17" r="9" stroke="#D4AF37" strokeWidth="1.5" />
+        <path d="M23.5 23.5L32 32" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="17" cy="17" r="4" fill="rgba(212,175,55,0.2)" />
+      </svg>
+    ),
   },
   {
     num: "02",
@@ -31,6 +26,14 @@ const STEPS = [
     title: "Aggregate & Structure",
     accent: "Land",
     desc: "Secure parcels and clean title documentation for institutional compliance.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+        <rect x="7" y="13" width="26" height="5" rx="1" stroke="#D4AF37" strokeWidth="1.5" />
+        <rect x="11" y="20" width="18" height="4" rx="1" stroke="#D4AF37" strokeWidth="1.5" opacity="0.7" />
+        <rect x="15" y="26" width="10" height="3" rx="1" stroke="#D4AF37" strokeWidth="1.5" opacity="0.4" />
+        <rect x="14" y="7" width="12" height="4" rx="1" fill="rgba(212,175,55,0.2)" />
+      </svg>
+    ),
   },
   {
     num: "03",
@@ -39,6 +42,13 @@ const STEPS = [
     title: "Master Planning",
     accent: "& Zoning",
     desc: "Institutional-grade layout and statutory compliance across all parcels.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+        <rect x="6" y="6" width="28" height="28" rx="1" stroke="#D4AF37" strokeWidth="1.5" />
+        <path d="M6 14H34M14 6V34" stroke="#D4AF37" strokeWidth="1" opacity="0.5" />
+        <rect x="16" y="16" width="12" height="12" fill="rgba(212,175,55,0.18)" />
+      </svg>
+    ),
   },
   {
     num: "04",
@@ -47,6 +57,14 @@ const STEPS = [
     title: "Infrastructure",
     accent: "Development",
     desc: "Roads, utilities, and Grade-A facility construction at scale.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+        <path d="M5 30H35" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="10" y="18" width="20" height="12" stroke="#D4AF37" strokeWidth="1.5" />
+        <path d="M10 18L20 10L30 18" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <rect x="16" y="22" width="8" height="8" fill="rgba(212,175,55,0.18)" />
+      </svg>
+    ),
   },
   {
     num: "05",
@@ -55,6 +73,13 @@ const STEPS = [
     title: "Lease",
     accent: "Stabilization",
     desc: "Securing long-term institutional tenants and operational stability across all assets.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+        <path d="M8 32V16L20 8L32 16V32" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M15 32V24H25V32" stroke="#D4AF37" strokeWidth="1.5" />
+        <circle cx="20" cy="19" r="3" fill="rgba(212,175,55,0.25)" stroke="#D4AF37" strokeWidth="1" />
+      </svg>
+    ),
   },
   {
     num: "06",
@@ -63,6 +88,13 @@ const STEPS = [
     title: "Long-term Asset",
     accent: "Holding",
     desc: "Managing asset performance and yield for sustained institutional-grade returns.",
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+        <polyline points="6,30 14,20 20,24 28,12 34,16" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="34" cy="16" r="3" fill="rgba(212,175,55,0.25)" stroke="#D4AF37" strokeWidth="1" />
+        <path d="M6 32H34" stroke="rgba(212,175,55,0.3)" strokeWidth="1" />
+      </svg>
+    ),
   },
   {
     num: "07",
@@ -72,388 +104,294 @@ const STEPS = [
     accent: "Strategy",
     desc: "Strategic divestment or REIT formation at peak institutional value.",
     isFinal: true,
+    icon: (
+      <svg viewBox="0 0 40 40" fill="none" className="w-10 h-10">
+        <path
+          d="M20 6L26 14H34L28 20L30 30L20 24L10 30L12 20L6 14H14L20 6Z"
+          stroke="#D4AF37"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M20 6L26 14H34L28 20L30 30L20 24L10 30L12 20L6 14H14L20 6Z"
+          fill="rgba(212,175,55,0.1)"
+        />
+      </svg>
+    ),
   },
 ];
 
-<<<<<<< Updated upstream
 const ROW1 = STEPS.slice(0, 4);
 const ROW2 = STEPS.slice(4, 7);
 
-// ─── PILL ──────────────────────────────────────────────────────────────────────
-function Pill({ label }: { label: string }) {
+// ─── ARROW ICON ────────────────────────────────────────────────────────────────
+function ArrowIcon() {
   return (
-    <div
-      className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6"
-      style={{ borderColor: G_BORDER, background: G_LIGHT }}
-    >
-      <span
-        className="w-1.5 h-1.5 rounded-full animate-pulse"
-        style={{ background: G }}
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+      <path
+        d="M2 8L8 2M8 2H3M8 2V7"
+        stroke="#D4AF37"
+        strokeWidth="1.2"
+        strokeLinecap="round"
       />
-      <span className="text-[9px] font-black uppercase tracking-[0.3em] text-accent" style={{ color: G }}>
-        {label}
-      </span>
-    </div>
+    </svg>
   );
 }
 
 // ─── STEP CARD ─────────────────────────────────────────────────────────────────
 function StepCard({
-=======
-function StepItem({
->>>>>>> Stashed changes
   step,
-  isLast,
+  delay,
 }: {
   step: (typeof STEPS)[0];
-  isLast: boolean;
+  delay: number;
 }) {
   const [hov, setHov] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setVisible(true), delay);
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [delay]);
+
+  const isFinal = !!step.isFinal;
 
   return (
-<<<<<<< Updated upstream
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay, ease: EASE }}
-      onHoverStart={() => setHov(true)}
-      onHoverEnd={() => setHov(false)}
-      className="relative p-8 rounded-[32px] bg-white border h-full flex flex-col transition-all duration-500"
+    <div
+      ref={ref}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      className="relative overflow-hidden cursor-default flex flex-col p-7 transition-all duration-500"
       style={{
-        borderColor: hov ? G : LINE,
-        boxShadow: hov ? `0 20px 40px rgba(212,175,55,0.1)` : "none",
-        transform: hov ? "translateY(-5px)" : "none",
+        border: "1px solid rgba(212,175,55,0.12)",
+        marginLeft: "-1px",
+        marginTop: "-1px",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(24px)",
+        transition: `opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1)`,
+        background: isFinal
+          ? "linear-gradient(135deg, rgba(212,175,55,0.06), rgba(212,175,55,0.02))"
+          : hov
+          ? "rgba(212,175,55,0.03)"
+          : "#ffffff",
       }}
     >
-      {/* Number Badge - Fixed Top Left Style */}
-      <div 
-        className="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold text-white mb-6"
-        style={{ background: P }}
+      {/* Top gold sweep bar */}
+      <div
+        className="absolute top-0 left-0 h-[2px] transition-all duration-500"
+        style={{
+          width: hov || isFinal ? "100%" : "0%",
+          background: "linear-gradient(to right, #D4AF37, transparent)",
+          transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
+        }}
+      />
+
+      {/* Ghost number */}
+      <span
+        className="absolute bottom-[-10px] right-2 font-serif font-black text-[96px] leading-none select-none pointer-events-none transition-colors duration-500"
+        style={{ color: hov ? "rgba(212,175,55,0.07)" : "rgba(212,175,55,0.04)" }}
       >
         {step.num}
-      </div>
+      </span>
 
-      {/* Decorative Corner Brackets */}
-      <div className="absolute top-4 left-4 w-4 h-4 border-t border-l opacity-20" style={{ borderColor: hov ? G : P }} />
-      <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r opacity-20" style={{ borderColor: hov ? G : P }} />
+      {/* Phase counter */}
+      <p
+        className="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.25em] mb-5 transition-colors duration-300"
+        style={{ color: hov || isFinal ? "#D4AF37" : "rgba(212,175,55,0.45)" }}
+      >
+        <span
+          className="w-[5px] h-[5px] rounded-full inline-block flex-shrink-0 transition-all duration-300"
+          style={{
+            background: hov || isFinal ? "#D4AF37" : "rgba(212,175,55,0.35)",
+            transform: hov || isFinal ? "scale(1.4)" : "scale(1)",
+          }}
+        />
+        {step.num} — {step.phase}
+      </p>
 
-      {/* Icon in Light Container */}
-      <div 
-        className="w-12 h-12 rounded-xl flex items-center justify-center border mb-6 transition-colors duration-300"
-        style={{ 
-          background: hov ? G_LIGHT : "rgba(10,20,40,0.02)", 
-          borderColor: hov ? G_BORDER : LINE 
+      {/* Icon */}
+      <div
+        className="mb-5 transition-all duration-500"
+        style={{
+          opacity: hov || isFinal ? 1 : 0.5,
+          transform: hov ? "translateY(-3px)" : "translateY(0)",
+          transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
         }}
       >
-        <Icon size={20} style={{ color: hov ? G : P }} />
+        {step.icon}
       </div>
 
-      {/* Content */}
-      <h3 className="text-lg font-serif font-black leading-tight uppercase tracking-tighter mb-3" style={{ color: P }}>
-        {step.title} <span style={{ color: G }}>{step.accent}</span>
+      {/* Tag */}
+      <span
+        className="inline-flex items-center self-start text-[9px] font-black uppercase tracking-[0.3em] px-2 py-1 mb-4 transition-all duration-300"
+        style={{
+          color: hov || isFinal ? "#D4AF37" : "rgba(212,175,55,0.5)",
+          border: `1px solid ${hov || isFinal ? "rgba(212,175,55,0.45)" : "rgba(212,175,55,0.15)"}`,
+        }}
+      >
+        {step.tag}
+      </span>
+
+      {/* Title */}
+      <h3 className="font-serif font-black text-[20px] leading-tight tracking-tight text-[#0A1428] mb-3">
+        {step.title}{" "}
+        <span className="text-[#D4AF37] italic">{step.accent}</span>
       </h3>
-      
-      <p className="text-[11px] leading-relaxed font-sans font-medium" style={{ color: TEXT_MUTED }}>
+
+      {/* Gold bar */}
+      <div
+        className="h-px mb-4 transition-all duration-500"
+        style={{
+          width: hov || isFinal ? 48 : 24,
+          background: "#D4AF37",
+          opacity: hov || isFinal ? 0.8 : 0.3,
+          transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
+        }}
+      />
+
+      {/* Description */}
+      <p
+        className="text-sm font-medium leading-relaxed transition-colors duration-300"
+        style={{ color: hov ? "rgba(10,20,40,0.65)" : "rgba(10,20,40,0.45)" }}
+      >
         {step.desc}
       </p>
 
-      {/* Hover Status Bar */}
-      <div 
-        className="absolute bottom-0 left-8 right-8 h-[2px] transition-all duration-500 rounded-full"
-        style={{ 
-            background: G,
-            opacity: hov ? 1 : 0,
-            transform: hov ? "scaleX(1)" : "scaleX(0)" 
-        }} 
-      />
-    </motion.div>
-  );
-}
-
-// ─── ARROW CONNECTOR ───────────────────────────────────────────────────────────
-function Arrow() {
-  return (
-    <div className="hidden lg:flex items-center justify-center self-start mt-12 flex-shrink-0 w-7 text-black/10">
-      <ChevronRight size={18} strokeWidth={1} />
-=======
-    <div
-      className="flex items-start"
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-    >
-      {/* Node column */}
-      <div className="flex flex-col items-center flex-shrink-0 w-11">
-        {/* Dot ring */}
-        <div
-          className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300"
-          style={{
-            border: `1px solid ${hov || step.isFinal
-              ? "rgba(201,168,76,0.65)"
-              : "rgba(201,168,76,0.18)"
-              }`,
-            background: hov ? "rgba(201,168,76,0.07)" : "transparent",
-          }}
-        >
-          <div
-            className="w-2 h-2 rounded-full transition-all duration-300"
-            style={{
-              background:
-                hov || step.isFinal ? "#C9A84C" : "rgba(201,168,76,0.4)",
-              transform:
-                hov || step.isFinal ? "scale(1.4)" : "scale(1)",
-            }}
-          />
-        </div>
-
-        {/* Connector */}
-        {!isLast && (
-          <div
-            className="w-px flex-1 min-h-6"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(201,168,76,0.25), rgba(201,168,76,0.05))",
-            }}
-          />
-        )}
+      {/* Corner arrow */}
+      <div
+        className="absolute right-4 bottom-4 w-7 h-7 flex items-center justify-center transition-all duration-400"
+        style={{
+          border: `1px solid ${hov || isFinal ? "rgba(212,175,55,0.5)" : "rgba(212,175,55,0.2)"}`,
+          opacity: hov || isFinal ? 1 : 0,
+          transform: hov || isFinal ? "translate(0,0)" : "translate(4px,4px)",
+          transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)",
+        }}
+      >
+        <ArrowIcon />
       </div>
-
-      {/* Content */}
-      <div className={`flex-1 pl-7 relative ${isLast ? "" : "pb-10"}`}>
-        {/* Left accent on hover */}
-        <div
-          className="absolute left-0 top-0 w-px transition-all duration-500"
-          style={{
-            bottom: isLast ? 0 : "40px",
-            background: hov
-              ? "linear-gradient(to bottom, #C9A84C, rgba(201,168,76,0))"
-              : "transparent",
-          }}
-        />
-
-        {/* Step counter — font-sans font-black uppercase tracking-widest (matches reference) */}
-        <p className="font-sans font-black text-[9px] uppercase tracking-widest mb-2 transition-colors duration-300"
-          style={{ color: hov ? "#C9A84C" : "rgba(201,168,76,0.45)" }}
-        >
-          {step.num} — {step.phase}
-        </p>
-
-        {/* Title row */}
-        <div className="flex items-baseline gap-3 flex-wrap mb-3">
-          {/* font-serif font-black uppercase tracking-tighter — exact match to h2 in reference */}
-          <h3
-            className="font-serif font-black uppercase tracking-tighter leading-tight text-primary transition-colors duration-300 text-2xl md:text-3xl lg:text-4xl"
-          >
-            {step.title}{" "}
-            <span className="text-accent">{step.accent}</span>
-          </h3>
-
-          {/* Tag pill — font-sans font-black uppercase tracking-widest (matches button style) */}
-          <span
-            className="font-sans font-black text-[9px] uppercase tracking-widest px-3 py-1 leading-none transition-all duration-300"
-            style={{
-              color: hov ? "#C9A84C" : "rgba(201,168,76,0.45)",
-              border: `1px solid ${hov ? "rgba(201,168,76,0.5)" : "rgba(201,168,76,0.15)"
-                }`,
-            }}
-          >
-            {step.tag}
-          </span>
-        </div>
-
-        {/* Gold bar */}
-        <div
-          className="h-px mb-3 transition-all duration-300"
-          style={{
-            width: hov || step.isFinal ? 56 : 28,
-            background: "#C9A84C",
-            opacity: hov || step.isFinal ? 0.8 : 0.3,
-          }}
-        />
-
-        {/* Description — text-lg font-medium text-primary/60 (matches reference body copy) */}
-        <p className="font-sans font-medium text-base md:text-lg text-primary/60 leading-relaxed max-w-xl transition-colors duration-300"
-          style={{ color: hov ? "var(--color-primary, #0A1428)" : undefined }}
-        >
-          {step.desc}
-        </p>
-      </div>
->>>>>>> Stashed changes
     </div>
   );
 }
 
-function PipelineDivider() {
+// ─── ROW LABEL ─────────────────────────────────────────────────────────────────
+function RowLabel({ label }: { label: string }) {
   return (
-<<<<<<< Updated upstream
-    <div className="flex items-center gap-4 my-10 px-4">
-      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-black/5 to-transparent" />
-      <div className="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.4em] text-black/25">
-        <span className="w-1 h-1 rounded-full bg-accent" />
-        Continuing Pipeline
-        <span className="w-1 h-1 rounded-full bg-accent" />
-      </div>
-      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-black/5 to-transparent" />
-=======
-    <div className="flex items-center gap-3 ml-11 pl-7 pt-2 pb-6">
-      <div
-        className="h-px w-10 flex-shrink-0"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(201,168,76,0.28), transparent)",
-        }}
-      />
-      <div
-        className="w-[5px] h-[5px] flex-shrink-0 rotate-45"
-        style={{ background: "rgba(201,168,76,0.4)" }}
-      />
-      {/* font-sans font-black uppercase tracking-widest — consistent with section style */}
-      <span className="font-sans font-black text-[9px] uppercase tracking-widest whitespace-nowrap text-primary/30">
-        Continuing Pipeline
+    <div className="flex items-center gap-3 mb-4">
+      <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[rgba(212,175,55,0.4)]">
+        {label}
       </span>
       <div
-        className="h-px flex-1"
+        className="flex-1 h-px"
         style={{
-          background:
-            "linear-gradient(to left, transparent, rgba(201,168,76,0.1))",
+          background: "linear-gradient(to right, rgba(212,175,55,0.2), transparent)",
         }}
       />
->>>>>>> Stashed changes
     </div>
   );
 }
 
+// ─── MAIN SECTION ──────────────────────────────────────────────────────────────
 export default function DevelopmentModelSection() {
   return (
-<<<<<<< Updated upstream
-    <section className="bg-white py-24 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* ── HEADER ── */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10 mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="flex-1"
-          >
-            <Pill label="End-to-End Value Creation" />
-            <h2 className="text-4xl md:text-6xl font-serif font-black uppercase leading-[0.95] tracking-tighter" style={{ color: P }}>
-              Our Development <br />
-              <span style={{ color: G }}>Model</span>
-            </h2>
-          </motion.div>
+    <section
+      className="py-24 bg-white overflow-hidden relative"
+      style={{
+        backgroundImage: `
+          radial-gradient(ellipse 60% 40% at 80% 10%, rgba(212,175,55,0.06) 0%, transparent 70%),
+          radial-gradient(ellipse 40% 30% at 10% 80%, rgba(10,20,40,0.03) 0%, transparent 70%)
+        `,
+      }}
+    >
+      <div className="max-w-[1200px] mx-auto px-12">
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="md:max-w-xs md:text-right border-l-2 md:border-l-0 md:border-r-2 pl-6 md:pl-0 md:pr-6"
-            style={{ borderColor: G_BORDER }}
-          >
-            <p className="text-[13px] leading-relaxed font-sans font-medium" style={{ color: TEXT_MUTED }}>
-              Seven integrated phases that transform raw land into India's most sought-after institutional-grade industrial assets.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* ── GRID: ROW 1 ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_28px_1fr_28px_1fr_28px_1fr] gap-4 items-stretch mb-6">
-          {ROW1.map((step, i) => (
-            <div key={step.num} className="contents">
-              <StepCard step={step} index={i} delay={i * 0.07} />
-              {i < ROW1.length - 1 && <Arrow />}
-=======
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Eyebrow — font-sans font-black uppercase tracking-widest (matches button text style) */}
-        <div className="inline-flex items-center gap-2.5 mb-10">
-          <span
-            className="w-[5px] h-[5px] rounded-full animate-pulse flex-shrink-0"
-            style={{ background: "#C9A84C" }}
+        {/* Eyebrow */}
+        <div className="flex items-center gap-3 mb-6 animate-[fadeUp_0.6s_ease_0.1s_both]">
+          <div
+            className="w-10 h-px"
+            style={{ background: "linear-gradient(to right, #D4AF37, transparent)" }}
           />
-          <span className="font-sans font-black text-[9px] uppercase tracking-widest text-accent">
+          <span className="text-[10px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
             End-to-End Value Creation
           </span>
         </div>
 
-        {/* Section heading — exact match: font-serif font-black uppercase tracking-tighter */}
-        <div className="mb-4">
-          <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-6">
-            Our Development{" "}
-            <span className="text-accent">Model</span>
+        {/* Header */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-end mb-16 animate-[fadeUp_0.7s_ease_0.2s_both]">
+          <h2 className="font-serif font-black text-5xl leading-none tracking-tight text-[#0A1428]">
+            Our<br />Development<br />
+            <em className="not-italic text-[#D4AF37] italic">Model</em>
           </h2>
-
-          {/* Body copy — exact match: text-lg md:text-xl font-medium text-primary/60 leading-relaxed */}
-          <p className="text-lg md:text-xl text-primary/60 font-medium leading-relaxed max-w-2xl mb-10">
+          <p className="text-lg font-medium leading-relaxed text-[rgba(10,20,40,0.5)] max-w-sm self-end pb-1">
             Seven integrated phases that transform raw land into India&apos;s most
             sought-after institutional-grade industrial assets.
           </p>
         </div>
 
-        {/* Gold rule */}
+        {/* Divider */}
         <div
           className="h-px mb-14"
           style={{
             background:
-              "linear-gradient(to right, rgba(201,168,76,0.4), rgba(201,168,76,0.08), transparent)",
+              "linear-gradient(to right, rgba(212,175,55,0.5), rgba(212,175,55,0.15), transparent)",
           }}
         />
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Spine */}
-          <div
-            className="absolute left-[22px] top-0 bottom-0 w-px pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(to bottom, rgba(201,168,76,0.4), rgba(201,168,76,0.08), transparent)",
-            }}
-          />
-
-          {STEPS.map((step, i) => (
-            <div key={step.num}>
-              <StepItem step={step} isLast={i === STEPS.length - 1} />
-              {i === 3 && <PipelineDivider />}
->>>>>>> Stashed changes
-            </div>
+        {/* Row 1 — 4 cards */}
+        <RowLabel label="Phase I — IV" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {ROW1.map((step, i) => (
+            <StepCard key={step.num} step={step} delay={i * 100} />
           ))}
         </div>
 
-<<<<<<< Updated upstream
-        {/* ── ROW DIVIDER ── */}
-        <RowDivider />
+        {/* Mid divider */}
+        <div
+          className="h-px my-0"
+          style={{
+            background:
+              "linear-gradient(to right, transparent, rgba(212,175,55,0.2), transparent)",
+          }}
+        />
 
-        {/* ── ROW 2: Steps 05–07 (3 columns centered width) ── */}
-        <div className="lg:max-w-[75%]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_28px_1fr_28px_1fr] gap-4 items-stretch">
+        {/* Row 2 — 3 cards */}
+        <div className="mt-5">
+          <RowLabel label="Phase V — VII" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {ROW2.map((step, i) => (
-                <div key={step.num} className="contents">
-                <StepCard step={step} index={i + 4} delay={i * 0.07} />
-                {i < ROW2.length - 1 && <Arrow />}
-                </div>
+              <StepCard key={step.num} step={step} delay={i * 100 + 200} />
             ))}
-            </div>
-=======
+          </div>
+        </div>
+
         {/* Footer strip */}
         <div
           className="flex items-center justify-between mt-12 pt-5"
-          style={{ borderTop: "1px solid rgba(201,168,76,0.1)" }}
+          style={{ borderTop: "1px solid rgba(212,175,55,0.1)" }}
         >
-          <span className="font-sans font-black text-[9px] uppercase tracking-widest text-primary/30">
+          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[rgba(10,20,40,0.25)]">
             Integrated Development Pipeline — India
           </span>
           <div className="flex items-center gap-2">
             <span
-              className="w-[3px] h-[3px] rounded-full inline-block flex-shrink-0"
-              style={{ background: "rgba(201,168,76,0.5)" }}
+              className="w-1 h-1 rounded-full inline-block animate-pulse"
+              style={{ background: "rgba(212,175,55,0.5)" }}
             />
-            <span className="font-sans font-black text-[9px] uppercase tracking-widest text-accent/50">
+            <span className="text-[9px] font-black uppercase tracking-[0.3em] text-[rgba(212,175,55,0.5)]">
               Industrial Real Estate
             </span>
           </div>
->>>>>>> Stashed changes
         </div>
 
       </div>

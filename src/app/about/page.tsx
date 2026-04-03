@@ -50,27 +50,7 @@ export default function AboutPage() {
 
 
       {/* 1. Header Section */}
-<<<<<<< Updated upstream
-     <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
-  
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image
-      src= {banner}
-      alt="Warehousing Infrastructure"
-      fill
-      priority
-      sizes="100vw"
-      className="object-cover opacity-30"
-    />
-    
-    {/* Dark Overlay for readability */}
-    <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
-    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent" />
-  </div>
-=======
       <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
->>>>>>> Stashed changes
 
         {/* Background Image */}
         <div className="absolute inset-0 z-0">

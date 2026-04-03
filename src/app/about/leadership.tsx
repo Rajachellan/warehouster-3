@@ -8,15 +8,16 @@ import kanadhasan from "../../assets/kannadhassun.webp";
 import kaushik from "../../assets/kaushik-vora-removebg-preview.webp";
 import debi from "../../assets/debisarangi1removebgpreview.webp";
 import divyash from "../../assets/divyansh.webp";
+import type { StaticImageData } from "next/image";
 
 // ─── TYPES ─────────────────────────────────────────────────────────────────────
 interface TeamMember {
   name: string;
-  role: string;
+  role: string; 
   department: string;
   tags: string[];
   bio: string;
-  image: string | object;
+  image: string | StaticImageData;
   index: number;
 }
 

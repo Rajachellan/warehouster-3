@@ -139,7 +139,7 @@ export const projects: ProjectContent[] = [
         scale: "54 Acres / 1.4 Mn sq.ft",
         client: "Horizon Industrial Parks",
         type: "Institutional JV",
-        image:  chengalpattu ,
+        image: chengalpattu,
         metrics: [
             { label: "Scale", value: "54 Acres" },
             { label: "Potential", value: "1.4M Sq.Ft" },
