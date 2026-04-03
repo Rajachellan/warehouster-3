@@ -129,18 +129,18 @@ export default function CompetitivePositioning() {
   return (
     <section className="relative overflow-hidden" >
 
-       <div className="absolute inset-0 z-0">
-                <Image 
-                  src={banner}
-                  alt="Land Acquisition Background"
-                  fill
-                  priority
-                  sizes="100vw"
-                  className="object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
-               <div className="absolute inset-0 bg-gradient-to-b from-blue/90 to-blue/95" />
-              </div>
+        <div className="absolute inset-0 z-0 scale-[1.02]">
+                 <Image 
+                   src={banner}
+                   alt="Competitive Background"
+                   fill
+                   priority
+                   sizes="100vw"
+                   className="object-cover object-center opacity-40"
+                 />
+                 <div className="absolute inset-0 bg-[#0A1428]/90 mix-blend-multiply" />
+                 <div className="absolute inset-0 bg-gradient-to-b from-[#0A1428]/80 via-transparent to-[#0A1428]/95" />
+               </div>
 
       
     
@@ -173,7 +173,7 @@ export default function CompetitivePositioning() {
             Competitive{" "}
             <em className="not-italic" style={{ color: G }}>Positioning</em>
           </h2>
-          <p className="text-[12px] leading-[1.7] mb-7" style={{ color: "rgba(255,255,255,0.45)", maxWidth: 440 }}>
+          <p className="text-[12px] leading-[1.7] mb-7" style={{ color: "rgba(255,255,255,0.75)", maxWidth: 440 }}>
             How Warehouster outperforms traditional industrial developers across every key metric that matters to institutional investors.
           </p>
 
@@ -198,11 +198,11 @@ export default function CompetitivePositioning() {
           className="overflow-hidden mb-5"
           style={{
             borderRadius: 24,
-            border: `1px solid rgba(212,175,55,0.20)`,
-            background: "rgba(10,20,40,0.60)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
-            boxShadow: "0 32px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(212,175,55,0.08)",
+            border: `1px solid rgba(212,175,55,0.30)`,
+            background: "rgba(10,24,48,0.85)",
+            backdropFilter: "blur(32px)",
+            WebkitBackdropFilter: "blur(32px)",
+            boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,175,55,0.12)",
           }}
         >
           {/* Column headers */}
@@ -233,11 +233,11 @@ export default function CompetitivePositioning() {
             </div>
 
             {/* Traditional developers header */}
-            <div className="flex items-center gap-[10px] px-5 py-[18px]" style={{ background: "rgba(10,20,40,0.75)" }}>
-              <div className="w-[30px] h-[30px] rounded-[8px] flex items-center justify-center flex-shrink-0 border" style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.04)" }}>
-                <Grid3x3 size={14} strokeWidth={1.6} style={{ color: "rgba(255,255,255,0.35)" }} />
+            <div className="flex items-center gap-[10px] px-5 py-[18px]" style={{ background: "rgba(10,20,40,0.85)" }}>
+              <div className="w-[30px] h-[30px] rounded-[8px] flex items-center justify-center flex-shrink-0 border" style={{ border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)" }}>
+                <Grid3x3 size={14} strokeWidth={1.6} style={{ color: "rgba(255,255,255,0.60)" }} />
               </div>
-              <span className="text-[10px] font-black uppercase tracking-[0.20em] font-sans" style={{ color: "rgba(255,255,255,0.40)" }}>Traditional Developers</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.20em] font-sans" style={{ color: "rgba(255,255,255,0.65)" }}>Traditional Developers</span>
             </div>
           </div>
 
@@ -272,7 +272,7 @@ export default function CompetitivePositioning() {
               <div className="w-px h-7 flex-shrink-0" style={{ background: "rgba(212,175,55,0.20)" }} />
               <span
                 className="text-[10px] font-black uppercase tracking-[0.18em] leading-[1.55] font-sans whitespace-pre-line"
-                style={{ color: "rgba(255,255,255,0.45)" }}
+                style={{ color: "rgba(255,255,255,0.75)" }}
               >
                 {s.label}
               </span>

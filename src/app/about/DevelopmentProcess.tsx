@@ -329,7 +329,7 @@ export default function DevelopmentModelSection() {
 
         {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-end mb-16 animate-[fadeUp_0.7s_ease_0.2s_both]">
-          <h2 className="font-serif font-black text-5xl leading-none tracking-tight text-[#0A1428]">
+          <h2 className="font-serif font-black text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight text-[#0A1428]">
             Our<br />Development<br />
             <em className="not-italic text-[#D4AF37] italic">Model</em>
           </h2>
