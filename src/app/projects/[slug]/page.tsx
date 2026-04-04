@@ -10,6 +10,7 @@ import { MapPin, ShieldCheck, Zap, Award, BarChart3, Clock, ArrowRight, UserChec
 import { useParams, notFound } from "next/navigation";
 import Link from "next/link";
 import { projects, ProjectContent } from "@/data/projects";
+import CaseStudySection from "@/components/CaseStudy";
 
 // --- Components ---
 
@@ -366,6 +367,9 @@ export default function ProjectDetailPage() {
           </div>
         </div>
       </section>
+
+      {/* 7.5 CASE STUDY SECTION */}
+      <CaseStudySection slug={slug} />
 
       {/* 8. RELATED PROJECTS (Bottom Section) */}
       <section className="py-40 bg-gray-50/50 border-t border-gray-100">

@@ -9,20 +9,23 @@ import Link from "next/link";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import blog3 from "../../assets/building-strategic-alliances-in-warehousing-park.webp"
 import banner from "../../assets/building-strategic-alliances-in-warehousing-park.webp"
+import news1 from "../../assets/news/manufacturing-today.jpg"
 const news = [
   {
-    title: "Warehouster Surpasses 20 Million Sq Ft Managed Assets",
-    excerpt: "A major milestone for India's leading industrial real estate platform as demand for Grade-A space hits record highs.",
-    date: "March 25, 2026",
+    title: "The rapid rise of sustainable warehousing",
+    excerpt: "We thank Manufacturing Today India for featuring our MD, Sandeep Chadha, in their latest article on sustainable warehousing",
+    date: "November 27, 2024",
     category: "Company Update",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
+    image: news1,
+     pdf: "/news/rapid-rise-of-sustainable-warehousing.pdf",
   },
   {
-    title: "The Impact of New GST Regulations on Logistics",
-    excerpt: "How the latest government policies are reshaping the cost structure of warehousing and distribution across states.",
-    date: "March 20, 2026",
+    title: "Strict security protocols, real-time tracking systems must in warehouses",
+    excerpt: "We're thrilled to thank CargoBreakingNews for featuring our MD, Mr. Sandeep Chadha, and his insights on security in warehouse management",
+    date: "October 25,2024",
     category: "Market Policy",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+     pdf: "/reports/report2.pdf",
   },
   {
     title: "New Strategic Alliance with Global Investment Fund",
@@ -30,6 +33,7 @@ const news = [
     date: "March 15, 2026",
     category: "Investment",
     image:blog3,
+     pdf: "/reports/report2.pdf",
   },
 ];
 
@@ -93,13 +97,18 @@ export default function NewsPage() {
                 <div className="p-10 flex flex-col flex-1">
                   <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-widest text-primary/30 mb-6">
                     <span className="flex items-center gap-2"><Calendar size={12} className="text-accent" /> {item.date}</span>
-                    <span className="flex items-center gap-2"><User size={12} className="text-accent" /> Admin</span>
+                    {/* <span className="flex items-center gap-2"><User size={12} className="text-accent" /> Admin</span> */}
                   </div>
-                  <h2 className="text-2xl font-serif font-black text-primary mb-6 group-hover:text-accent transition-colors leading-tight">{item.title}</h2>
+                  <h2 className="text-2xl font-serif font-black text-primary mb-6 group-hover:text-accent transition-colors ">{item.title}</h2>
                   <p className="text-sm font-medium text-primary/60 leading-relaxed mb-8">{item.excerpt}</p>
-                  <Link href="#" className="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-accent group-hover:translate-x-2 transition-all">
-                    Full Report <ArrowRight size={14} />
-                  </Link>
+                 <Link
+  href={item.pdf}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-accent group-hover:translate-x-2 transition-all"
+>
+  Full Report <ArrowRight size={14} />
+</Link>
                 </div>
               </motion.article>
             ))}
