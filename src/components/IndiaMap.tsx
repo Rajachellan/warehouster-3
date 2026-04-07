@@ -17,7 +17,7 @@ const ACCENT = "#F59E0B";
 const locations = [
   {
     id: "redhills",
-    name: "Redhills (Exp.)",
+    name: "Redhills ",
     corridor: "Chennai North",
     acres: 55,
     sqft: "1.1 Mn",
