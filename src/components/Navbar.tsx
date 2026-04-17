@@ -9,6 +9,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo-wt.png";
 import blog3 from "../assets/building-strategic-alliances-in-warehousing-park.webp"
 import news from "../assets/strategic-banner.webp"
+import news1 from "../assets/news/manufacturing-today.jpg"
+import news2 from "../assets/news/cargobreakingnews1.png"
+import news3 from "../assets/news/logisticsinsider.in_.jpg"
+import news4 from "../assets/news/Featured-in-The-Economic-Times.png"
 interface SubmenuItem {
   name: string;
   href: string;
@@ -91,19 +95,24 @@ const navLinks: NavItem[] = [
 
 const trendingItems = [
   {
-    title: "Market Surge",
-    desc: "Mumbai demand up 25%",
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=200",
+    title: "The rapid rise of sustainable warehousing",
+    desc: "We thank Manufacturing Today India for featuring our MD, Sandeep Chadha, in their latest article on sustainable warehousing",
+    img: news1,
   },
   {
-    title: "Eco-Hubs",
-    desc: "New Green Policy 2026",
-    img: news,
+    title: "Market Policy",
+    desc: "We're thrilled to thank CargoBreakingNews for featuring our MD, Mr. Sandeep Chadha, and his insights on security in warehouse management",
+    img: news2,
   },
   {
-    title: "Expansion",
-    desc: "2.5M sqft Hub Launch",
-    img: blog3,
+    title: "Retail Rebound",
+    desc: "We're thrilled to announce that our founder, Sandeep Chadha's article has been published in Logistics Insider!",
+    img: news3,
+  },
+    {
+    title: "Sameera Warehouster ",
+    desc: "Featured in The Economic Times: Major Milestone in Warehousing Partnership",
+    img: news4,
   },
 ];
 

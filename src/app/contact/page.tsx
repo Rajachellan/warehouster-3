@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { motion } from "framer-motion";
@@ -34,7 +34,7 @@ export default function ContactPage() {
           >
             Global Reach
           </motion.div>
-          <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter">
+          <h1 className="text-7xl  font-serif font-black text-white leading-none uppercase tracking-tighter">
             Contact <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Warehouster</span>
           </h1>
