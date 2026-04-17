@@ -21,11 +21,8 @@ import VisionMission from "./VisionMission"
 import DevelopmentProcess from "./DevelopmentProcess"
 import Leadership from "./leadership"
 import Summary from "../../components/Summary"
-<<<<<<< Updated upstream
 import CompetitivePositioning from "@/components/CompetitivePositioning";
 
-=======
->>>>>>> Stashed changes
 const team = [
   {
     name: "Kannadhassun",
@@ -52,7 +49,6 @@ const team = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
-<<<<<<< Updated upstream
       <Navbar />
 
       {/* 1. Header Section */}
@@ -71,116 +67,8 @@ export default function AboutPage() {
           {/* Dark Overlay for readability */}
           <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent" />
-=======
-
-
-      {/* 1. Header Section */}
-      <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
-
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={banner}
-            alt="Warehousing Infrastructure"
-            fill
-            priority
-            className="object-cover opacity-30"
-          />
-
-          {/* Dark Overlay for readability */}
-          <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent" />
         </div>
 
-        {/* Glow Effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
-
-        {/* Content */}
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8"
-          >
-            About Warehouster
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-6xl font-serif font-black text-white leading-none uppercase tracking-tighter"
-          >
-            Defining the <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">
-              Industrial
-            </span> Edge
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/50 font-sans font-medium max-w-3xl mt-12 leading-relaxed"
-          >
-            Delivering premium warehouse and logistics solutions across South India with a focus on quality, scalability, and strategic locations.
-          </motion.p>
-
-        </div>
-      </section>
-      <VisionMission />
-      <DevelopmentProcess />
-      {/* <Aboutsection/> */}
-      {/* ... rest of the content ... */}
-      {/* <section id="overview" className="py-32 bg-white relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="grid lg:grid-cols-2 gap-24 items-center"
-          >
-            <div className="relative aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl">
-              <Image 
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
-                alt="Warehouster Facility"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
-              <div className="absolute bottom-12 left-12 right-12 bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20">
-                 <p className="text-white font-serif text-xl">&quot;We don&apos;t just build warehouses; we architect the growth corridors of a rising nation.&quot;</p>
-                 <div className="mt-4 text-accent font-black text-[10px] uppercase tracking-widest">— Sandeep Chadha, CEO</div>
-              </div>
-            </div>
-            <div className="space-y-12">
-                <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
-                    Our Strategic <br />
-                    <span className="text-accent">Commitment</span>
-                </h2>
-                <div className="space-y-8">
-                    {[
-                        { icon: Target, title: "Mission", desc: "To deliver smart, scalable, and reliable warehouse solutions through innovation and expertise, empowering businesses to grow with confidence." },
-                        { icon: Rocket, title: "Vision", desc: "To redefine warehouse and industrial space access through a seamless, technology-driven ecosystem that enhances efficiency and transparency." },
-                        { icon: Award, title: "Quality", desc: "Zero-compromise structural integrity and operational efficiency across 50+ locations." },
-                    ].map((item, i) => (
-                        <div key={i} className="flex gap-8 group">
-                            <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all shadow-sm">
-                                <item.icon size={28} />
-                            </div>
-                            <div>
-                                <h4 className="text-xl font-serif font-black text-primary uppercase tracking-tight mb-2">{item.title}</h4>
-                                <p className="text-primary/50 font-medium leading-relaxed">{item.desc}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-          </motion.div>
->>>>>>> Stashed changes
-        </div>
-
-<<<<<<< Updated upstream
         {/* Glow Effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0" />
 
@@ -226,10 +114,6 @@ export default function AboutPage() {
       <JourneySection />
 
       {/* 3. CEO Profile: Executive Balance */}
-=======
-      <Summary />
-      <JourneySection />      {/* 2. CEO Profile: Executive Balance */}
->>>>>>> Stashed changes
       <section className="py-24 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -310,65 +194,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-<<<<<<< Updated upstream
       <Leadership />
-=======
-      {/* 3. Leadership Section: Standard Roster */}
-      {/* <section id="leadership" className="py-24 bg-gray-50/50 overflow-hidden relative border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-             <div className="flex items-center justify-center gap-4 mb-4">
-                <div className="h-[1px] w-10 bg-[#D4AF37]" />
-                <span className="text-[10px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">Management Board</span>
-                <div className="h-[1px] w-10 bg-[#D4AF37]" />
-             </div>
-             <h2 className="text-4xl md:text-6xl font-serif font-black text-primary uppercase tracking-tighter">
-               Strategic <span className="text-[#D4AF37]">Leadership</span>
-             </h2>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.8 }}
-                className="group relative"
-              >
-              
-                <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-lg border border-white bg-white transition-all duration-700">
-                   <Image 
-                     src={member.image} 
-                     alt={member.name} 
-                     fill 
-                     className="object-cover group-hover:scale-105 transition-transform duration-1000" 
-                   />
-                   
-                  
-                   <motion.div 
-                     className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center p-6 text-center backdrop-blur-[2px]"
-                   >
-                     <div className="h-[1px] w-8 bg-[#D4AF37] mb-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 delay-100" />
-                     <h3 className="text-xl font-serif font-black text-white uppercase tracking-tighter mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
-                        {member.name}
-                     </h3>
-                     <p className="text-[10px] font-black uppercase tracking-[0.4em] text-[#D4AF37] translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-150">
-                        {member.role}
-                     </p>
-                   </motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-      <Leadership />
-
-
-
->>>>>>> Stashed changes
 
       {/* 4. Purpose Section */}
       <section id="purpose" className="py-24 bg-white flex flex-col items-center text-center">

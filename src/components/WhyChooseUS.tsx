@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 
 // ─── TOKENS ────────────────────────────────────────────────────────────────────
-<<<<<<< Updated upstream
 const P = "#0A1428";
 const P2 = "#0f2040";
 const G = "#D4AF37";
@@ -22,21 +21,6 @@ const N05 = "rgba(10,20,40,0.05)";
 const N55 = "rgba(10,20,40,0.55)";
 const N40 = "rgba(10,20,40,0.40)";
 const N25 = "rgba(10,20,40,0.25)";
-=======
-const P    = "#0A1428";
-const P2   = "#0f2040";
-const G    = "#D4AF37";
-const G2   = "#C9A84C";
-const G40  = "rgba(212,175,55,0.40)";
-const G20  = "rgba(212,175,55,0.20)";
-const G12  = "rgba(212,175,55,0.12)";
-const G07  = "rgba(212,175,55,0.07)";
-const N08  = "rgba(10,20,40,0.08)";
-const N05  = "rgba(10,20,40,0.05)";
-const N55  = "rgba(10,20,40,0.55)";
-const N40  = "rgba(10,20,40,0.40)";
-const N25  = "rgba(10,20,40,0.25)";
->>>>>>> Stashed changes
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 // ─── DATA ──────────────────────────────────────────────────────────────────────
@@ -45,27 +29,17 @@ const REASONS = [
     num: "01", phase: "Decade of Experience", label: "Market Expertise",
     BannerIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.6" className="w-[18px] h-[18px]">
-<<<<<<< Updated upstream
         <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
         <line x1="2" y1="12" x2="5" y2="12" /><line x1="19" y1="12" x2="22" y2="12" />
       </svg>
     ),
     title: "Deep Corridor", accent: "Intelligence",
     desc: "Over a decade of boots-on-ground insight across South India's fastest-growing industrial and logistics corridors — giving us an irreplaceable first-mover advantage in land sourcing and positioning.",
-=======
-        <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-        <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
-      </svg>
-    ),
-    title: "Strategic ", accent: "Locations",
-    desc: "Prime positioning with close proximity to national,highways, major ports, industrial belts, and key urban consumption centers.​",
->>>>>>> Stashed changes
   },
   {
     num: "02", phase: "Institutional Network", label: "Occupier Network",
     BannerIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.6" className="w-[18px] h-[18px]">
-<<<<<<< Updated upstream
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
         <circle cx="9" cy="7" r="4" />
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
@@ -73,68 +47,35 @@ const REASONS = [
     ),
     title: "Marquee", accent: "Relationships",
     desc: "Pre-qualified, long-standing relationships with India's most sought-after institutional occupiers — including DHL, Flipkart, Amazon, and Reliance — ensuring faster lease-up and predictable revenue from day one.",
-=======
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
-    ),
-    title: "Structured ", accent: "Development",
-    desc: "Meticulously planned layouts backed by institutional-grade documentation, ensuring clean title and hassle-free ownership.​",
->>>>>>> Stashed changes
   },
   {
     num: "03", phase: "Grade-A Standard", label: "Quality Assurance",
     BannerIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.6" className="w-[18px] h-[18px]">
-<<<<<<< Updated upstream
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
     title: "Institutional", accent: "Grade-A Quality",
     desc: "Every project is held to the highest global benchmarks — clear heights up to 40ft, 150mm floor load, 100% power backup, advanced fire systems, and sustainability certifications that satisfy the strictest investor mandates.",
-=======
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-      </svg>
-    ),
-    title: "Compliance", accent: "First",
-    desc: "100% adherence to regulatory norms including fire safety,environmental clearances, and operational compliance standards.​",
->>>>>>> Stashed changes
   },
   {
     num: "04", phase: "End-to-End Execution", label: "Full Lifecycle",
     BannerIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.6" className="w-[18px] h-[18px]">
-<<<<<<< Updated upstream
         <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
         <polyline points="16 7 22 7 22 13" />
       </svg>
     ),
     title: "Proven", accent: "Execution Model",
     desc: "From land sourcing and statutory compliance through master planning, construction, lease stabilization, and eventual REIT-ready exit — our seven-phase model delivers measurable outcomes at every milestone.",
-=======
-        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-        <polyline points="16 7 22 7 22 13"/>
-      </svg>
-    ),
-    title: "Asset ", accent: "Appreciation",
-    desc: "Developments strategically positioned in high-growth corridors designed to deliver superior long-term capital appreciation..",
->>>>>>> Stashed changes
   },
 ];
 
 const MINI_STATS = [
-<<<<<<< Updated upstream
   { val: "330+", label: "Acres of strategic\nland in pipeline" },
   { val: "5 Mn", label: "Square feet of\nleasable space" },
   { val: "10+", label: "Marquee institutional\nclient relationships" },
   { val: "₹2B+", label: "Asset value\nunder management" },
-=======
-  { val: "330+", label: "Acres of strategic\nland in pipeline"         },
-  { val: "5 Mn", label: "Square feet of\nleasable space"               },
-  { val: "10+",  label: "Marquee institutional\nclient relationships"   },
-  { val: "₹2B+", label: "Asset value\nunder management"                },
->>>>>>> Stashed changes
 ];
 
 const TRUSTED = ["Blackstone", "ESR", "Indospace"];
@@ -218,7 +159,6 @@ function ReasonCard({ r, index }: { r: typeof REASONS[0]; index: number }) {
 
       {/* Card body */}
       <div className="flex flex-col flex-1 p-7">
-<<<<<<< Updated upstream
 
         {/* Navy icon banner */}
         <div
@@ -226,15 +166,6 @@ function ReasonCard({ r, index }: { r: typeof REASONS[0]; index: number }) {
           style={{ background: `linear-gradient(135deg, ${P2} 0%, #1a3060 100%)` }}
         >
 
-=======
-
-        {/* Navy icon banner */}
-        <div
-          className="relative w-full h-[72px] rounded-2xl mb-5 flex items-center gap-[14px] px-[18px] overflow-hidden flex-shrink-0"
-          style={{ background: `linear-gradient(135deg, ${P2} 0%, #1a3060 100%)` }}
-        >
-          
->>>>>>> Stashed changes
           <span className="font-serif font-black leading-none select-none flex-shrink-0 relative z-10" style={{ fontSize: 32, color: "rgba(212,175,55,0.22)", letterSpacing: "-0.03em" }}>{r.num}</span>
           <div className="w-px h-9 flex-shrink-0 relative z-10" style={{ background: "rgba(212,175,55,0.15)" }} />
           <div className="w-[38px] h-[38px] flex items-center justify-center rounded-[10px] flex-shrink-0 relative z-10" style={{ background: hov ? "rgba(212,175,55,0.22)" : "rgba(212,175,55,0.12)", border: `1px solid ${hov ? "rgba(212,175,55,0.5)" : "rgba(212,175,55,0.25)"}`, transition: "all .3s" }}>
@@ -321,11 +252,7 @@ function SuccessCard() {
 
       {/* Stats */}
       <div className="grid grid-cols-2 gap-3 mb-5">
-<<<<<<< Updated upstream
         {[{ end: 25, suffix: " acres", label: "Greenfield Park" }, { end: 14, suffix: " months", label: "Fully Leased" }].map((s, i) => (
-=======
-        {[{ end: 25, suffix: " ac", label: "Greenfield Park" }, { end: 14, suffix: " mo", label: "Fully Leased" }].map((s, i) => (
->>>>>>> Stashed changes
           <div key={i} className="px-4 py-4 rounded-xl" style={{ background: N05, border: `1px solid ${N08}` }}>
             <p className="font-serif font-black leading-none mb-1" style={{ fontSize: 28, color: G }}>
               <CountUp end={s.end} suffix={s.suffix} />
