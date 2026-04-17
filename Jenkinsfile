@@ -70,7 +70,7 @@ pipeline {
 
     post {
         success {
-            echo "🎉 Learnfella frontend deployed successfully!"
+            echo "🎉 Warehouster frontend deployed successfully!"
             echo "App running on port ${APP_PORT}"
         }
         failure {

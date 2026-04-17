@@ -9,6 +9,17 @@ export interface ProjectMetric {
     value: string;
 }
 
+export interface ProjectStat {
+    label: string;
+    value: number;
+    suffix: string;
+}
+
+export interface StorySection {
+    title: string;
+    content: string;
+}
+
 export interface ProjectTimelineItem {
     year: string;
     event: string;

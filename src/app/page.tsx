@@ -41,7 +41,6 @@ export default function Home() {
       <CTASection />
 
       {/* Quick Navigation Cards */}
-
       <FAQSection />
       <TrustedPartners />
       {/* Unified Contact Form */}
