@@ -241,6 +241,8 @@ function StepCard({
           border: `1px solid ${hov || isFinal ? "rgba(212,175,55,0.45)" : "rgba(212,175,55,0.15)"}`,
         }}
       >
+
+        
         {step.tag}
       </span>
 
