@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -17,6 +17,7 @@ import Intergrated from "@/components/IntegratedIndustrial"
 import TrustedPartners from "@/components/TrustedPartners"
 import Developmentline from "../components/DevelopmentLine"
 import Compatative from "../components/compatative"
+import ProjectsSection from "@/components/ProjectsSection";
 import CaseStudy from "../components/CaseStudy"
 export default function Home() {
   return (
@@ -31,9 +32,10 @@ export default function Home() {
       {/* Interactive Map Section */}
       <IndiaMap />
       <Developmentline />
-      <CaseStudy/>
+      <ProjectsSection />
+      <CaseStudy />
       <Intergrated />
-      {/* <ServicesSection /> */}
+      <ServicesSection />
       <Compatative />
       {/* Additional Sections */}
       <BlogSection />

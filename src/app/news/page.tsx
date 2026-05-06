@@ -206,30 +206,30 @@ export default function NewsPage() {
     <main className="min-h-screen bg-white">
      
       
-      <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
-              <div className="absolute inset-0 z-0">
-                   <Image 
-                     src={banner}
-                     alt="Land Acquisition Background"
-                     fill
-                     priority
-                     sizes="100vw"
-                     className="object-cover object-center"
-                   />
-                   <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-                   <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
-                 </div>
+      <section className="relative pt-64 pb-40 bg-primary overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src={banner}
+            alt="Corporate News Background"
+            fill
+            priority
+            className="object-cover opacity-40 grayscale"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary" />
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-10"
           >
-            Industrial News
+            Insights & Updates
           </motion.div>
-          <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter">
+
+          <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-[0.85] uppercase tracking-tighter">
             Corporate <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Updates</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white/20">Updates</span>
           </h1>
         </div>
       </section>
@@ -240,50 +240,58 @@ export default function NewsPage() {
             {news.map((item, i) => (
               <motion.article
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="group flex flex-col bg-white rounded-[2.5rem] border border-gray-100 overflow-hidden hover:shadow-2xl transition-all"
+                className="group flex flex-col bg-white rounded-[3.5rem] border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-72 overflow-hidden bg-gray-50">
                   <Image 
                     src={item.image} 
                     alt={item.title} 
                     fill 
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-all duration-700" 
+                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
                   />
-                  <div className="absolute top-6 left-6 px-4 py-1.5 bg-accent/90 text-primary text-[8px] font-black uppercase tracking-widest rounded">
-                    {item.category}
+                  <div className="absolute top-8 left-8 z-10">
+                    <div className="px-4 py-1.5 bg-primary/80 backdrop-blur-md text-accent text-[9px] font-black uppercase tracking-widest border border-accent/20 rounded-full">
+                      {item.category}
+                    </div>
                   </div>
                 </div>
-                <div className="p-10 flex flex-col flex-1">
-                  <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-widest text-primary/30 mb-6">
-                    <span className="flex items-center gap-2"><Calendar size={12} className="text-accent" /> {item.date}</span>
-                    {/* <span className="flex items-center gap-2"><User size={12} className="text-accent" /> Admin</span> */}
-                  </div>
-                  <h2 className="text-2xl font-serif font-black text-primary mb-6 group-hover:text-accent transition-colors ">{item.title}</h2>
-                  <p className="text-sm font-medium text-primary/60 leading-relaxed mb-8">{item.excerpt}</p>
-<div className="mt-auto flex items-center justify-between">
-  <Link
-    href={item.link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-accent group-hover:translate-x-2 transition-all"
-  >
-    Full Report <ArrowRight size={14} />
-  </Link>
 
-  <Link
-    href={item.pdf}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition-all"
-  >
-    View PDF <ArrowRight size={14} />
-  </Link>
-</div>
+                <div className="p-12 flex flex-col flex-1">
+                  <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.3em] text-primary/30 mb-8">
+                    <span className="flex items-center gap-2"><Calendar size={12} className="text-accent" /> {item.date}</span>
+                  </div>
+                  
+                  <h2 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-6 group-hover:text-accent transition-colors">
+                    {item.title}
+                  </h2>
+                  
+                  <p className="text-[14px] font-medium text-primary/50 leading-relaxed mb-10 line-clamp-3">
+                    {item.excerpt}
+                  </p>
+
+                  <div className="mt-auto flex items-center justify-between gap-4 pt-8 border-t border-gray-50">
+                    <Link
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.4em] text-primary hover:text-accent transition-all"
+                    >
+                      Full Report <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
+                    </Link>
+
+                    <Link
+                      href={item.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-[9px] font-black uppercase tracking-[0.3em] px-5 py-2.5 rounded-full border border-gray-200 text-primary/40 hover:border-accent hover:text-accent transition-all"
+                    >
+                      PDF <ArrowRight size={12} />
+                    </Link>
+                  </div>
                 </div>
               </motion.article>
             ))}

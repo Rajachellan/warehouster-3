@@ -68,7 +68,7 @@ export default function CompetitivePositioning() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-serif font-black text-[#0A1428] uppercase tracking-tighter mb-6"
+            className="text-4xl md:text-6xl font-serif font-black text-[#0A1428] uppercase tracking-light mb-6"
           >
             Competitive <span className="text-[#D4AF37]">Positioning</span>
           </motion.h2>
@@ -162,7 +162,7 @@ export default function CompetitivePositioning() {
               <div className="text-5xl lg:text-6xl font-serif font-black text-[#0A1428] mb-4 group-hover:text-[#D4AF37] transition-colors duration-500">
                 {stat.value}
               </div>
-              <div className="text-[10px] font-black uppercase tracking-[0.4em] text-[#0A1428]/40 leading-relaxed whitespace-pre-line group-hover:text-[#0A1428]/60 transition-colors duration-500">
+              <div className="text-[13px] font-black tracking-[0.2em] text-[#0A1428]/40 leading-relaxed whitespace-pre-line group-hover:text-[#0A1428]/60 transition-colors duration-500">
                 {stat.label}
               </div>
             </motion.div>

@@ -30,7 +30,7 @@ export default function WhyWarehousterGrid() {
                         className="flex items-center gap-6 mb-8"
                     >
                         <div className="h-[1px] w-12 bg-[#D4AF37]" />
-                        <span className="text-[10px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">
+                        <span className="text-[12px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">
                             Advanced UI
                         </span>
                     </motion.div>
@@ -65,7 +65,7 @@ export default function WhyWarehousterGrid() {
                             <h3 className="text-xl font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-6 group-hover:text-[#D4AF37] transition-colors">
                                 {item.title}
                             </h3>
-                            <p className="text-[12px] font-bold uppercase tracking-widest text-primary/40 leading-relaxed group-hover:text-primary transition-colors">
+                            <p className="text-[14px] font-bold uppercase tracking-widest text-primary/40 leading-relaxed group-hover:text-primary transition-colors">
                                 {item.desc}
                             </p>
                             <div className="mt-10 h-[1px] w-8 bg-gray-100 group-hover:w-full group-hover:bg-[#D4AF37] transition-all duration-1000" />

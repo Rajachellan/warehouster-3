@@ -43,7 +43,7 @@ export default function HeroSection() {
             className="flex items-center gap-4 mb-8"
           >
             <div className="h-[1px] w-8 bg-accent/60 shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
-            <span className="text-[9px] font-black uppercase tracking-[0.6em] text-accent/80">
+            <span className="text-[12px] font-black uppercase tracking-[0.3em] text-accent/80">
               Institutional Logistics Platform
             </span>
           </motion.div>
@@ -55,7 +55,7 @@ export default function HeroSection() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="mb-8 max-w-4xl"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif font-black text-white leading-[1.1] uppercase tracking-tighter">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-white leading-[1.1] uppercase tracking-light">
               Building <span className="text-white/40 font-light">South India&apos;s</span> Next <br />
               <span className="text-white">Institutional-Grade</span> <br />
               <span className="text-accent">Logistics Platform</span>
@@ -70,7 +70,7 @@ export default function HeroSection() {
             className="max-w-2xl pl-0 md:pl-1 mb-16 relative"
           >
             <div className="absolute left-[-24px] top-0 bottom-0 w-[1px] bg-accent/20 hidden md:block" />
-            <p className="text-base md:text-lg text-white/70 font-sans font-medium leading-relaxed tracking-wide uppercase">
+            <p className="text-base md:text-lg text-white/70 font-sans font-medium leading-relaxed tracking-wide ">
               Warehouster is a next-generation industrial and logistics real estate platform
               focused on developing <span className="text-white font-bold">Grade-A warehousing</span> and industrial infrastructure.
             </p>
@@ -85,7 +85,7 @@ export default function HeroSection() {
           >
             <Link
               href="/projects"
-              className="group relative px-12 py-5 bg-accent text-primary font-sans font-black text-[10px] uppercase tracking-[0.4em] overflow-hidden rounded-lg shadow-xl shadow-accent/10 transition-transform active:scale-95"
+              className="group relative px-12 py-5 bg-accent text-primary font-sans font-black text-[13px] uppercase tracking-[0.4em] overflow-hidden rounded-lg shadow-xl shadow-accent/10 transition-transform active:scale-95"
             >
               <span className="relative z-10">Explore Projects</span>
               <div className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
@@ -93,7 +93,7 @@ export default function HeroSection() {
 
             <Link
               href="/contact"
-              className="group px-12 py-5 bg-white/5 border border-white/20 text-white font-sans font-black text-[10px] uppercase tracking-[0.4em] rounded-lg backdrop-blur-md hover:bg-white hover:text-primary transition-all flex items-center gap-4 active:scale-95"
+              className="group px-12 py-5 bg-white/5 border border-white/20 text-white font-sans font-black text-[13px] uppercase tracking-[0.4em] rounded-lg backdrop-blur-md hover:bg-white hover:text-primary transition-all flex items-center gap-4 active:scale-95"
             >
               Speak to an Expert <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>

@@ -46,7 +46,7 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-white/60 text-[11px] font-bold uppercase tracking-widest leading-relaxed">
+            <p className="text-white/60 text-[13px] font-bold uppercase tracking-widest leading-relaxed">
               Grade-A industrial real estate solutions architected for the future of India&apos;s global logistics and infrastructure.
             </p>
             <div className="flex gap-4">
@@ -70,11 +70,11 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-serif font-black text-xs uppercase tracking-[0.3em] mb-10 border-l-2 border-accent pl-4">Navigation</h4>
+            <h4 className="text-white font-serif font-black text-sm uppercase tracking-[0.3em] mb-10 border-l-2 border-accent pl-4">Navigation</h4>
             <ul className="space-y-6">
               {["Home", "About", "Services", "Projects", "Blogs", "Careers"].map((item) => (
                 <li key={item}>
-                  <Link href={`/${item.toLowerCase()}`} className="text-white/60 hover:text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group transition-all">
+                  <Link href={`/${item.toLowerCase()}`} className="text-white/60 hover:text-white text-[12px] font-black uppercase tracking-widest flex items-center gap-2 group transition-all">
                     <span className="w-0 group-hover:w-3 h-[1px] bg-accent transition-all duration-300" />
                     {item}
                   </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-serif font-black text-xs uppercase tracking-[0.3em] mb-10 border-l-2 border-accent pl-4">Core Pillars</h4>
+            <h4 className="text-white font-serif font-black text-sm uppercase tracking-[0.3em] mb-10 border-l-2 border-accent pl-4">Core Pillars</h4>
             <ul className="space-y-6">
               {[
                 "Land Acquisition",
@@ -94,7 +94,7 @@ export default function Footer() {
                 "Industrial Consulting"
               ].map((item) => (
                 <li key={item}>
-                  <Link href={`/services/${item.toLowerCase().replace(/ /g, '-')}`} className="text-white/60 hover:text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 group transition-all">
+                  <Link href={`/services/${item.toLowerCase().replace(/ /g, '-')}`} className="text-white/60 hover:text-white text-[12px] font-black uppercase tracking-widest flex items-center gap-2 group transition-all">
                     <span className="w-0 group-hover:w-3 h-[1px] bg-accent transition-all duration-300" />
                     {item}
                   </Link>
@@ -105,25 +105,25 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="space-y-8">
-            <h4 className="text-white font-serif font-black text-xs uppercase tracking-[0.3em] mb-10 border-l-2 border-accent pl-4">Connect</h4>
+            <h4 className="text-white font-serif font-black text-sm uppercase tracking-[0.3em] mb-10 border-l-2 border-accent pl-4">Connect</h4>
             <div className="space-y-6">
               <div className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all">
                   <Phone size={18} />
                 </div>
-                <span className="text-white/60 text-[10px] font-black uppercase tracking-widest">+91 1800 123 456</span>
+                <span className="text-white/60 text-[12px] font-black uppercase tracking-widest">+91 1800 123 456</span>
               </div>
               <div className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all">
                   <Mail size={18} />
                 </div>
-                <span className="text-white/60 text-[10px] font-black uppercase tracking-widest">hello@warehouster.com</span>
+                <span className="text-white/60 text-[12px] font-black uppercase tracking-widest">hello@warehouster.com</span>
               </div>
               <div className="flex items-center gap-4 group">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all">
                   <MapPin size={18} />
                 </div>
-                <span className="text-white/60 text-[10px] font-black uppercase tracking-widest leading-relaxed">BKC, Mumbai, India</span>
+                <span className="text-white/60 text-[12px] font-black uppercase tracking-widest leading-relaxed">BKC, Mumbai, India</span>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-white/20 text-[9px] font-black uppercase tracking-[0.4em]">
+          <p className="text-white/20 text-[11px] font-black uppercase tracking-[0.4em]">
             © 2026 Warehouster. Industrial Integrity. All rights reserved.
           </p>
           <div className="flex gap-12">
@@ -140,7 +140,7 @@ export default function Footer() {
                 key={item}
                 href="#"
                 suppressHydrationWarning
-                className="text-white/20 hover:text-accent text-[9px] font-black uppercase tracking-[0.4em] transition-all"
+                className="text-white/20 hover:text-accent text-[11px] font-black uppercase tracking-[0.4em] transition-all"
               >
                 {item}
               </Link>

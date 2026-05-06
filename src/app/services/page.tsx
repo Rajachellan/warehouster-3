@@ -13,57 +13,56 @@ import development from "../../assets/land-acq-img-2.webp"
 import banner from "../../assets/logistics_connectivi_3093625c.jpg"
 import assets from "../../assets/assetmanagement.webp"
 const detailedServices = [
-  // ... existing services data ...
   {
     id: "land",
-    title: "Land Acquisition",
+    title: "Strategic Land Acquisition",
     icon: Building2,
-    description: "Strategic sourcing and vetting of high-yield industrial locations across India's key logistics corridors.",
+    description: "Intelligence-led sourcing of high-yield industrial locations. We secure the foundation for institutional assets through proprietary data models and rigorous governance protocols.",
     details: [
-      "Strategic Site Identification & Vetting",
-      "Legal & Technical Due Diligence",
-      "Title Search & Asset Valuation",
-      "Procurement Strategy & Execution"
+      "Multi-parameter Site Intelligence",
+      "Institutional Due Diligence",
+      "Title Absolute Governance",
+      "Strategic Corridor Valuation"
     ],
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200"
   },
   {
     id: "dev",
-    title: "Development Management",
+    title: "Integrated Development Management",
     icon: Hammer,
-    description: "End-to-end management of industrial projects, from initial feasibility studies to final handover.",
+    description: "Comprehensive lifecycle governance from greenfield to stabilized yield. We deliver precision engineering and statutory mastery to ensure Grade-A institutional compliance.",
     details: [
-      "Project Design & Engineering Coordination",
-      "Vendor Management & Procurement",
-      "Quality Assurance & Progress Tracking",
-      "Timely Project Delivery & Handover"
+      "Institutional Master Planning",
+      "Statutory Mastery & Compliance",
+      "Precision Quality Assurance",
+      "Lifecycle Risk Mitigation"
     ],
     image: development,
   },
   {
-    id: "const",
-    title: " Strategic Alliance",
-    description: "We build strong partnerships with industry leaders, investors, and developers to deliver integrated warehouse and industrial solutions, ensuring long-term value, efficiency, and sustainable growth.",
+    id: "alliance",
+    title: "Institutional Strategic Alliance",
+    description: "Building high-performance ecosystems through global partnerships. We align with institutional investors and logistics leaders to deliver scalable industrial platforms.",
     icon: ShieldCheck,
-   details: [
-  "Partnerships with Leading Developers & Investors",
-  "Collaborations with Logistics & Supply Chain Experts",
-  "Strong Network of Landowners & Industrial Partners",
-  "Long-term Alliances for Scalable Growth"
-],
+    details: [
+      "Global Investor Alignment",
+      "Logistics Network Synergy",
+      "Scalable Platform Engineering",
+      "Ecosystem Value Creation"
+    ],
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200"
   },
   {
-    id: "consult",
-    title: "Asset Management",
-    description: "We provide comprehensive asset management solutions to optimize performance, maximize value, and ensure long-term sustainability of industrial and warehouse properties.",
+    id: "asset",
+    title: "High-Performance Asset Management",
+    description: "Maximizing capital performance through proactive asset governance. We ensure long-term value preservation and operational throughput for Grade-A industrial portfolios.",
     icon: Users,
     details: [
-  "End-to-End Asset Lifecycle Management",
-  "Performance Monitoring & Value Optimization",
-  "Proactive Maintenance & Operational Efficiency",
-  "Data-Driven Insights for Strategic Decisions"
-],
+      "Yield Performance Monitoring",
+      "Operational Throughput Audit",
+      "Value-Add CapEx Strategy",
+      "Institutional Compliance Reporting"
+    ],
     image: assets,
   }
 ];

@@ -60,22 +60,26 @@ const navLinks: NavItem[] = [
         name: "Completed",
         href: "/projects#completed",
         submenu: [
-          { name: "Redhills Development", href: "/projects/redhills-development" },
+          { name: "Redhills", href: "/projects/redhills-development" },
+          { name: "Chengalpattu", href: "/projects/chengalpattu-industrial" },
+          { name: "Jaisalmer", href: "/projects/jaisalmer-bts" },
         ]
       },
       {
         name: "In Progress",
         href: "/projects#in-progress",
         submenu: [
-          { name: "Chengalpattu Development", href: "/projects/chengalpattu-development" },
-          { name: "Pondicherry BTS Facility", href: "/projects/pondicherry-bts" },
+          { name: "Pondicherry", href: "/projects/pondicherry-bts" },
+          { name: "Hosur (65 acres)", href: "/projects/hosur-logistics-hub" },
+          { name: "Thiruvallur (21 acres)", href: "/projects/thiruvallur-industrial" },
         ]
       },
       {
         name: "Pipeline",
         href: "/projects#pipeline",
         submenu: [
-          { name: "Jaisalmer BTS Facility", href: "/projects/jaisalmer-bts" },
+          { name: "Redhills (50 acres)", href: "/projects/redhills-phase-2" },
+          { name: "Krishnagiri (55 acres)", href: "/projects/krishnagiri-integrated" },
         ]
       },
     ],
@@ -120,6 +124,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const [newsIndex, setNewsIndex] = useState(0);
   const pathname = usePathname();
 
@@ -168,7 +173,7 @@ export default function Navbar() {
 
             {/* LIVE badge */}
             <motion.div
-              className="absolute top-1.5 right-1.5 flex items-center gap-0.5 bg-yellow-400 text-[#0A1428] text-[6px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full z-30"
+              className="absolute top-1.5 right-1.5 flex items-center gap-0.5 bg-yellow-400 text-[#0A1428] text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full z-30"
               animate={{ x: [2, -2, 2] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
@@ -215,7 +220,7 @@ export default function Navbar() {
                 >
                   <TrendingUp size={9} className="text-yellow-400" />
                 </motion.div>
-                <span className="text-[6px] font-black uppercase tracking-[0.25em] text-yellow-400">
+                <span className="text-[10px] font-black uppercase tracking-[0.25em] text-yellow-400">
                   Trending
                 </span>
               </div>
@@ -231,10 +236,10 @@ export default function Navbar() {
                     transition={{ duration: 0.4 }}
                     className="absolute inset-0 flex flex-col justify-center gap-0.5"
                   >
-                    <h5 className="text-[9px] font-black text-white uppercase tracking-tight truncate leading-tight">
+                    <h5 className="text-[12px] font-black text-white uppercase tracking-tight truncate leading-tight">
                       {trendingItems[newsIndex].title}
                     </h5>
-                    <p className="text-[7px] font-medium text-white/55 truncate leading-tight">
+                    <p className="text-[10px] font-medium text-white/55 truncate leading-tight">
                       {trendingItems[newsIndex].desc}
                     </p>
                   </motion.div>
@@ -243,7 +248,7 @@ export default function Navbar() {
 
               {/* Bottom row */}
               <div className="flex items-center justify-between">
-                <span className="text-[6px] text-white/25">tap to read</span>
+                <span className="text-[10px] text-white/25">tap to read</span>
                 <motion.div
                   className="w-4 h-4 rounded-full border border-yellow-400/60 flex items-center justify-center"
                   animate={{ x: [0, 4, 0] }}
@@ -270,7 +275,7 @@ export default function Navbar() {
           {/* Logo - Column 1 */}
           <div className="flex justify-start">
             <Link href="/" className="flex items-center gap-4 group">
-              <div className="relative w-36 h-8 overflow-hidden transition-transform duration-500 group-hover:scale-105">
+              <div className="relative w-40 h-10 overflow-hidden transition-transform duration-500 group-hover:scale-105">
                 <Image
                   src={logo}
                   alt="Warehouster Logo"
@@ -290,12 +295,18 @@ export default function Navbar() {
                 <div
                   key={link.name}
                   className="relative h-full flex items-center text-white group/link"
-                  onMouseEnter={() => setActiveMenu(link.name)}
-                  onMouseLeave={() => setActiveMenu(null)}
+                  onMouseEnter={() => {
+                    if (dropdownTimeout) clearTimeout(dropdownTimeout);
+                    setActiveMenu(link.name);
+                  }}
+                  onMouseLeave={() => {
+                    const timeout = setTimeout(() => setActiveMenu(null), 300);
+                    setDropdownTimeout(timeout);
+                  }}
                 >
                   <Link
                     href={link.href}
-                    className={`px-4 py-2 font-bold text-[10px] uppercase tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${activeMenu === link.name ? "text-accent scale-105" : "text-white hover:text-white/80"
+                    className={`px-4 py-2 font-bold text-[14px] tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${activeMenu === link.name ? "text-accent scale-105" : "text-white hover:text-white/80"
                       }`}
                   >
                     {link.name}
@@ -320,21 +331,23 @@ export default function Navbar() {
                             <div key={sub.name} className="relative group/sub">
                               <Link
                                 href={sub.href}
-                                className="flex items-center justify-between font-black text-[8px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl uppercase tracking-widest"
+                                className="flex items-center justify-between font-black text-[14px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl tracking-widest"
                               >
                                 {sub.name}
                                 {sub.submenu && <ChevronRight size={10} className="opacity-30 group-hover/sub:opacity-100 group-hover/sub:translate-x-1 transition-all" />}
                               </Link>
 
                               {sub.submenu && (
-                                <div className="absolute left-full top-0 ml-2 hidden group-hover/sub:block">
-                                  <div className="glass-dark rounded-[1.2rem] border border-white/10 p-2 shadow-3xl w-56">
+                                <div className="absolute left-full top-0 ml-0 pl-4 hidden group-hover/sub:block z-[120]">
+                                  {/* Bridge to prevent accidental closure */}
+                                  <div className="absolute left-0 top-0 bottom-0 w-4 bg-transparent" />
+                                  <div className="glass-dark rounded-[1.2rem] border border-white/10 p-2 shadow-3xl w-56 relative">
                                     <div className="flex flex-col gap-1">
                                       {sub.submenu.map((item) => (
                                         <Link
                                           key={item.name}
                                           href={item.href}
-                                          className="font-black text-[8px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl uppercase tracking-widest"
+                                          className="font-black text-[12px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl tracking-widest"
                                         >
                                           {item.name}
                                         </Link>
@@ -360,12 +373,12 @@ export default function Navbar() {
             <div className="hidden sm:flex items-center gap-3">
               <a
                 href="tel:+91 95600 11696"
-                className="group flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white hover:text-primary transition-all shadow-xl"
+                className="group flex items-center gap-3  px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white hover:text-primary transition-all shadow-xl"
               >
                 <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-white transition-all">
                   <Phone size={10} />
                 </div>
-                <span className="text-[9px] font-black uppercase tracking-widest">+91 95600 11696</span>
+                <span className="text-[14px] font-black uppercase tracking-widest">+91 95600 11696</span>
               </a>
             </div>
 
@@ -403,7 +416,7 @@ export default function Navbar() {
                           <div key={sub.name} className="flex flex-col gap-3">
                             <Link
                               href={sub.href}
-                              className="text-[10px] font-black text-accent uppercase tracking-[0.2em] transition-colors"
+                              className="text-[12px] font-black text-accent uppercase tracking-[0.2em] transition-colors"
                             >
                               {sub.name}
                             </Link>
@@ -413,7 +426,7 @@ export default function Navbar() {
                                   <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="text-[9px] font-bold text-white/50 hover:text-white uppercase tracking-[0.2em] transition-colors"
+                                    className="text-[11px] font-bold text-white/50 hover:text-white uppercase tracking-[0.2em] transition-colors"
                                   >
                                     {item.name}
                                   </Link>
@@ -436,7 +449,7 @@ export default function Navbar() {
                       <Phone size={16} />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest">Call our experts</span>
+                      <span className="text-[12px] font-bold text-white/50 uppercase tracking-widest">Call our experts</span>
                       <span className="text-sm font-black uppercase tracking-widest">+91 95600 11696</span>
                     </div>
                   </a>

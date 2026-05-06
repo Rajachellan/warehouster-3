@@ -219,7 +219,7 @@ function VMCard({
 
       {/* Body */}
       <p
-        className="text-[12.5px] leading-[1.9] font-sans mb-7"
+        className="text-[13px] leading-[1.9] font-sans mb-7"
         style={{ color: N50 }}
       >
         {card.body}
@@ -237,7 +237,7 @@ function VMCard({
               }}
             />
             <span
-              className="text-[11.5px] leading-[1.7] font-sans"
+              className="text-[13px] leading-[1.7] font-sans"
               style={{ color: N48 }}
             >
               {b}
@@ -280,7 +280,7 @@ function ValueCell({ item, index }: { item: typeof VALUES[0]; index: number }) {
     >
       {/* Number */}
       <span
-        className="text-[9px] font-black uppercase tracking-[0.5em] font-sans mb-4 transition-colors duration-300"
+        className="text-[12px] font-black uppercase tracking-[0.5em] font-sans mb-4 transition-colors duration-300"
         style={{ color: hov ? G : "rgba(212,175,55,0.4)" }}
       >
         {item.num}
@@ -303,7 +303,7 @@ function ValueCell({ item, index }: { item: typeof VALUES[0]; index: number }) {
 
       {/* Title */}
       <p
-        className="text-[11px] font-black uppercase tracking-[0.22em] font-sans mb-2"
+        className="text-[12px] font-black uppercase tracking-[0.22em] font-sans mb-2"
         style={{ color: P }}
       >
         {item.title}
@@ -321,7 +321,7 @@ function ValueCell({ item, index }: { item: typeof VALUES[0]; index: number }) {
 
       {/* Desc */}
       <p
-        className="text-[11.5px] leading-[1.8] font-sans"
+        className="text-[13px] leading-[1.8] font-sans"
         style={{ color: N48 }}
       >
         {item.desc}
@@ -376,7 +376,7 @@ export default function VisionMissionSection() {
             </h2>
           </div>
           <p
-            className="text-sm leading-relaxed md:text-right max-w-[260px] font-sans"
+            className="text-md leading-relaxed md:text-right max-w-[280px] font-sans "
             style={{
               color: N50,
               borderRight: `2px solid ${G35}`,

@@ -69,10 +69,10 @@ export default function StatsSection() {
                 </div>
                 
                 <div className="space-y-2">
-                  <div className="text-[10px] md:text-xs font-sans font-black uppercase tracking-[0.5em] text-white/90 group-hover:text-accent transition-colors duration-500">
+                  <div className="text-[12px] md:text-sm font-sans font-black uppercase tracking-[0.5em] text-white/90 group-hover:text-accent transition-colors duration-500">
                     {stat.label}
                   </div>
-                  <div className="text-white/20 font-sans font-black uppercase text-[8px] tracking-[0.3em] group-hover:text-white/40 transition-colors duration-500">
+                  <div className="text-white/20 font-sans font-black uppercase text-[10px] tracking-[0.3em] group-hover:text-white/40 transition-colors duration-500">
                     {stat.sub}
                   </div>
                 </div>

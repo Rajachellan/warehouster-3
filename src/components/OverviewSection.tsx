@@ -49,7 +49,7 @@ export default function OverviewSection() {
             </p>
             <Link
               href="/about"
-              className="group flex items-center gap-6 text-[11px] font-black uppercase tracking-widest text-primary hover:text-accent transition-all"
+              className="group flex items-center gap-6 text-[13px] font-black uppercase tracking-widest text-primary hover:text-accent transition-all"
             >
               Explore Our Approach<ArrowRight size={18} className="translate-x-[-10px] group-hover:translate-x-0 transition-all text-accent" />
             </Link>
@@ -71,7 +71,7 @@ export default function OverviewSection() {
                 <h4 className="text-xl font-serif font-bold text-primary mb-4 group-hover:text-white transition-colors">
                   {pillar.title}
                 </h4>
-                <p className="text-primary/40 text-[10px] font-bold uppercase tracking-widest leading-relaxed group-hover:text-white/40 transition-colors">
+                <p className="text-primary/40 text-[12px] font-bold uppercase tracking-widest leading-relaxed group-hover:text-white/40 transition-colors">
                   {pillar.desc}
                 </p>
               </motion.div>

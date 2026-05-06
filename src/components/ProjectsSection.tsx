@@ -1,163 +1,197 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { projects, ProjectContent } from "@/data/projects";
 import Image from "next/image";
-import { MapPin, ArrowUpRight, ArrowRight, Zap } from "lucide-react";
 import Link from "next/link";
+import { ArrowUpRight, MapPin, ChevronRight, Activity } from "lucide-react";
+import { useState } from "react";
 
-// Assets
-import chennai from "../assets/chennai.jpg";
-import madurai from "../assets/madurai.jpg";
-import land from "../assets/land.jpg";
+const CategoryTab = ({ 
+  label, 
+  count, 
+  isActive, 
+  onClick 
+}: { 
+  label: string; 
+  count: number; 
+  isActive: boolean; 
+  onClick: () => void 
+}) => (
+  <button
+    onClick={onClick}
+    className={`group relative px-8 py-6 transition-all duration-500 ${
+      isActive ? "text-primary" : "text-primary/40 hover:text-primary/60"
+    }`}
+  >
+    <div className="flex items-center gap-3">
+      <span className="text-[11px] font-black uppercase tracking-[0.3em]">{label}</span>
+      <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full border transition-colors ${
+        isActive ? "bg-accent/10 border-accent/20 text-accent" : "bg-gray-50 border-gray-100 text-primary/30"
+      }`}>
+        {count}
+      </span>
+    </div>
+    {isActive && (
+      <motion.div
+        layoutId="activeTabHome"
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-accent"
+        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+      />
+    )}
+  </button>
+);
 
-import { projects as allProjects } from "@/data/projects";
+const ProjectCard = ({ project, index }: { project: ProjectContent; index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: index * 0.1, duration: 0.8 }}
+    className="group relative h-[550px] rounded-[3rem] overflow-hidden bg-gray-50 shadow-2xl shadow-gray-200/50"
+  >
+    <Image
+      src={project.image}
+      alt={project.title}
+      fill
+      className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+    />
+    
+    {/* Status Badge */}
+    <div className="absolute top-8 left-8 z-10">
+      <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[9px] font-black uppercase tracking-widest">
+        {project.accentTag}
+      </div>
+    </div>
 
-const projectCategories = [
-  {
-    status: "Completed",
-    projects: allProjects.filter(p => p.category === "Completed").slice(0, 3)
-  },
-  {
-    status: "In Progress",
-    projects: allProjects.filter(p => p.category === "In Progress").slice(0, 3)
-  },
-  {
-    status: "Pipeline",
-    projects: allProjects.filter(p => p.category === "Pipeline").slice(0, 3)
-  }
-];
+    <div className="absolute top-8 right-8 z-10">
+      <div className="px-4 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-accent/20 text-accent text-[10px] font-black uppercase tracking-widest">
+        {project.status}
+      </div>
+    </div>
+
+    {/* Content Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1428] via-[#0A1428]/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-700" />
+    
+    <div className="absolute inset-0 p-12 flex flex-col justify-end transform group-hover:translate-y-[-10px] transition-transform duration-700">
+      <div className="flex items-center gap-2 text-accent text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+        <MapPin size={12} />
+        {project.location}
+      </div>
+      
+      <h3 className="text-3xl font-serif font-black text-white uppercase tracking-tighter leading-[0.9] mb-6">
+        {project.title}
+      </h3>
+      
+      <p className="text-white/60 text-[13px] leading-relaxed mb-8 line-clamp-2 font-medium">
+        {project.subtext}
+      </p>
+
+      {/* Highlights Grid */}
+      <div className="grid grid-cols-2 gap-3 mb-10">
+        {project.metrics.slice(0, 2).map((metric, i) => (
+          <div key={i} className="p-3 rounded-xl bg-white/5 border border-white/10">
+            <div className="text-[8px] font-black text-accent/50 uppercase tracking-widest mb-1">{metric.label}</div>
+            <div className="text-[11px] font-bold text-white tracking-wide">{metric.value}</div>
+          </div>
+        ))}
+      </div>
+
+      <Link 
+        href={`/projects/${project.slug}`}
+        className="inline-flex items-center gap-4 text-white text-[10px] font-black uppercase tracking-[0.4em] hover:text-accent transition-colors"
+      >
+        View Case Study <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform" />
+      </Link>
+    </div>
+  </motion.div>
+);
 
 export default function ProjectsSection() {
+  const [activeCategory, setActiveCategory] = useState<ProjectContent["category"]>("Completed");
+
+  const categories: ProjectContent["category"][] = ["Completed", "In Progress", "Pipeline"];
+  const filteredProjects = projects.filter(p => p.category === activeCategory);
+
   return (
     <section className="py-32 bg-white relative overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] -mr-64 -mt-64" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -ml-64 -mb-64" />
+      {/* Background Architectural Elements */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
+        
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-24">
           <div className="max-w-2xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="pill-tag border-accent/20 text-accent bg-accent/5 mb-8"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="flex items-center gap-4 mb-8"
             >
-              Strategic Scale
+              <div className="h-[2px] w-8 bg-accent" />
+              <span className="text-[11px] font-black uppercase tracking-[0.5em] text-accent">
+                Asset Portfolio
+              </span>
             </motion.div>
-            <h2 className="text-5xl md:text-7xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
-              Industrial <span className="text-accent">Landmarks</span> <br />
-              Portfolio
-            </h2>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="text-5xl md:text-8xl font-serif font-black text-primary uppercase tracking-tighter leading-[0.85]"
+            >
+              Industrial <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/30">Landmarks</span>
+            </motion.h2>
           </div>
-          <div className="flex flex-col items-start lg:items-end gap-4 max-w-xs text-left lg:text-right">
-            <div className="w-12 h-1 bg-accent mb-4" />
-            <p className="text-primary/50 font-medium text-sm leading-relaxed">
-              Delivering institutional-grade infrastructure across India&apos;s most critical economic corridors.
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="max-w-sm pb-2"
+          >
+            <p className="text-primary/50 text-lg font-medium leading-relaxed italic mb-6">
+              &ldquo;Strategically developed Grade-A assets across India&apos;s critical economic corridors.&rdquo;
             </p>
-          </div>
+            <div className="h-px w-16 bg-accent/30" />
+          </motion.div>
         </div>
 
-        <div className="space-y-40">
-          {projectCategories.map((group, groupIdx) => (
-            <div key={group.status} className="relative">
-              {/* Category Header */}
-              <div className="flex items-center gap-6 mb-16 group">
-                <div className="relative">
-                  <h3 className="text-2xl md:text-4xl font-serif font-black text-primary uppercase tracking-tight">
-                    {group.status} <br />
-                    <span className="text-accent">Projects</span>
-                  </h3>
-                </div>
-                <div className="h-px flex-1 bg-gray-100" />
-                <div className="flex flex-col items-end">
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/30">Sub-Sector</span>
-                  <span className="text-sm font-bold text-primary">Distribution & Parks</span>
-                </div>
-              </div>
+        {/* Tabs */}
+        <div className="flex border-b border-gray-100 mb-16 overflow-x-auto no-scrollbar">
+          {categories.map(cat => (
+            <CategoryTab
+              key={cat}
+              label={cat}
+              count={projects.filter(p => p.category === cat).length}
+              isActive={activeCategory === cat}
+              onClick={() => setActiveCategory(cat)}
+            />
+          ))}
+        </div>
 
-              {/* Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                {group.projects.map((project, i) => (
-                  <motion.div
-                    key={project.slug}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Link
-                      href={`/projects/${project.slug}`}
-                      className="group relative block h-[550px] rounded-[3.5rem] overflow-hidden bg-primary shadow-3xl transition-all duration-700 hover:-translate-y-4 hover:shadow-accent/10"
-                    >
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-50 group-hover:opacity-100"
-                      />
-
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent group-hover:from-primary/90 transition-all duration-500" />
-
-                      {/* Top Action */}
-                      <div className="absolute top-10 left-10 z-20">
-                        <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-all duration-500">
-                          <Zap size={20} className="text-accent" />
-                        </div>
-                      </div>
-
-                      {/* Content */}
-                      <div className="absolute inset-0 z-10 p-12 flex flex-col justify-end">
-                        <div className="flex items-center gap-4 text-accent mb-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                          <MapPin size={16} />
-                          <span className="text-[10px] font-black uppercase tracking-[0.3em] font-sans">
-                            {project.location}
-                          </span>
-                        </div>
-                        <h3 className="text-3xl md:text-4xl font-serif font-black text-white mb-8 uppercase tracking-tight leading-none group-hover:text-accent transition-all duration-500">
-                          {project.title}
-                        </h3>
-
-                        <div className="flex items-center justify-between pt-10 border-t border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-10 group-hover:translate-y-0">
-                          <div className="text-white/40 font-bold uppercase text-[9px] tracking-[0.4em]">
-                            {project.scale}
-                          </div>
-                          <div className="flex items-center gap-3 text-accent font-black text-[10px] uppercase tracking-widest">
-                            Architecture Details <ArrowUpRight size={16} />
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, i) => (
+            <ProjectCard key={project.slug} project={project} index={i} />
           ))}
         </div>
 
         {/* View All CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-40 pt-24 border-t border-gray-100 flex flex-col items-center text-center"
-        >
-          <h4 className="text-2xl font-serif font-black text-primary mb-12 uppercase tracking-wide">
-            Experience the Full <span className="text-accent">Ecosystem</span>
-          </h4>
+        <div className="mt-24 flex flex-col items-center gap-8">
+          <div className="flex items-center gap-4">
+             <div className="w-12 h-px bg-gray-100" />
+             <Activity className="text-accent/20" size={24} />
+             <div className="w-12 h-px bg-gray-100" />
+          </div>
           <Link
             href="/projects"
-            className="group relative inline-flex items-center gap-8 px-16 py-8 bg-primary text-white rounded-[2.5rem] overflow-hidden hover:bg-accent transition-all duration-500 shadow-3xl shadow-primary/20"
+            className="group px-16 py-6 bg-primary text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.5em] hover:bg-accent transition-all shadow-2xl shadow-primary/20 flex items-center gap-6"
           >
-            <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-            <span className="relative z-10 text-[11px] font-black uppercase tracking-[0.4em] group-hover:text-primary transition-colors">
-              Explore Full Portfolio
-            </span>
-            <ArrowRight size={22} className="relative z-10 group-hover:translate-x-3 transition-transform group-hover:text-primary" />
+            Explore Full Portfolio <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>
-        </motion.div>
+        </div>
+
       </div>
     </section>
   );
