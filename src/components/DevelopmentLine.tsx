@@ -236,7 +236,7 @@ function PhaseColumn({ phase, index }: { phase: typeof PHASES[0]; index: number 
         />
 
         {/* Bullets — flex-1 fills remaining space so cards align bottom */}
-        <div className="flex flex-col gap-[5px] flex-1 relative z-10">
+        <div className="flex flex-col gap-[5px]  flex-1 relative z-10">
           {phase.bullets.map((b, i) => (
             <div key={i} className="flex items-start gap-[7px]">
               <div
@@ -244,7 +244,7 @@ function PhaseColumn({ phase, index }: { phase: typeof PHASES[0]; index: number 
                 style={{ background: lit ? G : G40 }}
               />
               <span
-                className="text-[10.5px] leading-[1.5] font-sans transition-colors duration-300"
+                className="text-[13px] leading-[1.5] font-sans transition-colors duration-300"
                 style={{ color: lit ? "rgba(10,20,40,0.72)" : N55 }}
               >
                 {b}

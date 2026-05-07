@@ -184,8 +184,8 @@ function StepCard({
         background: isFinal
           ? "linear-gradient(135deg, rgba(212,175,55,0.06), rgba(212,175,55,0.02))"
           : hov
-          ? "rgba(212,175,55,0.03)"
-          : "#ffffff",
+            ? "rgba(212,175,55,0.03)"
+            : "#ffffff",
       }}
     >
       {/* Top gold sweep bar */}
@@ -209,12 +209,12 @@ function StepCard({
       {/* Phase counter */}
       <p
         className="flex items-center gap-2 text-[9px] font-black uppercase tracking-[0.25em] mb-5 transition-colors duration-300"
-        style={{ color: hov || isFinal ? "#D4AF37" : "rgba(212,175,55,0.45)" }}
+        style={{ color: hov || isFinal ? "#aa850aff" : "rgba(212,175,55,0.45)" }}
       >
         <span
           className="w-[5px] h-[5px] rounded-full inline-block flex-shrink-0 transition-all duration-300"
           style={{
-            background: hov || isFinal ? "#D4AF37" : "rgba(212,175,55,0.35)",
+            background: hov || isFinal ? "#a17f0cff" : "rgba(212,175,55,0.35)",
             transform: hov || isFinal ? "scale(1.4)" : "scale(1)",
           }}
         />
@@ -237,12 +237,12 @@ function StepCard({
       <span
         className="inline-flex items-center self-start text-[9px] font-black uppercase tracking-[0.3em] px-2 py-1 mb-4 transition-all duration-300"
         style={{
-          color: hov || isFinal ? "#D4AF37" : "rgba(212,175,55,0.5)",
+          color: hov || isFinal ? "#aa8611ff" : "rgba(212,175,55,0.5)",
           border: `1px solid ${hov || isFinal ? "rgba(212,175,55,0.45)" : "rgba(212,175,55,0.15)"}`,
         }}
       >
 
-        
+
         {step.tag}
       </span>
 

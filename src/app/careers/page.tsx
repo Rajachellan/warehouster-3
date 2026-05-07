@@ -45,8 +45,8 @@ export default function CareersPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
           </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -60,7 +60,7 @@ export default function CareersPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif font-black text-white leading-none uppercase tracking-tighter"
           >
             Join the <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Elite</span> Force
@@ -69,7 +69,7 @@ export default function CareersPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/50 font-sans font-medium max-w-2xl mt-12 leading-relaxed"
+            className="text-lg md:text-xl text-white/50 font-sans font-medium max-w-2xl mt-12 leading-relaxed"
           >
             Architect your career with a team defining the structural integrity of India&apos;s future.
           </motion.p>
@@ -95,13 +95,13 @@ export default function CareersPage() {
                         className="p-10 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:bg-accent/5 hover:border-accent/20 transition-all duration-500"
                     >
                         <h4 className="text-2xl font-serif font-bold text-primary mb-6">{item.label}</h4>
-                        <p className="text-primary/40 font-bold uppercase text-[9px] tracking-[0.3em] leading-relaxed">{item.desc}</p>
+                        <p className="text-primary/40 font-bold uppercase text-[11px] tracking-[0.2em] leading-relaxed">{item.desc}</p>
                     </motion.div>
                 ))}
             </div>
 
             <div className="space-y-12">
-                <h2 className="text-5xl md:text-7xl font-serif font-black text-primary mb-16 uppercase tracking-tighter">Strategic <span className="text-accent">Opportunities</span></h2>
+                <h2 className="text-4xl md:text-6xl font-serif font-black text-primary mb-16 uppercase tracking-tighter">Strategic <span className="text-accent">Opportunities</span></h2>
                 <div className="grid gap-8">
                     {jobs.map((job, i) => (
                         <motion.div 
@@ -118,7 +118,7 @@ export default function CareersPage() {
                                 </div>
                                 <div className="space-y-4">
                                     <h3 className="text-3xl font-serif font-bold text-primary group-hover:text-white transition-colors">{job.title}</h3>
-                                    <div className="flex flex-wrap gap-8 items-center text-primary/30 group-hover:text-white/40 text-[10px] font-black uppercase tracking-[0.3em] transition-colors">
+                                    <div className="flex flex-wrap gap-8 items-center text-primary/40 group-hover:text-white/40 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors">
                                         <div className="flex items-center gap-3"><MapPin size={14} className="text-accent" /> {job.location}</div>
                                         <div className="flex items-center gap-3"><Clock size={14} className="text-accent" /> {job.type}</div>
                                         <div className="px-5 py-2 rounded-full border border-primary/10 group-hover:border-white/10">{job.category}</div>

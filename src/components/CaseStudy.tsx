@@ -1,5 +1,5 @@
 "use client";
-
+ 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -9,17 +9,17 @@ import {
   TrendingUp, Trophy, ArrowUpRight, ChevronLeft, ChevronRight,
   CheckCircle2, Workflow, Target, AlertCircle, Lightbulb, BarChart4, Truck, Activity
 } from "lucide-react";
-
+ 
 import Image from "next/image";
 import Link from "next/link";
 import { projects, ProjectContent } from "@/data/projects";
-
+ 
 // ─── CONSTANTS ───────────────────────────────────────────────────────────────
 const ICON_CLS = "w-4 h-4 stroke-[#C9A84C] fill-none";
 const GOLD = "#C9A84C";
 const NAVY = "#0B1828";
 const INTERVAL = 6000;
-
+ 
 // ─── ICON MAPPING ───────────────────────────────────────────────────────────
 const ICON_MAP: Record<string, React.ReactNode> = {
   Search: <Search className={ICON_CLS} />,
@@ -45,7 +45,7 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   Trophy: <Trophy className={ICON_CLS} />,
   Truck: <Truck className={ICON_CLS} />,
 };
-
+ 
 // ─── STEP CARD ───────────────────────────────────────────────────────────────
 function StepCard({ step, index, isVisible }: { step: any; index: number; isVisible: boolean }) {
   return (
@@ -66,7 +66,7 @@ function StepCard({ step, index, isVisible }: { step: any; index: number; isVisi
     </motion.div>
   );
 }
-
+ 
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 export default function CaseStudySection({ slug }: { slug?: string | string[] }) {
   const [cur, setCur] = useState(0);
@@ -75,16 +75,16 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startRef = useRef<number>(Date.now());
   const sectionRef = useRef<HTMLDivElement>(null);
-
+ 
   // Filter projects if slug is provided
   const targetSlug = Array.isArray(slug) ? slug[0] : slug;
   const filteredProjects = targetSlug
     ? projects.filter(p => p.slug === targetSlug)
     : projects;
-
+ 
   const isSingle = !!targetSlug;
   const study = filteredProjects[cur] || projects[0];
-
+ 
   const goTo = useCallback((n: number) => {
     if (isSingle) return;
     const next = ((n % filteredProjects.length) + filteredProjects.length) % filteredProjects.length;
@@ -92,10 +92,10 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
     setProgress(0);
     startRef.current = Date.now();
   }, [isSingle, filteredProjects.length]);
-
+ 
   const next = useCallback(() => goTo(cur + 1), [cur, goTo]);
   const prev = useCallback(() => goTo(cur - 1), [cur, goTo]);
-
+ 
   useEffect(() => {
     if (isSingle) return;
     if (timerRef.current) clearInterval(timerRef.current);
@@ -110,18 +110,18 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
     }, 60);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [cur, goTo, isSingle]);
-
+ 
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setIsVisible(true); }, { threshold: 0.1 });
     if (sectionRef.current) obs.observe(sectionRef.current);
     return () => obs.disconnect();
   }, []);
-
+ 
   if (!study) return null;
-
+ 
   return (
     <section ref={sectionRef} className={`bg-white relative overflow-hidden ${isSingle ? 'py-0' : 'py-24'}`}>
-      
+     
       {/* ── SECTION HEADER ── */}
       <div className="max-w-7xl mx-auto px-8 mb-16">
         <motion.div
@@ -134,7 +134,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
             {isSingle ? "Project Case Study" : "Execution Excellence"}
           </span>
         </motion.div>
-
+ 
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -147,7 +147,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
                <>Real-World <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/40">Execution Impact</span></>
             )}
           </motion.h2>
-
+ 
           <motion.p
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : {}}
@@ -157,10 +157,10 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
           </motion.p>
         </div>
       </div>
-
+ 
       {/* ── MAIN CONTENT GRID ── */}
       <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-12">
-        
+       
         {/* LEFT PANEL: CONTEXT & OVERVIEW */}
         <div className="lg:col-span-4 space-y-12">
           <div className="relative h-[450px] rounded-[3rem] overflow-hidden group shadow-2xl">
@@ -173,7 +173,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
               <h3 className="text-2xl font-serif font-black text-white uppercase tracking-tight">{study.title}</h3>
             </div>
           </div>
-
+ 
           <div className="space-y-8 bg-gray-50 p-10 rounded-[2.5rem] border border-gray-100">
             <div className="flex items-center gap-3 text-accent text-[10px] font-black uppercase tracking-widest">
                <Activity className="w-4 h-4" /> Asset Specs
@@ -193,14 +193,14 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
             </div>
           </div>
         </div>
-
+ 
         {/* RIGHT PANEL: THE STORY */}
         <div className="lg:col-span-8 space-y-16">
-          
+         
           {/* 1. CHALLENGE & SOLUTION HIGHLIGHT BOXES */}
           {study.extraDetails && (
             <div className="grid md:grid-cols-2 gap-6">
-              <motion.div 
+              <motion.div
                 whileHover={{ y: -5 }}
                 className="p-10 rounded-[2.5rem] bg-[#0B1828] text-white relative overflow-hidden group"
               >
@@ -218,8 +218,8 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
                   ))}
                 </ul>
               </motion.div>
-
-              <motion.div 
+ 
+              <motion.div
                 whileHover={{ y: -5 }}
                 className="p-10 rounded-[2.5rem] bg-accent text-[#0B1828] relative overflow-hidden group"
               >
@@ -240,7 +240,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
               </motion.div>
             </div>
           )}
-
+ 
           {/* 2. EXECUTION WORKFLOW */}
           <div className="space-y-8">
             <div className="flex items-center gap-4">
@@ -254,7 +254,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
               ))}
             </div>
           </div>
-
+ 
           {/* 3. OUTCOMES & IMPACT */}
           <div className="p-12 rounded-[3.5rem] border border-gray-100 bg-gray-50/50">
              <div className="flex items-center justify-between mb-10">
@@ -276,7 +276,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
                     </div>
                   ))}
                 </div>
-
+ 
                 <div className="bg-[#0B1828] rounded-[2.5rem] p-10 flex flex-col justify-center gap-8">
                    {study.stats.slice(0, 2).map((s, i) => (
                      <div key={i}>
@@ -291,7 +291,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
           </div>
         </div>
       </div>
-
+ 
       {/* ── NAVIGATION (ONLY FOR SLIDER MODE) ── */}
       {!isSingle && (
         <div className="max-w-7xl mx-auto px-8 mt-16 flex items-center justify-between py-8 border-t border-gray-100">
@@ -314,7 +314,9 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
            </div>
         </div>
       )}
-
+ 
     </section>
   );
 }
+ 
+ 

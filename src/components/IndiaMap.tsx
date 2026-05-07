@@ -106,7 +106,7 @@ export default function IndiaMap() {
               <br />Architecture
             </h2>
           </div>
-          <p className="text-sm max-w-xs leading-relaxed md:text-right" style={{ color: `${PRIMARY}50` }}>
+          <p className="text-md max-w-xs leading-relaxed md:text-right" style={{ color: `${PRIMARY}80` }}>
             330+ Acres of strategic industrial growth across South India's premium logistics corridors.
           </p>
         </div>

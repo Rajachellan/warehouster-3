@@ -41,7 +41,7 @@ export default function BlogsPage() {
       
       
       {/* 1. Page Header */}
-      <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
+      <section className="relative pt-60 pb-32 overflow-hidden">
     <div className="absolute inset-0 z-0">
                    <Image 
                      src={banner}
@@ -117,7 +117,7 @@ export default function BlogsPage() {
                                 src={blog.image} 
                                 alt={blog.title} 
                                 fill 
-                                className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 opacity-60 group-hover:opacity-100"
+                                className="object-cover duration-1000  group-hover:opacity-100"
                              />
                              <div className="absolute top-10 left-10 z-10">
                                 <div className="px-6 py-2 rounded-full glass-gold text-white font-black uppercase text-[8px] tracking-[0.2em] border border-white/20">

@@ -335,7 +335,7 @@ export default function LeadershipSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-serif font-black text-white uppercase tracking-tighter leading-tight"
+              className="font-serif font-black text-white uppercase  leading-tight"
               style={{ fontSize: "clamp(32px, 5.5vw, 64px)" }}
             >
               Institutional Sponsorship
@@ -348,9 +348,9 @@ export default function LeadershipSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.25 }}
-              className="font-sans font-medium text-sm leading-relaxed lg:text-right lg:max-w-xs"
+              className="font-sans font-medium text-md leading-relaxed lg:text-right lg:max-w-xs"
               style={{
-                color: "rgba(255,255,255,0.38)",
+                color: "rgba(243, 234, 234, 0.86)",
                 borderRight: `1.5px solid ${GOLD_LINE}`,
                 paddingRight: 16,
               }}
@@ -392,7 +392,7 @@ export default function LeadershipSection() {
             </span>
             <div className="h-px flex-1" style={{ background: "rgba(10,20,40,0.07)" }} />
             <span
-              className="font-sans font-black text-[9px] uppercase tracking-[0.3em] text-primary/20"
+              className="font-sans font-black text-[13px] uppercase tracking-[0.3em] text-primary/60"
             >
               {team.length} Members
             </span>
@@ -412,16 +412,16 @@ export default function LeadershipSection() {
             viewport={{ once: true }}
             transition={{ delay: 0.6, duration: 0.6 }}
             className="mt-14 pt-6 flex items-center justify-between"
-            style={{ borderTop: `1px solid rgba(212,175,55,0.12)` }}
+            style={{ borderTop: `1px solid rgba(177, 137, 8, 0.71)` }}
           >
-            <span className="font-sans font-black text-[9px] uppercase tracking-[0.3em] text-primary/20">
+            <span className="font-sans font-black text-[9px] uppercase tracking-[0.3em] text-primary/60">
               Integrated Leadership — India
             </span>
             <div className="flex items-center gap-2.5">
               <div className="h-px w-8" style={{ background: GOLD_LINE }} />
               <span
-                className="font-sans font-black text-[9px] uppercase tracking-[0.3em]"
-                style={{ color: "rgba(212,175,55,0.5)" }}
+                className="font-sans font-black text-[10px] uppercase tracking-[0.3em]"
+                style={{ color: "rgba(219, 171, 10, 0.59)" }}
               >
                 Industrial Real Estate
               </span>

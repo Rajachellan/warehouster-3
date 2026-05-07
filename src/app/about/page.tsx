@@ -29,59 +29,81 @@ export default function AboutPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-40 grayscale"
+            className="object-cover opacity-40 "
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#D4AF37_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.03]" />
+
+          {/* Right Side Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
+
+        
+         
         </div>
 
         {/* Content */}
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-10"
-          >
-            Institutional Platform
-          </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-9xl font-serif font-black text-white leading-[0.85] uppercase tracking-tighter max-w-5xl"
-          >
-            Building India&apos;s <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white/20">
-              Industrial Legacy
-            </span>
-          </motion.h1>
-
-          <div className="grid lg:grid-cols-2 gap-12 mt-16 items-start">
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-lg md:text-xl text-white/50 font-sans max-w-xl leading-relaxed"
-            >
-              Warehouster is a next-generation industrial real estate platform focused on developing Grade-A assets that define the future of India&apos;s global supply chain.
-            </motion.p>
+          {/* Left aligned container */}
+          <div className="max-w-4xl text-left">
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6 }}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 relative overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="pill-tag border-accent/30 text-accent bg-accent/5 mb-10 w-fit"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-accent" />
-              <p className="text-white text-xl font-serif leading-tight italic mb-4">
-                &ldquo;We don&apos;t just build sheds. We engineer structured industrial ecosystems.&rdquo;
-              </p>
-              <div className="flex items-center gap-4 mt-8">
-                 <div className="h-px w-8 bg-accent/50" />
-                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent">Core Philosophy</span>
-              </div>
+              Institutional Platform
             </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-xl  font-serif font-black text-white  max-w-2xl"
+            >
+              Warehouster is a next-generation industrial and logistics real
+              estate platform focused on developing
+
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white/70">
+                Grade-A warehousing
+              </span>{" "}
+              and industrial infrastructure.
+            </motion.h1>
+
+            <div className="grid lg:grid-cols-2 gap-12 mt-5 items-start">
+
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-lg md:text-xl text-white/60 font-sans leading-relaxed"
+              >
+                Warehouster is a next-generation industrial real estate platform
+                focused on developing Grade-A assets that define the future of
+                India&apos;s global supply chain.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6 }}
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[1rem] p-5 relative overflow-hidden"
+              >
+                <div className="absolute top-0 left-0 w-1 h-full bg-accent" />
+
+                <p className="text-white text-xl font-serif leading-tight italic mb-4">
+                  &ldquo;We don&apos;t just build sheds. We engineer structured
+                  industrial ecosystems.&rdquo;
+                </p>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <div className="h-px w-8 bg-accent/50" />
+
+                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent">
+                    Core Philosophy
+                  </span>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -89,7 +111,15 @@ export default function AboutPage() {
       {/* 2. VISION & MISSION */}
       <VisionMission />
 
-      {/* 3. CORE STRATEGY: THE FOUNDER */}
+    
+      {/* 4. DEVELOPMENT MODEL */}
+      <DevelopmentProcess />
+
+      {/* 5. COMPETITIVE EDGE */}
+      <CompetitivePositioning />
+         {/* 7. JOURNEY & SUMMARY */}
+      <JourneySection />
+  {/* 3. CORE STRATEGY: THE FOUNDER */}
       <section className="py-32 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-24 items-center">
@@ -124,9 +154,9 @@ export default function AboutPage() {
                   <div className="h-[2px] w-12 bg-accent" />
                   <span className="text-[11px] font-black uppercase tracking-[0.6em] text-accent">Strategic Leadership</span>
                 </div>
-                <h2 className="text-4xl md:text-7xl font-serif font-black text-primary uppercase tracking-tighter leading-[0.9]">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-black text-primary uppercase  leading-[0.9]">
                   Architecting <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/40">Industrial Excellence</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary/70">Industrial Excellence</span>
                 </h2>
               </motion.div>
 
@@ -160,23 +190,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. DEVELOPMENT MODEL */}
-      <DevelopmentProcess />
-
-      {/* 5. COMPETITIVE EDGE */}
-      <CompetitivePositioning />
-
       {/* 6. TEAM EXERTION */}
       <Leadership />
 
-      {/* 7. JOURNEY & SUMMARY */}
-      <JourneySection />
+   
       <Summary />
 
       {/* 8. FINAL PURPOSE CTA */}
       <section className="py-40 bg-gray-50 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#0A1428_1px,transparent_1px)] bg-[size:32px:32px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#0A1428_1px,transparent_1px)] bg-[size:32px:32px]" />
         </div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -184,11 +207,11 @@ export default function AboutPage() {
             <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-xl mb-4">
               <Activity className="text-accent" size={28} />
             </div>
-            
+
             <h2 className="text-5xl md:text-8xl font-serif font-black text-primary leading-[0.85] uppercase tracking-tighter">
               Driven by <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/40">Purpose</span>
             </h2>
-            
+
             <p className="text-xl md:text-2xl text-primary/50 font-serif leading-relaxed max-w-2xl mb-12">
               &ldquo;We create high-performance environments that don&apos;t just house goods, but fuel the economic engines of tomorrow.&rdquo;
             </p>

@@ -46,7 +46,7 @@ export default function EventsPage() {
           >
             Engagement
           </motion.div>
-          <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-none uppercase tracking-tighter">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-black text-white leading-none uppercase tracking-tighter">
             Industry <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Events</span>
           </h1>
@@ -73,16 +73,16 @@ export default function EventsPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent p-12 flex flex-col justify-end">
                     <div className="mb-8">
-                         <span className="px-4 py-1.5 bg-accent/90 text-primary text-[8px] font-black uppercase tracking-widest rounded-lg mb-4 inline-block">
+                         <span className="px-4 py-1.5 bg-accent/90 text-primary text-[10px] font-bold uppercase tracking-widest rounded-lg mb-4 inline-block">
                             {event.type}
                         </span>
-                        <h2 className="text-3xl font-serif font-black text-white leading-tight mb-6">{event.title}</h2>
+                        <h2 className="text-2xl md:text-3xl font-serif font-black text-white leading-tight mb-6">{event.title}</h2>
                         
                         <div className="space-y-3">
-                            <div className="flex items-center gap-3 text-white/60 text-[10px] font-black uppercase tracking-widest">
+                            <div className="flex items-center gap-3 text-white/60 text-[11px] font-bold uppercase tracking-widest">
                                 <Calendar size={14} className="text-accent" /> {event.date}
                             </div>
-                            <div className="flex items-center gap-3 text-white/40 text-[10px] font-black uppercase tracking-widest">
+                            <div className="flex items-center gap-3 text-white/40 text-[11px] font-bold uppercase tracking-widest">
                                 <MapPin size={14} className="text-accent" /> {event.location}
                             </div>
                         </div>

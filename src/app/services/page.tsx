@@ -83,8 +83,8 @@ export default function ServicesPage() {
       sizes="100vw"
       className="object-cover object-center"
     />
-    <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
-    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
   </div>
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
@@ -99,7 +99,7 @@ export default function ServicesPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-6xl  font-serif font-black text-white leading-none uppercase tracking-tighter"
+            className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-white leading-none uppercase tracking-tighter"
           >
             Industrial <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Capabilities</span>
@@ -108,7 +108,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-white/50 font-sans font-medium max-w-2xl mt-8 leading-relaxed"
+            className="text-lg md:text-xl text-white/50 font-sans font-medium max-w-2xl mt-8 leading-relaxed"
           >
             Engineering excellence and strategic intelligence across the entire industrial real estate lifecycle.
           </motion.p>
@@ -149,10 +149,10 @@ export default function ServicesPage() {
                         <div className="w-16 h-16 rounded-[1.5rem] bg-gray-50 flex items-center justify-center text-primary group hover:bg-primary hover:text-white transition-all shadow-sm">
                             <service.icon size={28} />
                         </div>
-                        <h2 className="text-5xl font-serif font-black text-primary uppercase tracking-tighter leading-tight">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-primary uppercase tracking-tighter leading-tight">
                             {service.title}
                         </h2>
-                        <p className="text-xl text-primary/60 font-medium leading-relaxed">
+                        <p className="text-lg md:text-xl text-primary/60 font-medium leading-relaxed">
                             {service.description}
                         </p>
                         

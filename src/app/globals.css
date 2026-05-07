@@ -58,7 +58,7 @@
   }
 
   .pill-tag {
-    @apply inline-flex items-center px-4 py-1 rounded-full border border-accent/30 bg-accent/5 text-[12px] font-black uppercase tracking-widest text-accent;
+    @apply inline-flex items-center px-4 py-1 rounded-full border border-accent/30 bg-accent/5 text-[13px] font-bold uppercase tracking-widest text-accent;
   }
 }
 

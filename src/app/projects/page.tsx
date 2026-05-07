@@ -99,7 +99,7 @@ const SectionHeader = ({ id, tag, title, subtitle }: { id: string; tag: string; 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-5xl md:text-8xl font-serif font-black text-primary uppercase tracking-tighter leading-[0.85] max-w-2xl"
+        className="text-4xl md:text-6xl lg:text-7xl font-serif font-black text-primary uppercase tracking-tighter leading-[0.85] max-w-2xl"
       >
         {title.split(' ')[0]} <br />
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/30">{title.split(' ').slice(1).join(' ')}</span>
@@ -112,7 +112,7 @@ const SectionHeader = ({ id, tag, title, subtitle }: { id: string; tag: string; 
         transition={{ delay: 0.2 }}
         className="max-w-md"
       >
-        <p className="text-primary/50 font-medium text-lg leading-relaxed mb-6 italic">
+        <p className="text-primary/50 font-medium text-base md:text-lg leading-relaxed mb-6 italic">
           &ldquo;{subtitle}&rdquo;
         </p>
         <div className="h-px w-16 bg-accent/30" />
@@ -147,8 +147,8 @@ export default function ProjectsPage() {
             priority
           />
         </motion.div>
-       <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -161,7 +161,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-6xl md:text-9xl font-serif font-black text-white leading-[0.9] uppercase tracking-tighter"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif font-black text-white leading-[0.9] uppercase tracking-tighter"
           >
             Industrial <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-gold-light to-white">Landmarks</span>
@@ -170,7 +170,7 @@ export default function ProjectsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl text-white/50 font-sans font-medium max-w-2xl mt-12 leading-relaxed"
+            className="text-lg md:text-xl text-white/50 font-sans font-medium max-w-2xl mt-12 leading-relaxed"
           >
             A diverse range of strategic assets that define the standard of institutional-grade infrastructure across India&apos;s critical economic corridors.
           </motion.p>

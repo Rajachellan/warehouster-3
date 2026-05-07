@@ -219,7 +219,7 @@ function VMCard({
 
       {/* Body */}
       <p
-        className="text-[13px] leading-[1.9] font-sans mb-7"
+        className="text-[15px] leading-[1.9] font-sans mb-7"
         style={{ color: N50 }}
       >
         {card.body}
@@ -237,7 +237,7 @@ function VMCard({
               }}
             />
             <span
-              className="text-[13px] leading-[1.7] font-sans"
+              className="text-[14px] leading-[1.7] font-sans"
               style={{ color: N48 }}
             >
               {b}
@@ -365,7 +365,7 @@ export default function VisionMissionSection() {
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14">
           <div>
-            <Pill label="Strategic Foundation" gold className="mb-5" />
+            <Pill label="Strategic Foundation" gold className="mb-5 text-[12px]" />
             <h2
               className="font-serif font-black uppercase leading-[0.93] tracking-[-0.025em]"
               style={{ fontSize: "clamp(44px,6.5vw,80px)", color: P }}
@@ -401,7 +401,7 @@ export default function VisionMissionSection() {
               <button
                 key={c.id}
                 onClick={() => setActiveId(c.id)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border font-black uppercase text-[10px] tracking-[0.3em] transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl border font-black uppercase text-[12px] tracking-[0.3em] transition-all duration-300"
                 style={{
                   background: active ? G : "white",
                   borderColor: active ? "transparent" : N08,
@@ -417,7 +417,7 @@ export default function VisionMissionSection() {
         </div>
 
         {/* VM Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2  gap-5 ">
           {CARDS.map((c) => (
             <VMCard
               key={c.id}
@@ -453,7 +453,7 @@ export default function VisionMissionSection() {
               </h3>
             </div>
             <span
-              className="text-[9px] font-black uppercase tracking-[0.45em] font-sans pb-1"
+              className="text-[13px] font-black uppercase tracking-[0.15em] font-sans pb-1"
               style={{ color: N25 }}
             >
               06 Principles

@@ -22,8 +22,8 @@ export default function ContactPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
           </div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -34,7 +34,7 @@ export default function ContactPage() {
           >
             Global Reach
           </motion.div>
-          <h1 className="text-7xl  font-serif font-black text-white leading-none uppercase tracking-tighter">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-white leading-none uppercase tracking-tighter">
             Contact <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Warehouster</span>
           </h1>

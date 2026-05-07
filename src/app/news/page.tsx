@@ -215,7 +215,8 @@ export default function NewsPage() {
             priority
             className="object-cover opacity-40 grayscale"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -227,9 +228,9 @@ export default function NewsPage() {
             Insights & Updates
           </motion.div>
 
-          <h1 className="text-6xl md:text-9xl font-serif font-black text-white leading-[0.85] uppercase tracking-tighter">
-            Corporate <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white/20">Updates</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-white leading-[0.85] uppercase ">
+            Corporate 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white/20"> Updates</span>
           </h1>
         </div>
       </section>
@@ -246,12 +247,12 @@ export default function NewsPage() {
                 transition={{ delay: i * 0.1 }}
                 className="group flex flex-col bg-white rounded-[3.5rem] border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500"
               >
-                <div className="relative h-72 overflow-hidden bg-gray-50">
+                <div className="relative h-52 overflow-hidden bg-gray-50">
                   <Image 
                     src={item.image} 
                     alt={item.title} 
                     fill 
-                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
+                    className="object-cover transition-all duration-1000" 
                   />
                   <div className="absolute top-8 left-8 z-10">
                     <div className="px-4 py-1.5 bg-primary/80 backdrop-blur-md text-accent text-[9px] font-black uppercase tracking-widest border border-accent/20 rounded-full">
@@ -261,7 +262,7 @@ export default function NewsPage() {
                 </div>
 
                 <div className="p-12 flex flex-col flex-1">
-                  <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.3em] text-primary/30 mb-8">
+                  <div className="flex items-center gap-6 text-[12px] font-bold uppercase tracking-[0.3em] text-primary/40 mb-8">
                     <span className="flex items-center gap-2"><Calendar size={12} className="text-accent" /> {item.date}</span>
                   </div>
                   
@@ -269,7 +270,7 @@ export default function NewsPage() {
                     {item.title}
                   </h2>
                   
-                  <p className="text-[14px] font-medium text-primary/50 leading-relaxed mb-10 line-clamp-3">
+                  <p className="text-sm md:text-base font-medium text-primary/60 leading-relaxed mb-10 line-clamp-3">
                     {item.excerpt}
                   </p>
 

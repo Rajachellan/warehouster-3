@@ -1,22 +1,22 @@
 "use client";
-
+ 
 import { motion } from "framer-motion";
 import { projects, ProjectContent } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, MapPin, ChevronRight, Activity } from "lucide-react";
 import { useState } from "react";
-
-const CategoryTab = ({ 
-  label, 
-  count, 
-  isActive, 
-  onClick 
-}: { 
-  label: string; 
-  count: number; 
-  isActive: boolean; 
-  onClick: () => void 
+ 
+const CategoryTab = ({
+  label,
+  count,
+  isActive,
+  onClick
+}: {
+  label: string;
+  count: number;
+  isActive: boolean;
+  onClick: () => void
 }) => (
   <button
     onClick={onClick}
@@ -41,7 +41,7 @@ const CategoryTab = ({
     )}
   </button>
 );
-
+ 
 const ProjectCard = ({ project, index }: { project: ProjectContent; index: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -54,39 +54,39 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
       src={project.image}
       alt={project.title}
       fill
-      className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+      className="object-cover  transition-all duration-1000"
     />
-    
+   
     {/* Status Badge */}
     <div className="absolute top-8 left-8 z-10">
       <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[9px] font-black uppercase tracking-widest">
         {project.accentTag}
       </div>
     </div>
-
+ 
     <div className="absolute top-8 right-8 z-10">
       <div className="px-4 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-accent/20 text-accent text-[10px] font-black uppercase tracking-widest">
         {project.status}
       </div>
     </div>
-
+ 
     {/* Content Overlay */}
     <div className="absolute inset-0 bg-gradient-to-t from-[#0A1428] via-[#0A1428]/40 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-700" />
-    
+   
     <div className="absolute inset-0 p-12 flex flex-col justify-end transform group-hover:translate-y-[-10px] transition-transform duration-700">
       <div className="flex items-center gap-2 text-accent text-[10px] font-black uppercase tracking-[0.3em] mb-4">
         <MapPin size={12} />
         {project.location}
       </div>
-      
+     
       <h3 className="text-3xl font-serif font-black text-white uppercase tracking-tighter leading-[0.9] mb-6">
         {project.title}
       </h3>
-      
+     
       <p className="text-white/60 text-[13px] leading-relaxed mb-8 line-clamp-2 font-medium">
         {project.subtext}
       </p>
-
+ 
       {/* Highlights Grid */}
       <div className="grid grid-cols-2 gap-3 mb-10">
         {project.metrics.slice(0, 2).map((metric, i) => (
@@ -96,8 +96,8 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
           </div>
         ))}
       </div>
-
-      <Link 
+ 
+      <Link
         href={`/projects/${project.slug}`}
         className="inline-flex items-center gap-4 text-white text-[10px] font-black uppercase tracking-[0.4em] hover:text-accent transition-colors"
       >
@@ -106,21 +106,21 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
     </div>
   </motion.div>
 );
-
+ 
 export default function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState<ProjectContent["category"]>("Completed");
-
+ 
   const categories: ProjectContent["category"][] = ["Completed", "In Progress", "Pipeline"];
   const filteredProjects = projects.filter(p => p.category === activeCategory);
-
+ 
   return (
     <section className="py-32 bg-white relative overflow-hidden">
       {/* Background Architectural Elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
-
+ 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
+       
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-12 mb-24">
           <div className="max-w-2xl">
@@ -134,17 +134,17 @@ export default function ProjectsSection() {
                 Asset Portfolio
               </span>
             </motion.div>
-            
+           
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-8xl font-serif font-black text-primary uppercase tracking-tighter leading-[0.85]"
+              className="text-6xl  font-serif font-black text-primary uppercase "
             >
-              Industrial <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/30">Landmarks</span>
+              Industrial 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent/60">  Landmarks</span>
             </motion.h2>
           </div>
-
+ 
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -156,7 +156,7 @@ export default function ProjectsSection() {
             <div className="h-px w-16 bg-accent/30" />
           </motion.div>
         </div>
-
+ 
         {/* Tabs */}
         <div className="flex border-b border-gray-100 mb-16 overflow-x-auto no-scrollbar">
           {categories.map(cat => (
@@ -169,14 +169,14 @@ export default function ProjectsSection() {
             />
           ))}
         </div>
-
+ 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, i) => (
             <ProjectCard key={project.slug} project={project} index={i} />
           ))}
         </div>
-
+ 
         {/* View All CTA */}
         <div className="mt-24 flex flex-col items-center gap-8">
           <div className="flex items-center gap-4">
@@ -191,7 +191,7 @@ export default function ProjectsSection() {
             Explore Full Portfolio <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>
         </div>
-
+ 
       </div>
     </section>
   );

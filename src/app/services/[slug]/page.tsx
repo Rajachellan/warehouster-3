@@ -142,7 +142,8 @@ export default function ServiceDetailPage() {
           className="object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <motion.div
@@ -156,7 +157,7 @@ export default function ServiceDetailPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-6xl md:text-8xl font-serif font-black text-white uppercase tracking-tighter leading-none mb-8"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif font-black text-white uppercase tracking-tighter leading-none mb-8"
           >
             {service.title.split(' ')[0]} <br />
             <span className="text-accent">{service.title.split(' ').slice(1).join(' ')}</span>
@@ -165,7 +166,7 @@ export default function ServiceDetailPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-white/60 font-medium max-w-2xl leading-relaxed"
+            className="text-lg md:text-xl text-white/60 font-medium max-w-2xl leading-relaxed"
           >
             {service.description}
           </motion.p>
@@ -178,12 +179,12 @@ export default function ServiceDetailPage() {
           <div className="grid lg:grid-cols-2 gap-24 items-start">
              <div>
                 <div className="pill-tag mb-12">Deep Technical Expertise</div>
-                <h2 className="text-4xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tight mb-12">
+                <h2 className="text-3xl md:text-4xl font-serif font-black text-primary leading-tight uppercase tracking-tight mb-12">
                    Institutional Grade <br />
                    <span className="text-accent">Process & Excellence</span>
                 </h2>
                 <div className="prose prose-xl prose-primary text-primary/60 font-medium leading-[1.8] space-y-8">
-                   <p className="text-2xl text-primary font-serif leading-relaxed">
+                   <p className="text-xl md:text-2xl text-primary font-serif leading-relaxed">
                       &quot;{service.detailedContent}&quot;
                    </p>
                    <p>
