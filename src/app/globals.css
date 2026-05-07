@@ -5,8 +5,10 @@
   --color-accent: #D4AF37;
   --color-gold-light: #F0E2A1;
   --color-gold-dark: #9A7B4F;
-  --font-serif: var(--font-outfit), sans-serif;
-  --font-sans: var(--font-inter), sans-serif;
+  
+  /* Use explicit fallbacks and check variable naming */
+  --font-serif: var(--font-outfit, ui-serif, Georgia, serif);
+  --font-sans: var(--font-inter, ui-sans-serif, system-ui, sans-serif);
 }
 
 :root {
@@ -25,13 +27,7 @@
     @apply bg-white text-primary font-sans antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    /* Default to sans/poppins to keep original sections unchanged */
+  h1, h2, h3, h4, h5, h6 {
     @apply font-sans;
   }
 }
@@ -46,15 +42,18 @@
   }
 
   .btn-gold {
-    @apply bg-accent text-primary px-6 py-3 rounded-lg font-bold transition-all hover:bg-gold-light shadow-md hover:shadow-xl active:scale-95;
+    @apply bg-accent text-primary px-6 py-3 rounded-lg font-bold transition-all shadow-md active:scale-95;
+    @apply hover:bg-gold-light hover:shadow-xl;
   }
 
   .btn-outline {
-    @apply border-2 border-accent text-accent px-6 py-3 rounded-lg font-bold transition-all hover:bg-accent hover:text-primary active:scale-95;
+    @apply border-2 border-accent text-accent px-6 py-3 rounded-lg font-bold transition-all active:scale-95;
+    @apply hover:bg-accent hover:text-primary;
   }
 
   .hover-lift {
-    @apply transition-all duration-500 hover:-translate-y-2 shadow-sm hover:shadow-2xl hover:border-accent/40;
+    @apply transition-all duration-500 shadow-sm;
+    @apply hover:-translate-y-2 hover:shadow-2xl hover:border-accent/40;
   }
 
   .pill-tag {
@@ -71,7 +70,6 @@
     @apply bg-gradient-to-br from-[#0A1A35] via-[#0A1428] to-[#050B18];
   }
 
-  /* Specific helper for Institutional sections */
   .institutional-serif {
     @apply font-serif font-black uppercase tracking-tighter;
   }
