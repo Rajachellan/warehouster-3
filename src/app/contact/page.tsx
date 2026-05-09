@@ -9,6 +9,10 @@ import banner from "../../assets/bmi-strategic-alliance-banner.webp"
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
+
+
+
+      
       {/* Header */}
       <section className="relative pt-60 pb-24 bg-primary overflow-hidden">
           <div className="absolute inset-0 z-0">
