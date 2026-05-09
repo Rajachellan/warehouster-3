@@ -8,6 +8,13 @@ pipeline {
     }
 
     stages {
+
+        stage('Clean Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
+
         stage('Checkout Code') {
             steps {
                 git branch: "main",
@@ -29,7 +36,7 @@ pipeline {
             steps {
                 sh '''
                 echo "Building Docker image..."
-                docker build -t $DOCKER_IMAGE .
+                docker build --no-cache -t $DOCKER_IMAGE .
                 '''
             }
         }
@@ -58,10 +65,14 @@ pipeline {
         stage('Verify Container') {
             steps {
                 sh '''
-                if [ "$(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME)" != "true" ]; then
+                RUNNING=$(docker inspect -f '{{.State.Running}}' $CONTAINER_NAME)
+
+                if [ "$RUNNING" != "true" ]; then
+                    echo "❌ Container failed to start"
                     docker logs $CONTAINER_NAME
                     exit 1
                 fi
+
                 echo "✅ Container is running"
                 '''
             }
@@ -71,10 +82,15 @@ pipeline {
     post {
         success {
             echo "🎉 Warehouster frontend deployed successfully!"
-            echo "App running on port ${APP_PORT}"
+            echo "🚀 App running on port ${APP_PORT}"
         }
+
         failure {
             echo "❌ Deployment failed. Check logs above."
+        }
+
+        always {
+            sh 'docker image prune -f || true'
         }
     }
 }
