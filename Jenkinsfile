@@ -10,9 +10,9 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: "dev",
+                git branch: "main",
                     credentialsId: 'learnfella-credentials',
-                    url: 'https://github.com/Rajachellan/warehouster.git'
+                    url: 'https://github.com/Rajachellan/warehouster-3.git'
             }
         }
 
