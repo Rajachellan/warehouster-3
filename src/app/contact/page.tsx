@@ -24,15 +24,15 @@ export default function ContactPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.9)] to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.8)] via-transparent to-transparent" />
           </div>
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[rgba(212,175,55,0.05)] -skew-x-12 translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="pill-tag border-accent/20 text-accent bg-accent/5 mb-6"
+            className="pill-tag border-[rgba(212,175,55,0.2)] text-accent bg-[rgba(212,175,55,0.05)] mb-6"
           >
             Global Reach
           </motion.div>

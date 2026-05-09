@@ -142,16 +142,16 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
             className="font-serif text-4xl md:text-7xl font-black text-[#0B1828] uppercase tracking-tighter leading-[0.85] max-w-3xl"
           >
             {isSingle ? (
-               <>Case Study: <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/40">{study.title}</span></>
+               <>Case Study: <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[rgba(212,175,55,0.4)]">{study.title}</span></>
             ) : (
-               <>Real-World <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/40">Execution Impact</span></>
+               <>Real-World <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[rgba(212,175,55,0.4)]">Execution Impact</span></>
             )}
           </motion.h2>
  
           <motion.p
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : {}}
-            className="text-lg text-[#0B1828]/50 font-medium lg:max-w-[280px] lg:text-right italic border-r-2 border-accent/30 pr-6"
+            className="text-lg text-[#0B1828]/50 font-medium lg:max-w-[280px] lg:text-right italic border-r-2 border-[rgba(212,175,55,0.3)] pr-6"
           >
             &ldquo;Strategically developed Grade-A assets across India&apos;s critical economic corridors.&rdquo;
           </motion.p>
@@ -167,7 +167,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
             <Image src={study.image} alt={study.title} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B1828] via-transparent to-transparent opacity-60" />
             <div className="absolute bottom-10 left-10 right-10">
-              <span className="inline-block px-3 py-1 bg-accent/90 text-[#0B1828] text-[9px] font-black uppercase tracking-widest rounded mb-3">
+              <span className="inline-block px-3 py-1 bg-[rgba(212,175,55,0.9)] text-[#0B1828] text-[9px] font-black uppercase tracking-widest rounded mb-3">
                 {study.badge}
               </span>
               <h3 className="text-2xl font-serif font-black text-white uppercase tracking-tight">{study.title}</h3>
@@ -186,8 +186,8 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
                  { label: "Status", value: study.status }
                ].map((item, i) => (
                  <div key={i} className="flex justify-between items-end border-b border-gray-200 pb-2">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-primary/30">{item.label}</span>
-                    <span className="text-sm font-bold text-primary/80">{item.value}</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.3)]">{item.label}</span>
+                    <span className="text-sm font-bold text-[rgba(10,20,40,0.8)]">{item.value}</span>
                  </div>
                ))}
             </div>
@@ -212,7 +212,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
                 </div>
                 <ul className="space-y-4">
                   {study.extraDetails.challenges.map((c, i) => (
-                    <li key={i} className="text-sm text-white/60 leading-relaxed font-medium pl-4 border-l border-accent/30 italic">
+                    <li key={i} className="text-sm text-white/60 leading-relaxed font-medium pl-4 border-l border-[rgba(212,175,55,0.3)] italic">
                       &ldquo;{c}&rdquo;
                     </li>
                   ))}
@@ -245,7 +245,7 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
           <div className="space-y-8">
             <div className="flex items-center gap-4">
                <Workflow className="text-accent" size={20} />
-               <span className="text-[12px] font-black uppercase tracking-[0.4em] text-primary/40">Execution Approach</span>
+               <span className="text-[12px] font-black uppercase tracking-[0.4em] text-[rgba(10,20,40,0.4)]">Execution Approach</span>
                <div className="flex-1 h-px bg-gray-100" />
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -260,19 +260,19 @@ export default function CaseStudySection({ slug }: { slug?: string | string[] })
              <div className="flex items-center justify-between mb-10">
                 <div className="flex items-center gap-4">
                    <BarChart4 className="text-accent" size={20} />
-                   <span className="text-[12px] font-black uppercase tracking-[0.4em] text-primary/40">Measured Impact</span>
+                   <span className="text-[12px] font-black uppercase tracking-[0.4em] text-[rgba(10,20,40,0.4)]">Measured Impact</span>
                 </div>
-                <div className="text-[10px] font-black uppercase tracking-widest text-accent px-4 py-1 bg-accent/10 rounded-full">Results Driven</div>
+                <div className="text-[10px] font-black uppercase tracking-widest text-accent px-4 py-1 bg-[rgba(212,175,55,0.1)] rounded-full">Results Driven</div>
              </div>
              
              <div className="grid md:grid-cols-2 gap-10">
                 <div className="space-y-4">
                   {study.outcomes.map((o, i) => (
-                    <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-100 group hover:border-accent/40 transition-all">
-                       <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                    <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-100 group hover:border-[rgba(212,175,55,0.4)] transition-all">
+                       <div className="w-8 h-8 rounded-full bg-[rgba(212,175,55,0.1)] flex items-center justify-center text-accent">
                           <Trophy size={14} />
                        </div>
-                       <span className="text-sm font-bold text-primary/70">{o}</span>
+                       <span className="text-sm font-bold text-[rgba(10,20,40,0.7)]">{o}</span>
                     </div>
                   ))}
                 </div>

@@ -8,7 +8,7 @@ export default function CTASection() {
   return (
     <section className="py-32 bg-primary relative overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[rgba(212,175,55,0.1)] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-royal/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
@@ -16,7 +16,7 @@ export default function CTASection() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="pill-tag border-accent/30 text-accent bg-accent/5 mb-10 mx-auto"
+          className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-10 mx-auto"
         >
           Begin Your Evolution
         </motion.div>
@@ -38,7 +38,7 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-20">
           <Link
             href="/contact"
-            className="group px-14 py-6 bg-accent text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.3em] hover:bg-white hover:text-primary transition-all shadow-3xl shadow-accent/20 flex items-center gap-4 active:scale-95 border border-accent/30"
+            className="group px-14 py-6 bg-accent text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.3em] hover:bg-white hover:text-primary transition-all shadow-3xl shadow-[rgba(212,175,55,0.2)] flex items-center gap-4 active:scale-95 border border-[rgba(212,175,55,0.3)]"
           >
             Schedule Consultation <ArrowRight size={18} className="group-hover:translate-x-3 transition-transform" />
           </Link>

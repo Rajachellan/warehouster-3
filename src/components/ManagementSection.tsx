@@ -31,7 +31,7 @@ export default function ManagementSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-10 text-xl text-primary/70 max-w-3xl mx-auto font-medium leading-relaxed"
+            className="mt-10 text-xl text-[rgba(10,20,40,0.7)] max-w-3xl mx-auto font-medium leading-relaxed"
           >
             We approach things with a unique perspective, actively seek opportunities with a flexible team, and strive to deliver exceptional value to our customers, partners, and employees.
           </motion.p>
@@ -59,8 +59,8 @@ export default function ManagementSection() {
                  </div>
               </div>
               {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-8 border-accent/10 rounded-full -z-10 animate-pulse" />
-              <div className="absolute top-10 -left-10 text-[120px] font-black text-primary/5 select-none leading-none">SC</div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-8 border-[rgba(212,175,55,0.1)] rounded-full -z-10 animate-pulse" />
+              <div className="absolute top-10 -left-10 text-[120px] font-black text-[rgba(10,20,40,0.05)] select-none leading-none">SC</div>
             </motion.div>
            </div>
 
@@ -80,11 +80,11 @@ export default function ManagementSection() {
                 <p className="text-accent font-black uppercase tracking-[0.2em] text-sm mb-10">Founder and CEO</p>
 
                 <div className="max-w-2xl">
-                    <p className="text-xl text-primary/70 font-medium leading-relaxed mb-10">
+                    <p className="text-xl text-[rgba(10,20,40,0.7)] font-medium leading-relaxed mb-10">
                         Sandeep has 20+ years of leadership in real estate, successfully managing and exiting warehousing portfolios to Blackstone and major REIT funds.
                     </p>
                     
-                    <div className="space-y-6 text-primary/60 font-medium leading-relaxed">
+                    <div className="space-y-6 text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">
                         <p>
                             Prior to founding Warehouster in 2019, he served as CEO of All Cargo Logistics Parks and Partner at Milestone Capital. He is an alumnus of Cornell University and Delhi University.
                         </p>

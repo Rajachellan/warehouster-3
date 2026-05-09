@@ -59,7 +59,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     suppressHydrationWarning
-                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-accent hover:border-accent hover:bg-accent/5 transition-all"
+                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-accent hover:border-accent hover:bg-[rgba(212,175,55,0.05)] transition-all"
                   >
                     <Icon size={18} />
                   </Link>

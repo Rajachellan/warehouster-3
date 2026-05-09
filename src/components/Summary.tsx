@@ -28,7 +28,7 @@ export default function SummarySection() {
               transition={{ delay: index * 0.1, duration: 0.8 }}
               className="px-8 text-center sm:text-left group"
             >
-              <div className="text-[10px] font-black uppercase tracking-[0.4em] text-accent/40 mb-4 group-hover:text-accent transition-colors">
+              <div className="text-[10px] font-black uppercase tracking-[0.4em] text-[rgba(212,175,55,0.4)] mb-4 group-hover:text-accent transition-colors">
                 {stat.sub}
               </div>
               

@@ -59,13 +59,13 @@ export default function WhyWarehousterGrid() {
                             viewport={{ once: true }}
                             className="group relative p-10 bg-white border border-gray-100 shadow-2xl shadow-gray-200/50 hover:border-[#D4AF37]/30 transition-all duration-700"
                         >
-                            <div className="w-14 h-14 rounded-sm bg-primary/05 flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-700">
+                            <div className="w-14 h-14 rounded-sm bg-[rgba(10,20,40,0.05)] flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-700">
                                 {item.icon}
                             </div>
                             <h3 className="text-xl font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-6 group-hover:text-[#D4AF37] transition-colors">
                                 {item.title}
                             </h3>
-                            <p className="text-[14px] font-bold uppercase tracking-widest text-primary/40 leading-relaxed group-hover:text-primary transition-colors">
+                            <p className="text-[14px] font-bold uppercase tracking-widest text-[rgba(10,20,40,0.4)] leading-relaxed group-hover:text-primary transition-colors">
                                 {item.desc}
                             </p>
                             <div className="mt-10 h-[1px] w-8 bg-gray-100 group-hover:w-full group-hover:bg-[#D4AF37] transition-all duration-1000" />

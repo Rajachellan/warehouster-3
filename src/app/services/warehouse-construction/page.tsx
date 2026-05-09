@@ -47,11 +47,11 @@ export default function WarehouseConstructionPage() {
             sizes="100vw"
             className="object-cover" 
           />
-          <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+          <div className="absolute inset-0 bg-[rgba(10,20,40,0.8)] mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.4)] to-transparent" />
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8">Engineering Power</motion.div>
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8">Engineering Power</motion.div>
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter">Warehouse <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Construction</span></motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl text-white/50 font-sans font-medium max-w-2xl mt-8 leading-relaxed">            Grade-A construction standards and India&apos;s high-performance industrial ecosystems built for the future of global commerce.
 </motion.p>
@@ -65,10 +65,10 @@ export default function WarehouseConstructionPage() {
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="flex-1 space-y-8">
                     <div className="flex items-center gap-4 text-accent"><Zap size={20} /><span className="text-[10px] font-black uppercase tracking-[0.4em] font-sans">Section {i + 1}</span></div>
                     <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">{section.title}</h2>
-                    <p className="text-lg text-primary/60 font-medium leading-relaxed">{section.content}</p>
+                    <p className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">{section.content}</p>
                     <div className="grid grid-cols-2 gap-6">
                         {section.points.map((point) => (
-                            <div key={point} className="flex items-center gap-3"><CheckCircle2 size={16} className="text-accent" /><span className="text-xs font-bold text-primary/80 uppercase tracking-widest">{point}</span></div>
+                            <div key={point} className="flex items-center gap-3"><CheckCircle2 size={16} className="text-accent" /><span className="text-xs font-bold text-[rgba(10,20,40,0.8)] uppercase tracking-widest">{point}</span></div>
                         ))}
                     </div>
                 </motion.div>

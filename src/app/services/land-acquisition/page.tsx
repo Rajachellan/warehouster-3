@@ -48,15 +48,15 @@ export default function LandAcquisitionPage() {
             fill 
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+          <div className="absolute inset-0 bg-[rgba(10,20,40,0.8)] mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.4)] to-transparent" />
         </div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
             <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8"
+                className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
             >
                 Core Service
             </motion.div>
@@ -102,14 +102,14 @@ export default function LandAcquisitionPage() {
                     <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
                         {section.title}
                     </h2>
-                    <p className="text-lg text-primary/60 font-medium leading-relaxed">
+                    <p className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">
                         {section.content}
                     </p>
                     <div className="grid grid-cols-2 gap-6">
                         {section.points.map((point) => (
                             <div key={point} className="flex items-center gap-3">
                                 <CheckCircle2 size={16} className="text-accent" />
-                                <span className="text-xs font-bold text-primary/80 uppercase tracking-widest">{point}</span>
+                                <span className="text-xs font-bold text-[rgba(10,20,40,0.8)] uppercase tracking-widest">{point}</span>
                             </div>
                         ))}
                     </div>

@@ -57,7 +57,7 @@ export default function BlogPage() {
       
       {/* Page Header */}
       <section className="relative pt-48 pb-24 bg-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-accent/5 -skew-x-12 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-1/4 h-full bg-[rgba(212,175,55,0.05)] -skew-x-12 translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center lg:text-left">
             <motion.h1 
                 initial={{ opacity: 0, x: -20 }}
@@ -70,7 +70,7 @@ export default function BlogPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-lg md:text-xl text-primary/40 font-bold max-w-2xl mt-6 uppercase tracking-[0.2em]"
+                className="text-lg md:text-xl text-[rgba(10,20,40,0.4)] font-bold max-w-2xl mt-6 uppercase tracking-[0.2em]"
             >
                 Staying ahead of the curve in industrial infrastructure.
             </motion.p>
@@ -104,7 +104,7 @@ export default function BlogPage() {
                     </Link>
                     
                     <div className="p-10 flex flex-col flex-1">
-                        <div className="flex items-center gap-6 text-primary/40 text-[11px] font-bold uppercase tracking-widest mb-6">
+                        <div className="flex items-center gap-6 text-[rgba(10,20,40,0.4)] text-[11px] font-bold uppercase tracking-widest mb-6">
                             <span className="flex items-center gap-2"><Clock size={16} className="text-accent" /> {post.date}</span>
                             <span className="flex items-center gap-2"><User size={16} className="text-accent" /> {post.author}</span>
                         </div>
@@ -115,7 +115,7 @@ export default function BlogPage() {
                             </h2>
                         </Link>
                         
-                        <p className="text-primary/60 text-sm md:text-base font-medium leading-relaxed mb-8 flex-1">
+                        <p className="text-[rgba(10,20,40,0.6)] text-sm md:text-base font-medium leading-relaxed mb-8 flex-1">
                             {post.excerpt}
                         </p>
                         

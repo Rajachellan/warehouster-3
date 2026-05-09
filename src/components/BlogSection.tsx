@@ -43,7 +43,7 @@ export default function BlogSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="pill-tag border-accent/20 text-accent bg-accent/5 mb-8"
+              className="pill-tag border-[rgba(212,175,55,0.2)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
             >
               Latest Insights
             </motion.div>
@@ -55,7 +55,7 @@ export default function BlogSection() {
 
           <Link
             href="/blogs"
-            className="group flex items-center gap-6 px-12 py-5 bg-primary text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-widest hover:bg-white hover:text-primary transition-all shadow-xl shadow-primary/20 border border-transparent hover:border-primary"
+            className="group flex items-center gap-6 px-12 py-5 bg-primary text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-widest hover:bg-white hover:text-primary transition-all shadow-xl shadow-[rgba(10,20,40,0.2)] border border-transparent hover:border-primary"
           >
             Read All Study
             <ArrowRight size={18} className="group-hover:translate-x-3 transition-transform text-accent" />
@@ -70,7 +70,7 @@ export default function BlogSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group flex flex-col bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 hover:border-accent/30 transition-all duration-700 h-full"
+              className="group flex flex-col bg-gray-50 rounded-[3rem] overflow-hidden border border-gray-100 hover:border-[rgba(212,175,55,0.3)] transition-all duration-700 h-full"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -80,11 +80,11 @@ export default function BlogSection() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-1000   group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-[rgba(10,20,40,0.2)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
               <div className="p-10 flex flex-col flex-grow">
-                <div className="flex items-center gap-8 mb-6 text-primary/30 text-[9px] font-black uppercase tracking-[0.4em] font-sans">
+                <div className="flex items-center gap-8 mb-6 text-[rgba(10,20,40,0.3)] text-[9px] font-black uppercase tracking-[0.4em] font-sans">
                   <div className="flex items-center gap-3">
                     <Calendar size={14} className="text-accent" />
                     {blog.date}
@@ -99,7 +99,7 @@ export default function BlogSection() {
                   {blog.title}
                 </h3>
 
-                <p className="text-primary/50 font-medium leading-relaxed mb-10 line-clamp-2 text-sm">
+                <p className="text-[rgba(10,20,40,0.5)] font-medium leading-relaxed mb-10 line-clamp-2 text-sm">
                   {blog.excerpt}
                 </p>
 

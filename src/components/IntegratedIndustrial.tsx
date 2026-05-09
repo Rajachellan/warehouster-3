@@ -94,7 +94,7 @@ function PortfolioCard({ service, index }: { service: typeof services[0]; index:
           </h3>
 
           {/* Description */}
-          <p className="text-[15px] font-medium leading-[1.6] text-primary/50 tracking-tight mb-8 group-hover:text-primary/70 transition-colors duration-500">
+          <p className="text-[15px] font-medium leading-[1.6] text-[rgba(10,20,40,0.5)] tracking-tight mb-8 group-hover:text-[rgba(10,20,40,0.7)] transition-colors duration-500">
             {service.desc}
           </p>
 
@@ -158,7 +158,7 @@ export default function ServicesSection() {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="max-w-2xl text-primary/40 mt-10 text-[13px] uppercase font-black tracking-[0.25em] leading-relaxed"
+            className="max-w-2xl text-[rgba(10,20,40,0.4)] mt-10 text-[13px] uppercase font-black tracking-[0.25em] leading-relaxed"
           >
             Pioneering Grade-A Logistics Infrastructure <br /> with Global Performance Standards.
           </motion.p>

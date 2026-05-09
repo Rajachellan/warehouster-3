@@ -69,7 +69,7 @@ export default function ServicesSection() {
             
             <h2 className="text-5xl md:text-8xl font-serif font-black text-primary leading-[0.85] uppercase tracking-tighter">
               Integrated Industrial <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/30">Excellence</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[rgba(10,20,40,0.3)]">Excellence</span>
             </h2>
           </div>
           
@@ -78,10 +78,10 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1 }}
             className="max-w-sm pb-2"
           >
-            <p className="text-primary/50 text-lg font-medium leading-relaxed italic mb-6">
+            <p className="text-[rgba(10,20,40,0.5)] text-lg font-medium leading-relaxed italic mb-6">
               &ldquo;Comprehensive industrial solutions engineered for long-term institutional performance.&rdquo;
             </p>
-            <div className="h-px w-16 bg-accent/30" />
+            <div className="h-px w-16 bg-[rgba(212,175,55,0.3)]" />
           </motion.div>
         </div>
 
@@ -142,7 +142,7 @@ export default function ServicesSection() {
               </div>
               
               {/* Corner Reveal */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-[4rem] -translate-y-16 translate-x-16 group-hover:translate-y-0 group-hover:translate-x-0 transition-transform duration-700 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[rgba(212,175,55,0.05)] rounded-bl-[4rem] -translate-y-16 translate-x-16 group-hover:translate-y-0 group-hover:translate-x-0 transition-transform duration-700 pointer-events-none" />
             </motion.div>
           ))}
         </div>

@@ -26,7 +26,7 @@ export default function AboutPreview() {
                                 fill
                                 className="object-cover"
                             />
-                            <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
+                            <div className="absolute inset-0 bg-[rgba(10,20,40,0.1)] mix-blend-multiply" />
                         </div>
                         {/* Architectural Accent */}
                         <div className="absolute -bottom-8 -right-8 w-48 h-48 border-b-2 border-r-2 border-[#D4AF37]/50 pointer-events-none" />
@@ -54,7 +54,7 @@ export default function AboutPreview() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
                             viewport={{ once: true }}
-                            className="text-lg text-primary/60 font-medium leading-relaxed max-w-xl"
+                            className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed max-w-xl"
                         >
                             Warehouster is a next-generation industrial and logistics real estate platform focused on developing Grade-A warehousing and industrial infrastructure across India&apos;s high-growth corridors.
                         </motion.p>
@@ -62,7 +62,7 @@ export default function AboutPreview() {
                         {/* Pill Tags */}
                         <div className="flex flex-wrap gap-3">
                             {["Grade-A Assets", "Logistics Corridors", "Industrial Parks"].map((tag) => (
-                                <div key={tag} className="px-5 py-2 border border-primary/10 bg-gray-50 text-[10px] font-black uppercase tracking-widest text-primary transform -skew-x-12">
+                                <div key={tag} className="px-5 py-2 border border-[rgba(10,20,40,0.1)] bg-gray-50 text-[10px] font-black uppercase tracking-widest text-primary transform -skew-x-12">
                                     {tag}
                                 </div>
                             ))}

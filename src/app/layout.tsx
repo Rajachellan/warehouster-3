@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
-import "./globals.css";
+import "./tailwind-precompiled.css";
 import Navbar from "@/components/Navbar";
 
 const inter = Inter({

@@ -242,7 +242,7 @@ function DesktopCard({ item }: { item: (typeof milestones)[0] }) {
       {/* meta row */}
       <div className="flex items-start justify-between px-4 pt-4 pb-3 border-b border-gray-50 shrink-0">
         <div className="flex flex-col gap-0.5 min-w-0 mr-1">
-          <span className="text-[13px] font-bold text-primary/30 tracking-widest truncate">{item.id}</span>
+          <span className="text-[13px] font-bold text-[rgba(10,20,40,0.3)] tracking-widest truncate">{item.id}</span>
           <span className="text-[11px] font-medium text-[#D4AF37] tracking-tighter uppercase truncate">{item.coords}</span>
         </div>
         <span className="shrink-0 text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 bg-[#D4AF37]/5 text-[#D4AF37] border border-[#D4AF37]/10">
@@ -263,7 +263,7 @@ function DesktopCard({ item }: { item: (typeof milestones)[0] }) {
 
       {/* body */}
       <div className="p-4 flex flex-col flex-1 overflow-hidden">
-        <div className="text-3xl font-serif font-black text-primary/5 group-hover:text-[#D4AF37]/80 select-none leading-none transition-all duration-700 mb-1">
+        <div className="text-3xl font-serif font-black text-[rgba(10,20,40,0.05)] group-hover:text-[#D4AF37]/80 select-none leading-none transition-all duration-700 mb-1">
           {item.year.slice(2)}
         </div>
 
@@ -271,7 +271,7 @@ function DesktopCard({ item }: { item: (typeof milestones)[0] }) {
           {item.title}
         </h4>
 
-        <p className="text-[11px]  font-medium leading-relaxed text-primary/40 tracking-tight line-clamp-4">
+        <p className="text-[11px]  font-medium leading-relaxed text-[rgba(10,20,40,0.4)] tracking-tight line-clamp-4">
           {item.desc}
         </p>
 
@@ -280,7 +280,7 @@ function DesktopCard({ item }: { item: (typeof milestones)[0] }) {
             {item.bullets.map((b, i) => (
               <div key={i} className="flex items-center gap-2">
                 <div className="w-1 h-[1px] bg-[#D4AF37]" />
-                <span className="text-[9px] font-black uppercase tracking-widest text-primary/20">{b}</span>
+                <span className="text-[9px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.2)]">{b}</span>
               </div>
             ))}
           </div>
@@ -296,7 +296,7 @@ function MilestoneCard({ item }: { item: (typeof milestones)[0] }) {
     <div className="group bg-white border border-gray-100 p-6 flex flex-col hover:bg-gray-50/50 transition-all duration-500">
       <div className="flex items-start justify-between mb-5 pb-4 border-b border-gray-50">
         <div className="flex flex-col gap-1 min-w-0 mr-2">
-          <span className="text-[11px] font-bold text-primary/30 tracking-widest">{item.id}</span>
+          <span className="text-[11px] font-bold text-[rgba(10,20,40,0.3)] tracking-widest">{item.id}</span>
           <span className="text-[10px] font-medium text-[#D4AF37] tracking-tighter uppercase">{item.coords}</span>
         </div>
         <span className="shrink-0 text-[11px] font-black uppercase tracking-widest px-2 py-1 bg-[#D4AF37]/5 text-[#D4AF37] border border-[#D4AF37]/10">
@@ -308,18 +308,18 @@ function MilestoneCard({ item }: { item: (typeof milestones)[0] }) {
         <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-[2s]" />
       </div>
 
-      <div className="text-5xl font-serif font-black text-primary/5 select-none leading-none mb-1">{item.year.slice(2)}</div>
+      <div className="text-5xl font-serif font-black text-[rgba(10,20,40,0.05)] select-none leading-none mb-1">{item.year.slice(2)}</div>
       <h4 className="text-base font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-2 group-hover:text-[#D4AF37] transition-colors">
         {item.title}
       </h4>
-      <p className="text-[13px] font-medium leading-relaxed text-primary/40 tracking-tight">{item.desc}</p>
+      <p className="text-[13px] font-medium leading-relaxed text-[rgba(10,20,40,0.4)] tracking-tight">{item.desc}</p>
 
       {item.bullets && (
         <div className="mt-4 pt-4 border-t border-gray-50 space-y-1.5">
           {item.bullets.map((b, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="w-1.5 h-[1px] bg-[#D4AF37]" />
-              <span className="text-[11px] font-black uppercase tracking-widest text-primary/20">{b}</span>
+              <span className="text-[11px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.2)]">{b}</span>
             </div>
           ))}
         </div>

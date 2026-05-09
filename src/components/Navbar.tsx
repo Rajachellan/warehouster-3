@@ -266,7 +266,7 @@ export default function Navbar() {
 
       <nav
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${isScrolled
-          ? "bg-primary/95 shadow-2xl py-6 border-b border-white/5"
+          ? "bg-[rgba(10,20,40,0.95)] shadow-2xl py-6 border-b border-white/5"
           : "bg-transparent py-6"
           }`}
       >
@@ -375,7 +375,7 @@ export default function Navbar() {
                 href="tel:+91 95600 11696"
                 className="group flex items-center gap-3  px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white hover:text-primary transition-all shadow-xl"
               >
-                <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-white transition-all">
+                <div className="w-5 h-5 rounded-full bg-[rgba(212,175,55,0.2)] flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-white transition-all">
                   <Phone size={10} />
                 </div>
                 <span className="text-[14px] font-black uppercase tracking-widest">+91 95600 11696</span>
@@ -399,7 +399,7 @@ export default function Navbar() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="lg:hidden absolute top-full left-0 right-0 bg-primary/95 border-t border-white/5 shadow-3xl overflow-hidden"
+              className="lg:hidden absolute top-full left-0 right-0 bg-[rgba(10,20,40,0.95)] border-t border-white/5 shadow-3xl overflow-hidden"
             >
               <div className="px-6 py-10 flex flex-col gap-8 max-h-[85vh] overflow-y-auto">
                 {navLinks.map((link) => (
@@ -445,7 +445,7 @@ export default function Navbar() {
                     href="tel:+919560011696"
                     className="flex items-center gap-4 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white active:bg-white active:text-primary transition-all shadow-xl"
                   >
-                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                    <div className="w-10 h-10 rounded-full bg-[rgba(212,175,55,0.2)] flex items-center justify-center text-accent">
                       <Phone size={16} />
                     </div>
                     <div className="flex flex-col">

@@ -83,11 +83,11 @@ export default function ServicesPage() {
       sizes="100vw"
       className="object-cover object-center"
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent" />
-    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.8)] to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.6)] via-transparent to-transparent" />
   </div>
 
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[rgba(212,175,55,0.1)] rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                             sizes="(max-width: 1024px) 100vw, 50vw"
                             className="group-hover:scale-105 transition-transform duration-1000 " 
                         />
-                        <div className="absolute inset-0 bg-primary/20 transition-colors group-hover:bg-primary/5" />
+                        <div className="absolute inset-0 bg-[rgba(10,20,40,0.2)] transition-colors group-hover:bg-[rgba(10,20,40,0.05)]" />
                     </motion.div>
                     
                     <motion.div 
@@ -152,7 +152,7 @@ export default function ServicesPage() {
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-primary uppercase tracking-tighter leading-tight">
                             {service.title}
                         </h2>
-                        <p className="text-lg md:text-xl text-primary/60 font-medium leading-relaxed">
+                        <p className="text-lg md:text-xl text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">
                             {service.description}
                         </p>
                         
@@ -160,7 +160,7 @@ export default function ServicesPage() {
                             {service.details.map((detail, i) => (
                                 <div key={i} className="flex items-center gap-4">
                                     <CheckCircle2 size={18} className="text-accent flex-shrink-0" />
-                                    <span className="text-primary/70 font-bold text-sm leading-tight">{detail}</span>
+                                    <span className="text-[rgba(10,20,40,0.7)] font-bold text-sm leading-tight">{detail}</span>
                                 </div>
                             ))}
                         </div>
@@ -168,7 +168,7 @@ export default function ServicesPage() {
                         <div className="pt-10">
                             <Link 
                                 href="/contact"
-                                className="group inline-flex items-center gap-4 px-10 py-5 bg-primary text-white rounded-xl font-sans font-black text-[10px] uppercase tracking-widest hover:bg-accent transition-all shadow-xl shadow-primary/20"
+                                className="group inline-flex items-center gap-4 px-10 py-5 bg-primary text-white rounded-xl font-sans font-black text-[10px] uppercase tracking-widest hover:bg-accent transition-all shadow-xl shadow-[rgba(10,20,40,0.2)]"
                             >
                                 Start Your Project <ArrowRight size={16} className="group-hover:translate-x-3 transition-transform" />
                             </Link>

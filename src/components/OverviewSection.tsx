@@ -37,14 +37,14 @@ export default function OverviewSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="pill-tag border-accent/20 text-accent bg-accent/5 mb-8">
+            <div className="pill-tag border-[rgba(212,175,55,0.2)] text-accent bg-[rgba(212,175,55,0.05)] mb-8">
              Strategic Industrial Excellence
             </div>
             <h2 className="text-3xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-12">
             Defining the Future of  
               <span className="text-accent"> Industrial Warehousing</span> 
             </h2>
-            <p className="text-xl text-primary/50 font-medium leading-relaxed mb-12 max-w-xl text-justify ">
+            <p className="text-xl text-[rgba(10,20,40,0.5)] font-medium leading-relaxed mb-12 max-w-xl text-justify ">
               Warehouster is a leading provider of Grade-A industrial warehousing and logistics infrastructure in India, delivering strategically located, high-performance spaces designed for modern supply chain operations. With a strong presence across key economic corridors in South India, we enable scalable growth, operational efficiency, and seamless distribution for enterprises and 3PL leaders.
             </p>
             <Link
@@ -71,7 +71,7 @@ export default function OverviewSection() {
                 <h4 className="text-xl font-serif font-bold text-primary mb-4 group-hover:text-white transition-colors">
                   {pillar.title}
                 </h4>
-                <p className="text-primary/40 text-[12px] font-bold uppercase tracking-widest leading-relaxed group-hover:text-white/40 transition-colors">
+                <p className="text-[rgba(10,20,40,0.4)] text-[12px] font-bold uppercase tracking-widest leading-relaxed group-hover:text-white/40 transition-colors">
                   {pillar.desc}
                 </p>
               </motion.div>

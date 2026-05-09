@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
     className="group relative"
   >
     <Link href={`/projects/${project.slug}`} className="block">
-      <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 shadow-2xl border border-gray-100 transition-all duration-700 hover:shadow-accent/20 bg-gray-50">
+      <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 shadow-2xl border border-gray-100 transition-all duration-700 hover:shadow-[rgba(212,175,55,0.2)] bg-gray-50">
         <Image
           src={project.image}
           alt={project.title}
@@ -36,13 +36,13 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
         </div>
 
         <div className="absolute top-8 right-8 z-10">
-          <div className="px-6 py-2 rounded-full bg-primary/80 backdrop-blur-md text-accent font-sans font-black text-[12px] uppercase tracking-widest border border-accent/20 shadow-2xl">
+          <div className="px-6 py-2 rounded-full bg-[rgba(10,20,40,0.8)] backdrop-blur-md text-accent font-sans font-black text-[12px] uppercase tracking-widest border border-[rgba(212,175,55,0.2)] shadow-2xl">
             {project.status}
           </div>
         </div>
 
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-12 flex flex-col justify-end">
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-[rgba(10,20,40,0.8)] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-12 flex flex-col justify-end">
           <div className="mb-4 flex items-center gap-2">
             <div className="h-px w-8 bg-accent" />
             <span className="text-accent text-[10px] font-black uppercase tracking-widest">Institutional Asset</span>
@@ -71,8 +71,8 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
         <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
           {project.metrics.slice(0, 2).map((m, i) => (
             <div key={i} className="flex flex-col">
-              <span className="text-[9px] font-black uppercase tracking-widest text-primary/30 mb-1">{m.label}</span>
-              <span className="text-sm font-bold text-primary/70">{m.value}</span>
+              <span className="text-[9px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.3)] mb-1">{m.label}</span>
+              <span className="text-sm font-bold text-[rgba(10,20,40,0.7)]">{m.value}</span>
             </div>
           ))}
         </div>
@@ -102,7 +102,7 @@ const SectionHeader = ({ id, tag, title, subtitle }: { id: string; tag: string; 
         className="text-4xl md:text-6xl lg:text-7xl font-serif font-black text-primary uppercase tracking-tighter leading-[0.85] max-w-2xl"
       >
         {title.split(' ')[0]} <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/30">{title.split(' ').slice(1).join(' ')}</span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[rgba(10,20,40,0.3)]">{title.split(' ').slice(1).join(' ')}</span>
       </motion.h2>
       
       <motion.div
@@ -112,10 +112,10 @@ const SectionHeader = ({ id, tag, title, subtitle }: { id: string; tag: string; 
         transition={{ delay: 0.2 }}
         className="max-w-md"
       >
-        <p className="text-primary/50 font-medium text-base md:text-lg leading-relaxed mb-6 italic">
+        <p className="text-[rgba(10,20,40,0.5)] font-medium text-base md:text-lg leading-relaxed mb-6 italic">
           &ldquo;{subtitle}&rdquo;
         </p>
-        <div className="h-px w-16 bg-accent/30" />
+        <div className="h-px w-16 bg-[rgba(212,175,55,0.3)]" />
       </motion.div>
     </div>
   </div>
@@ -147,8 +147,8 @@ export default function ProjectsPage() {
             priority
           />
         </motion.div>
-       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+       <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.9)] to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.8)] via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

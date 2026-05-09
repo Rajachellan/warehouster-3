@@ -392,7 +392,7 @@ export default function LeadershipSection() {
             </span>
             <div className="h-px flex-1" style={{ background: "rgba(10,20,40,0.07)" }} />
             <span
-              className="font-sans font-black text-[13px] uppercase tracking-[0.3em] text-primary/60"
+              className="font-sans font-black text-[13px] uppercase tracking-[0.3em] text-[rgba(10,20,40,0.6)]"
             >
               {team.length} Members
             </span>
@@ -414,7 +414,7 @@ export default function LeadershipSection() {
             className="mt-14 pt-6 flex items-center justify-between"
             style={{ borderTop: `1px solid rgba(177, 137, 8, 0.71)` }}
           >
-            <span className="font-sans font-black text-[9px] uppercase tracking-[0.3em] text-primary/60">
+            <span className="font-sans font-black text-[9px] uppercase tracking-[0.3em] text-[rgba(10,20,40,0.6)]">
               Integrated Leadership — India
             </span>
             <div className="flex items-center gap-2.5">

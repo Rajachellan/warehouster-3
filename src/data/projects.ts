@@ -186,6 +186,7 @@ export const projects: ProjectContent[] = [
             { label: "Connectivity", value: "GST Road / NH-45" },
             { label: "Status", value: "Completed" }
         ],
+        overview: "A 54-acre South Chennai industrial park developed with institutional standards for large-scale manufacturing and assembly demand.",
         detailedOverview: "The Chengalpattu Industrial Park is a landmark 54-acre development situated on the high-growth GST Road corridor. Developed as a strategic partnership with Horizon Industrial Parks (a Blackstone platform), this facility addresses the critical need for large-scale manufacturing and assembly infrastructure in South Chennai.",
         locationAdvantages: [
             "Located on the NH-45 corridor, primary artery to Southern Tamil Nadu.",
@@ -264,6 +265,7 @@ export const projects: ProjectContent[] = [
             { label: "Connectivity", value: "National Highway Hub" },
             { label: "Status", value: "Operational" }
         ],
+        overview: "A mission-critical built-to-suit facility in Jaisalmer supporting Suzlon's renewable energy storage and logistics operations.",
         detailedOverview: "Specialized Built-to-Suit (BTS) development serving the renewable energy sector. Engineered to store and maintain heavy wind turbine components.",
         locationAdvantages: ["Wind energy corridor of Rajasthan", "Proximity to major wind farm sites"],
         connectivity: [{ label: "Highway", detail: "NH-15 Frontage" }],
@@ -294,7 +296,12 @@ export const projects: ProjectContent[] = [
         highlights: ["Heavy Component Storage", "15-Year Lease", "Desert-Grade Build"],
         extraDetails: {
             challenges: ["Extreme desert heat affecting material durability.", "Logistics of moving massive wind turbine blades into the site."],
-            solutions: ["Use of high-albedo roofing and specialized thermal expansion joints.", "Customized internal road radii designed for 60m blade transport."]
+            solutions: ["Use of high-albedo roofing and specialized thermal expansion joints.", "Customized internal road radii designed for 60m blade transport."],
+            technicalSpecs: [
+                { label: "Built Area", value: "4.16 Lakh Sq.Ft" },
+                { label: "Lease Lock-in", value: "15 Years" },
+                { label: "Monthly Revenue", value: "84 Lakhs" }
+            ]
         }
     },
     {
@@ -317,6 +324,7 @@ export const projects: ProjectContent[] = [
             { label: "Connectivity", value: "Last-mile Coastal Hub" },
             { label: "Status", value: "Under Construction" }
         ],
+        overview: "A high-spec Pondicherry BTS distribution center designed for Britannia's fast-moving and perishable FMCG supply chain.",
         detailedOverview: "A high-spec BTS distribution center for Britannia, optimized for perishable and high-turnover food products.",
         locationAdvantages: ["Last-mile serving Pondicherry", "Proximity to production clusters"],
         connectivity: [{ label: "ECR Link", detail: "Near the East Coast Road." }],
@@ -348,7 +356,12 @@ export const projects: ProjectContent[] = [
         highlights: ["FM2 Flooring", "Cold-Chain Ready", "Rapid Deployment"],
         extraDetails: {
             challenges: ["High humidity and salinity affecting structural steel life.", "Tight urban plot requiring vertical optimization."],
-            solutions: ["Application of marine-grade zinc coatings to all exposed steel.", "Implementation of a multi-level mezzanine for high-density storage."]
+            solutions: ["Application of marine-grade zinc coatings to all exposed steel.", "Implementation of a multi-level mezzanine for high-density storage."],
+            technicalSpecs: [
+                { label: "Built Area", value: "72,000 Sq.Ft" },
+                { label: "Stage", value: "Under Construction" },
+                { label: "Specification", value: "Cold-chain Ready Shell" }
+            ]
         }
     },
     {
@@ -371,6 +384,7 @@ export const projects: ProjectContent[] = [
             { label: "Connectivity", value: "Bangalore-Hosur NH-44" },
             { label: "Status", value: "In Development" }
         ],
+        overview: "A 65-acre Hosur greenfield industrial hub planned for EV, electronics, and multi-tenant manufacturing growth along NH-44.",
         detailedOverview: "Ambitious greenfield project on the strategic NH-44 corridor. Serving the global EV and electronics clusters.",
         locationAdvantages: ["Crossroads of CBIC", "Proximity to EV clusters (Ola, TVS)"],
         connectivity: [{ label: "NH-44", detail: "Direct frontage on the North-South corridor." }],
@@ -402,7 +416,12 @@ export const projects: ProjectContent[] = [
         highlights: ["NH-44 Proximity", "1.6 Mn Sq.Ft Potential", "Industrial Power Grid"],
         extraDetails: {
             challenges: ["Managing significant topographical levels across 65 acres.", "Aligning with rapid regional EV infrastructure expansion."],
-            solutions: ["Terraced industrial design to minimize earth-work while maximizing flat pads.", "Integration of high-voltage charging infrastructure within the park master plan."]
+            solutions: ["Terraced industrial design to minimize earth-work while maximizing flat pads.", "Integration of high-voltage charging infrastructure within the park master plan."],
+            technicalSpecs: [
+                { label: "Land Area", value: "65 Acres" },
+                { label: "Potential", value: "1.6 Mn Sq.Ft" },
+                { label: "Corridor", value: "NH-44" }
+            ]
         }
     },
     {
@@ -425,6 +444,7 @@ export const projects: ProjectContent[] = [
             { label: "Connectivity", value: "NH-4 Corridor" },
             { label: "Status", value: "In Construction" }
         ],
+        overview: "A 21-acre West Chennai grade-A park tailored for electronics and light manufacturing with precision infrastructure.",
         detailedOverview: "Specialized 21-acre development for the West Chennai electronics cluster. Boutique industrial environment for tech firms.",
         locationAdvantages: ["Neighboring global manufacturing giants", "Strategic node on CBIC"],
         connectivity: [{ label: "Industrial Axis", detail: "Near Sriperumbudur hubs." }],
@@ -456,7 +476,12 @@ export const projects: ProjectContent[] = [
         highlights: ["500,000 Sq.Ft Development", "Plug-and-Play ready", "Skilled Labour Proximity"],
         extraDetails: {
             challenges: ["Securing tech-grade power stability in a suburban zone.", "Meeting specialized clean-air exchange requirements for assembly."],
-            solutions: ["Redundant feeder lines from the nearest 230KV substation.", "Implementation of automated louver and filtration systems."]
+            solutions: ["Redundant feeder lines from the nearest 230KV substation.", "Implementation of automated louver and filtration systems."],
+            technicalSpecs: [
+                { label: "Land Area", value: "21 Acres" },
+                { label: "Planned Built Area", value: "500,000 Sq.Ft" },
+                { label: "Target Completion", value: "Q1 2025" }
+            ]
         }
     },
     {
@@ -479,6 +504,7 @@ export const projects: ProjectContent[] = [
             { label: "Connectivity", value: "Chennai Outer Ring Road" },
             { label: "Status", value: "Pipeline" }
         ],
+        overview: "A strategic 50-acre Redhills expansion built to serve high-throughput e-commerce and FMCG distribution demand.",
         detailedOverview: "Strategic expansion in North Chennai, optimized for high throughput e-commerce distribution.",
         locationAdvantages: ["Adjacent to successful Phase I", "Immediate ORR access"],
         connectivity: [{ label: "ORR Access", detail: "5-minute link to Outer Ring Road." }],
@@ -526,6 +552,7 @@ export const projects: ProjectContent[] = [
             { label: "Connectivity", value: "Chennai-Bangalore NH-48" },
             { label: "Status", value: "Pipeline" }
         ],
+        overview: "A 55-acre integrated Krishnagiri park planned as a multi-sector industrial ecosystem on the Chennai-Bangalore corridor.",
         detailedOverview: "Self-sustaining industrial ecosystem with integrated worker housing and utility infrastructure.",
         locationAdvantages: ["Mid-point between Chennai and Bangalore", "Lower operational costs"],
         connectivity: [{ label: "NH-48", detail: "Direct frontage on the primary tech link." }],

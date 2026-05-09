@@ -95,7 +95,7 @@ export default function IndiaMap() {
         {/* ── HEADER ── */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center px-3 py-1 rounded-full border border-accent/20 text-accent bg-accent/5 mb-6 text-sm font-bold uppercase tracking-widest">
+            <div className="inline-flex items-center px-3 py-1 rounded-full border border-[rgba(212,175,55,0.2)] text-accent bg-[rgba(212,175,55,0.05)] mb-6 text-sm font-bold uppercase tracking-widest">
               Scalable Pipeline
             </div>
             <h2
@@ -123,7 +123,7 @@ export default function IndiaMap() {
               <div className="flex items-center justify-between px-7 pt-6 pb-4">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full animate-pulse bg-accent" />
-                  <span className="text-[12px] font-black uppercase tracking-[0.3em] text-primary/40">
+                  <span className="text-[12px] font-black uppercase tracking-[0.3em] text-[rgba(10,20,40,0.4)]">
                     Industrial Corridor View
                   </span>
                 </div>
@@ -177,7 +177,7 @@ export default function IndiaMap() {
                     >
                       {/* Pulse Effect - Inside Hitbox */}
                       <div
-                        className={`absolute inset-0 rounded-full animate-ping opacity-40 pointer-events-none ${selectedId === loc.id ? "bg-accent" : "bg-accent/20"
+                        className={`absolute inset-0 rounded-full animate-ping opacity-40 pointer-events-none ${selectedId === loc.id ? "bg-accent" : "bg-[rgba(212,175,55,0.2)]"
                           }`}
                         style={{ animationDuration: "3s" }}
                       />
@@ -195,7 +195,7 @@ export default function IndiaMap() {
                           {/* The Label - Shifted down and made non-blocking */}
                           <div className="absolute top-full mt-2 text-center whitespace-nowrap">
                             <span
-                              className={`inline-block text-[11px] font-black tracking-widest px-2 py-0.5 rounded transition-all duration-500 shadow-xl ${selectedId === loc.id ? "bg-accent text-white" : "text-accent/60 bg-black/60 backdrop-blur-md"
+                              className={`inline-block text-[11px] font-black tracking-widest px-2 py-0.5 rounded transition-all duration-500 shadow-xl ${selectedId === loc.id ? "bg-accent text-white" : "text-[rgba(212,175,55,0.6)] bg-black/60 backdrop-blur-md"
                                 }`}
                             >
                               {loc.name.toUpperCase()}
@@ -216,7 +216,7 @@ export default function IndiaMap() {
                     className="flex items-center gap-2 group"
                   >
                     <div
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${selectedId === loc.id ? "bg-accent scale-150" : "bg-primary/20 group-hover:bg-primary/40"}`}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${selectedId === loc.id ? "bg-accent scale-150" : "bg-[rgba(10,20,40,0.2)] group-hover:bg-[rgba(10,20,40,0.4)]"}`}
                     />
                     <span
                       className="text-[9px] font-black uppercase tracking-widest transition-colors"
@@ -294,7 +294,7 @@ export default function IndiaMap() {
             <button
               key={loc.id}
               onClick={() => setSelectedId(loc.id)}
-              className={`px-6 py-3 rounded-2xl border transition-all font-black uppercase text-[12px] tracking-widest ${selectedId === loc.id ? "bg-accent border-transparent text-white shadow-xl shadow-accent/20" : "bg-white border-black/5 text-primary/40 hover:bg-gray-50"
+              className={`px-6 py-3 rounded-2xl border transition-all font-black uppercase text-[12px] tracking-widest ${selectedId === loc.id ? "bg-accent border-transparent text-white shadow-xl shadow-[rgba(212,175,55,0.2)]" : "bg-white border-black/5 text-[rgba(10,20,40,0.4)] hover:bg-gray-50"
                 }`}
             >
               {loc.name} <span className="opacity-30 ml-2">/ {String(i + 1).padStart(2, "0")}</span>

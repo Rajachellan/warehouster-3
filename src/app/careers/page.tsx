@@ -45,15 +45,15 @@ export default function CareersPage() {
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.9)] to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.8)] via-transparent to-transparent" />
           </div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[rgba(212,175,55,0.1)] rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8"
+            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
           >
             Human Capital
           </motion.div>
@@ -92,10 +92,10 @@ export default function CareersPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: i * 0.1 }}
-                        className="p-10 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:bg-accent/5 hover:border-accent/20 transition-all duration-500"
+                        className="p-10 rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:bg-[rgba(212,175,55,0.05)] hover:border-[rgba(212,175,55,0.2)] transition-all duration-500"
                     >
                         <h4 className="text-2xl font-serif font-bold text-primary mb-6">{item.label}</h4>
-                        <p className="text-primary/40 font-bold uppercase text-[11px] tracking-[0.2em] leading-relaxed">{item.desc}</p>
+                        <p className="text-[rgba(10,20,40,0.4)] font-bold uppercase text-[11px] tracking-[0.2em] leading-relaxed">{item.desc}</p>
                     </motion.div>
                 ))}
             </div>
@@ -118,10 +118,10 @@ export default function CareersPage() {
                                 </div>
                                 <div className="space-y-4">
                                     <h3 className="text-3xl font-serif font-bold text-primary group-hover:text-white transition-colors">{job.title}</h3>
-                                    <div className="flex flex-wrap gap-8 items-center text-primary/40 group-hover:text-white/40 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors">
+                                    <div className="flex flex-wrap gap-8 items-center text-[rgba(10,20,40,0.4)] group-hover:text-white/40 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors">
                                         <div className="flex items-center gap-3"><MapPin size={14} className="text-accent" /> {job.location}</div>
                                         <div className="flex items-center gap-3"><Clock size={14} className="text-accent" /> {job.type}</div>
-                                        <div className="px-5 py-2 rounded-full border border-primary/10 group-hover:border-white/10">{job.category}</div>
+                                        <div className="px-5 py-2 rounded-full border border-[rgba(10,20,40,0.1)] group-hover:border-white/10">{job.category}</div>
                                     </div>
                                 </div>
                             </div>

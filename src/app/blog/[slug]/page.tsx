@@ -24,7 +24,7 @@ export default function BlogPostDetail() {
         <div className="max-w-4xl mx-auto px-6">
             <Link 
                 href="/blog" 
-                className="inline-flex items-center gap-3 text-primary/40 font-black uppercase text-sm tracking-widest mb-12 hover:text-accent transition-colors group"
+                className="inline-flex items-center gap-3 text-[rgba(10,20,40,0.4)] font-black uppercase text-sm tracking-widest mb-12 hover:text-accent transition-colors group"
             >
                 <ArrowLeft size={18} className="group-hover:-translate-x-2 transition-transform" />
                 Back to Insights
@@ -34,22 +34,22 @@ export default function BlogPostDetail() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className="px-5 py-2 bg-accent/10 rounded-full text-accent font-black text-xs uppercase tracking-[0.2em] mb-6 block w-fit">
+                <span className="px-5 py-2 bg-[rgba(212,175,55,0.1)] rounded-full text-accent font-black text-xs uppercase tracking-[0.2em] mb-6 block w-fit">
                     Industry Insights
                 </span>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-primary leading-[1.1] mb-8 uppercase tracking-tighter">
                    {String(slug).split('-').join(' ')}
                 </h1>
                 
-                <div className="flex flex-wrap items-center gap-8 text-primary/40 text-sm font-black uppercase tracking-widest border-y border-gray-100 py-8 mb-12">
+                <div className="flex flex-wrap items-center gap-8 text-[rgba(10,20,40,0.4)] text-sm font-black uppercase tracking-widest border-y border-gray-100 py-8 mb-12">
                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-accent">
+                        <div className="w-10 h-10 rounded-full bg-[rgba(10,20,40,0.05)] flex items-center justify-center text-accent">
                             <User size={20} />
                         </div>
                         <span>By David Chen</span>
                    </div>
                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-accent">
+                        <div className="w-10 h-10 rounded-full bg-[rgba(10,20,40,0.05)] flex items-center justify-center text-accent">
                             <Clock size={20} />
                         </div>
                         <span>Published March 15, 2026</span>
@@ -77,7 +77,7 @@ export default function BlogPostDetail() {
                 />
             </motion.div>
             
-            <div className="prose prose-2xl prose-primary max-w-none font-medium text-primary/80 leading-relaxed space-y-8">
+            <div className="prose prose-2xl prose-primary max-w-none font-medium text-[rgba(10,20,40,0.8)] leading-relaxed space-y-8">
                 <p className="text-2xl font-bold text-primary">
                     In an era of unprecedented digital transformation, the physical backbone of commerce—warehousing—is undergoing its own radical evolution.
                 </p>

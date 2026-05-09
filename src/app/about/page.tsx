@@ -33,8 +33,8 @@ export default function AboutPage() {
           />
 
           {/* Right Side Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.6)] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.3)] via-transparent to-transparent" />
 
         
          
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="pill-tag border-accent/30 text-accent bg-accent/5 mb-10 w-fit"
+              className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-10 w-fit"
             >
               Institutional Platform
             </motion.div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 </p>
 
                 <div className="flex items-center gap-4 mt-8">
-                  <div className="h-px w-8 bg-accent/50" />
+                  <div className="h-px w-8 bg-[rgba(212,175,55,0.5)]" />
 
                   <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent">
                     Core Philosophy
@@ -139,8 +139,8 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-accent/20 rounded-tl-[4rem] pointer-events-none" />
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-accent/5 rounded-full blur-[80px] -z-10" />
+              <div className="absolute -top-10 -left-10 w-40 h-40 border-t-2 border-l-2 border-[rgba(212,175,55,0.2)] rounded-tl-[4rem] pointer-events-none" />
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[rgba(212,175,55,0.05)] rounded-full blur-[80px] -z-10" />
             </motion.div>
 
             {/* Right: Narrative */}
@@ -156,15 +156,15 @@ export default function AboutPage() {
                 </div>
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-black text-primary uppercase  leading-[0.9]">
                   Architecting <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary/70">Industrial Excellence</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[rgba(10,20,40,0.7)]">Industrial Excellence</span>
                 </h2>
               </motion.div>
 
               <div className="space-y-8">
-                <p className="text-lg text-primary/60 font-medium leading-relaxed max-w-xl">
+                <p className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed max-w-xl">
                   Sandeep Chadha brings 20+ years of sector-leading experience in managing and exiting warehousing portfolios to global institutional investors like Blackstone.
                 </p>
-                <p className="text-lg text-primary/60 font-medium leading-relaxed max-w-xl">
+                <p className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed max-w-xl">
                   As the strategist behind Warehouster Capital, he has built a scaled platform for the acquisition and management of high-performance logistics assets across India. A Cornell Alumnus and former CEO of All Cargo Logistics Parks.
                 </p>
 
@@ -178,11 +178,11 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-12 pt-12 border-t border-gray-100">
                 <div>
                   <div className="text-4xl font-serif font-black text-primary mb-2 tracking-tighter">20+</div>
-                  <div className="text-[10px] font-black uppercase tracking-widest text-primary/30">Years Sector Experience</div>
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.3)]">Years Sector Experience</div>
                 </div>
                 <div>
                   <div className="text-4xl font-serif font-black text-primary mb-2 tracking-tighter">12Mn+</div>
-                  <div className="text-[10px] font-black uppercase tracking-widest text-primary/30">Sq. Ft. Asset Delivery</div>
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.3)]">Sq. Ft. Asset Delivery</div>
                 </div>
               </div>
             </div>
@@ -199,7 +199,7 @@ export default function AboutPage() {
       {/* 8. FINAL PURPOSE CTA */}
       <section className="py-40 bg-gray-50 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#0A1428_1px,transparent_1px)] bg-[size:32px:32px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#0A1428_1px,transparent_1px)] bg-[size:32px_32px]" />
         </div>
 
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -209,16 +209,16 @@ export default function AboutPage() {
             </div>
 
             <h2 className="text-5xl md:text-8xl font-serif font-black text-primary leading-[0.85] uppercase tracking-tighter">
-              Driven by <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/40">Purpose</span>
+              Driven by <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-[rgba(212,175,55,0.4)]">Purpose</span>
             </h2>
 
-            <p className="text-xl md:text-2xl text-primary/50 font-serif leading-relaxed max-w-2xl mb-12">
+            <p className="text-xl md:text-2xl text-[rgba(10,20,40,0.5)] font-serif leading-relaxed max-w-2xl mb-12">
               &ldquo;We create high-performance environments that don&apos;t just house goods, but fuel the economic engines of tomorrow.&rdquo;
             </p>
 
             <Link
               href="/careers"
-              className="group inline-flex items-center gap-8 px-16 py-7 bg-primary text-white rounded-[2.5rem] font-sans font-black text-[12px] uppercase tracking-[0.4em] hover:bg-accent transition-all shadow-2xl shadow-primary/20"
+              className="group inline-flex items-center gap-8 px-16 py-7 bg-primary text-white rounded-[2.5rem] font-sans font-black text-[12px] uppercase tracking-[0.4em] hover:bg-accent transition-all shadow-2xl shadow-[rgba(10,20,40,0.2)]"
             >
               Join the Evolution <ChevronRight size={18} className="group-hover:translate-x-2 transition-transform" />
             </Link>

@@ -22,9 +22,9 @@ export default function HeroSection() {
           />
         </video>
         {/* Architectural Depth Layers */}
-        <div className="absolute inset-0 bg-primary/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[rgba(10,20,40,0.4)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.6)] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.8)] via-transparent to-transparent" />
 
         {/* Sophisticated Texture Overlay */}
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
@@ -42,8 +42,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-4 mb-8"
           >
-            <div className="h-[1px] w-8 bg-accent/60 shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
-            <span className="text-[12px] font-black uppercase tracking-[0.3em] text-accent/80">
+            <div className="h-[1px] w-8 bg-[rgba(212,175,55,0.6)] shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
+            <span className="text-[12px] font-black uppercase tracking-[0.3em] text-[rgba(212,175,55,0.8)]">
               Institutional Logistics Platform
             </span>
           </motion.div>
@@ -69,7 +69,7 @@ export default function HeroSection() {
             transition={{ delay: 0.4, duration: 1 }}
             className="max-w-2xl pl-0 md:pl-1 mb-16 relative"
           >
-            <div className="absolute left-[-24px] top-0 bottom-0 w-[1px] bg-accent/20 hidden md:block" />
+            <div className="absolute left-[-24px] top-0 bottom-0 w-[1px] bg-[rgba(212,175,55,0.2)] hidden md:block" />
             <p className="text-base md:text-lg text-white/70 font-sans font-medium leading-relaxed tracking-wide ">
               Warehouster is a next-generation industrial and logistics real estate platform
               focused on developing <span className="text-white font-bold">Grade-A warehousing</span> and industrial infrastructure.
@@ -85,7 +85,7 @@ export default function HeroSection() {
           >
             <Link
               href="/projects"
-              className="group relative px-12 py-5 bg-accent text-primary font-sans font-black text-[13px] uppercase tracking-[0.4em] overflow-hidden rounded-lg shadow-xl shadow-accent/10 transition-transform active:scale-95"
+              className="group relative px-12 py-5 bg-accent text-primary font-sans font-black text-[13px] uppercase tracking-[0.4em] overflow-hidden rounded-lg shadow-xl shadow-[rgba(212,175,55,0.1)] transition-transform active:scale-95"
             >
               <span className="relative z-10">Explore Projects</span>
               <div className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-out" />
@@ -107,15 +107,15 @@ export default function HeroSection() {
           transition={{ delay: 1.2, duration: 1 }}
           className="hidden xl:flex col-span-3 flex-col justify-end gap-16 pb-20 items-end"
         >
-          <div className="text-right border-r border-accent/30 pr-6">
+          <div className="text-right border-r border-[rgba(212,175,55,0.3)] pr-6">
             <div className="text-accent text-2xl font-serif font-black mb-1">19+</div>
             <div className="text-[9px] font-black uppercase tracking-widest text-white/40">Acres Developed</div>
           </div>
-          <div className="text-right border-r border-accent/30 pr-6">
+          <div className="text-right border-r border-[rgba(212,175,55,0.3)] pr-6">
             <div className="text-accent text-2xl font-serif font-black mb-1">Grade-A</div>
             <div className="text-[9px] font-black uppercase tracking-widest text-white/40">Asset Quality</div>
           </div>
-          <div className="text-right border-r border-accent/30 pr-6">
+          <div className="text-right border-r border-[rgba(212,175,55,0.3)] pr-6">
             <div className="text-accent text-2xl font-serif font-black mb-1">Institutional</div>
             <div className="text-[9px] font-black uppercase tracking-widest text-white/40">Standard Platform</div>
           </div>
@@ -131,12 +131,12 @@ export default function HeroSection() {
       >
         <div className="text-[8px] font-black uppercase tracking-[0.5em] text-white/20 flex items-center gap-12">
             <span>Chennai / South India</span>
-            <div className="h-[4px] w-[4px] bg-accent/40 rounded-full" />
+            <div className="h-[4px] w-[4px] bg-[rgba(212,175,55,0.4)] rounded-full" />
             <span>Industrial Development</span>
-            <div className="h-[4px] w-[4px] bg-accent/40 rounded-full" />
+            <div className="h-[4px] w-[4px] bg-[rgba(212,175,55,0.4)] rounded-full" />
             <span>WRE Portfolio</span>
         </div>
-        <div className="text-[8px] font-black uppercase tracking-[0.5em] text-accent/40">
+        <div className="text-[8px] font-black uppercase tracking-[0.5em] text-[rgba(212,175,55,0.4)]">
             Designing Future Logistics
         </div>
       </motion.div> */}
@@ -150,7 +150,7 @@ export default function HeroSection() {
         <div className="text-[9px] font-black uppercase tracking-[0.4em] text-white/20 vertical-text origin-right rotate-90 translate-y-12 mb-16">
             Scroll to Navigate
         </div>
-        <div className="w-[1px] h-32 bg-gradient-to-b from-accent via-accent/5 to-transparent" />
+        <div className="w-[1px] h-32 bg-gradient-to-b from-accent via-[rgba(212,175,55,0.05)] to-transparent" />
       </motion.div> */}
     </section>
   );

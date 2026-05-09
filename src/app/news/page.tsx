@@ -215,15 +215,15 @@ export default function NewsPage() {
             priority
             className="object-cover opacity-40 grayscale"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.9)] to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.8)] via-transparent to-transparent" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-10"
+            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-10"
           >
             Insights & Updates
           </motion.div>
@@ -255,14 +255,14 @@ export default function NewsPage() {
                     className="object-cover transition-all duration-1000" 
                   />
                   <div className="absolute top-8 left-8 z-10">
-                    <div className="px-4 py-1.5 bg-primary/80 backdrop-blur-md text-accent text-[9px] font-black uppercase tracking-widest border border-accent/20 rounded-full">
+                    <div className="px-4 py-1.5 bg-[rgba(10,20,40,0.8)] backdrop-blur-md text-accent text-[9px] font-black uppercase tracking-widest border border-[rgba(212,175,55,0.2)] rounded-full">
                       {item.category}
                     </div>
                   </div>
                 </div>
 
                 <div className="p-12 flex flex-col flex-1">
-                  <div className="flex items-center gap-6 text-[12px] font-bold uppercase tracking-[0.3em] text-primary/40 mb-8">
+                  <div className="flex items-center gap-6 text-[12px] font-bold uppercase tracking-[0.3em] text-[rgba(10,20,40,0.4)] mb-8">
                     <span className="flex items-center gap-2"><Calendar size={12} className="text-accent" /> {item.date}</span>
                   </div>
                   
@@ -270,7 +270,7 @@ export default function NewsPage() {
                     {item.title}
                   </h2>
                   
-                  <p className="text-sm md:text-base font-medium text-primary/60 leading-relaxed mb-10 line-clamp-3">
+                  <p className="text-sm md:text-base font-medium text-[rgba(10,20,40,0.6)] leading-relaxed mb-10 line-clamp-3">
                     {item.excerpt}
                   </p>
 
@@ -288,7 +288,7 @@ export default function NewsPage() {
                       href={item.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-[9px] font-black uppercase tracking-[0.3em] px-5 py-2.5 rounded-full border border-gray-200 text-primary/40 hover:border-accent hover:text-accent transition-all"
+                      className="flex items-center gap-3 text-[9px] font-black uppercase tracking-[0.3em] px-5 py-2.5 rounded-full border border-gray-200 text-[rgba(10,20,40,0.4)] hover:border-accent hover:text-accent transition-all"
                     >
                       PDF <ArrowRight size={12} />
                     </Link>

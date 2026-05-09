@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npx @tailwindcss/cli -i ./src/app/globals.css -o ./src/app/tailwind-precompiled.css",
     "dev": "next dev -p 5005",
+    "prebuild": "npx @tailwindcss/cli -i ./src/app/globals.css -o ./src/app/tailwind-precompiled.css",
     "build": "next build --webpack",
     "start": "next start -p 5005",
     "lint": "eslint"
@@ -13,7 +15,7 @@
     "framer-motion": "^12.38.0",
     "gsap": "^3.14.2",
     "lucide-react": "^0.470.0",
-    "next": "16.2.1",
+    "next": "^16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "tailwind-merge": "^3.5.0"
@@ -23,8 +25,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.5.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "postcss": "^8.5.14",
+    "postcss-nested": "^7.0.2",
+    "postcss-nesting": "^14.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

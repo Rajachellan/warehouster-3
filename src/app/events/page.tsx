@@ -37,12 +37,12 @@ export default function EventsPage() {
       
       
       <section className="relative pt-60 pb-32 bg-primary overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-accent/10 rounded-full blur-[100px] translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-[rgba(212,175,55,0.1)] rounded-full blur-[100px] translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8"
+            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
           >
             Engagement
           </motion.div>
@@ -71,9 +71,9 @@ export default function EventsPage() {
                     fill 
                     className="object-cover opacity-60 group-hover:scale-110 group-hover:opacity-100 transition-all duration-1000" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent p-12 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-[rgba(10,20,40,0.2)] to-transparent p-12 flex flex-col justify-end">
                     <div className="mb-8">
-                         <span className="px-4 py-1.5 bg-accent/90 text-primary text-[10px] font-bold uppercase tracking-widest rounded-lg mb-4 inline-block">
+                         <span className="px-4 py-1.5 bg-[rgba(212,175,55,0.9)] text-primary text-[10px] font-bold uppercase tracking-widest rounded-lg mb-4 inline-block">
                             {event.type}
                         </span>
                         <h2 className="text-2xl md:text-3xl font-serif font-black text-white leading-tight mb-6">{event.title}</h2>

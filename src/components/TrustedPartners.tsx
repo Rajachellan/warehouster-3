@@ -46,7 +46,7 @@ export default function EcosystemSection() {
           className="flex items-center justify-center gap-6 mb-8"
         >
           <div className="h-[1px] w-12 bg-accent shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
-          <span className="text-[12px] font-black uppercase tracking-[0.6em] text-accent/80">
+          <span className="text-[12px] font-black uppercase tracking-[0.6em] text-[rgba(212,175,55,0.8)]">
             Institutional Network
           </span>
           <div className="h-[1px] w-12 bg-accent shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
@@ -59,7 +59,7 @@ export default function EcosystemSection() {
           transition={{ duration: 0.7, delay: 0.08 }}
           className="text-4xl md:text-7xl font-serif font-black text-primary leading-tight tracking-tighter mb-8 uppercase"
         >
-          Our <span className="text-primary/30 font-light">Ecosystem,</span> <br />
+          Our <span className="text-[rgba(10,20,40,0.3)] font-light">Ecosystem,</span> <br />
           <span className="text-accent underline decoration-accent/10 underline-offset-[16px] decoration-1">Your Advantage</span>
         </motion.h2>
 
@@ -68,11 +68,11 @@ export default function EcosystemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.16 }}
-          className="text-[12px] items-center justify-center flex gap-4 font-black uppercase tracking-[0.4em] text-primary/20 max-w-2xl mx-auto"
+          className="text-[12px] items-center justify-center flex gap-4 font-black uppercase tracking-[0.4em] text-[rgba(10,20,40,0.2)] max-w-2xl mx-auto"
         >
-          <span className="h-1.5 w-1.5 bg-accent/40 rounded-full" />
+          <span className="h-1.5 w-1.5 bg-[rgba(212,175,55,0.4)] rounded-full" />
           Marquee Occupiers & Investors
-          <span className="h-1.5 w-1.5 bg-accent/40 rounded-full" />
+          <span className="h-1.5 w-1.5 bg-[rgba(212,175,55,0.4)] rounded-full" />
         </motion.p>
       </div>
 
@@ -124,7 +124,7 @@ function LogoChip({ name, src }: { name: string; src: any }) {
         group flex items-center justify-center
         shrink-0 rounded-2xl
         border border-gray-100 bg-white
-        hover:border-accent/40
+        hover:border-[rgba(212,175,55,0.4)]
         hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.15)]
         transition-all duration-500 cursor-pointer
       "

@@ -21,13 +21,13 @@ const CategoryTab = ({
   <button
     onClick={onClick}
     className={`group relative px-8 py-6 transition-all duration-500 ${
-      isActive ? "text-primary" : "text-primary/40 hover:text-primary/60"
+      isActive ? "text-primary" : "text-[rgba(10,20,40,0.4)] hover:text-[rgba(10,20,40,0.6)]"
     }`}
   >
     <div className="flex items-center gap-3">
       <span className="text-[11px] font-black uppercase tracking-[0.3em]">{label}</span>
       <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full border transition-colors ${
-        isActive ? "bg-accent/10 border-accent/20 text-accent" : "bg-gray-50 border-gray-100 text-primary/30"
+        isActive ? "bg-[rgba(212,175,55,0.1)] border-[rgba(212,175,55,0.2)] text-accent" : "bg-gray-50 border-gray-100 text-[rgba(10,20,40,0.3)]"
       }`}>
         {count}
       </span>
@@ -65,7 +65,7 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
     </div>
  
     <div className="absolute top-8 right-8 z-10">
-      <div className="px-4 py-1.5 rounded-full bg-primary/80 backdrop-blur-md border border-accent/20 text-accent text-[10px] font-black uppercase tracking-widest">
+      <div className="px-4 py-1.5 rounded-full bg-[rgba(10,20,40,0.8)] backdrop-blur-md border border-[rgba(212,175,55,0.2)] text-accent text-[10px] font-black uppercase tracking-widest">
         {project.status}
       </div>
     </div>
@@ -91,7 +91,7 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
       <div className="grid grid-cols-2 gap-3 mb-10">
         {project.metrics.slice(0, 2).map((metric, i) => (
           <div key={i} className="p-3 rounded-xl bg-white/5 border border-white/10">
-            <div className="text-[8px] font-black text-accent/50 uppercase tracking-widest mb-1">{metric.label}</div>
+            <div className="text-[8px] font-black text-[rgba(212,175,55,0.5)] uppercase tracking-widest mb-1">{metric.label}</div>
             <div className="text-[11px] font-bold text-white tracking-wide">{metric.value}</div>
           </div>
         ))}
@@ -116,8 +116,8 @@ export default function ProjectsSection() {
   return (
     <section className="py-32 bg-white relative overflow-hidden">
       {/* Background Architectural Elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[rgba(212,175,55,0.05)] rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[rgba(10,20,40,0.05)] rounded-full blur-[100px] pointer-events-none" />
  
       <div className="max-w-7xl mx-auto px-6 relative z-10">
        
@@ -141,7 +141,7 @@ export default function ProjectsSection() {
               className="text-6xl  font-serif font-black text-primary uppercase "
             >
               Industrial 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent/60">  Landmarks</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[rgba(212,175,55,0.6)]">  Landmarks</span>
             </motion.h2>
           </div>
  
@@ -150,10 +150,10 @@ export default function ProjectsSection() {
             whileInView={{ opacity: 1 }}
             className="max-w-sm pb-2"
           >
-            <p className="text-primary/50 text-lg font-medium leading-relaxed italic mb-6">
+            <p className="text-[rgba(10,20,40,0.5)] text-lg font-medium leading-relaxed italic mb-6">
               &ldquo;Strategically developed Grade-A assets across India&apos;s critical economic corridors.&rdquo;
             </p>
-            <div className="h-px w-16 bg-accent/30" />
+            <div className="h-px w-16 bg-[rgba(212,175,55,0.3)]" />
           </motion.div>
         </div>
  
@@ -181,12 +181,12 @@ export default function ProjectsSection() {
         <div className="mt-24 flex flex-col items-center gap-8">
           <div className="flex items-center gap-4">
              <div className="w-12 h-px bg-gray-100" />
-             <Activity className="text-accent/20" size={24} />
+             <Activity className="text-[rgba(212,175,55,0.2)]" size={24} />
              <div className="w-12 h-px bg-gray-100" />
           </div>
           <Link
             href="/projects"
-            className="group px-16 py-6 bg-primary text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.5em] hover:bg-accent transition-all shadow-2xl shadow-primary/20 flex items-center gap-6"
+            className="group px-16 py-6 bg-primary text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.5em] hover:bg-accent transition-all shadow-2xl shadow-[rgba(10,20,40,0.2)] flex items-center gap-6"
           >
             Explore Full Portfolio <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>

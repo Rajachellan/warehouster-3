@@ -51,14 +51,14 @@ export default function BlogsPage() {
                      sizes="100vw"
                      className="object-cover object-center"
                    />
-                   <div className="absolute inset-0 bg-primary/60 mix-blend-multiply" />
-                   <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/40 to-transparent" />
+                   <div className="absolute inset-0 bg-[rgba(10,20,40,0.6)] mix-blend-multiply" />
+                   <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.4)] to-transparent" />
                  </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="pill-tag border-accent/30 text-accent bg-accent/5 mb-8"
+            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
           >
             Industrial Pulse
           </motion.div>
@@ -87,13 +87,13 @@ export default function BlogsPage() {
             <div className="flex flex-col md:flex-row justify-between items-center mb-24 gap-8">
                 <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
                     {["All", "Technology", "Market Trends", "Architecture"].map((cat) => (
-                        <button key={cat} className="px-10 py-4 rounded-xl bg-gray-50 text-[10px] font-black uppercase tracking-widest text-primary/40 hover:bg-primary hover:text-white transition-all whitespace-nowrap">
+                        <button key={cat} className="px-10 py-4 rounded-xl bg-gray-50 text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.4)] hover:bg-primary hover:text-white transition-all whitespace-nowrap">
                             {cat}
                         </button>
                     ))}
                 </div>
                 <div className="relative group w-full md:w-96">
-                    <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-primary/20 group-hover:text-accent transition-colors" size={20} />
+                    <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-[rgba(10,20,40,0.2)] group-hover:text-accent transition-colors" size={20} />
                     <input 
                         type="text" 
                         placeholder="Search Intelligence..." 
@@ -126,7 +126,7 @@ export default function BlogsPage() {
                              </div>
                         </div>
                         <div className="px-4 flex flex-col flex-grow">
-                             <div className="flex items-center gap-8 mb-6 text-[10px] font-black uppercase tracking-widest text-primary/30 font-sans">
+                             <div className="flex items-center gap-8 mb-6 text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.3)] font-sans">
                                 <div className="flex items-center gap-3"><Calendar size={14} className="text-accent" /> {blog.date}</div>
                                 <div className="flex items-center gap-3"><User size={14} className="text-accent" /> {blog.author}</div>
                              </div>

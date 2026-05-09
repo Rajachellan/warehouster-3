@@ -142,8 +142,8 @@ export default function ServiceDetailPage() {
           className="object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-[rgba(10,20,40,0.9)] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.8)] via-transparent to-transparent" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <motion.div
@@ -183,7 +183,7 @@ export default function ServiceDetailPage() {
                    Institutional Grade <br />
                    <span className="text-accent">Process & Excellence</span>
                 </h2>
-                <div className="prose prose-xl prose-primary text-primary/60 font-medium leading-[1.8] space-y-8">
+                <div className="prose prose-xl prose-primary text-[rgba(10,20,40,0.6)] font-medium leading-[1.8] space-y-8">
                    <p className="text-xl md:text-2xl text-primary font-serif leading-relaxed">
                       &quot;{service.detailedContent}&quot;
                    </p>
@@ -206,7 +206,7 @@ export default function ServiceDetailPage() {
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex gap-4 group">
                            <CheckCircle2 className="text-accent shrink-0 mt-1" size={20} />
-                           <p className="text-lg font-bold text-primary/70 group-hover:text-primary transition-colors">{feature}</p>
+                           <p className="text-lg font-bold text-[rgba(10,20,40,0.7)] group-hover:text-primary transition-colors">{feature}</p>
                         </div>
                       ))}
                    </div>
@@ -229,10 +229,10 @@ export default function ServiceDetailPage() {
                    <div className="p-10 rounded-[2.5rem] bg-accent text-primary space-y-6">
                       <BadgeCheck size={32} />
                       <h4 className="text-xl font-serif font-black uppercase tracking-tight">Best Use Cases</h4>
-                      <ul className="space-y-4 text-primary/60 text-sm font-bold">
+                      <ul className="space-y-4 text-[rgba(10,20,40,0.6)] text-sm font-bold">
                          {service.useCases.map((useCase, i) => (
                            <li key={i} className="flex gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-primary/20 mt-1.5" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-[rgba(10,20,40,0.2)] mt-1.5" />
                               {useCase}
                            </li>
                          ))}
@@ -253,7 +253,7 @@ export default function ServiceDetailPage() {
             </h3>
             <Link 
                 href="/contact"
-                className="group inline-flex items-center gap-6 px-14 py-6 bg-primary text-white rounded-[2rem] font-sans font-black text-[11px] uppercase tracking-widest hover:bg-accent transition-all shadow-3xl shadow-primary/20"
+                className="group inline-flex items-center gap-6 px-14 py-6 bg-primary text-white rounded-[2rem] font-sans font-black text-[11px] uppercase tracking-widest hover:bg-accent transition-all shadow-3xl shadow-[rgba(10,20,40,0.2)]"
             >
                 Consult Our Strategic Team <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform text-accent" />
             </Link>

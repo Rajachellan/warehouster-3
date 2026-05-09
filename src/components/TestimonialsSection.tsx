@@ -29,8 +29,8 @@ export default function TestimonialsSection() {
     <section className="py-32 bg-[#fafafa] relative overflow-hidden">
         {/* Background Accents */}
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-            <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-accent/10 rounded-full blur-[120px]" />
-            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px]" />
+            <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-[rgba(212,175,55,0.1)] rounded-full blur-[120px]" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[40%] bg-[rgba(10,20,40,0.1)] rounded-full blur-[120px]" />
         </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-8 text-xl text-primary/40 font-bold uppercase tracking-[0.4em]"
+            className="mt-8 text-xl text-[rgba(10,20,40,0.4)] font-bold uppercase tracking-[0.4em]"
           >
             Voice of Excellence
           </motion.p>
@@ -66,7 +66,7 @@ export default function TestimonialsSection() {
             >
               <div className="absolute top-0 left-12 w-16 h-1 w-0 group-hover:w-20 bg-accent transition-all duration-700 rounded-full" />
               
-              <Quote className="absolute top-12 right-12 w-16 h-16 text-primary/5 group-hover:text-accent/10 transition-colors duration-500" />
+              <Quote className="absolute top-12 right-12 w-16 h-16 text-[rgba(10,20,40,0.05)] group-hover:text-[rgba(212,175,55,0.1)] transition-colors duration-500" />
               
               <div className="flex gap-1.5 mb-8">
                 {[...Array(t.stars)].map((_, i) => (
@@ -74,12 +74,12 @@ export default function TestimonialsSection() {
                 ))}
               </div>
 
-              <p className="text-primary/70 font-medium leading-[1.8] mb-12 text-xl">
+              <p className="text-[rgba(10,20,40,0.7)] font-medium leading-[1.8] mb-12 text-xl">
                 "{t.content}"
               </p>
 
               <div className="flex items-center gap-6 mt-auto">
-                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-primary/20 rotate-3 group-hover:rotate-0 transition-transform duration-500">
+                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-[rgba(10,20,40,0.8)] flex items-center justify-center text-white font-black text-2xl shadow-xl shadow-[rgba(10,20,40,0.2)] rotate-3 group-hover:rotate-0 transition-transform duration-500">
                     {t.name[0]}
                  </div>
                  <div>

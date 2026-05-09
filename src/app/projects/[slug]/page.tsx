@@ -50,12 +50,12 @@ const SectionHeading = ({ label, title, light = false }: { label: string, title:
 );
 
 const InfoCard = ({ title, content, icon: Icon }: { title: string; content: string; icon: any }) => (
-  <div className="p-8 rounded-[2rem] bg-white border border-gray-100 hover:border-accent/40 transition-all duration-500 group shadow-sm">
+  <div className="p-8 rounded-[2rem] bg-white border border-gray-100 hover:border-[rgba(212,175,55,0.4)] transition-all duration-500 group shadow-sm">
     <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-accent mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all">
       <Icon size={24} />
     </div>
     <h4 className="text-lg font-serif font-black text-primary uppercase tracking-tight mb-3">{title}</h4>
-    <p className="text-sm text-primary/50 font-medium leading-relaxed">{content}</p>
+    <p className="text-sm text-[rgba(10,20,40,0.5)] font-medium leading-relaxed">{content}</p>
   </div>
 );
 
@@ -88,7 +88,7 @@ export default function ProjectDetailPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(10,20,40,0.8)] via-[rgba(10,20,40,0.4)] to-primary" />
         </motion.div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
@@ -97,7 +97,7 @@ export default function ProjectDetailPage() {
             animate={{ opacity: 1, y: 0 }}
             className="flex flex-col items-center text-center"
           >
-            <div className="pill-tag border-accent/40 bg-accent/20 text-accent mb-8 backdrop-blur-md">
+            <div className="pill-tag border-[rgba(212,175,55,0.4)] bg-[rgba(212,175,55,0.2)] text-accent mb-8 backdrop-blur-md">
               {data.heroLabel}
             </div>
 
@@ -113,7 +113,7 @@ export default function ProjectDetailPage() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-12 hidden md:flex flex-col items-center gap-6">
-          <div className="w-[1px] h-24 bg-gradient-to-b from-transparent via-accent/50 to-accent" />
+          <div className="w-[1px] h-24 bg-gradient-to-b from-transparent via-[rgba(212,175,55,0.5)] to-accent" />
           <span className="text-[9px] font-black text-accent uppercase tracking-[0.5em] [writing-mode:vertical-lr]">Case Study Details</span>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default function ProjectDetailPage() {
                 <div className="text-4xl md:text-6xl font-serif font-black text-white mb-2 tracking-tighter group-hover:text-accent transition-colors">
                   <CountUp value={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-[10px] font-black uppercase tracking-[0.4em] text-accent/50 group-hover:text-accent transition-colors">{stat.label}</div>
+                <div className="text-[10px] font-black uppercase tracking-[0.4em] text-[rgba(212,175,55,0.5)] group-hover:text-accent transition-colors">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -138,7 +138,7 @@ export default function ProjectDetailPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <SectionHeading label="The Mission" title="Project <span className='text-accent'>Overview</span>" />
-          <p className="text-lg md:text-xl text-primary/60 font-medium leading-[1.8] text-justify md:text-center">
+          <p className="text-lg md:text-xl text-[rgba(10,20,40,0.6)] font-medium leading-[1.8] text-justify md:text-center">
             {data.detailedOverview || data.overview}
           </p>
         </div>
@@ -159,10 +159,10 @@ export default function ProjectDetailPage() {
                     transition={{ delay: i * 0.1 }}
                     className="flex gap-4 items-start"
                   >
-                    <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 mt-1">
+                    <div className="w-6 h-6 rounded-full bg-[rgba(212,175,55,0.2)] flex items-center justify-center text-accent shrink-0 mt-1">
                       <ShieldCheck size={14} />
                     </div>
-                    <p className="text-primary/70 font-medium leading-relaxed">{adv}</p>
+                    <p className="text-[rgba(10,20,40,0.7)] font-medium leading-relaxed">{adv}</p>
                   </motion.div>
                 ))}
               </div>
@@ -176,7 +176,7 @@ export default function ProjectDetailPage() {
                 {data.connectivity?.map((item, i) => (
                   <div key={i}>
                     <div className="text-[10px] font-black uppercase tracking-[0.3em] text-accent mb-2">{item.label}</div>
-                    <p className="text-sm text-primary/60 font-medium leading-relaxed">{item.detail}</p>
+                    <p className="text-sm text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">{item.detail}</p>
                   </div>
                 ))}
               </div>
@@ -193,7 +193,7 @@ export default function ProjectDetailPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {data.developmentDetails?.map((detail, i) => (
               <div key={i} className="p-8 rounded-[2rem] bg-gray-50 border border-gray-100 group hover:bg-white hover:shadow-xl transition-all duration-500">
-                <div className="text-[9px] font-black uppercase tracking-[0.4em] text-primary/30 mb-4">{detail.label}</div>
+                <div className="text-[9px] font-black uppercase tracking-[0.4em] text-[rgba(10,20,40,0.3)] mb-4">{detail.label}</div>
                 <div className="text-lg font-serif font-black text-primary uppercase tracking-tight leading-tight">{detail.detail}</div>
               </div>
             ))}
@@ -255,7 +255,7 @@ export default function ProjectDetailPage() {
                   <HardHat size={28} />
                 </div>
                 <h4 className="text-lg font-serif font-black text-primary uppercase tracking-tight mb-2">{step.title}</h4>
-                <p className="text-sm text-primary/40 font-medium leading-relaxed">{step.description}</p>
+                <p className="text-sm text-[rgba(10,20,40,0.4)] font-medium leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -288,7 +288,7 @@ export default function ProjectDetailPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
             <SectionHeading label="Ecosystem" title="Related <span className='text-accent'>Assets</span>" />
-            <Link href="/projects" className="group flex items-center gap-4 text-xs font-black uppercase tracking-[0.4em] text-primary/40 hover:text-accent transition-colors mb-12">
+            <Link href="/projects" className="group flex items-center gap-4 text-xs font-black uppercase tracking-[0.4em] text-[rgba(10,20,40,0.4)] hover:text-accent transition-colors mb-12">
               All Projects <ChevronRight size={16} />
             </Link>
           </div>
@@ -296,7 +296,7 @@ export default function ProjectDetailPage() {
             {relatedProjects.map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="group relative block h-[500px] rounded-[3.5rem] overflow-hidden shadow-lg">
                 <Image src={project.image} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent p-12 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,20,40,0.9)] to-transparent p-12 flex flex-col justify-end">
                   <h3 className="text-3xl font-serif font-black text-white uppercase tracking-tighter mb-4">{project.title}</h3>
                   <div className="flex items-center gap-4 text-accent text-[10px] font-black uppercase tracking-[0.4em] opacity-0 group-hover:opacity-100 transition-all">
                     View Case Study <ArrowRight size={16} />

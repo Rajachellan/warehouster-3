@@ -22,7 +22,7 @@ export default function VisionMission() {
                         <h3 className="text-3xl font-serif font-black text-primary uppercase tracking-tighter mb-6 group-hover:text-[#D4AF37] transition-colors">
                             Our Mission
                         </h3>
-                        <p className="text-sm font-medium text-primary/50 leading-relaxed max-w-sm">
+                        <p className="text-sm font-medium text-[rgba(10,20,40,0.5)] leading-relaxed max-w-sm">
                             To deliver smart, scalable, and reliable warehouse solutions through innovation and expertise, empowering businesses to grow with confidence.
                         </p>
                     </motion.div>

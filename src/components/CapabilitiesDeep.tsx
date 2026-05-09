@@ -81,14 +81,14 @@ export default function CapabilitiesDeep() {
                             <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter mb-6 group-hover:text-[#D4AF37] transition-colors">
                                 {item.title}
                             </h3>
-                            <p className="text-sm font-medium text-primary/40 leading-relaxed mb-10 group-hover:text-primary transition-colors">
+                            <p className="text-sm font-medium text-[rgba(10,20,40,0.4)] leading-relaxed mb-10 group-hover:text-primary transition-colors">
                                 {item.desc}
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-auto">
                                 {item.points.map((point, pIdx) => (
                                     <div key={pIdx} className="flex items-center gap-3">
                                         <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full" />
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-primary/60">{point}</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.6)]">{point}</span>
                                     </div>
                                 ))}
                             </div>
