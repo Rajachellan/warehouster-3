@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, User, ArrowRight } from "lucide-react";
 
+
 const posts = [
   {
     id: 1,
