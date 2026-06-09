@@ -7,6 +7,8 @@ import CTASection from "@/components/CTASection";
 import Image from "next/image";
 import { CheckCircle2, ArrowRight, Zap, Target, TrendingUp } from "lucide-react";
 import banner from "../../../assets/high-view-village-taken-by-drone.jpg"
+import CaseStudySection, { CaseStudyProps } from "@/components/CaseStudySection";
+
 const sections = [
   {
     title: "What we do",
@@ -33,6 +35,58 @@ const sections = [
     points: ["50 Acres", "Chennai Corridor", "Early Delivery", "Global Client"]
   }
 ];
+
+const landAcquisitionCaseStudy: CaseStudyProps = {
+  title: "Chennai Logistics Hub Land Acquisition",
+  summary: "Acquired a prime 50-acre parcel in the Chennai Industrial Corridor for a global 3PL provider, ensuring clear titles and compliance 2 months ahead of schedule.",
+  client: "Global 3PL Provider",
+  location: "Chennai Industrial Corridor, India",
+  industry: "Logistics & Supply Chain",
+  serviceUsed: "Strategic Land Acquisition",
+  duration: "4 Months",
+  status: "Completed",
+  image: "https://images.unsplash.com/photo-1582213706001-c918c0e29202?auto=format&fit=crop&q=80&w=1920",
+  challenge: [
+    "Identifying a large, contiguous land parcel within close proximity to major ports.",
+    "Navigating complex local zoning laws and agricultural land conversion.",
+    "Tight 6-month deadline set by the client's global expansion mandate."
+  ],
+  solution: [
+    "Utilized proprietary data models to pinpoint high-potential zones before market saturation.",
+    "Engaged local legal experts and authorities early to expedite the due diligence and conversion process.",
+    "Negotiated directly with multiple landowners simultaneously to aggregate the 50 acres."
+  ],
+  execution: [
+    "Conducted comprehensive topographical and soil feasibility studies.",
+    "Cleared 15+ individual land titles and resolved minor disputes preemptively.",
+    "Managed end-to-end registration and handover."
+  ],
+  results: [
+    "Successfully acquired the full 50 acres with 100% legal compliance.",
+    "Completed the entire acquisition and conversion process 2 months ahead of the 6-month deadline."
+  ],
+  businessImpact: "The early acquisition allowed the client to commence construction ahead of the monsoon season, ultimately advancing their operational launch and capturing early market share in the region.",
+  highlights: {
+    size: "50 Acres",
+    timeline: "4 Months (2 months early)",
+    budget: "$12M+",
+    team: "12 Subject Matter Experts",
+    deliverables: "Clear Title Land, Zoning Approvals",
+    metrics: "100% Compliance"
+  },
+  outcomes: [
+    "Accelerated project launch by 2 months",
+    "Zero legal disputes post-acquisition",
+    "Optimized land cost by 15% under budget",
+    "Seamless handover to development team"
+  ],
+  testimonial: {
+    quote: "Warehouster's ability to navigate the complex land landscape in Chennai was remarkable. They delivered a prime parcel faster than we thought possible, fully vetted and ready for development.",
+    author: "Director of Expansion, Global 3PL"
+  },
+  nextCaseStudyLink: "/services/development-management",
+  relatedServicesLink: "/services"
+};
 
 export default function LandAcquisitionPage() {
   return (
@@ -63,7 +117,7 @@ export default function LandAcquisitionPage() {
             <motion.h1 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter"
+                className="text-5xl md:text-7xl font-serif font-black text-white leading-none uppercase tracking-tighter"
             >
                 Land <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Acquisition</span>
@@ -99,7 +153,7 @@ export default function LandAcquisitionPage() {
                         <Zap size={20} />
                         <span className="text-[10px] font-black uppercase tracking-[0.4em] font-sans">Section {i + 1}</span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
+                    <h2 className="text-3xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">
                         {section.title}
                     </h2>
                     <p className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">
@@ -133,6 +187,8 @@ export default function LandAcquisitionPage() {
           ))}
         </div>
       </section>
+
+      <CaseStudySection data={landAcquisitionCaseStudy} />
 
       <CTASection />
       <Footer />

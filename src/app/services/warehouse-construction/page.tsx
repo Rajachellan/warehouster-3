@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import Image from "next/image";
 import { CheckCircle2, Zap } from "lucide-react";
+import CaseStudySection, { CaseStudyProps } from "@/components/CaseStudySection";
 
 const sections = [
   {
@@ -34,6 +35,59 @@ const sections = [
   }
 ];
 
+const warehouseConstructionCaseStudy: CaseStudyProps = {
+  title: "Multi-Specialty Grade-A Hub",
+  summary: "Constructed a 1.2M sq. ft. Grade-A distribution center in Bengaluru in a record 11 months, setting a new regional benchmark for speed and structural quality.",
+  client: "Global FMCG Conglomerate",
+  location: "Bengaluru, India",
+  industry: "FMCG",
+  serviceUsed: "Warehouse Construction",
+  duration: "11 Months",
+  status: "Completed",
+  image: "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?auto=format&fit=crop&q=80&w=1920",
+  challenge: [
+    "Constructing a massive 1.2M sq. ft. facility within an extremely compressed timeline of 12 months.",
+    "Ensuring FM2 specialized flooring for high-density racking systems across the entire floorplate.",
+    "Navigating unseasonal heavy monsoons during the peak construction phase."
+  ],
+  solution: [
+    "Deployed Pre-Engineered Building (PEB) structural components fabricated off-site for rapid assembly.",
+    "Utilized advanced laser screed technology to achieve perfectly flat FM2 flooring in record time.",
+    "Implemented a 24/7 dual-shift construction schedule to recover days lost to weather."
+  ],
+  execution: [
+    "Completed foundation work and column erection simultaneously across different zones.",
+    "Installed energy-efficient roofing and climate-adaptive insulation to meet FMCG storage standards.",
+    "Integrated state-of-the-art NFPA fire protection and smart safety systems."
+  ],
+  results: [
+    "Delivered the entire 1.2M sq. ft. facility fully commissioned in just 11 months.",
+    "Achieved FM2 flooring standards with zero rework required."
+  ],
+  businessImpact: "The early delivery allowed the client to consolidate 4 regional warehouses into this central hub ahead of their peak festive season, resulting in a 30% increase in operational throughput.",
+  highlights: {
+    size: "1.2M Sq. Ft.",
+    timeline: "11 Months",
+    budget: "$75M+",
+    team: "450+ Workers & Engineers",
+    deliverables: "Grade-A Hub, FM2 Flooring",
+    metrics: "1 Month Early Delivery"
+  },
+  outcomes: [
+    "30% increase in client's operational throughput",
+    "Zero structural defects during final handover",
+    "100% compliance with international safety standards",
+    "Optimized construction waste management"
+  ],
+  testimonial: {
+    quote: "The speed and quality of construction delivered by Warehouster were unprecedented. They didn't just build a warehouse; they built a strategic asset that has fundamentally transformed our supply chain capabilities.",
+    author: "Head of Supply Chain, Global FMCG"
+  },
+  prevCaseStudyLink: "/services/development-management",
+  nextCaseStudyLink: "/services/industrial-consulting",
+  relatedServicesLink: "/services"
+};
+
 export default function WarehouseConstructionPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -52,7 +106,7 @@ export default function WarehouseConstructionPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8">Engineering Power</motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter">Warehouse <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Construction</span></motion.h1>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-serif font-black text-white leading-none uppercase tracking-tighter">Warehouse <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Construction</span></motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl text-white/50 font-sans font-medium max-w-2xl mt-8 leading-relaxed">            Grade-A construction standards and India&apos;s high-performance industrial ecosystems built for the future of global commerce.
 </motion.p>
         </div>
@@ -64,7 +118,7 @@ export default function WarehouseConstructionPage() {
             <div key={section.title} className={`flex flex-col lg:flex-row items-center gap-16 lg:gap-32 py-24 border-b border-gray-100 last:border-0 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="flex-1 space-y-8">
                     <div className="flex items-center gap-4 text-accent"><Zap size={20} /><span className="text-[10px] font-black uppercase tracking-[0.4em] font-sans">Section {i + 1}</span></div>
-                    <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">{section.title}</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">{section.title}</h2>
                     <p className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">{section.content}</p>
                     <div className="grid grid-cols-2 gap-6">
                         {section.points.map((point) => (
@@ -85,6 +139,9 @@ export default function WarehouseConstructionPage() {
           ))}
         </div>
       </section>
+      
+      <CaseStudySection data={warehouseConstructionCaseStudy} />
+      
       <CTASection />
       <Footer />
     </main>

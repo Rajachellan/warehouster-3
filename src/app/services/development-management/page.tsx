@@ -7,6 +7,8 @@ import CTASection from "@/components/CTASection";
 import Image from "next/image";
 import { CheckCircle2, Zap } from "lucide-react";
 import banner from "../../../assets/warehouster-development.webp"
+import CaseStudySection, { CaseStudyProps } from "@/components/CaseStudySection";
+
 const sections = [
   {
     title: "What we do",
@@ -34,6 +36,59 @@ const sections = [
   }
 ];
 
+const devManagementCaseStudy: CaseStudyProps = {
+  title: "LEED Platinum Distribution Center",
+  summary: "End-to-end management of a 750,000 sq. ft. Grade-A facility in the National Capital Region (NCR), achieving LEED Platinum certification and 22% lifecycle energy cost reduction.",
+  client: "National E-Commerce Leader",
+  location: "National Capital Region (NCR), India",
+  industry: "E-Commerce & Retail",
+  serviceUsed: "Development Management",
+  duration: "14 Months",
+  status: "Completed",
+  image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1920",
+  challenge: [
+    "Coordinating a massive build across a fragmented local vendor ecosystem.",
+    "Stringent sustainability requirements to meet the client's global zero-carbon mandate.",
+    "Ensuring strict cost control amidst volatile construction material pricing."
+  ],
+  solution: [
+    "Implemented a digital twin project management system for real-time tracking.",
+    "Integrated green building consultants from the initial concept phase.",
+    "Locked in strategic vendor pricing early to mitigate market volatility."
+  ],
+  execution: [
+    "Oversaw master planning, prioritizing natural lighting and thermal insulation.",
+    "Managed over 50 subcontractors seamlessly to maintain the aggressive timeline.",
+    "Conducted rigorous daily quality control audits."
+  ],
+  results: [
+    "Delivered the 750,000 sq. ft. facility on time and 5% under the baseline budget.",
+    "Achieved LEED Platinum certification, the highest sustainability standard."
+  ],
+  businessImpact: "The sustainable design resulted in a 22% reduction in ongoing energy costs for the client, significantly improving their operational margins and supporting their ESG commitments.",
+  highlights: {
+    size: "750,000 Sq. Ft.",
+    timeline: "14 Months",
+    budget: "$45M+",
+    team: "25+ Managers & Engineers",
+    deliverables: "Turnkey Facility, LEED Cert",
+    metrics: "22% Energy Reduction"
+  },
+  outcomes: [
+    "5% cost savings against baseline budget",
+    "Zero lost-time injuries (LTI) during construction",
+    "Awarded LEED Platinum status",
+    "Fully operational within 30 days of handover"
+  ],
+  testimonial: {
+    quote: "Warehouster's development management was flawless. They handled the complexity of a massive, sustainable build with absolute precision, delivering a facility that is setting new benchmarks for our operations.",
+    author: "VP of Real Estate, National E-Commerce Leader"
+  },
+  prevCaseStudyLink: "/services/land-acquisition",
+  nextCaseStudyLink: "/services/warehouse-construction",
+  relatedServicesLink: "/services"
+};
+
 export default function DevelopmentManagementPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -52,7 +107,7 @@ export default function DevelopmentManagementPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8">Management Excellence</motion.div>
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-6xl md:text-8xl font-serif font-black text-white leading-none uppercase tracking-tighter">Development <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Management</span></motion.h1>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-5xl md:text-7xl font-serif font-black text-white leading-none uppercase tracking-tighter">Development <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Management</span></motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-xl text-white/50 font-sans font-medium max-w-2xl mt-8 leading-relaxed">End-to-end oversight of complex industrial projects with a focus on precision, transparency, and high-performance delivery.</motion.p>
         </div>
       </section>
@@ -63,7 +118,7 @@ export default function DevelopmentManagementPage() {
             <div key={section.title} className={`flex flex-col lg:flex-row items-center gap-16 lg:gap-32 py-24 border-b border-gray-100 last:border-0 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="flex-1 space-y-8">
                     <div className="flex items-center gap-4 text-accent"><Zap size={20} /><span className="text-[10px] font-black uppercase tracking-[0.4em] font-sans">Section {i + 1}</span></div>
-                    <h2 className="text-4xl md:text-6xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">{section.title}</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter">{section.title}</h2>
                     <p className="text-lg text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">{section.content}</p>
                     <div className="grid grid-cols-2 gap-6">
                         {section.points.map((point) => (
@@ -84,6 +139,9 @@ export default function DevelopmentManagementPage() {
           ))}
         </div>
       </section>
+      
+      <CaseStudySection data={devManagementCaseStudy} />
+      
       <CTASection />
       <Footer />
     </main>
