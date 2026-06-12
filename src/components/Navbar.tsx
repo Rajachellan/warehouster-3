@@ -91,6 +91,7 @@ const navLinks: NavItem[] = [
       { name: "Trending News", href: "/news" },
       { name: "Events", href: "/events" },
       { name: "Industry Insights", href: "/news#insights" },
+      { name: "Case Study", href: "/case-study" },
     ],
   },
   { name: "Blogs", href: "/blogs" },

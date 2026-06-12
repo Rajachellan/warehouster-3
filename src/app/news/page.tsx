@@ -71,7 +71,8 @@ const news = [
     date: "August 10, 2024",
     category: "Business Today",
     image:news5,
-     pdf: "/news/news5.pdf",    link:"https://www.businesstoday.in/impact-feature/story/featuring-eminent-personalities-and-their-leadership-journey-440711-2024-08-08",
+     pdf: "/news/news5.pdf",    
+     link:"https://www.businesstoday.in/impact-feature/story/featuring-eminent-personalities-and-their-leadership-journey-440711-2024-08-08",
   },
   {
     title: "Charting India’s Economic Course: Highlights of Union Budget 2024",
