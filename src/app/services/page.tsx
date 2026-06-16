@@ -15,7 +15,7 @@ import assets from "../../assets/assetmanagement.webp"
 const detailedServices = [
   {
     id: "land",
-    title: "Strategic Land Acquisition",
+    title: "Land Owners",
     icon: Building2,
     description: "Intelligence-led sourcing of high-yield industrial locations. We secure the foundation for institutional assets through proprietary data models and rigorous governance protocols.",
     details: [

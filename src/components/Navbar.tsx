@@ -40,13 +40,14 @@ const navLinks: NavItem[] = [
       { name: "Leadership", href: "/about#leadership" },
       { name: "Purpose", href: "/about#purpose" },
       { name: "Careers", href: "/careers" },
+      { name: "Track Record", href: "/track-record" },
     ],
   },
   {
     name: "Services",
     href: "/services",
     dropdown: [
-      { name: "Land Acquisition", href: "/services/land-acquisition" },
+      { name: "Land Owners", href: "/services/land-acquisition" },
       { name: "Development Management", href: "/services/development-management" },
       { name: "Warehouse Construction", href: "/services/warehouse-construction" },
       { name: "Industrial Consulting", href: "/services/industrial-consulting" },
@@ -84,6 +85,7 @@ const navLinks: NavItem[] = [
       },
     ],
   },
+
   {
     name: "News",
     href: "/news",
@@ -121,6 +123,13 @@ const trendingItems = [
   },
 ];
 
+const LIGHT_NAV_PATHS = [
+  "/services/industrial-consulting",
+  "/services/land-acquisition",
+  "/services/development-management",
+  "/services/warehouse-construction",
+];
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -128,6 +137,9 @@ export default function Navbar() {
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const [newsIndex, setNewsIndex] = useState(0);
   const pathname = usePathname();
+
+  const isLightNavPage = LIGHT_NAV_PATHS.some((p) => pathname === p);
+  const useLightNav = isLightNavPage && !isScrolled;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -266,10 +278,13 @@ export default function Navbar() {
 
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${isScrolled
-          ? "bg-[rgba(10,20,40,0.95)] shadow-2xl py-6 border-b border-white/5"
-          : "bg-transparent py-6"
-          }`}
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 py-6 ${
+          isScrolled
+            ? "bg-[rgba(10,20,40,0.95)] shadow-2xl border-b border-white/5"
+            : useLightNav
+              ? "bg-white/95 backdrop-blur-xl border-b border-stone-200 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+              : "bg-transparent"
+        }`}
       >
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 items-center">
 
@@ -282,7 +297,9 @@ export default function Navbar() {
                   alt="Warehouster Logo"
                   fill
                   sizes="144px"
-                  className="object-contain"
+                  className={`object-contain transition-all duration-500 ${
+                    useLightNav ? "brightness-0" : ""
+                  }`}
                   priority
                 />
               </div>
@@ -291,11 +308,11 @@ export default function Navbar() {
 
           {/* Desktop Nav Links - Column 2 (Centered) */}
           <div className="hidden lg:flex justify-center">
-            <div className="flex items-center text-white gap-1">
+            <div className={`flex items-center gap-1 ${useLightNav ? "text-primary" : "text-white"}`}>
               {navLinks.map((link) => (
                 <div
                   key={link.name}
-                  className="relative h-full flex items-center text-white group/link"
+                  className={`relative h-full flex items-center group/link ${useLightNav ? "text-primary" : "text-white"}`}
                   onMouseEnter={() => {
                     if (dropdownTimeout) clearTimeout(dropdownTimeout);
                     setActiveMenu(link.name);
@@ -307,8 +324,13 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`px-4 py-2 font-bold text-[14px] tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${activeMenu === link.name ? "text-accent scale-105" : "text-white hover:text-white/80"
-                      }`}
+                    className={`px-4 py-2 font-bold text-[14px] tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${
+                      activeMenu === link.name
+                        ? "text-accent scale-105"
+                        : useLightNav
+                          ? "text-primary/80 hover:text-primary"
+                          : "text-white hover:text-white/80"
+                    }`}
                   >
                     {link.name}
                     {link.dropdown && (
@@ -369,14 +391,22 @@ export default function Navbar() {
           </div>
 
           {/* CTA & Mobile Toggle - Column 3 */}
-          <div className="flex items-center justify-end gap-3 sm:gap-8 text-white">
+          <div className={`flex items-center justify-end gap-3 sm:gap-8 ${useLightNav ? "text-primary" : "text-white"}`}>
             {/* CTA Cluster */}
             <div className="hidden sm:flex items-center gap-3">
               <a
                 href="tel:+91 95600 11696"
-                className="group flex items-center gap-3  px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white hover:text-primary transition-all shadow-xl"
+                className={`group flex items-center gap-3 px-5 py-2.5 rounded-full transition-all shadow-xl ${
+                  useLightNav
+                    ? "bg-primary/5 border border-primary/10 text-primary hover:bg-primary hover:text-white"
+                    : "bg-white/5 border border-white/10 text-white hover:bg-white hover:text-primary"
+                }`}
               >
-                <div className="w-5 h-5 rounded-full bg-[rgba(212,175,55,0.2)] flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-white transition-all">
+                <div className={`w-5 h-5 rounded-full flex items-center justify-center text-accent transition-all ${
+                  useLightNav
+                    ? "bg-accent/15 group-hover:bg-white group-hover:text-primary"
+                    : "bg-[rgba(212,175,55,0.2)] group-hover:bg-primary group-hover:text-white"
+                }`}>
                   <Phone size={10} />
                 </div>
                 <span className="text-[14px] font-black uppercase tracking-widest">+91 95600 11696</span>
@@ -385,7 +415,11 @@ export default function Navbar() {
 
             {/* Mobile Toggle */}
             <button
-              className="lg:hidden text-white bg-white/5 p-4 rounded-full hover:bg-accent hover:text-primary transition-all shadow-xl"
+              className={`lg:hidden p-4 rounded-full transition-all shadow-xl ${
+                useLightNav
+                  ? "text-primary bg-primary/5 hover:bg-accent hover:text-white"
+                  : "text-white bg-white/5 hover:bg-accent hover:text-primary"
+              }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}

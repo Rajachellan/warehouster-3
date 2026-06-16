@@ -27,27 +27,27 @@ interface ServiceContent {
 
 const serviceData: Record<string, ServiceContent> = {
   "land-acquisition": {
-    title: "Land Acquisition",
-    description: "Strategic sourcing of high-yield industrial locations across India's leading logistics corridors.",
+    title: "Land Owners",
+    description: "Partner with Warehouster to unlock institutional value from your industrial land across South India's premier logistics corridors.",
     icon: Building2,
     image: landImg,
     features: [
-      "Multi-parameter site selection (topography, soil, drainage).",
-      "Legal and regulatory due diligence for clear title assurance.",
-      "Liaison with local and state authorities for conversion and approvals.",
-      "Strategic land aggregation for large-scale logistics parks."
+      "Fair institutional valuation backed by corridor data and comparables.",
+      "JV, BTS, and outright sale structuring tailored to landowner goals.",
+      "End-to-end regulatory support for conversion, zoning, and title clearance.",
+      "Direct access to global PE funds, REITs, and institutional capital partners."
     ],
     benefits: [
-      "Mitigated risk through institutional-grade legal vetting.",
-      "Optimized land value capture via early-stage sourcing.",
-      "Ready-to-build land parcels with clear connectivity strategies."
+      "Maximum value capture through institutional-grade partnerships.",
+      "Transparent, founder-led engagement without broker intermediation.",
+      "Participation in development upside through flexible JV structures."
     ],
     useCases: [
-      "E-commerce giants seeking expansion in Tier-1 corridors.",
-      "Industrial funds looking for high-yield land investments.",
-      "Manufacturing OEMs requiring port-adjacent land parcels."
+      "Agricultural landowners along high-growth industrial corridors.",
+      "Families holding large contiguous land banks seeking JV partners.",
+      "Industrial plot holders looking for institutional buyers or co-developers."
     ],
-    detailedContent: `Land acquisition is the foundational pillar of any successful industrial project. In India's complex regulatory landscape, Warehouster provides the expertise required to navigate the intricacies of land procurement with zero compromise on legality or strategic value. Our process begins with high-resolution data analysis of regional infrastructure plans, ensuring that every acquisition is positioned to benefit from future growth. We don't just buy land; we acquire the future growth corridors of a rising nation. From the initial search to the final registration, our team manages every touchpoint, ensuring that titles are clear, zoning is appropriate, and environmental risks are mitigated. This institutional approach to land acquisition has made us the partner of choice for global investment funds and major industrial players.`
+    detailedContent: `Warehouster partners directly with landowners across South India to transform underutilised industrial parcels into Grade-A logistics assets. With 434+ acres in our active landbank and partnerships spanning Chennai, Bengaluru, and Hyderabad corridors, we bring institutional capital, regulatory expertise, and end-to-end execution capability to every landowner engagement. Whether you seek an outright sale, a joint venture with equity participation, or a built-to-suit arrangement, our founder-led team structures transactions that align with your objectives — delivering fair valuations, complete transparency, and access to global institutional buyers that local brokers cannot provide.`
   },
   "development-management": {
     title: "Development Management",

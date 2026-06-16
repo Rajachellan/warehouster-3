@@ -11,8 +11,8 @@ import construction from "../assets/adrian-sulyok-sczNLg6rrhQ-unsplash.jpg";
 
 const services = [
   {
-    title: "Strategic Land Acquisition",
-    description: "Leveraging multi-parameter data intelligence to source high-yield industrial locations across key corridors.",
+    title: "Land Owners",
+    description: "Partner with Warehouster to unlock institutional value from your industrial land through fair valuations, JV structuring, and global capital access.",
     features: ["Corridor Mapping", "Title Governance", "Zoning Mastery"],
     icon: Globe,
     href: "/services/land-acquisition",

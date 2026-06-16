@@ -88,7 +88,7 @@ export default function Footer() {
             <h4 className="text-white font-serif font-black text-sm uppercase tracking-[0.3em] mb-10 border-l-2 border-accent pl-4">Core Pillars</h4>
             <ul className="space-y-6">
               {[
-                "Land Acquisition",
+                "Land Owners",
                 "Development Management",
                 "Warehouse Construction",
                 "Industrial Consulting"
