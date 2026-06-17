@@ -638,6 +638,9 @@
   .mt-14 {
     margin-top: calc(var(--spacing) * 14);
   }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
@@ -2667,9 +2670,6 @@
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
-  .py-14 {
-    padding-block: calc(var(--spacing) * 14);
-  }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
@@ -2793,14 +2793,8 @@
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
   }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
-  }
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
-  }
-  .pb-16 {
-    padding-bottom: calc(var(--spacing) * 16);
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
@@ -4705,6 +4699,11 @@
       border-bottom-width: 0px;
     }
   }
+  .md\:p-10 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 10);
+    }
+  }
   .md\:p-12 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 12);
@@ -4715,9 +4714,9 @@
       padding: calc(var(--spacing) * 16);
     }
   }
-  .md\:py-28 {
+  .md\:py-20 {
     @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 28);
+      padding-block: calc(var(--spacing) * 20);
     }
   }
   .md\:py-32 {
@@ -4730,9 +4729,9 @@
       padding-block: calc(var(--spacing) * 40);
     }
   }
-  .md\:pt-40 {
+  .md\:pt-32 {
     @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 40);
+      padding-top: calc(var(--spacing) * 32);
     }
   }
   .md\:pt-48 {
@@ -4745,9 +4744,9 @@
       padding-bottom: 0;
     }
   }
-  .md\:pb-24 {
+  .md\:pb-16 {
     @media (width >= 48rem) {
-      padding-bottom: calc(var(--spacing) * 24);
+      padding-bottom: calc(var(--spacing) * 16);
     }
   }
   .md\:pb-32 {
@@ -5032,6 +5031,12 @@
       text-align: right;
     }
   }
+  .lg\:text-4xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
   .lg\:text-5xl {
     @media (width >= 64rem) {
       font-size: var(--text-5xl);
@@ -5079,12 +5084,6 @@
   .xl\:gap-20 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 20);
-    }
-  }
-  .xl\:text-7xl {
-    @media (width >= 80rem) {
-      font-size: var(--text-7xl);
-      line-height: var(--tw-leading, var(--text-7xl--line-height));
     }
   }
   .xl\:text-\[13px\] {

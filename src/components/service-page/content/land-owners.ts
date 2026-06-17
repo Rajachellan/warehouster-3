@@ -10,11 +10,11 @@ const landOwnersContent: ServicePageContent = {
     primaryCta: { label: "Evaluate my land confidentially", href: "/contact" },
     secondaryCta: { label: "View Our Projects", href: "/projects" },
     mainImage:
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop&q=85",
+      "/images/warehouse/warehouster-land (10).jpg",
     accentImage1:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&auto=format&fit=crop&q=80",
     accentImage2:
-      "https://images.unsplash.com/photo-1582213706001-c918c0e29202?w=400&auto=format&fit=crop&q=80",
+      "/images/warehouse/warehouster-land (1).jpg",
     mainImageAlt: "Aerial view of industrial land parcel",
   },
   stats: [
@@ -30,7 +30,10 @@ const landOwnersContent: ServicePageContent = {
     "Fair Valuation",
   ],
   galleryImages: [
-    "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&auto=format&fit=crop&q=80",
+    "/images/warehouse/warehouster-land (8).jpg",
+    "/images/warehouse/warehouster-land (7).jpg",
+    "/images/warehouse/warehouster-land (5).jpg",
+
     "https://images.unsplash.com/photo-1582213706001-c918c0e29202?w=600&auto=format&fit=crop&q=80",
     "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&auto=format&fit=crop&q=80",
     "https://images.unsplash.com/photo-1454165833767-027ff33027b6?w=600&auto=format&fit=crop&q=80",
