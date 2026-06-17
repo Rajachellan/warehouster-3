@@ -91,11 +91,12 @@ const navLinks: NavItem[] = [
     href: "/news",
     dropdown: [
       { name: "Trending News", href: "/news" },
-      { name: "Events", href: "/events" },
+      // { name: "Events", href: "/events" },
       { name: "Industry Insights", href: "/news#insights" },
       { name: "Case Study", href: "/case-study" },
     ],
   },
+  { name: "Intelligence", href: "/platform" },
   { name: "Blogs", href: "/blogs" },
   { name: "Contact", href: "/contact" },
 ];
@@ -116,7 +117,7 @@ const trendingItems = [
     desc: "We're thrilled to announce that our founder, Sandeep Chadha's article has been published in Logistics Insider!",
     img: news3,
   },
-    {
+  {
     title: "Sameera Warehouster ",
     desc: "Featured in The Economic Times: Major Milestone in Warehousing Partnership",
     img: news4,
@@ -278,13 +279,12 @@ export default function Navbar() {
 
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 py-6 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 py-6 ${isScrolled
             ? "bg-[rgba(10,20,40,0.95)] shadow-2xl border-b border-white/5"
             : useLightNav
               ? "bg-white/95 backdrop-blur-xl border-b border-stone-200 shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
               : "bg-transparent"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 items-center">
 
@@ -297,9 +297,8 @@ export default function Navbar() {
                   alt="Warehouster Logo"
                   fill
                   sizes="144px"
-                  className={`object-contain transition-all duration-500 ${
-                    useLightNav ? "brightness-0" : ""
-                  }`}
+                  className={`object-contain transition-all duration-500 ${useLightNav ? "brightness-0" : ""
+                    }`}
                   priority
                 />
               </div>
@@ -324,13 +323,12 @@ export default function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`px-4 py-2 font-bold text-[14px] tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${
-                      activeMenu === link.name
+                    className={`px-3 py-2 font-bold text-[14px] tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${activeMenu === link.name
                         ? "text-accent scale-105"
                         : useLightNav
                           ? "text-primary/80 hover:text-primary"
                           : "text-white hover:text-white/80"
-                    }`}
+                      }`}
                   >
                     {link.name}
                     {link.dropdown && (
@@ -396,17 +394,15 @@ export default function Navbar() {
             <div className="hidden sm:flex items-center gap-3">
               <a
                 href="tel:+91 95600 11696"
-                className={`group flex items-center gap-3 px-5 py-2.5 rounded-full transition-all shadow-xl ${
-                  useLightNav
+                className={`group flex items-center gap-3 px-5 py-2.5 rounded-full transition-all shadow-xl ${useLightNav
                     ? "bg-primary/5 border border-primary/10 text-primary hover:bg-primary hover:text-white"
                     : "bg-white/5 border border-white/10 text-white hover:bg-white hover:text-primary"
-                }`}
+                  }`}
               >
-                <div className={`w-5 h-5 rounded-full flex items-center justify-center text-accent transition-all ${
-                  useLightNav
+                <div className={`w-5 h-5 rounded-full flex items-center justify-center text-accent transition-all ${useLightNav
                     ? "bg-accent/15 group-hover:bg-white group-hover:text-primary"
                     : "bg-[rgba(212,175,55,0.2)] group-hover:bg-primary group-hover:text-white"
-                }`}>
+                  }`}>
                   <Phone size={10} />
                 </div>
                 <span className="text-[14px] font-black uppercase tracking-widest">+91 95600 11696</span>
@@ -415,11 +411,10 @@ export default function Navbar() {
 
             {/* Mobile Toggle */}
             <button
-              className={`lg:hidden p-4 rounded-full transition-all shadow-xl ${
-                useLightNav
+              className={`lg:hidden p-4 rounded-full transition-all shadow-xl ${useLightNav
                   ? "text-primary bg-primary/5 hover:bg-accent hover:text-white"
                   : "text-white bg-white/5 hover:bg-accent hover:text-primary"
-              }`}
+                }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
