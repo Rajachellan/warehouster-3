@@ -7,23 +7,8 @@ import {
   Calculator,
   ArrowRight,
   Sparkles,
-  Brain,
-  Layers,
-  Target,
-  BarChart3,
-  Search,
-  Shield,
-  Database,
-  TrendingUp,
-  Map,
-  FileSearch,
-  Settings,
-  Cpu,
-  Network,
-  GitBranch,
   ChevronLeft,
   ChevronRight,
-  CheckCircle2,
   Download,
 } from "lucide-react";
 import Link from "next/link";
@@ -65,93 +50,87 @@ function formatCr(value: number): string {
   return `₹${formatIndianNumber(Math.round(cr * 100) / 100)} Cr`;
 }
 
-const CAPABILITIES = [
+const EIGHT_MODULES = [
   {
-    title: "Real-time Industrial Index",
+    tag: "INSTITUTIONAL ACCESS" as const,
+    title: "South India Industrial Index",
     description:
-      "Proprietary corridor-level pricing data updated weekly, benchmarking every micro-market across South India.",
-    icon: BarChart3,
+      "Quarterly benchmark for industrial land and warehousing across Chennai, Bengaluru, Hosur, Coimbatore, Madurai and Pondicherry corridors.",
   },
   {
-    title: "Combo and Optics",
+    tag: "INSTITUTIONAL ACCESS" as const,
+    title: "Corridor Intelligence",
     description:
-      "Layered zoning, FSI, and environmental data overlays to identify optimal plots before they hit the market.",
-    icon: Layers,
+      "Node-level deep dives — connectivity, demand drivers, occupier momentum, capital activity across the eight tracked corridors.",
   },
   {
-    title: "Prospect Intelligence",
+    tag: "INSTITUTIONAL ACCESS" as const,
+    title: "Pricing Dashboard",
     description:
-      "Machine-parsed occupier signals from filings, expansion plans, and supply-chain announcements.",
-    icon: Search,
+      "Live transaction-driven pricing for land and warehousing per corridor node.",
   },
   {
-    title: "Lattice > Than Data",
+    tag: "IN BUILD" as const,
+    title: "Industrial Heat Maps",
     description:
-      "Structured relationship graphs connecting landholders, developers, occupiers, and capital in a single view.",
-    icon: Network,
+      "Visual overlay of demand, supply, capital deployment and emerging hotspots.",
   },
   {
-    title: "Land Velocity Index",
+    tag: "IN BUILD" as const,
+    title: "Land Valuation Engine",
     description:
-      "Transaction-speed analytics per corridor — showing how fast parcels convert from listing to closure.",
-    icon: TrendingUp,
+      "Inputs-driven valuation for any South India industrial parcel.",
   },
   {
-    title: "AI Validation",
+    tag: "LIVE" as const,
+    title: "BTS Calculator",
     description:
-      "Automated title, encumbrance, and conversion checks powered by LLM-parsed government records.",
-    icon: Shield,
+      "Feasibility modeling for built-to-suit projects — yield, NOI, indicative exit value.",
   },
   {
-    title: "Transactional Genetics",
+    tag: "INSTITUTIONAL ACCESS" as const,
+    title: "Investment Analyzer",
     description:
-      "Pattern-matched deal archetypes from our proprietary database of 200+ closed mandates.",
-    icon: GitBranch,
+      "IRR, hold, sensitivity, scenario modeling for institutional deployments.",
   },
   {
-    title: "Salting > Smart History",
+    tag: "INSTITUTIONAL ACCESS" as const,
+    title: "Industrial Research Library",
     description:
-      "Every historical data point is contextually enriched for predictive corridor modelling.",
-    icon: Database,
+      "Quarterly reports, white papers, and corridor briefs — institutional access only.",
   },
 ];
 
 const AI_AGENTS = [
   {
-    title: "AI Research Analyst",
+    title: "AI Research Assistant",
     description:
-      "Autonomously scans regulatory filings, land records, and industry data to surface actionable intelligence on emerging corridors.",
-    icon: FileSearch,
+      "Synthesizes corridor data, news, and capital activity into briefings on demand.",
   },
   {
-    title: "AI Land Optimizer",
+    title: "AI Land Screener",
     description:
-      "Runs multi-variable simulations on land parcels to optimize plot configuration, FSI utilization, and ground coverage ratios.",
-    icon: Settings,
+      "Filters landowner submissions against institutional buy-box criteria automatically.",
   },
   {
-    title: "AI Deal Examiner",
+    title: "AI Deal Matching",
     description:
-      "Validates deal economics against comparable transactions, flagging yield discrepancies and structural risks in real time.",
-    icon: Target,
+      "Matches originated opportunities to active institutional mandates in seconds.",
   },
   {
-    title: "AI Portfolio Oversight",
+    title: "AI Investor Concierge",
     description:
-      "Monitors portfolio-level exposure, tenant concentration, and renewal risk across every active asset simultaneously.",
-    icon: Cpu,
+      "Personalized institutional dashboards with mandate-specific deal flow.",
   },
   {
-    title: "ARTA Advisor",
+    title: "AI BTS Advisor",
     description:
-      "Automated Real-Time Advisory engine delivering corridor-specific strategic recommendations to institutional capital desks.",
-    icon: Brain,
+      "Drafts BTS feasibility and structuring options for occupier briefs.",
   },
   {
-    title: "AI Land Optimizations",
+    title: "AI Lead Qualification",
     description:
-      "Continuous optimization loops for land bank strategy, adjusting acquisition targets based on real-time market shifts.",
-    icon: Map,
+      "Scores and routes inbound landowner / occupier / capital enquiries.",
   },
 ];
 
@@ -267,7 +246,6 @@ export default function PlatformContent() {
   const yieldOnCost = projectCost > 0 ? (stabilisedNOI / projectCost) * 100 : 0;
   const exitValue = exitCapRate > 0 ? stabilisedNOI / (exitCapRate / 100) : 0;
 
-  const [hoveredAgent, setHoveredAgent] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isExporting, setIsExporting] = useState(false);
 
@@ -835,234 +813,151 @@ export default function PlatformContent() {
       </section>
 
       {/* ════════════════════════════════════════════════════
-          CAPABILITIES — Elegant 2-column staggered layout
+          THE EIGHT MODULES — Reference grid layout
           ════════════════════════════════════════════════════ */}
-      <section className="relative py-28 md:py-36 bg-[#F9FAFB] overflow-hidden">
+      <section className="relative overflow-hidden bg-[#FDFCF8] py-24 md:py-32">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-stone-200 to-transparent" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.12 }}
             variants={stagger}
           >
-            {/* Header */}
-            <motion.div
-              variants={fadeUp}
-              className="mb-20 flex flex-col lg:flex-row lg:items-end justify-between gap-8"
-            >
-              <div className="max-w-2xl">
-                <div className="flex items-center gap-4 mb-5">
-                  <div className="h-[2px] w-10 bg-[#D4AF37]" />
-                  <span className="text-[11px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
-                    Core Intelligence
-                  </span>
-                </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-[#0A1428] leading-[1.05]">
-                  Built from first-principles.{" "}
-                  <span className="text-[#D4AF37]">
-                    By practitioners.
-                  </span>
-                </h2>
-              </div>
-              <p className="text-base text-[#0A1428]/40 max-w-sm font-medium leading-relaxed lg:pb-2">
-                Eight proprietary intelligence modules that form the backbone
-                of every institutional decision we power.
+            <motion.div variants={fadeUp} className="mb-14 md:mb-20">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.35em] text-[#0A1428]/35">
+                The Eight Modules
               </p>
+              <h2 className="max-w-3xl font-serif text-3xl font-black leading-[1.1] tracking-tight text-[#0A1428] md:text-4xl lg:text-5xl">
+                Built from first-principles. By practitioners.
+              </h2>
             </motion.div>
 
-            {/* 4×2 Grid */}
             <motion.div
               variants={stagger}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
+              className="overflow-hidden border border-stone-200"
             >
-              {CAPABILITIES.map((cap, i) => (
-                <motion.div
-                  key={cap.title}
-                  variants={fadeUp}
-                  whileHover={{
-                    y: -8,
-                    transition: { duration: 0.3 },
-                  }}
-                  className="group"
-                >
-                  <div className="relative h-full p-7 rounded-2xl bg-white border border-stone-200/80 hover:border-[#D4AF37]/30 transition-all duration-500 shadow-sm hover:shadow-[0_20px_50px_rgba(10,20,40,0.08)] overflow-hidden">
-                    {/* Top gold line on hover */}
-                    <div className="absolute top-0 left-6 right-6 h-[2px] rounded-full bg-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                    {/* Number */}
-                    <span className="absolute top-5 right-6 text-[11px] font-black text-[#0A1428]/[0.06] tracking-widest">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                {EIGHT_MODULES.map((mod, i) => (
+                  <motion.article
+                    key={mod.title}
+                    variants={fadeUp}
+                    whileHover={{ backgroundColor: "rgba(212,175,55,0.03)" }}
+                    transition={{ duration: 0.35 }}
+                    className={`group border-stone-200 p-8 md:p-10 lg:p-12 ${
+                      i < EIGHT_MODULES.length - 1 ? "border-b" : ""
+                    } ${i < 6 ? "md:border-b" : ""} ${
+                      i % 2 === 0 ? "md:border-r" : ""
+                    }`}
+                  >
+                  <div className="mb-8 flex items-start justify-between gap-4">
+                    <span className="text-[11px] font-black tracking-[0.2em] text-[#B8922A]/70">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-
-                    {/* Icon */}
-                    <div className="w-11 h-11 rounded-xl bg-[#0A1428]/[0.03] group-hover:bg-[#D4AF37]/10 flex items-center justify-center mb-5 transition-all duration-500">
-                      <cap.icon
-                        size={18}
-                        className="text-[#D4AF37] group-hover:text-[#D4AF37] transition-colors duration-500"
-                      />
-                    </div>
-
-                    {/* Content */}
-                    <h3 className="text-[15px] font-black text-[#0A1428] mb-2.5 group-hover:text-[#0A1428] transition-colors duration-300 leading-snug">
-                      {cap.title}
-                    </h3>
-                    <p className="text-[13px] text-[#0A1428]/35 font-medium leading-relaxed group-hover:text-[#0A1428]/55 transition-colors duration-300">
-                      {cap.description}
-                    </p>
+                    <span
+                      className={`shrink-0 border px-2.5 py-1 text-[8px] font-black uppercase tracking-[0.18em] ${
+                        mod.tag === "LIVE"
+                          ? "border-[#D4AF37]/40 text-[#D4AF37]"
+                          : "border-stone-300 text-[#0A1428]/40"
+                      }`}
+                    >
+                      {mod.tag}
+                    </span>
                   </div>
-                </motion.div>
-              ))}
+                  <h3 className="mb-4 font-serif text-xl font-black leading-snug text-[#0A1428] transition-colors duration-300 group-hover:text-[#B8922A] md:text-2xl">
+                    {mod.title}
+                  </h3>
+                  <p className="text-sm font-medium leading-relaxed text-[#0A1428]/45">
+                    {mod.description}
+                  </p>
+                  </motion.article>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* ════════════════════════════════════════════════════
-          SIX AGENTS — Premium cards with dark-blue accent bg
+          THE AI LAYER — Dark grid with six agents
           ════════════════════════════════════════════════════ */}
-      <section className="relative py-28 md:py-36 bg-white overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-stone-200 to-transparent" />
+      <section className="relative overflow-hidden bg-[#0A0F14] py-24 md:py-32">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_20%_0%,rgba(212,175,55,0.06),transparent)]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={stagger}
           >
-            {/* Header */}
-            <motion.div
-              variants={fadeUp}
-              className="mb-16 text-center max-w-3xl mx-auto"
-            >
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/5 mb-6">
-                <Cpu size={14} className="text-[#D4AF37]" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#D4AF37]">
-                  Autonomous Agents
-                </span>
-              </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-[#0A1428] leading-[1.05] mb-4">
+            <motion.div variants={fadeUp} className="mb-14 md:mb-20">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
+                The AI Layer
+              </p>
+              <h2 className="max-w-2xl font-sans text-3xl font-black leading-[1.12] text-white md:text-4xl lg:text-5xl">
                 Six agents.{" "}
-                <span className="italic text-[#D4AF37]">
+                <span className="font-serif italic text-[#D4AF37]">
                   One operating system.
                 </span>
               </h2>
-              <p className="text-base text-[#0A1428]/40 max-w-lg mx-auto font-medium leading-relaxed mt-4">
-                Purpose-built AI agents that work in concert to surface,
-                validate, and optimize every industrial real estate decision.
-              </p>
             </motion.div>
 
-            {/* Agent cards */}
-            <motion.div
-              variants={stagger}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {AI_AGENTS.map((agent, i) => (
-                <motion.div
-                  key={agent.title}
-                  variants={fadeUp}
-                  onMouseEnter={() => setHoveredAgent(i)}
-                  onMouseLeave={() => setHoveredAgent(null)}
-                  className="group"
-                >
-                  <div
-                    className={`relative p-8 rounded-2xl transition-all duration-500 overflow-hidden h-full cursor-default ${
-                      hoveredAgent === i
-                        ? "bg-[#0A1428] border border-[#D4AF37]/25 shadow-[0_25px_60px_rgba(10,20,40,0.25)] scale-[1.02]"
-                        : "bg-white border border-stone-200 shadow-sm hover:shadow-lg"
-                    }`}
+            <motion.div variants={stagger} className="border-t border-white/[0.08]">
+              <div className="grid grid-cols-1 md:grid-cols-3">
+                {AI_AGENTS.slice(0, 3).map((agent, i) => (
+                  <motion.div
+                    key={agent.title}
+                    variants={fadeUp}
+                    className={`group border-b border-white/[0.08] p-8 md:p-10 lg:p-12 ${
+                      i < 2 ? "md:border-r" : ""
+                    } transition-colors duration-400 hover:bg-white/[0.02]`}
                   >
-                    {/* Agent number */}
-                    <div
-                      className={`absolute top-7 right-7 text-[40px] font-black leading-none transition-colors duration-500 ${
-                        hoveredAgent === i
-                          ? "text-white/[0.04]"
-                          : "text-[#0A1428]/[0.03]"
-                      }`}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
-
-                    {/* Icon */}
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-all duration-500 ${
-                        hoveredAgent === i
-                          ? "bg-[#D4AF37]/12"
-                          : "bg-[#0A1428]/[0.04]"
-                      }`}
-                    >
-                      <agent.icon
-                        size={20}
-                        className={`transition-colors duration-500 ${
-                          hoveredAgent === i
-                            ? "text-[#D4AF37]"
-                            : "text-[#D4AF37]"
-                        }`}
-                      />
-                    </div>
-
-                    {/* Content */}
-                    <h3
-                      className={`text-lg font-black mb-3 transition-colors duration-400 leading-snug ${
-                        hoveredAgent === i
-                          ? "text-white"
-                          : "text-[#0A1428]"
-                      }`}
-                    >
+                    <p className="mb-5 text-[9px] font-black uppercase tracking-[0.28em] text-[#D4AF37]">
+                      Agent
+                    </p>
+                    <h3 className="mb-4 font-serif text-lg font-black leading-snug text-white md:text-xl">
                       {agent.title}
                     </h3>
-                    <p
-                      className={`text-[13px] font-medium leading-relaxed transition-colors duration-400 ${
-                        hoveredAgent === i
-                          ? "text-white/45"
-                          : "text-[#0A1428]/40"
-                      }`}
-                    >
+                    <p className="text-sm font-medium leading-relaxed text-white/40 transition-colors duration-300 group-hover:text-white/55">
                       {agent.description}
                     </p>
-
-                    {/* Status */}
-                    <div className="mt-6 flex items-center gap-2">
-                      <motion.div
-                        className={`w-1.5 h-1.5 rounded-full ${
-                          hoveredAgent === i
-                            ? "bg-emerald-400"
-                            : "bg-emerald-500"
-                        }`}
-                        animate={{ opacity: [1, 0.3, 1] }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                        }}
-                      />
-                      <span
-                        className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-colors duration-500 ${
-                          hoveredAgent === i
-                            ? "text-emerald-400/50"
-                            : "text-emerald-600/40"
-                        }`}
-                      >
-                        Active
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3">
+                {AI_AGENTS.slice(3).map((agent, i) => (
+                  <motion.div
+                    key={agent.title}
+                    variants={fadeUp}
+                    className={`group border-b border-white/[0.08] p-8 md:p-10 lg:p-12 ${
+                      i < 2 ? "md:border-r" : ""
+                    } transition-colors duration-400 hover:bg-white/[0.02]`}
+                  >
+                    <p className="mb-5 text-[9px] font-black uppercase tracking-[0.28em] text-[#D4AF37]">
+                      Agent
+                    </p>
+                    <h3 className="mb-4 font-serif text-lg font-black leading-snug text-white md:text-xl">
+                      {agent.title}
+                    </h3>
+                    <p className="text-sm font-medium leading-relaxed text-white/40 transition-colors duration-300 group-hover:text-white/55">
+                      {agent.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
 
-            {/* CTA */}
-            <motion.div variants={fadeUp} className="mt-16 text-center">
+            <motion.div variants={fadeUp} className="mt-12 md:mt-16">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-[#0A1428] text-white text-[12px] font-black uppercase tracking-[0.2em] shadow-[0_8px_32px_rgba(10,20,40,0.18)] hover:shadow-[0_16px_48px_rgba(10,20,40,0.28)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98]"
+                className="group inline-flex items-center gap-3 bg-[#D4AF37] px-8 py-4 text-[11px] font-black uppercase tracking-[0.22em] text-[#0A0F14] transition-all duration-400 hover:bg-[#e0c04a] hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] active:scale-[0.98]"
               >
-                Explore all platform modules
+                Request platform access
                 <ArrowRight
-                  size={16}
-                  className="transition-transform group-hover:translate-x-1"
+                  size={14}
+                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
               </Link>
             </motion.div>

@@ -455,7 +455,7 @@ type CaseData   = {
 const CASES: CaseData[] = [
   {
     num: "01",
-    title: "Redhills Institutional Land Aggregation",
+    title: "From 25+ acres of fragmented title to a fully operational ~500,000 sq ft Grade A facility.",
     tag: "Institutional Land Aggregation · Development Management",
     corridor: "North Chennai (Redhills) logistics corridor",
     client: "Blackstone",
@@ -473,12 +473,14 @@ const CASES: CaseData[] = [
     mandate:
       "Originate, validate and aggregate a single deployable parcel of more than 25 acres within an agreed land budget — fully title-clear, ready for institutional underwriting — and then deliver the development end-to-end through approvals, construction supervision and handover to an operating asset.",
     approach: [
-      "Mapped 20+ parcels against revenue, zoning and corridor master plans before approaching any aggregator.",
-      "Brought in an interim investor to aggregate the land and ring-fence intermediaries to suppress price discovery leakage.",
-      "Title diligence sequenced ahead of price commitment — eliminated 40% of parcels before any LOI.",
-      "Held the land in an SPV to ease eventual acquisition by Blackstone.",
-      "Appointed contractors on lump-sum, milestone-linked contracts with a single-window interface to government.",
-      "Active construction management delivered a ~500,000 sq ft Grade A facility — fully operational on handover.",
+    "Mapped 20+ parcels against revenue, zoning and corridor master plans before approaching the aggregators.",
+    "Brought in an interim investor to aggregate the land and ring-fence intermediaries to suppress price discovery leakage.",
+    "Title diligence sequenced ahead of price commitment — eliminated 40% of parcels before any LOI.",
+    "Held the land in an SPV to ease eventual acquisition by Blackstone.",
+    "Initiated warehouse development approvals well before the actual acquisition by Blackstone.",
+    "Supported Blackstone on clearances, project estimation, micro-market mapping to tenants and the full monetisation strategy.",
+    "Carried the project into execution as development manager — design coordination, contractor tendering, construction supervision, cost and schedule control.",
+    "Drove the project to full handover and operating readiness — ~500,000 sq ft of Grade A warehousing now fully operational."
     ],
     outcome:
       '"Origination is not brokerage, and development management is not construction. The outcome here was decided in the first three months of land work, and again in the early days of execution — long before the first panel was cast."',
@@ -491,29 +493,31 @@ const CASES: CaseData[] = [
   },
   {
     num: "02",
-    title: "Coimbatore Built-to-Suit Facility",
+    title: "Delivering a 72,000 sq. ft. built-to-suit facility under an aggressive 10-month timeline.",
     tag: "Built-to-Suit Development · Aggressive Timeline",
-    corridor: "Coimbatore · Madurai logistics belt",
-    client: "Institutional Occupier",
-    period: "Nov 2023 – Aug 2026",
+    corridor: "Puducherry corridor, South India",
+    client: "Britannia Industries",
+    period: "2025-2026",
     img: "https://images.unsplash.com/photo-1553446396-7f0a4c3e2a16?w=1400&q=85&auto=format&fit=crop",
     imgCaption: "Delivering a 72,000 sq ft built-to-suit facility under an aggressive 10-month timeline.",
     stats: [
       { val: "72K",  lbl: "sq ft" },
-      { val: "10mo", lbl: "Timeline" },
+      { val: "Nov 2025-26", lbl: "Timeline" },
       { val: "On schedule", lbl: "Status" },
     ],
     badge: "In development",
     situation:
-      "The client required a built-to-suit industrial facility of 72,000 sq ft in the Coimbatore-Madurai corridor — with a move-in date that left less than 10 months from site selection to handover. Speed was non-negotiable; the occupier had existing lease commitments expiring on a fixed date.",
+      "Britannia Industries required a dedicated 72,000 sq. ft. built-to-suit warehouse and distribution facility in a Tier-2/Tier-3 market along the Southern India logistics corridor near Puducherry. Despite evaluating multiple sites, the client had been unable to identify a parcel that satisfied location, approval, development and delivery requirements. Site identification commenced in November 2025 with operations required by August 2026.",
     mandate:
-      "Identify and acquire a site meeting the occupier's operational specifications, obtain all approvals, design and construct a facility to occupier fit-out standards, and hand over a fully functional asset within 10 months.",
+      "Identify, acquire and institutionalise a suitable industrial land parcel, secure all development approvals, commence construction immediately and deliver a fully operational 72,000 sq. ft. built-to-suit facility within the client's required timeline.",
     approach: [
-      "Site selection run in parallel with occupier brief finalisation — shortlisted and closed within 3 weeks.",
-      "Pre-application meetings with planning authority to front-load approval risk before contracts were signed.",
-      "Design and procurement run in parallel — structural steel ordered before drawings were complete using parametric prelim design.",
-      "GC appointed on an accelerated EPC basis with contractual milestone penalties and float management.",
-      "Weekly programme gates with client and contractor to protect the critical path throughout delivery.",
+      "Ran rapid micro-market analysis across industrial clusters surrounding the Puducherry corridor to identify viable development locations.",
+      "Shortlisted and secured the most suitable parcel based on logistics access, workforce availability and future expansion potential.",
+      "Fast-tracked land acquisition, title validation and land conversion to eliminate delays in project commencement.",
+      "Initiated building plan approvals immediately on land finalisation, rather than waiting for conventional transaction milestones.",
+      "Coordinated consultants, statutory authorities and stakeholders under a single execution framework.",
+      "Commenced construction at the earliest possible stage to compress the overall delivery schedule.",
+      "Managed development execution, stakeholder coordination and timeline monitoring against operational requirements."
     ],
     outcome:
       '"Execution speed is rarely created during construction. It is created in the first 60 days — through decisive land selection, parallel approval management, and eliminating hand-off delays between acquisition and development."',
@@ -526,10 +530,10 @@ const CASES: CaseData[] = [
   },
   {
     num: "03",
-    title: "South Chennai Industrial Park",
-    tag: "Institutional Industrial Park · Pre-leasing",
-    corridor: "Chengalpattu · South Chennai",
-    client: "Institutional Family Office",
+    title: "Creating an institution-ready 52-acre industrial park through structured acquisition and pre-leasing.",
+    tag: "Off-Market Institutionalisation",
+    corridor: "Chengalpattu corridor, South Chennai",
+    client: "Horizon Industrial Parks",
     period: "Jan – Oct 2024",
     img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop",
     imgCaption: "Creating an institution-ready 52-acre industrial park through structured acquisition and pre-leasing.",
@@ -540,15 +544,18 @@ const CASES: CaseData[] = [
     ],
     badge: "Off-market · SPV transfer",
     situation:
-      "Spencer Industrial Shores sought to acquire a large-scale industrial land asset in the high-growth Chengalpattu corridor of South Chennai. The opportunity was off-market: 52 acres held by a retiring industrial family with title complexity typical of multigenerational South Indian industrial holdings.",
+      "Horizon Industrial Parks sought to establish a large-scale industrial and warehousing park in the high-growth Chengalpattu corridor of South Chennai. The opportunity was an off-market 52-acre parcel with potential for 1.3 million sq. ft. of Grade A development — but it was not institution-ready. Ownership structuring, acquisition, approvals, conversion, investor alignment and tenant validation all had to be resolved before an institutional investor could underwrite it.",
     mandate:
-      "Structure and execute an off-market acquisition, resolve title and regulatory positioning, and convert a raw industrial site into a pre-leased, institution-ready platform with approvals, zoning clearance, and anchor tenant demand in place.",
+      "Originate, structure and institutionalise a 52-acre off-market industrial land opportunity and create a de-risked acquisition platform — covering interim capital, aggregation, approvals, SPV creation, early tenant engagement and development management.",
     approach: [
-      "Structured the acquisition as an SPV transfer — avoiding stamp duty and simplifying the title chain.",
-      "Undertook title investigation across three generations of ownership records.",
-      "Created a land master plan aligned to institutional park specifications for Grade A manufacturing.",
-      "Ran a parallel pre-leasing process — 40% pre-commitment secured before construction mobilisation.",
-      "Navigated EB infrastructure approvals, panchayat NOCs, and SIPCOT corridor compliance simultaneously.",
+    "Originated the off-market opportunity within the Chengalpattu corridor before the asset was broadly marketed, retaining control over pricing and structure.",
+    "Introduced an interim investor to acquire and hold the land through the value-creation phase, isolating institutional capital from entitlement and execution risk.",
+    "Institutionalised the land — acquisition, consolidation, title verification, documentation standardisation and removal of underwriting bottlenecks.",
+    "Coordinated the full regulatory pathway: conversion, development approvals, infrastructure planning and compliance readiness.",
+    "Created and maintained a dedicated SPV so the institutional investor could acquire control through an SPV transfer rather than an underlying land transaction.",
+    "Ran parallel tenant origination — secured a soft commitment of ~400,000 sq. ft. (nearly one-third of the park) while acquisition was still in motion.",
+    "Transitioned the institutionalised platform to the institutional investor via SPV transfer once approvals and readiness milestones were achieved.",
+    "Continued post-acquisition development management — consultants, planning, execution support and investor reporting."
     ],
     outcome:
       '"Institutional investors prefer acquiring certainty, not complexity. The value creation here did not occur at acquisition — it occurred in the months spent converting raw land into an institution-ready platform with approvals, tenant demand, and a clean acquisition structure already in place."',
@@ -559,111 +566,111 @@ const CASES: CaseData[] = [
     ],
     altLayout: false,
   },
-  {
-    num: "04",
-    title: "Learnfella EdTech Platform Scale-Up",
-    tag: "Digital Growth · Lead Generation",
-    corridor: "Pan-India · Online",
-    client: "Learnfella",
-    period: "2024–2025",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=85&auto=format&fit=crop",
-    imgCaption: "+280% qualified leads in 8 months through full-funnel performance and SEO strategy.",
-    stats: [
-      { val: "+280%", lbl: "Qualified Leads" },
-      { val: "+190%", lbl: "Organic Traffic" },
-      { val: "+140%", lbl: "Conversion rate" },
-    ],
-    badge: "Growth · Completed",
-    situation:
-      "Learnfella had strong course content but a fragmented digital presence — multiple undifferentiated landing pages, near-zero organic authority, and reliance on expensive paid acquisition with deteriorating CAC. The team needed a partner who could rebuild the growth architecture from first principles.",
-    mandate:
-      "Rebuild organic search presence, reduce CAC through full-funnel optimisation, and install a lead-generation engine capable of running at scale without proportional ad spend increases.",
-    approach: [
-      "Full audit of keyword gap, competitor SERP share, and on-page technical deficiencies.",
-      "Consolidated 40+ thin landing pages into 12 authoritative pillar hubs — each mapped to a distinct search intent cluster.",
-      "Deployed programmatic SEO for long-tail course variants — 1,200 pages published in 6 weeks.",
-      "Rebuilt paid acquisition funnels around BOFU intent with micro-commitment landing pages.",
-      "A/B tested 18 CTA variants across lead forms — 140% conversion lift on the primary enrollment page.",
-    ],
-    outcome:
-      '"The most expensive growth mistake is treating SEO and paid as separate workstreams. When you align keyword strategy to paid targeting, organic traffic starts subsidising your CAC — and the compounding begins."',
-    resultMetrics: [
-      { val: "+280%", lbl: "Qualified leads" },
-      { val: "+190%", lbl: "Organic traffic" },
-      { val: "-42%",  lbl: "CAC reduction" },
-    ],
-    altLayout: true,
-  },
-  {
-    num: "05",
-    title: "RankRaze SaaS Authority Build",
-    tag: "SaaS SEO · Content Authority",
-    corridor: "B2B SaaS · Global",
-    client: "RankRaze",
-    period: "2024",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=85&auto=format&fit=crop",
-    imgCaption: "Zero to #1 SERP for 48 competitive SaaS keywords in under 6 months.",
-    stats: [
-      { val: "48",    lbl: "Top-3 rankings" },
-      { val: "+340%", lbl: "Demo requests" },
-      { val: "6mo",   lbl: "Time to results" },
-    ],
-    badge: "SEO · Completed",
-    situation:
-      "RankRaze launched into a saturated SEO tools market with strong product differentiation but no organic presence, no backlink profile, and no content engine. Every competitor had 3 to 8 years of domain authority. Paid search CPCs in the category exceeded Rs 900 per click.",
-    mandate:
-      "Build organic authority from zero, rank for high-intent commercial keywords ahead of the next funding cycle, and generate a self-sustaining pipeline of qualified demo requests.",
-    approach: [
-      "Mapped the full competitive SERP landscape — identified 12 underserved keyword clusters with high intent and low difficulty.",
-      "Designed a hub-and-spoke content architecture — 6 pillar pages and 144 supporting articles, fully interlinked.",
-      "Digital PR sprint: 34 placements in 90 days, building foundational backlink authority without PBNs.",
-      "Technical SEO foundation: Core Web Vitals remediation, crawl budget optimisation, schema markup at scale.",
-      "Installed a continuous publishing cadence — 3 long-form pieces per week maintained by trained in-house writers.",
-    ],
-    outcome:
-      '"Zero to #1 is not a content volume game. It is a precision architecture game — understanding exactly which gaps the market leaders have left, and filling them with content that serves the reader better than anything currently ranking."',
-    resultMetrics: [
-      { val: "48",    lbl: "Top-3 keywords" },
-      { val: "+340%", lbl: "Demo requests" },
-      { val: "34",    lbl: "PR placements" },
-    ],
-    altLayout: false,
-  },
-  {
-    num: "06",
-    title: "Chennai Shared Office Rollout",
-    tag: "Commercial Real Estate · Workspace Strategy",
-    corridor: "Chennai CBD · Nungambakkam · OMR",
-    client: "Co-working Operator",
-    period: "2023–2024",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=85&auto=format&fit=crop",
-    imgCaption: "3 new locations, 1,200 seats pre-sold, zero capex overrun.",
-    stats: [
-      { val: "3",     lbl: "Locations" },
-      { val: "1,200", lbl: "Seats" },
-      { val: "Zero",  lbl: "Capex overrun" },
-    ],
-    badge: "Completed · Operational",
-    situation:
-      "A fast-growing co-working operator needed to expand from 1 to 4 locations in Chennai within 14 months to meet enterprise client demand and defend against a well-funded competitor entering the market. Each location required negotiation, fitout, and pre-sale before opening.",
-    mandate:
-      "Identify, negotiate, and fitout three new Chennai co-working locations — each pre-sold to a minimum 60% occupancy before opening — within budget and on a 14-month aggregate timeline.",
-    approach: [
-      "Site selection using a proprietary micro-location scoring model: transit proximity, enterprise density, competing supply.",
-      "Structured each lease with fitout contribution clauses and rent-free periods — reduced effective capex per seat by 28%.",
-      "Engaged anchor enterprise clients during the design phase — locked pre-commitments before fitout completion.",
-      "Appointed a single fitout contractor across all three sites for programme continuity and bulk material procurement.",
-      "Opened all three locations within 12 days of each other — operational critical mass from week one.",
-    ],
-    outcome:
-      '"The biggest risk in co-working expansion is opening a beautiful space to an empty calendar. Pre-selling before you open is not a marketing problem — it is a product design problem. We built the sales pipeline into the site selection and design process from day one."',
-    resultMetrics: [
-      { val: "3",    lbl: "Locations opened" },
-      { val: "82%",  lbl: "Day-1 occupancy" },
-      { val: "-28%", lbl: "Effective capex/seat" },
-    ],
-    altLayout: true,
-  },
+  // {
+  //   num: "04",
+  //   title: "Learnfella EdTech Platform Scale-Up",
+  //   tag: "Digital Growth · Lead Generation",
+  //   corridor: "Pan-India · Online",
+  //   client: "Learnfella",
+  //   period: "2024–2025",
+  //   img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1400&q=85&auto=format&fit=crop",
+  //   imgCaption: "+280% qualified leads in 8 months through full-funnel performance and SEO strategy.",
+  //   stats: [
+  //     { val: "+280%", lbl: "Qualified Leads" },
+  //     { val: "+190%", lbl: "Organic Traffic" },
+  //     { val: "+140%", lbl: "Conversion rate" },
+  //   ],
+  //   badge: "Growth · Completed",
+  //   situation:
+  //     "Learnfella had strong course content but a fragmented digital presence — multiple undifferentiated landing pages, near-zero organic authority, and reliance on expensive paid acquisition with deteriorating CAC. The team needed a partner who could rebuild the growth architecture from first principles.",
+  //   mandate:
+  //     "Rebuild organic search presence, reduce CAC through full-funnel optimisation, and install a lead-generation engine capable of running at scale without proportional ad spend increases.",
+  //   approach: [
+  //     "Full audit of keyword gap, competitor SERP share, and on-page technical deficiencies.",
+  //     "Consolidated 40+ thin landing pages into 12 authoritative pillar hubs — each mapped to a distinct search intent cluster.",
+  //     "Deployed programmatic SEO for long-tail course variants — 1,200 pages published in 6 weeks.",
+  //     "Rebuilt paid acquisition funnels around BOFU intent with micro-commitment landing pages.",
+  //     "A/B tested 18 CTA variants across lead forms — 140% conversion lift on the primary enrollment page.",
+  //   ],
+  //   outcome:
+  //     '"The most expensive growth mistake is treating SEO and paid as separate workstreams. When you align keyword strategy to paid targeting, organic traffic starts subsidising your CAC — and the compounding begins."',
+  //   resultMetrics: [
+  //     { val: "+280%", lbl: "Qualified leads" },
+  //     { val: "+190%", lbl: "Organic traffic" },
+  //     { val: "-42%",  lbl: "CAC reduction" },
+  //   ],
+  //   altLayout: true,
+  // },
+  // {
+  //   num: "05",
+  //   title: "RankRaze SaaS Authority Build",
+  //   tag: "SaaS SEO · Content Authority",
+  //   corridor: "B2B SaaS · Global",
+  //   client: "RankRaze",
+  //   period: "2024",
+  //   img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=85&auto=format&fit=crop",
+  //   imgCaption: "Zero to #1 SERP for 48 competitive SaaS keywords in under 6 months.",
+  //   stats: [
+  //     { val: "48",    lbl: "Top-3 rankings" },
+  //     { val: "+340%", lbl: "Demo requests" },
+  //     { val: "6mo",   lbl: "Time to results" },
+  //   ],
+  //   badge: "SEO · Completed",
+  //   situation:
+  //     "RankRaze launched into a saturated SEO tools market with strong product differentiation but no organic presence, no backlink profile, and no content engine. Every competitor had 3 to 8 years of domain authority. Paid search CPCs in the category exceeded Rs 900 per click.",
+  //   mandate:
+  //     "Build organic authority from zero, rank for high-intent commercial keywords ahead of the next funding cycle, and generate a self-sustaining pipeline of qualified demo requests.",
+  //   approach: [
+  //     "Mapped the full competitive SERP landscape — identified 12 underserved keyword clusters with high intent and low difficulty.",
+  //     "Designed a hub-and-spoke content architecture — 6 pillar pages and 144 supporting articles, fully interlinked.",
+  //     "Digital PR sprint: 34 placements in 90 days, building foundational backlink authority without PBNs.",
+  //     "Technical SEO foundation: Core Web Vitals remediation, crawl budget optimisation, schema markup at scale.",
+  //     "Installed a continuous publishing cadence — 3 long-form pieces per week maintained by trained in-house writers.",
+  //   ],
+  //   outcome:
+  //     '"Zero to #1 is not a content volume game. It is a precision architecture game — understanding exactly which gaps the market leaders have left, and filling them with content that serves the reader better than anything currently ranking."',
+  //   resultMetrics: [
+  //     { val: "48",    lbl: "Top-3 keywords" },
+  //     { val: "+340%", lbl: "Demo requests" },
+  //     { val: "34",    lbl: "PR placements" },
+  //   ],
+  //   altLayout: false,
+  // },
+  // {
+  //   num: "06",
+  //   title: "Chennai Shared Office Rollout",
+  //   tag: "Commercial Real Estate · Workspace Strategy",
+  //   corridor: "Chennai CBD · Nungambakkam · OMR",
+  //   client: "Co-working Operator",
+  //   period: "2023–2024",
+  //   img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=85&auto=format&fit=crop",
+  //   imgCaption: "3 new locations, 1,200 seats pre-sold, zero capex overrun.",
+  //   stats: [
+  //     { val: "3",     lbl: "Locations" },
+  //     { val: "1,200", lbl: "Seats" },
+  //     { val: "Zero",  lbl: "Capex overrun" },
+  //   ],
+  //   badge: "Completed · Operational",
+  //   situation:
+  //     "A fast-growing co-working operator needed to expand from 1 to 4 locations in Chennai within 14 months to meet enterprise client demand and defend against a well-funded competitor entering the market. Each location required negotiation, fitout, and pre-sale before opening.",
+  //   mandate:
+  //     "Identify, negotiate, and fitout three new Chennai co-working locations — each pre-sold to a minimum 60% occupancy before opening — within budget and on a 14-month aggregate timeline.",
+  //   approach: [
+  //     "Site selection using a proprietary micro-location scoring model: transit proximity, enterprise density, competing supply.",
+  //     "Structured each lease with fitout contribution clauses and rent-free periods — reduced effective capex per seat by 28%.",
+  //     "Engaged anchor enterprise clients during the design phase — locked pre-commitments before fitout completion.",
+  //     "Appointed a single fitout contractor across all three sites for programme continuity and bulk material procurement.",
+  //     "Opened all three locations within 12 days of each other — operational critical mass from week one.",
+  //   ],
+  //   outcome:
+  //     '"The biggest risk in co-working expansion is opening a beautiful space to an empty calendar. Pre-selling before you open is not a marketing problem — it is a product design problem. We built the sales pipeline into the site selection and design process from day one."',
+  //   resultMetrics: [
+  //     { val: "3",    lbl: "Locations opened" },
+  //     { val: "82%",  lbl: "Day-1 occupancy" },
+  //     { val: "-28%", lbl: "Effective capex/seat" },
+  //   ],
+  //   altLayout: true,
+  // },
 ];
 
 /* ────────────────────────────────────────────────────────────────

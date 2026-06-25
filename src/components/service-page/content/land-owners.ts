@@ -50,25 +50,25 @@ const landOwnersContent: ServicePageContent = {
       tag: "01",
       title: "",
       body: "Local brokers shop your land to the same buyers everyone else uses.",
-      img: "https://images.unsplash.com/photo-1454165833767-027ff33027b6?w=800&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouster-land (9).jpg",
     },
     {
       tag: "02",
       title: "",
       body: "Big 4 advisories will not engage on a single landowner mandate.",
-      img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouster-land (5).jpg",
     },
     {
       tag: "03",
       title: "",
       body: "Selling early to a local developer often costs 30–60% of fair institutional value.",
-      img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouse (3).jpg",
     },
     {
       tag: "04",
       title: "",
       body: "Most landowners have never been packaged to institutional standards.",
-      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouse (2).jpg",
     },
   ],
   archetypesSection: {
@@ -87,7 +87,7 @@ const landOwnersContent: ServicePageContent = {
       type: "Industrial Plot Holders",
       tag: "Existing Parcels",
       desc: "Owners of undeveloped or underutilised industrial plots seeking JV partners or outright sale to institutional buyers.",
-      img: "https://images.unsplash.com/photo-1582213706001-c918c0e29202?w=600&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouster-land (9).jpg",
     },
     {
       type: "Estate Families",
@@ -120,7 +120,7 @@ const landOwnersContent: ServicePageContent = {
       n: "02",
       title: "Valuation & Feasibility",
       body: "Comprehensive site assessment including title verification, zoning analysis, market benchmarking, and development potential modelling.",
-      img: "https://images.unsplash.com/photo-1454165833767-027ff33027b6?w=960&auto=format&fit=crop&q=85",
+      img:"/images/warehouse/warehouster-land (6).jpg",
     },
     {
       n: "03",
@@ -132,7 +132,7 @@ const landOwnersContent: ServicePageContent = {
       n: "04",
       title: "Execution & Handover",
       body: "We manage regulatory approvals, investor matching, and transaction close — keeping you informed at every milestone.",
-      img: "https://images.unsplash.com/photo-1582213706001-c918c0e29202?w=960&auto=format&fit=crop&q=85",
+      img:"/images/warehouse/warehouster-land (11).jpg",
     },
   ],
   corridorsSection: {
@@ -162,7 +162,7 @@ const landOwnersContent: ServicePageContent = {
       role: "Emerging Corridor",
       nodes: ["Patancheru", "Zaheerabad", "IDA Pashamylaram"],
       sector: "Pharma · EV · Electronics",
-      img: "https://images.unsplash.com/photo-1589474564855-6a4c99b0ecb2?w=900&auto=format&fit=crop&q=85",
+      img: "/images/warehouse/hyderabad.jpg",
     },
   ],
   quote: {
@@ -198,7 +198,7 @@ const landOwnersContent: ServicePageContent = {
     eyebrow: "What Landowners Receive",
     title: "A Trusted Partner, Not A Broker",
     mainImage:
-      "https://images.unsplash.com/photo-1582213706001-c918c0e29202?w=1200&auto=format&fit=crop&q=80",
+      "/images/warehouse/warehouse-inside (8).png",
     accentImage:
       "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&auto=format&fit=crop&q=80",
     mainImageAlt: "Industrial land development site",
@@ -229,7 +229,7 @@ const landOwnersContent: ServicePageContent = {
     duration: "8 Months",
     status: "In Progress",
     image:
-      "https://images.unsplash.com/photo-1582213706001-c918c0e29202?auto=format&fit=crop&q=80&w=1920",
+      "/images/warehouse/warehouse-inside (12).png",
     challenge: [
       "Fragmented land titles across multiple family members requiring consolidation.",
       "Agricultural land conversion pending with complex local regulatory requirements.",
