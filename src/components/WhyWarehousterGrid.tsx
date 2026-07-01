@@ -10,12 +10,12 @@ interface Item {
 }
 
 const items: Item[] = [
-    { title: "Institutional Grade", desc: "Grade-A specifications meeting international FM2 and ESFR standards.", icon: <Shield className="text-[#D4AF37]" /> },
-    { title: "Strategic Precision", desc: "Identifying high-growth corridors with proximity to consumption hubs.", icon: <Target className="text-[#D4AF37]" /> },
-    { title: "Governance", desc: "100% compliance and transparent documentation for global investors.", icon: <Globe className="text-[#D4AF37]" /> },
-    { title: "Sustainability", desc: "Eco-efficient designs and green energy integration in every park.", icon: <Heart className="text-[#D4AF37]" /> },
-    { title: "Speed-to-Market", desc: "Adherence to a strict 24-month structured development lifecycle.", icon: <Zap className="text-[#D4AF37]" /> },
-    { title: "Future-Ready", desc: "Scalable infrastructure designed for the next generation of logistics.", icon: <Rocket className="text-[#D4AF37]" /> },
+    { title: "Institutional Grade", desc: "Grade-A specifications meeting international FM2 and ESFR standards.", icon: <Shield className="text-primary" /> },
+    { title: "Strategic Precision", desc: "Identifying high-growth corridors with proximity to consumption hubs.", icon: <Target className="text-primary" /> },
+    { title: "Governance", desc: "100% compliance and transparent documentation for global investors.", icon: <Globe className="text-primary" /> },
+    { title: "Sustainability", desc: "Eco-efficient designs and green energy integration in every park.", icon: <Heart className="text-primary" /> },
+    { title: "Speed-to-Market", desc: "Adherence to a strict 24-month structured development lifecycle.", icon: <Zap className="text-primary" /> },
+    { title: "Future-Ready", desc: "Scalable infrastructure designed for the next generation of logistics.", icon: <Rocket className="text-primary" /> },
 ];
 
 export default function WhyWarehousterGrid() {
@@ -29,8 +29,8 @@ export default function WhyWarehousterGrid() {
                         viewport={{ once: true }}
                         className="flex items-center gap-6 mb-8"
                     >
-                        <div className="h-[1px] w-12 bg-[#D4AF37]" />
-                        <span className="text-[12px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">
+                        <div className="h-[1px] w-12 bg-primary/20" />
+                        <span className="text-[12px] font-black uppercase tracking-[0.4em] text-primary/40">
                             Advanced UI
                         </span>
                     </motion.div>
@@ -43,7 +43,7 @@ export default function WhyWarehousterGrid() {
                         className="text-4xl md:text-6xl font-serif font-black text-primary leading-[1.1] uppercase tracking-tighter"
                     >
                         Why <br />
-                        <span className="text-white bg-[#D4AF37] px-4 py-1 inline-block mt-3 transform -skew-x-12">
+                        <span className="text-white bg-accent px-4 py-1 inline-block mt-3 transform -skew-x-12">
                             Warehouster
                         </span>
                     </motion.h2>
@@ -57,18 +57,18 @@ export default function WhyWarehousterGrid() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative p-10 bg-white border border-gray-100 shadow-2xl shadow-gray-200/50 hover:border-[#D4AF37]/30 transition-all duration-700"
+                            className="group relative p-10 bg-white border border-gray-100 shadow-2xl shadow-gray-200/50 hover:border-primary/20 transition-all duration-700"
                         >
                             <div className="w-14 h-14 rounded-sm bg-[rgba(10,20,40,0.05)] flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-700">
                                 {item.icon}
                             </div>
-                            <h3 className="text-xl font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-6 group-hover:text-[#D4AF37] transition-colors">
+                            <h3 className="text-xl font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-6 group-hover:text-primary transition-colors">
                                 {item.title}
                             </h3>
                             <p className="text-[14px] font-bold uppercase tracking-widest text-[rgba(10,20,40,0.4)] leading-relaxed group-hover:text-primary transition-colors">
                                 {item.desc}
                             </p>
-                            <div className="mt-10 h-[1px] w-8 bg-gray-100 group-hover:w-full group-hover:bg-[#D4AF37] transition-all duration-1000" />
+                            <div className="mt-10 h-[1px] w-8 bg-gray-100 group-hover:w-full group-hover:bg-primary/30 transition-all duration-1000" />
                         </motion.div>
                     ))}
                 </div>

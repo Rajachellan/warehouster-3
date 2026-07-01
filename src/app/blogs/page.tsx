@@ -58,7 +58,7 @@ export default function BlogsPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
+            className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-8"
           >
             Industrial Pulse
           </motion.div>
@@ -93,7 +93,7 @@ export default function BlogsPage() {
                     ))}
                 </div>
                 <div className="relative group w-full md:w-96">
-                    <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-[rgba(10,20,40,0.2)] group-hover:text-accent transition-colors" size={20} />
+                    <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-[rgba(10,20,40,0.2)] group-hover:text-primary transition-colors" size={20} />
                     <input 
                         type="text" 
                         placeholder="Search Intelligence..." 
@@ -127,17 +127,17 @@ export default function BlogsPage() {
                         </div>
                         <div className="px-4 flex flex-col flex-grow">
                              <div className="flex items-center gap-8 mb-6 text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.3)] font-sans">
-                                <div className="flex items-center gap-3"><Calendar size={14} className="text-accent" /> {blog.date}</div>
-                                <div className="flex items-center gap-3"><User size={14} className="text-accent" /> {blog.author}</div>
+                                <div className="flex items-center gap-3"><Calendar size={14} className="text-primary" /> {blog.date}</div>
+                                <div className="flex items-center gap-3"><User size={14} className="text-primary" /> {blog.author}</div>
                              </div>
-                             <h3 className="text-3xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-accent transition-all duration-500">
+                             <h3 className="text-3xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-primary transition-all duration-500">
                                 {blog.title}
                              </h3>
                              <Link 
                                 href={blog.href}
-                                className="mt-auto inline-flex items-center gap-4 text-[11px] font-black uppercase tracking-widest text-primary group-hover:text-accent transition-all group-hover:translate-x-4"
+                                className="mt-auto inline-flex items-center gap-4 text-[11px] font-black uppercase tracking-widest text-primary group-hover:text-primary transition-all group-hover:translate-x-4"
                              >
-                                Study Intelligence <ArrowRight size={16} className="text-accent" />
+                                Study Intelligence <ArrowRight size={16} className="text-primary" />
                              </Link>
                         </div>
                     </motion.div>

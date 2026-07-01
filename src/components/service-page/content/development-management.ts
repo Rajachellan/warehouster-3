@@ -10,11 +10,11 @@ const developmentManagementContent: ServicePageContent = {
     primaryCta: { label: "Start A Project Brief", href: "/contact" },
     secondaryCta: { label: "View Completed Projects", href: "/projects" },
     mainImage:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=1200&auto=format&fit=crop&q=85",
+      "/images/warehouse/ware-house (8).jpg",
     accentImage1:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&auto=format&fit=crop&q=80",
+      "/images/warehouse/warehouse-inside (9).png",
     accentImage2:
-      "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=400&auto=format&fit=crop&q=80",
+      "/images/warehouse/warehouster-land (9).jpg",
     mainImageAlt: "Industrial development site management",
   },
   stats: [
@@ -30,10 +30,10 @@ const developmentManagementContent: ServicePageContent = {
     "Founder-Led Oversight",
   ],
   galleryImages: [
-    "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=600&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=600&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80",
+   "/images/warehouse/ware-house (6).jpg",
+    "/images/warehouse/warehouse-inside (9).png",
+    "/images/warehouse/warehouster-land (11).jpg",
+    "/images/warehouse/ware-house (10).jpg",
   ],
   pillarsSection: {
     eyebrow: "Core Capabilities",
@@ -47,13 +47,13 @@ const developmentManagementContent: ServicePageContent = {
       tag: "01",
       title: "Master Planning",
       body: "Institutional-grade site planning, phasing strategy, and infrastructure design optimised for logistics throughput and long-term capital appreciation.",
-      img: "https://images.unsplash.com/photo-1454165833767-027ff33027b6?w=800&auto=format&fit=crop&q=80",
+      img: "/images/services/land_aggregation.png",
     },
     {
       tag: "02",
       title: "Statutory Compliance",
       body: "End-to-end regulatory navigation — building permits, environmental clearances, fire safety, and occupancy certifications across all jurisdictions.",
-      img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=80",
+      img:"/images/parks/singhadivakkam-park-img.webp",
     },
     {
       tag: "03",
@@ -65,7 +65,7 @@ const developmentManagementContent: ServicePageContent = {
       tag: "04",
       title: "Cost & Schedule Control",
       body: "Real-time milestone tracking, budget governance, and risk mitigation to deliver projects on time and within institutional hurdle rates.",
-      img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      img: "/images/journey/2024_chennai.png",
     },
   ],
   archetypesSection: {
@@ -111,7 +111,7 @@ const developmentManagementContent: ServicePageContent = {
       n: "01",
       title: "Project Briefing & Feasibility",
       body: "Define scope, budget, timeline, and technical requirements. Conduct site feasibility, statutory mapping, and preliminary cost modelling.",
-      img: "https://images.unsplash.com/photo-1454165833767-027ff33027b6?w=960&auto=format&fit=crop&q=85",
+      img: "/images/journey/2025_expansion.png",
     },
     {
       n: "02",
@@ -123,13 +123,13 @@ const developmentManagementContent: ServicePageContent = {
       n: "03",
       title: "Construction Oversight",
       body: "On-ground project management, contractor governance, quality inspections, and real-time progress reporting to stakeholders.",
-      img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=960&auto=format&fit=crop&q=85",
+      img:"/images/warehouse/ware-house (4).jpg",
     },
     {
       n: "04",
       title: "Commissioning & Handover",
       body: "Final inspections, occupancy certifications, snagging resolution, and formal handover with complete documentation package.",
-      img: "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=960&auto=format&fit=crop&q=85",
+      img:"/images/warehouse/warehouster-land (9).jpg",
     },
   ],
   corridorsSection: {
@@ -159,7 +159,7 @@ const developmentManagementContent: ServicePageContent = {
       role: "Emerging Market",
       nodes: ["Industrial Corridor Nodes"],
       sector: "Agri-Processing · Logistics",
-      img: "https://images.unsplash.com/photo-1589474564855-6a4c99b0ecb2?w=900&auto=format&fit=crop&q=85",
+      img: "/images/journey/2025_expansion.png",
     },
   ],
   quote: {
@@ -176,13 +176,13 @@ const developmentManagementContent: ServicePageContent = {
       tag: "Sustainability",
       title: "LEED Platinum certification: how sustainable design reduces lifecycle costs by 22%",
       date: "June 2026",
-      img: "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=700&auto=format&fit=crop&q=80",
+      img:"/images/warehouse/warehouse (5).jpg",
     },
     {
       tag: "Project Delivery",
       title: "PEB construction vs conventional: speed and cost benchmarks for South India warehouses",
       date: "May 2026",
-      img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=700&auto=format&fit=crop&q=80",
+      img:"/images/warehouse/warehouster-land (5).jpg",
     },
     {
       tag: "Compliance",
@@ -226,7 +226,7 @@ const developmentManagementContent: ServicePageContent = {
     duration: "14 Months",
     status: "Completed",
     image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1920",
+      "/images/warehouse/warehouse-inside (5).png",
     challenge: [
       "Coordinating a massive build across a fragmented local vendor ecosystem.",
       "Achieving LEED Platinum certification within a compressed 14-month timeline.",

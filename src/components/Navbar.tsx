@@ -7,99 +7,11 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone, TrendingUp, ArrowRight, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo-wt.png";
-import blog3 from "../assets/building-strategic-alliances-in-warehousing-park.webp"
-import news from "../assets/strategic-banner.webp"
 import news1 from "../assets/news/manufacturing-today.jpg"
 import news2 from "../assets/news/cargobreakingnews1.png"
 import news3 from "../assets/news/logisticsinsider.in_.jpg"
 import news4 from "../assets/news/Featured-in-The-Economic-Times.png"
-interface SubmenuItem {
-  name: string;
-  href: string;
-}
-
-interface DropdownItem {
-  name: string;
-  href: string;
-  submenu?: SubmenuItem[];
-}
-
-interface NavItem {
-  name: string;
-  href: string;
-  dropdown?: DropdownItem[];
-}
-
-const navLinks: NavItem[] = [
-  { name: "Home", href: "/" },
-  {
-    name: "About",
-    href: "/about",
-    dropdown: [
-      { name: "About Warehouster", href: "/about#overview" },
-      { name: "Leadership", href: "/about#leadership" },
-      { name: "Purpose", href: "/about#purpose" },
-      { name: "Careers", href: "/careers" },
-      { name: "Track Record", href: "/track-record" },
-    ],
-  },
-  {
-    name: "Services",
-    href: "/services",
-    dropdown: [
-      { name: "Land Owners", href: "/services/land-acquisition" },
-      { name: "Development Management", href: "/services/development-management" },
-      { name: "Warehouse Construction", href: "/services/warehouse-construction" },
-      { name: "Industrial Consulting", href: "/services/industrial-consulting" },
-    ],
-  },
-  {
-    name: "Projects",
-    href: "/projects",
-    dropdown: [
-      {
-        name: "Completed",
-        href: "/projects#completed",
-        submenu: [
-          { name: "Redhills", href: "/projects/redhills-development" },
-          { name: "Chengalpattu", href: "/projects/chengalpattu-industrial" },
-          { name: "Jaisalmer", href: "/projects/jaisalmer-bts" },
-        ]
-      },
-      {
-        name: "In Progress",
-        href: "/projects#in-progress",
-        submenu: [
-          { name: "Pondicherry", href: "/projects/pondicherry-bts" },
-          { name: "Hosur (65 acres)", href: "/projects/hosur-logistics-hub" },
-          { name: "Thiruvallur (21 acres)", href: "/projects/thiruvallur-industrial" },
-        ]
-      },
-      {
-        name: "Pipeline",
-        href: "/projects#pipeline",
-        submenu: [
-          { name: "Redhills (50 acres)", href: "/projects/redhills-phase-2" },
-          { name: "Krishnagiri (55 acres)", href: "/projects/krishnagiri-integrated" },
-        ]
-      },
-    ],
-  },
-
-  {
-    name: "News",
-    href: "/news",
-    dropdown: [
-      { name: "Trending News", href: "/news" },
-      // { name: "Events", href: "/events" },
-      { name: "Industry Insights", href: "/news#insights" },
-      { name: "Case Study", href: "/case-study" },
-    ],
-  },
-  { name: "Intelligence", href: "/platform" },
-  { name: "Blogs", href: "/blogs" },
-  { name: "Contact", href: "/contact" },
-];
+import { navLinks, routes, type DropdownItem, type SubmenuItem } from "@/config/navigation";
 
 const trendingItems = [
   {
@@ -125,10 +37,10 @@ const trendingItems = [
 ];
 
 const LIGHT_NAV_PATHS = [
-  "/services/industrial-consulting",
-  "/services/land-acquisition",
-  "/services/development-management",
-  "/services/warehouse-construction",
+  routes.industrialConsulting,
+  routes.landAcquisition,
+  routes.developmentManagement,
+  routes.warehouseConstruction,
 ];
 
 export default function Navbar() {
@@ -165,9 +77,9 @@ export default function Navbar() {
     <>
       {/* Top Corner: Enhanced Trending Insights Card */}
       <div className="fixed top-28 right-5 z-[110] hidden md:block">
-        <Link href="/news">
+        <Link href={routes.news}>
           <motion.div
-            className="group relative bg-[#0A1428] border border-yellow-400/50 rounded-xl overflow-hidden flex flex-col items-start w-40 cursor-pointer z-10"
+            className="group relative bg-[#0A1428] border border-accent/50 rounded-xl overflow-hidden flex flex-col items-start w-40 cursor-pointer z-10"
             whileHover={{ scale: 1.03 }}
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -187,7 +99,7 @@ export default function Navbar() {
 
             {/* LIVE badge */}
             <motion.div
-              className="absolute top-1.5 right-1.5 flex items-center gap-0.5 bg-yellow-400 text-[#0A1428] text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full z-30"
+              className="absolute top-1.5 right-1.5 flex items-center gap-0.5 bg-accent text-[#0A1428] text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full z-30"
               animate={{ x: [2, -2, 2] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
@@ -232,9 +144,9 @@ export default function Navbar() {
                   animate={{ rotate: [0, 15, -15, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <TrendingUp size={9} className="text-yellow-400" />
+                  <TrendingUp size={9} className="text-primary" />
                 </motion.div>
-                <span className="text-[10px] font-black uppercase tracking-[0.25em] text-yellow-400">
+                <span className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40">
                   Trending
                 </span>
               </div>
@@ -264,11 +176,11 @@ export default function Navbar() {
               <div className="flex items-center justify-between">
                 <span className="text-[10px] text-white/25">tap to read</span>
                 <motion.div
-                  className="w-4 h-4 rounded-full border border-yellow-400/60 flex items-center justify-center"
+                  className="w-4 h-4 rounded-full border border-accent/60 flex items-center justify-center"
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <ArrowRight size={8} className="text-yellow-400" />
+                  <ArrowRight size={8} className="text-primary" />
                 </motion.div>
               </div>
             </div>
@@ -324,7 +236,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`px-3 py-2 font-bold text-[14px] tracking-[0.15em] transition-all duration-300 flex items-center gap-2 ${activeMenu === link.name
-                        ? "text-accent scale-105"
+                        ? "text-white scale-105"
                         : useLightNav
                           ? "text-primary/80 hover:text-primary"
                           : "text-white hover:text-white/80"
@@ -334,7 +246,7 @@ export default function Navbar() {
                     {link.dropdown && (
                       <ChevronDown
                         size={8}
-                        className={`transition-transform duration-500 ${activeMenu === link.name ? "rotate-180 text-accent" : "opacity-30"}`}
+                        className={`transition-transform duration-500 ${activeMenu === link.name ? "rotate-180 text-white" : "opacity-30"}`}
                       />
                     )}
                   </Link>
@@ -352,7 +264,7 @@ export default function Navbar() {
                             <div key={sub.name} className="relative group/sub">
                               <Link
                                 href={sub.href}
-                                className="flex items-center justify-between font-black text-[14px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl tracking-widest"
+                                className="flex items-center justify-between font-black text-[14px] text-white hover:text-white hover:bg-white/5 transition-all px-4 py-3 rounded-xl tracking-widest"
                               >
                                 {sub.name}
                                 {sub.submenu && <ChevronRight size={10} className="opacity-30 group-hover/sub:opacity-100 group-hover/sub:translate-x-1 transition-all" />}
@@ -368,7 +280,7 @@ export default function Navbar() {
                                         <Link
                                           key={item.name}
                                           href={item.href}
-                                          className="font-black text-[12px] text-white hover:text-accent hover:bg-white/5 transition-all px-4 py-3 rounded-xl tracking-widest"
+                                          className="font-black text-[12px] text-white hover:text-white hover:bg-white/5 transition-all px-4 py-3 rounded-xl tracking-widest"
                                         >
                                           {item.name}
                                         </Link>
@@ -436,7 +348,7 @@ export default function Navbar() {
                   <div key={link.name} className="flex flex-col gap-4">
                     <Link
                       href={link.href}
-                      className="text-2xl font-bold text-white hover:text-accent transition-all leading-tight uppercase tracking-widest"
+                      className="text-2xl font-bold text-white hover:text-primary transition-all leading-tight uppercase tracking-widest"
                     >
                       {link.name}
                     </Link>

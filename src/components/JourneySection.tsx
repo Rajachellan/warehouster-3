@@ -79,7 +79,7 @@ export default function JourneySection() {
         className="absolute inset-0 opacity-[0.01] pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(#D4AF37 0.5px, transparent 0.5px), linear-gradient(90deg, #D4AF37 0.5px, transparent 0.5px)",
+            "linear-gradient(#0A1428 0.5px, transparent 0.5px), linear-gradient(90deg, #0A1428 0.5px, transparent 0.5px)",
           backgroundSize: "100px 100px",
         }}
       />
@@ -93,8 +93,8 @@ export default function JourneySection() {
             whileInView={{ opacity: 1, x: 0 }}
             className="flex items-center gap-6 mb-6"
           >
-            <div className="h-[2px] w-12 bg-[#D4AF37]" />
-            <span className="text-[12px] font-black uppercase tracking-[0.4em] text-[#D4AF37]">
+            <div className="h-[2px] w-12 bg-primary/20" />
+            <span className="text-[12px] font-black uppercase tracking-[0.4em] text-primary/40">
               Historic Evolution
             </span>
           </motion.div>
@@ -105,13 +105,13 @@ export default function JourneySection() {
             className="text-4xl md:text-6xl font-serif font-black text-primary  uppercase "
           >
             Our Strategic 
-            <span className="text-[#D4AF37]">Roadmap</span>
+            <span className="text-accent">Roadmap</span>
           </motion.h2>
         </div>
 
         {/* ── MOBILE: vertical timeline ── */}
         <div className="flex flex-col md:hidden relative pl-10">
-          <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#D4AF37]/30" />
+          <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-primary/15" />
           {milestones.map((item, idx) => (
             <motion.div
               key={idx}
@@ -121,7 +121,7 @@ export default function JourneySection() {
               className="relative mb-10 group"
             >
               {/* node dot */}
-              <div className="absolute -left-[26px] top-5 w-4 h-4 rounded-full bg-white border-2 border-[#D4AF37] z-10" />
+              <div className="absolute -left-[26px] top-5 w-4 h-4 rounded-full bg-white border-2 border-primary/30 z-10" />
               <MilestoneCard item={item} />
             </motion.div>
           ))}
@@ -151,7 +151,7 @@ export default function JourneySection() {
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 2.8, ease: "easeInOut" }}
                 style={{ transformOrigin: "left center" }}
-                className="absolute inset-0 bg-[#D4AF37]"
+                className="absolute inset-0 bg-primary/20"
               />
             </div>
 
@@ -182,7 +182,7 @@ export default function JourneySection() {
                         <DesktopCard item={item} />
 
                         {/* stem down to spine */}
-                        <div className="mx-auto w-[1px] bg-[#D4AF37]/50" style={{ height: "var(--stem-h)" }} />
+                        <div className="mx-auto w-[1px] bg-primary/20" style={{ height: "var(--stem-h)" }} />
 
                         {/* year circle ON the spine */}
                         <YearCircle year={item.year} />
@@ -193,7 +193,7 @@ export default function JourneySection() {
                         <YearCircle year={item.year} />
 
                         {/* stem down from spine */}
-                        <div className="mx-auto w-[1px] bg-[#D4AF37]/50" style={{ height: "var(--stem-h)" }} />
+                        <div className="mx-auto w-[1px] bg-primary/20" style={{ height: "var(--stem-h)" }} />
 
                         {/* card */}
                         <DesktopCard item={item} />
@@ -215,7 +215,7 @@ export default function JourneySection() {
 function YearCircle({ year }: { year: string }) {
   return (
     <div
-      className="mx-auto flex items-center justify-center rounded-full bg-white border-2 border-[#D4AF37] z-20 relative"
+      className="mx-auto flex items-center justify-center rounded-full bg-white border-2 border-primary/25 z-20 relative"
       style={{
         width: "52px",
         height: "52px",
@@ -225,7 +225,7 @@ function YearCircle({ year }: { year: string }) {
         boxShadow: "0 0 0 5px white",
       }}
     >
-      <span className="text-[11px] font-black text-[#D4AF37] tracking-tight select-none">
+      <span className="text-[11px] font-black text-primary tracking-tight select-none">
         {year}
       </span>
     </div>
@@ -236,16 +236,16 @@ function YearCircle({ year }: { year: string }) {
 function DesktopCard({ item }: { item: (typeof milestones)[0] }) {
   return (
     <div
-      className="w-full bg-white border border-gray-100 flex flex-col group-hover:border-[#D4AF37]/20 transition-all duration-700 group-hover:bg-gray-50/50"
+      className="w-full bg-white border border-gray-100 flex flex-col group-hover:border-primary/15 transition-all duration-700 group-hover:bg-gray-50/50"
       style={{ height: "var(--card-h)", overflow: "hidden" }}
     >
       {/* meta row */}
       <div className="flex items-start justify-between px-4 pt-4 pb-3 border-b border-gray-50 shrink-0">
         <div className="flex flex-col gap-0.5 min-w-0 mr-1">
           <span className="text-[13px] font-bold text-[rgba(10,20,40,0.3)] tracking-widest truncate">{item.id}</span>
-          <span className="text-[11px] font-medium text-[#D4AF37] tracking-tighter uppercase truncate">{item.coords}</span>
+          <span className="text-[11px] font-medium text-primary/40 tracking-tighter uppercase truncate">{item.coords}</span>
         </div>
-        <span className="shrink-0 text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 bg-[#D4AF37]/5 text-[#D4AF37] border border-[#D4AF37]/10">
+        <span className="shrink-0 text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 bg-accent/5 text-accent border border-accent/10">
           {item.status}
         </span>
       </div>
@@ -263,11 +263,11 @@ function DesktopCard({ item }: { item: (typeof milestones)[0] }) {
 
       {/* body */}
       <div className="p-4 flex flex-col flex-1 overflow-hidden">
-        <div className="text-3xl font-serif font-black text-[rgba(10,20,40,0.05)] group-hover:text-[#D4AF37]/80 select-none leading-none transition-all duration-700 mb-1">
+        <div className="text-3xl font-serif font-black text-[rgba(10,20,40,0.05)] group-hover:text-primary/20 select-none leading-none transition-all duration-700 mb-1">
           {item.year.slice(2)}
         </div>
 
-        <h4 className="text-xs xl:text-[13px] font-serif font-black text-primary uppercase tracking-tight leading-tight mb-2 group-hover:text-[#D4AF37] transition-colors duration-500">
+        <h4 className="text-xs xl:text-[13px] font-serif font-black text-primary uppercase tracking-tight leading-tight mb-2 group-hover:text-primary transition-colors duration-500">
           {item.title}
         </h4>
 
@@ -279,7 +279,7 @@ function DesktopCard({ item }: { item: (typeof milestones)[0] }) {
           <div className="mt-auto pt-2 space-y-1">
             {item.bullets.map((b, i) => (
               <div key={i} className="flex items-center gap-2">
-                <div className="w-1 h-[1px] bg-[#D4AF37]" />
+                <div className="w-1 h-[1px] bg-primary/30" />
                 <span className="text-[9px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.2)]">{b}</span>
               </div>
             ))}
@@ -297,9 +297,9 @@ function MilestoneCard({ item }: { item: (typeof milestones)[0] }) {
       <div className="flex items-start justify-between mb-5 pb-4 border-b border-gray-50">
         <div className="flex flex-col gap-1 min-w-0 mr-2">
           <span className="text-[11px] font-bold text-[rgba(10,20,40,0.3)] tracking-widest">{item.id}</span>
-          <span className="text-[10px] font-medium text-[#D4AF37] tracking-tighter uppercase">{item.coords}</span>
+          <span className="text-[10px] font-medium text-primary/40 tracking-tighter uppercase">{item.coords}</span>
         </div>
-        <span className="shrink-0 text-[11px] font-black uppercase tracking-widest px-2 py-1 bg-[#D4AF37]/5 text-[#D4AF37] border border-[#D4AF37]/10">
+        <span className="shrink-0 text-[11px] font-black uppercase tracking-widest px-2 py-1 bg-accent/5 text-accent border border-accent/10">
           {item.status}
         </span>
       </div>
@@ -309,7 +309,7 @@ function MilestoneCard({ item }: { item: (typeof milestones)[0] }) {
       </div>
 
       <div className="text-5xl font-serif font-black text-[rgba(10,20,40,0.05)] select-none leading-none mb-1">{item.year.slice(2)}</div>
-      <h4 className="text-base font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-2 group-hover:text-[#D4AF37] transition-colors">
+      <h4 className="text-base font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-2 group-hover:text-primary transition-colors">
         {item.title}
       </h4>
       <p className="text-[13px] font-medium leading-relaxed text-[rgba(10,20,40,0.4)] tracking-tight">{item.desc}</p>
@@ -318,7 +318,7 @@ function MilestoneCard({ item }: { item: (typeof milestones)[0] }) {
         <div className="mt-4 pt-4 border-t border-gray-50 space-y-1.5">
           {item.bullets.map((b, i) => (
             <div key={i} className="flex items-center gap-3">
-              <div className="w-1.5 h-[1px] bg-[#D4AF37]" />
+              <div className="w-1.5 h-[1px] bg-primary/30" />
               <span className="text-[11px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.2)]">{b}</span>
             </div>
           ))}

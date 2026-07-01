@@ -47,12 +47,12 @@ export default function QuickNavSection() {
                   <box.icon size={24} />
                 </div>
                 
-                <h3 className="text-sm font-black uppercase tracking-widest text-primary group-hover:text-accent transition-colors">
+                <h3 className="text-sm font-black uppercase tracking-widest text-primary group-hover:text-primary transition-colors">
                   {box.title}
                 </h3>
                 
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 group-hover:-translate-y-1">
-                    <ArrowUpRight size={18} className="text-accent" />
+                    <ArrowUpRight size={18} className="text-primary" />
                 </div>
 
                 {/* Background Shadow Text */}

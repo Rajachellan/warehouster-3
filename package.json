@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predev": "npx @tailwindcss/cli -i ./src/app/globals.css -o ./src/app/tailwind-precompiled.css",
-    "dev": "next dev -p 5005",
+    "dev": "next dev -p 5005 --webpack",
     "prebuild": "npx @tailwindcss/cli -i ./src/app/globals.css -o ./src/app/tailwind-precompiled.css",
     "build": "next build --webpack",
     "start": "next start -p 5005",
@@ -26,13 +26,13 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "autoprefixer": "^10.5.0",
+    "autoprefixer": "^10.5.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.16",
     "postcss-nested": "^7.0.2",
     "postcss-nesting": "^14.0.0",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.3.2",
     "typescript": "^5"
   }
 }

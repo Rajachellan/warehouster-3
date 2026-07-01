@@ -8,37 +8,37 @@ import Link from "next/link";
 /* ── Data ─────────────────────────────────────────────── */
 const services = [
   {
-    title: "Industrial Land Aggregation",
-    desc: "Strategic acquisition and consolidation of high-potential land parcels within critical logistics corridors. We ensure title absolute and multi-parameter clearance for rapid institutional development.",
-    bullets: ["Title Governance", "Corridor Analysis", "Zoning Compliance"],
+    title: "Proprietary South India deal flow.",
+    desc: "Off-market industrial land and BTS opportunities, transaction-ready, in markets the Big 4 cannot systematically cover.",
+    // bullets: ["Title Governance", "Corridor Analysis", "Zoning Compliance"],
     image: "/images/services/land_aggregation.png",
     id: "01",
-    slug: "/land-acquisition"
+    slug: "land-acquisition"
   },
   {
-    title: "Grade-A Warehouse Development",
-    desc: "Developing institutional-grade assets with global specifications. Our facilities are engineered for maximum operational efficiency, safety, and long-term capital appreciation.",
+    title: "Institutional Monetization of your Land",
+    desc: "Convert undermonetized industrial holdings into institutional-grade transactions — sale, JV, or BTS.",
     bullets: ["40ft Clear Heights", "FM2 Flooring", "Dock Levelers"],
     image: "/images/services/warehouse_interior.png",
     id: "02",
-    slug: "/development-management"
+    slug: "development-management"
   },
   {
-    title: "Industrial & Logistics Parks",
-    desc: "Master-planned industrial clusters featuring comprehensive internal infrastructure. We provide 24/7 security, advanced utility grids, and professional management services.",
+    title: "Built-to-suit, where no developer goes.",
+    desc: "Manufacturing, 3PL, and logistics BTS execution across Tier 2 and Tier 3 South Indian corridors.",
     bullets: ["Internal Utilities", "Security Protocols", "Common Area Mgmt"],
     image: "/images/services/logistics_park.png",
     id: "03",
-    slug: "/warehouse-construction"
+    slug: "warehouse-construction"
   },
-  {
-    title: "Built-to-Suit Solutions",
-    desc: "Custom infrastructure designed specifically to meet complex tenant requirements. From design to deployment, we deliver rapid-execution facilities tailored to your business goals.",
-    bullets: ["Custom Engineering", "Statutory Mastery", "Rapid Deployment"],
-    image: "/images/services/bts_facility.png",
-    id: "04",
-    slug:"/industrial-consulting"
-  }
+  // {
+  //   title: "Built-to-Suit Solutions",
+  //   desc: "Custom infrastructure designed specifically to meet complex tenant requirements. From design to deployment, we deliver rapid-execution facilities tailored to your business goals.",
+  //   bullets: ["Custom Engineering", "Statutory Mastery", "Rapid Deployment"],
+  //   image: "/images/services/bts_facility.png",
+  //   id: "04",
+  //   slug: "industrial-consulting"
+  // }
 ];
 
 function PortfolioCard({ service, index }: { service: typeof services[0]; index: number }) {
@@ -72,7 +72,7 @@ function PortfolioCard({ service, index }: { service: typeof services[0]; index:
           </div>
 
           {/* Hover Action Button */}
-          <div className="absolute bottom-6 right-6 w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl shadow-[#D4AF37]/40">
+          <div className="absolute bottom-6 right-6 w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl shadow-[#D4AF37]/40">
             <ArrowUpRight size={20} />
           </div>
         </div>
@@ -80,16 +80,16 @@ function PortfolioCard({ service, index }: { service: typeof services[0]; index:
         {/* Body — flex-grow fills remaining height so all cards match */}
         <div className="p-8 lg:p-10 flex flex-col flex-grow relative bg-white group-hover:bg-gray-50 transition-colors duration-500">
           {/* Top Accent Line */}
-          <div className="absolute top-0 left-0 w-12 h-[3px] bg-[#D4AF37] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+          <div className="absolute top-0 left-0 w-12 h-[3px] bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
           {/* ID + Tag row */}
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#D4AF37]">Phase {service.id}</span>
-            <div className="h-px w-6 bg-[#D4AF37]/20" />
+            <span className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40">Phase {service.id}</span>
+            <div className="h-px w-6 bg-accent/20" />
           </div>
 
           {/* Title */}
-          <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter leading-[1.1] mb-6 group-hover:text-[#D4AF37] transition-colors duration-500">
+          <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter leading-[1.1] mb-6 group-hover:text-primary transition-colors duration-500">
             {service.title}
           </h3>
 
@@ -99,22 +99,22 @@ function PortfolioCard({ service, index }: { service: typeof services[0]; index:
           </p>
 
           {/* Capability Specs — mt-auto pins this to the bottom of the body */}
-          <div className="mt-auto pt-8 border-t border-gray-100">
+          {/* <div className="mt-auto pt-8 border-t border-gray-100">
             <div className="flex flex-wrap gap-2">
               {service.bullets.map((bullet, idx) => (
                 <span
                   key={idx}
-                  className="text-[10px] font-black uppercase tracking-widest text-[#D4AF37] bg-[#D4AF37]/5 px-3 py-1.5 rounded-md border border-[#D4AF37]/10 group-hover:bg-[#D4AF37] group-hover:text-white group-hover:border-transparent transition-all duration-300"
+                  className="text-[10px] font-black uppercase tracking-widest text-accent bg-accent/5 px-3 py-1.5 rounded-md border border-accent/10 group-hover:bg-primary group-hover:text-white group-hover:border-transparent transition-all duration-300"
                 >
                   {bullet}
                 </span>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Finishing Architectural Bar — always flush to bottom */}
-        <div className="h-2 w-full shrink-0 bg-gray-100 group-hover:bg-[#D4AF37] transition-colors duration-700" />
+        <div className="h-2 w-full shrink-0 bg-gray-100 group-hover:bg-primary/20 transition-colors duration-700" />
       </Link>
     </motion.div>
   );
@@ -137,11 +137,11 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             className="flex items-center gap-4 mb-8"
           >
-            <div className="h-[1px] w-6 bg-[#D4AF37]" />
-            <span className="text-[12px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">
-              Industrial Scale
+            <div className="h-[1px] w-6 bg-primary/20" />
+            <span className="text-[12px] font-black uppercase tracking-[0.4em] text-primary/40">
+            Choose your door
             </span>
-            <div className="h-[1px] w-6 bg-[#D4AF37]" />
+            <div className="h-[1px] w-6 bg-primary/20" />
           </motion.div>
 
           <motion.h2
@@ -149,9 +149,9 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-3xl md:text-6xl font-serif font-black text-primary leading-[1.1] uppercase tracking-tighter"
           >
-            Core Institutional <br />
-            <span className="text-white bg-[#D4AF37] px-4 py-1 inline-block mt-3 transform -skew-x-12">
-              Capabilities
+        Three audiences. <br />
+            <span className="text-white bg-accent px-4 py-1 inline-block mt-3 transform -skew-x-12">
+            One platform.
             </span>
           </motion.h2>
 
@@ -160,12 +160,12 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1 }}
             className="max-w-2xl text-[rgba(10,20,40,0.4)] mt-10 text-[13px] uppercase font-black tracking-[0.25em] leading-relaxed"
           >
-            Pioneering Grade-A Logistics Infrastructure <br /> with Global Performance Standards.
+           Warehouster operates at the intersection of three historically disconnected parties. Each gets a dedicated journey, dedicated proof, and dedicated structuring.
           </motion.p>
         </div>
 
         {/* items-stretch (Tailwind default for grid) makes every cell the same height */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {services.map((service, i) => (
             <PortfolioCard key={i} service={service} index={i} />
           ))}

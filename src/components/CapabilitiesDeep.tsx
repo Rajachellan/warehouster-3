@@ -45,8 +45,8 @@ export default function CapabilitiesDeep() {
                         viewport={{ once: true }}
                         className="flex items-center gap-6 mb-8"
                     >
-                        <div className="h-[1px] w-12 bg-[#D4AF37]" />
-                        <span className="text-[10px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">
+                        <div className="h-[1px] w-12 bg-primary/20" />
+                        <span className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40">
                             Core Capabilities
                         </span>
                     </motion.div>
@@ -59,7 +59,7 @@ export default function CapabilitiesDeep() {
                         className="text-4xl md:text-6xl font-serif font-black text-primary leading-[1.1] uppercase tracking-tighter"
                     >
                         Engineering <br />
-                        <span className="text-white bg-[#D4AF37] px-4 py-1 inline-block mt-3 transform -skew-x-12">
+                        <span className="text-white bg-accent px-4 py-1 inline-block mt-3 transform -skew-x-12">
                             Excellence
                         </span>
                     </motion.h2>
@@ -73,12 +73,12 @@ export default function CapabilitiesDeep() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative flex flex-col p-12 bg-white border border-gray-100 hover:border-[#D4AF37]/40 transition-all duration-700 overflow-hidden"
+                            className="group relative flex flex-col p-12 bg-white border border-gray-100 hover:border-primary/20 transition-all duration-700 overflow-hidden"
                         >
-                            <div className="w-16 h-16 rounded-sm bg-primary text-white flex items-center justify-center mb-10 group-hover:bg-[#D4AF37] transition-colors duration-700">
+                            <div className="w-16 h-16 rounded-sm bg-primary text-white flex items-center justify-center mb-10 group-hover:bg-primary/20 transition-colors duration-700">
                                 {item.icon}
                             </div>
-                            <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter mb-6 group-hover:text-[#D4AF37] transition-colors">
+                            <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter mb-6 group-hover:text-primary transition-colors">
                                 {item.title}
                             </h3>
                             <p className="text-sm font-medium text-[rgba(10,20,40,0.4)] leading-relaxed mb-10 group-hover:text-primary transition-colors">
@@ -87,12 +87,12 @@ export default function CapabilitiesDeep() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-auto">
                                 {item.points.map((point, pIdx) => (
                                     <div key={pIdx} className="flex items-center gap-3">
-                                        <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full" />
+                                        <div className="w-1.5 h-1.5 bg-primary/40 rounded-full" />
                                         <span className="text-[10px] font-black uppercase tracking-widest text-[rgba(10,20,40,0.6)]">{point}</span>
                                     </div>
                                 ))}
                             </div>
-                            <div className="absolute right-0 bottom-0 top-0 w-1 bg-gray-100 group-hover:bg-[#D4AF37] transition-all" />
+                            <div className="absolute right-0 bottom-0 top-0 w-1 bg-gray-100 group-hover:bg-primary/30 transition-all" />
                         </motion.div>
                     ))}
                 </div>

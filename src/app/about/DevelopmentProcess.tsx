@@ -248,7 +248,7 @@ function StepCard({
 
       <h3 className="font-serif font-black text-[20px] leading-tight tracking-tight text-[#0A1428] mb-3">
         {step.title}{" "}
-        <span className="text-[#D4AF37]">{step.accent}</span>
+        <span className="text-accent">{step.accent}</span>
       </h3>
 
       {/* Gold bar */}
@@ -323,7 +323,7 @@ export default function DevelopmentModelSection() {
             className="w-10 h-px"
             style={{ background: "linear-gradient(to right, #D4AF37, transparent)" }}
           />
-          <span className="text-[10px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
+          <span className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40">
             End-to-End Value Creation
           </span>
         </div>
@@ -332,7 +332,7 @@ export default function DevelopmentModelSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-end mb-16 animate-[fadeUp_0.7s_ease_0.2s_both]">
           <h2 className="font-serif font-black text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight text-[#0A1428]">
             Our<br />Development<br />
-            <em className="not-italic text-[#D4AF37]">Model</em>
+            <em className="not-italic text-accent">Model</em>
           </h2>
           <p className="text-lg font-medium leading-relaxed text-[rgba(10,20,40,0.5)] max-w-sm self-end pb-1">
             Seven integrated phases that transform raw land into India&apos;s most

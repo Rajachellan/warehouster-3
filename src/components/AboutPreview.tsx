@@ -29,7 +29,7 @@ export default function AboutPreview() {
                             <div className="absolute inset-0 bg-[rgba(10,20,40,0.1)] mix-blend-multiply" />
                         </div>
                         {/* Architectural Accent */}
-                        <div className="absolute -bottom-8 -right-8 w-48 h-48 border-b-2 border-r-2 border-[#D4AF37]/50 pointer-events-none" />
+                        <div className="absolute -bottom-8 -right-8 w-48 h-48 border-b-2 border-r-2 border-primary/15 pointer-events-none" />
                     </motion.div>
 
                     {/* Right: Institutional Content */}
@@ -40,12 +40,12 @@ export default function AboutPreview() {
                             viewport={{ once: true }}
                         >
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="h-[1px] w-10 bg-[#D4AF37]" />
-                                <span className="text-[10px] font-black uppercase tracking-[0.8em] text-[#D4AF37]">Corporate Profile</span>
+                                <div className="h-[1px] w-10 bg-primary/20" />
+                                <span className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40">Corporate Profile</span>
                             </div>
                             <h2 className="text-4xl md:text-6xl font-serif font-black text-primary uppercase tracking-tighter leading-[1.1]">
                                 Institutional <br />
-                                <span className="text-[#D4AF37]">Infrastructure</span>
+                                <span className="text-accent">Infrastructure</span>
                             </h2>
                         </motion.div>
 

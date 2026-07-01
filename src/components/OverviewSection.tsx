@@ -37,7 +37,7 @@ export default function OverviewSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="pill-tag border-[rgba(212,175,55,0.2)] text-accent bg-[rgba(212,175,55,0.05)] mb-8">
+            <div className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-8">
              Strategic Industrial Excellence
             </div>
             <h2 className="text-3xl md:text-5xl font-serif font-black text-primary leading-tight uppercase tracking-tighter mb-12">
@@ -49,7 +49,7 @@ export default function OverviewSection() {
             </p>
             <Link
               href="/about"
-              className="group flex items-center gap-6 text-[13px] font-black uppercase tracking-widest text-primary hover:text-accent transition-all"
+              className="group flex items-center gap-6 text-[13px] font-black uppercase tracking-widest text-primary hover:text-primary transition-all"
             >
               Explore Our Approach<ArrowRight size={18} className="translate-x-[-10px] group-hover:translate-x-0 transition-all text-accent" />
             </Link>
@@ -65,8 +65,8 @@ export default function OverviewSection() {
                 transition={{ delay: i * 0.1 }}
                 className="p-10 rounded-[3rem] bg-gray-50 border border-gray-100 hover:bg-primary hover:border-primary transition-all duration-500 group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-white shadow-xl flex items-center justify-center mb-8 border border-gray-100 group-hover:bg-accent group-hover:text-white transition-all">
-                  <pillar.icon size={28} className="text-accent group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 rounded-2xl bg-white shadow-xl flex items-center justify-center mb-8 border border-gray-100 group-hover:bg-primary group-hover:text-white transition-all">
+                  <pillar.icon size={28} className="text-primary group-hover:text-white transition-colors" />
                 </div>
                 <h4 className="text-xl font-serif font-bold text-primary mb-4 group-hover:text-white transition-colors">
                   {pillar.title}

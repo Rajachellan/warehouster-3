@@ -12,9 +12,9 @@ const warehouseConstructionContent: ServicePageContent = {
     mainImage:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format&fit=crop&q=85",
     accentImage1:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=400&auto=format&fit=crop&q=80",
+      "/images/warehouse/warehouse-inside (9).png",
     accentImage2:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&auto=format&fit=crop&q=80",
+     "/images/warehouse/warehouse (6).jpg",
     mainImageAlt: "Grade-A warehouse under construction",
   },
   stats: [
@@ -30,10 +30,10 @@ const warehouseConstructionContent: ServicePageContent = {
     "Rapid Deployment",
   ],
   galleryImages: [
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=600&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=600&auto=format&fit=crop&q=80",
+    "/images/warehouse/warehouse-inside (11).png",
+"/images/warehouse/ware-house (7).jpg",
+    "/images/warehouse/warehouse (2).jpg",
+    "/images/warehouse/warehouse (3).jpg",
   ],
   pillarsSection: {
     eyebrow: "Construction Excellence",
@@ -47,7 +47,7 @@ const warehouseConstructionContent: ServicePageContent = {
       tag: "01",
       title: "Pre-Engineered Buildings",
       body: "Off-site fabrication of structural components for rapid on-site assembly — compressing delivery timelines without compromising structural integrity.",
-      img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=800&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouse-inside (4).png",
     },
     {
       tag: "02",
@@ -65,7 +65,7 @@ const warehouseConstructionContent: ServicePageContent = {
       tag: "04",
       title: "Sustainable Infrastructure",
       body: "Rainwater harvesting, LED lighting, climate-adaptive insulation, and green building practices as standard — reducing lifecycle operating costs.",
-      img: "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=800&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouster-land (1).jpg",
     },
   ],
   archetypesSection: {
@@ -117,7 +117,7 @@ const warehouseConstructionContent: ServicePageContent = {
       n: "02",
       title: "Off-Site Fabrication",
       body: "PEB components manufactured in controlled environments for precision quality, then transported for rapid on-site assembly.",
-      img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=960&auto=format&fit=crop&q=85",
+      img:"/images/warehouse/industrial-park.jpg",
     },
     {
       n: "03",
@@ -145,7 +145,7 @@ const warehouseConstructionContent: ServicePageContent = {
       role: "Primary Hub",
       nodes: ["Redhills", "Ennathur", "Oragadam", "Sriperumbudur"],
       sector: "Logistics · Auto · BTS",
-      img: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=900&auto=format&fit=crop&q=85",
+      img: "/images/warehouse/chennai.jpg",
     },
     {
       city: "Bengaluru-Hosur",
@@ -159,7 +159,7 @@ const warehouseConstructionContent: ServicePageContent = {
       role: "Expanding",
       nodes: ["Madurai", "Pondicherry", "Coimbatore"],
       sector: "FMCG · Agri-Logistics",
-      img: "https://images.unsplash.com/photo-1589474564855-6a4c99b0ecb2?w=900&auto=format&fit=crop&q=85",
+      img:"https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=900&auto=format&fit=crop&q=85",
     },
   ],
   quote: {
@@ -176,7 +176,7 @@ const warehouseConstructionContent: ServicePageContent = {
       tag: "PEB Technology",
       title: "How pre-engineered buildings cut warehouse delivery timelines by 40%",
       date: "June 2026",
-      img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=700&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouse-inside (4).png",
     },
     {
       tag: "Flooring Standards",
@@ -188,14 +188,14 @@ const warehouseConstructionContent: ServicePageContent = {
       tag: "Sustainability",
       title: "Green warehouse construction: ROI analysis for South India logistics assets",
       date: "April 2026",
-      img: "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=700&auto=format&fit=crop&q=80",
+      img: "/images/warehouse/warehouse-inside (6).png",
     },
   ],
   valueProp: {
     eyebrow: "Construction Guarantee",
     title: "Faster Delivery. Superior Quality.",
     mainImage:
-      "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?w=1200&auto=format&fit=crop&q=80",
+      "/images/warehouse/warehouse (6).jpg",
     accentImage:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&auto=format&fit=crop&q=80",
     mainImageAlt: "Completed Grade-A warehouse facility",
@@ -226,7 +226,7 @@ const warehouseConstructionContent: ServicePageContent = {
     duration: "11 Months",
     status: "Completed",
     image:
-      "https://images.unsplash.com/photo-1590684153400-e3e7a935b0e1?auto=format&fit=crop&q=80&w=1920",
+      "/images/warehouse/ware-house (2).jpg",
     challenge: [
       "Constructing a massive 1.2M sq. ft. facility within an extremely compressed timeline of 12 months.",
       "Ensuring FM2 specialized flooring for high-density racking systems across the entire floorplate.",

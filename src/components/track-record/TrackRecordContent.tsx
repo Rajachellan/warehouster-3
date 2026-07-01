@@ -24,7 +24,7 @@ const MANDATES = [
     status: "Under delivery",
     occupierType: "Global PE",
     caseStudy: "CASE 01 →",
-    caseLink: "/projects/redhills-development"
+    caseLink: "/case-study#case-01"
   },
   {
     client: "Horizon Industrial Parks",
@@ -38,7 +38,8 @@ const MANDATES = [
     status: "Closed",
     occupierType: "REIT / Platform",
     caseStudy: "CASE 03 →",
-    caseLink: "/projects/chengalpattu-industrial"
+    caseLink: "/case-study#case-03"
+
   },
   {
     client: "Britannia Industries",
@@ -52,7 +53,8 @@ const MANDATES = [
     status: "Under delivery",
     occupierType: "Fortune 500",
     caseStudy: "CASE 02 →",
-    caseLink: "/projects/pondicherry-bts"
+    caseLink: "/case-study#case-02"
+
   },
   {
     client: "HNI Client",
@@ -253,9 +255,9 @@ export default function TrackRecordContent() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-20 md:pt-48 md:pb-28 w-full">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.div variants={fadeUp} className="mb-6">
-              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/8 backdrop-blur-sm">
-                <Shield size={13} className="text-[#D4AF37]" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#D4AF37]">
+              <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-accent/25 bg-accent/8 backdrop-blur-sm">
+                <Shield size={13} className="text-primary" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent">
                   Track Record
                 </span>
               </div>
@@ -265,7 +267,7 @@ export default function TrackRecordContent() {
               variants={fadeUp}
               className="text-4xl md:text-6xl lg:text-7xl font-serif font-black text-white leading-[1.08] mb-8 max-w-4xl"
             >
-              <span className="text-[#D4AF37]">₹300 Cr+</span> in closed
+              <span className="text-accent">₹300 Cr+</span> in closed
               industrial transactions across South India.
             </motion.h1>
 
@@ -332,8 +334,8 @@ export default function TrackRecordContent() {
               <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                 <div>
                   <div className="flex items-center gap-4 mb-5">
-                    <div className="h-[2px] w-10 bg-[#D4AF37]" />
-                    <span className="text-[11px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
+                    <div className="h-[2px] w-10 bg-accent" />
+                    <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40">
                       Transaction Database
                     </span>
                   </div>
@@ -387,7 +389,7 @@ export default function TrackRecordContent() {
                     <select
                       value={filter.value}
                       onChange={(e) => filter.onChange(e.target.value)}
-                      className="w-full appearance-none bg-[#F9FAFB] border border-stone-200 rounded-xl px-4 py-3 text-sm font-bold text-[#0A1428] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all cursor-pointer hover:border-stone-300"
+                      className="w-full appearance-none bg-[#F9FAFB] border border-stone-200 rounded-xl px-4 py-3 text-sm font-bold text-[#0A1428] focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent/50 transition-all cursor-pointer hover:border-stone-300"
                     >
                       {filter.options.map((opt) => (
                         <option key={opt}>{opt}</option>
@@ -410,101 +412,124 @@ export default function TrackRecordContent() {
             </motion.div>
 
             {/* Flat Minimal Table (Responsive, fits page width, no horizontal scrollbar) */}
-            <motion.div variants={scaleIn}>
-              <div className="w-full overflow-x-auto scrollbar-hide">
-                <table className="w-full text-left border-collapse table-auto md:table-fixed min-w-[700px] lg:min-w-0">
-                  <thead>
-                    <tr className="border-t border-b border-stone-200">
-                      {[
-                        { name: "CLIENT", className: "w-[16%] pl-1" },
-                        { name: "YEAR", className: "w-[9%]" },
-                        { name: "CORRIDOR", className: "w-[21%]" },
-                        { name: "MANDATE", className: "w-[25%]" },
-                        { name: "LAND", className: "w-[8%]" },
-                        { name: "BTS", className: "w-[9%]" },
-                        { name: "STATUS", className: "w-[8%]" },
-                        { name: "CASE", className: "w-[4%] text-right pr-2" },
-                      ].map((col) => (
-                        <th
-                          key={col.name}
-                          className={`py-4 px-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#0A1428]/40 ${col.className}`}
-                        >
-                          {col.name}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredMandates.map((m, i) => (
-                      <motion.tr
-                        initial={{ opacity: 0, y: 8 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{
-                          delay: i * 0.04,
-                          duration: 0.4,
-                        }}
-                        key={`${m.client}-${i}`}
-                        className="border-b border-stone-200/60 last:border-b-0 hover:bg-[#D4AF37]/[0.01] transition-colors"
-                      >
-                        <td className="py-6 px-3 pl-1 text-sm text-[#0A1428]">
-                          <span className="font-serif font-black text-[15px] block leading-tight">{m.client}</span>
-                        </td>
-                        <td className="py-6 px-3 text-xs md:text-sm text-[#0A1428]/70 font-medium">
-                          {m.year}
-                        </td>
-                        <td className="py-6 px-3 text-xs md:text-sm text-[#0A1428]/70 font-medium leading-relaxed">
-                          {m.corridor}
-                        </td>
-                        <td className="py-6 px-3 text-xs md:text-sm text-[#0A1428]/70 font-medium leading-relaxed">
-                          {m.mandate}
-                        </td>
-                        <td className="py-6 px-3 text-xs md:text-sm text-[#0A1428]/70 font-medium">
-                          {m.land}
-                        </td>
-                        <td className="py-6 px-3 text-xs md:text-sm text-[#0A1428]/70 font-medium">
-                          {m.bts}
-                        </td>
-                        <td className="py-6 px-3 text-xs md:text-sm">
-                          <span className={getStatusTextStyle(m.status)}>
-                            {m.status}
-                          </span>
-                        </td>
-                        <td className="py-6 px-3 text-right pr-2 text-xs md:text-sm font-bold">
-                          {m.caseStudy !== "NDA" && m.caseLink ? (
-                            <Link
-                              href={m.caseLink}
-                              className="text-[#D4AF37] hover:text-[#0A1428] transition-colors inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider whitespace-nowrap"
-                            >
-                              {m.caseStudy}
-                            </Link>
-                          ) : (
-                            <span className="text-[#0A1428]/25 text-[11px] font-bold uppercase tracking-wider">
-                              {m.caseStudy}
-                            </span>
-                          )}
-                        </td>
-                      </motion.tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+<motion.div variants={scaleIn}>
+  <div className="w-full overflow-hidden rounded-2xl border border-stone-200 bg-white px-4">
+    <table className="w-full table-auto border-collapse">
+      <thead>
+        <tr className="border-t border-b border-stone-200">
+          {[
+            { name: "CLIENT", className: "w-[16%] pl-1" },
+            { name: "YEAR", className: "w-[9%]" },
+            { name: "CORRIDOR", className: "w-[21%]" },
+            { name: "MANDATE", className: "w-[25%]" },
+            { name: "LAND", className: "w-[8%]" },
+            { name: "BTS", className: "w-[9%]" },
+            { name: "STATUS", className: "w-[8%]" },
+            { name: "CASE", className: "w-[4%] text-right pr-2" },
+          ].map((col) => (
+            <th
+              key={col.name}
+              className={`py-4 px-3 text-[10px] font-black uppercase tracking-[0.2em] text-[#0A1428]/40 ${col.className}`}
+            >
+              {col.name}
+            </th>
+          ))}
+        </tr>
+      </thead>
 
-              {filteredMandates.length === 0 && (
-                <div className="p-8 text-center text-stone-400 text-xs font-medium bg-white rounded-2xl border border-stone-100 shadow-sm mt-4">
-                  No mandates match the selected filters.
-                </div>
+      <tbody>
+        {filteredMandates.map((m, i) => (
+          <motion.tr
+            key={`${m.client}-${i}`}
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: i * 0.04,
+              duration: 0.4,
+            }}
+            className="border-b border-stone-200/60 last:border-b-0 hover:bg-accent/[0.01] transition-colors"
+          >
+            {/* Client */}
+            <td className="py-6 px-3 pl-1 align-top">
+              <div className="break-words whitespace-normal">
+                <span className="font-serif font-black text-[15px] leading-tight">
+                  {m.client}
+                </span>
+              </div>
+            </td>
+
+            {/* Year */}
+            <td className="py-6 px-3 text-sm text-[#0A1428]/70 font-medium align-top">
+              {m.year}
+            </td>
+
+            {/* Corridor */}
+            <td className="py-6 px-3 align-top">
+              <div className="text-sm text-[#0A1428]/70 font-medium leading-relaxed break-words whitespace-normal">
+                {m.corridor}
+              </div>
+            </td>
+
+            {/* Mandate */}
+            <td className="py-6 px-3 align-top">
+              <div className="text-sm text-[#0A1428]/70 font-medium leading-relaxed break-words whitespace-normal">
+                {m.mandate}
+              </div>
+            </td>
+
+            {/* Land */}
+            <td className="py-6 px-3 text-sm text-[#0A1428]/70 font-medium align-top">
+              {m.land}
+            </td>
+
+            {/* BTS */}
+            <td className="py-6 px-3 text-sm text-[#0A1428]/70 font-medium align-top">
+              {m.bts}
+            </td>
+
+            {/* Status */}
+            <td className="py-6 px-3 text-sm align-top">
+              <span className={getStatusTextStyle(m.status)}>
+                {m.status}
+              </span>
+            </td>
+
+            {/* Case */}
+            <td className="py-6 px-3 pr-2 text-right align-top whitespace-nowrap">
+              {m.caseStudy !== "NDA" && m.caseLink ? (
+                <Link
+                  href={m.caseLink}
+                  className="inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-wider text-accent hover:text-[#0A1428] transition-colors"
+                >
+                  {m.caseStudy}
+                </Link>
+              ) : (
+                <span className="text-[#0A1428]/25 text-[11px] font-bold uppercase tracking-wider">
+                  {m.caseStudy}
+                </span>
               )}
+            </td>
+          </motion.tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
 
-              {/* Footer disclaimer */}
-              <div className="mt-8 pt-5 border-t border-stone-200/40">
-                <p className="text-[11px] text-[#0A1428]/30 font-medium leading-relaxed">
-                  Transaction values, exact locations, and counterparty
-                  details available under NDA to active institutional
-                  engagements only.
-                </p>
-              </div>
-            </motion.div>
+  {filteredMandates.length === 0 && (
+    <div className="mt-4 rounded-2xl border border-stone-100 bg-white p-8 text-center text-xs font-medium text-stone-400 shadow-sm">
+      No mandates match the selected filters.
+    </div>
+  )}
+
+  {/* Footer */}
+  <div className="mt-8 border-t border-stone-200/40 pt-5">
+    <p className="text-[11px] leading-relaxed font-medium text-[#0A1428]/30">
+      Transaction values, exact locations, and counterparty details are
+      available under NDA to active institutional engagements only.
+    </p>
+  </div>
+</motion.div>
           </motion.div>
         </div>
       </section>
@@ -514,7 +539,7 @@ export default function TrackRecordContent() {
           ════════════════════════════════════════════════════ */}
       <section className="relative py-28 md:py-32 bg-[#0A1428] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_70%_40%,rgba(212,175,55,0.05),transparent)] pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/10 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/10 to-transparent" />
 
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
@@ -526,14 +551,14 @@ export default function TrackRecordContent() {
           >
             <motion.div variants={fadeUp} className="md:col-span-7">
               <div className="flex items-center gap-4 mb-5">
-                <div className="h-[2px] w-10 bg-[#D4AF37]/40" />
-                <span className="text-[11px] font-black uppercase tracking-[0.35em] text-[#D4AF37]/70">
+                <div className="h-[2px] w-10 bg-accent/40" />
+                <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40/70">
                   Only the track record matters
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-white leading-[1.12]">
                 Repeat institutional mandates are the hardest credential to{" "}
-                <span className="text-[#D4AF37]">fake.</span>
+                <span className="text-accent">fake.</span>
               </h2>
             </motion.div>
 
@@ -543,7 +568,7 @@ export default function TrackRecordContent() {
             >
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#c9a632] text-[#0A1428] text-[12px] font-black uppercase tracking-[0.2em] shadow-[0_8px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.5)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98] whitespace-nowrap"
+                className="group inline-flex items-center gap-3 px-10 py-5 rounded-xl bg-accent text-[#0A1428] text-[12px] font-black uppercase tracking-[0.2em] shadow-[0_8px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.5)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98] whitespace-nowrap"
               >
                 Discuss your mandate
                 <ArrowRight

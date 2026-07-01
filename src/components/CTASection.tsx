@@ -6,17 +6,15 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="py-32 bg-primary relative overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[rgba(212,175,55,0.1)] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-royal/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+    <section className="relative overflow-hidden bg-primary py-32">
+      <div className="pointer-events-none absolute top-0 right-0 h-[800px] w-[800px] -translate-y-1/2 translate-x-1/2 rounded-full bg-white/5 blur-[120px]" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-10 mx-auto"
+          className="pill-tag mx-auto mb-10"
         >
           Begin Your Evolution
         </motion.div>
@@ -25,37 +23,38 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-6xl font-serif font-black text-white leading-tight uppercase tracking-tighter mb-12"
+          className="mb-12 font-serif text-5xl font-black uppercase leading-tight tracking-tighter text-white md:text-6xl"
         >
-          Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-white">Optimize</span> <br />
+          Ready to <span className="text-accent">Optimize</span> <br />
           Your Industrial Footprint?
         </motion.h2>
 
-        <p className="text-xl text-white/50 font-sans font-medium mb-16 max-w-2xl mx-auto leading-relaxed">
+        <p className="mx-auto mb-16 max-w-2xl font-sans text-xl font-medium leading-relaxed text-white/50">
           From Chennai to Bengaluru, Hosur to Madurai, we deliver high-performance industrial spaces tailored for e-commerce, manufacturing, FMCG, and 3PL operations.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-20">
+        <div className="mb-20 flex flex-col items-center justify-center gap-8 sm:flex-row">
           <Link
             href="/contact"
-            className="group px-14 py-6 bg-accent text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.3em] hover:bg-white hover:text-primary transition-all shadow-3xl shadow-[rgba(212,175,55,0.2)] flex items-center gap-4 active:scale-95 border border-[rgba(212,175,55,0.3)]"
+            className="group flex items-center gap-4 rounded-2xl bg-accent px-14 py-6 font-sans text-[11px] font-black uppercase tracking-[0.3em] text-primary transition-all hover:bg-white active:scale-95"
           >
-            Schedule Consultation <ArrowRight size={18} className="group-hover:translate-x-3 transition-transform" />
+            Schedule Consultation
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-3" />
           </Link>
           <Link
             href="mailto:hello@warehouster.com"
-            className="group px-14 py-6 bg-white/5 border border-white/20 text-white rounded-2xl font-sans font-black text-[11px] uppercase tracking-[0.3em] hover:bg-white/10 transition-all flex items-center gap-4 backdrop-blur-sm"
+            className="group flex items-center gap-4 rounded-2xl border border-white/20 bg-white/5 px-14 py-6 font-sans text-[11px] font-black uppercase tracking-[0.3em] text-white backdrop-blur-sm transition-all hover:bg-white/10"
           >
-            Contact Support <Mail size={16} className="text-accent" />
+            Contact Support <Mail size={16} />
           </Link>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-12 pt-16 border-t border-white/10 opacity-30">
-          <div className="flex items-center gap-4 text-white font-sans font-black text-[9px] uppercase tracking-[0.4em]">
-            <Phone size={14} className="text-accent" /> +91 95600 11696
+        <div className="flex flex-wrap justify-center gap-12 border-t border-white/10 pt-16 opacity-40">
+          <div className="flex items-center gap-4 font-sans text-[9px] font-black uppercase tracking-[0.4em] text-white">
+            <Phone size={14} /> +91 95600 11696
           </div>
-          <div className="flex items-center gap-4 text-white font-sans font-black text-[9px] uppercase tracking-[0.4em]">
-            <Mail size={14} className="text-accent" /> info@warehouster.com
+          <div className="flex items-center gap-4 font-sans text-[9px] font-black uppercase tracking-[0.4em] text-white">
+            <Mail size={14} /> info@warehouster.com
           </div>
         </div>
       </div>

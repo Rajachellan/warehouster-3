@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* 1. INSTITUTIONAL HERO */}
-      <section className="relative pt-64 pb-40 bg-primary overflow-hidden">
+      <section id="overview" className="relative pt-64 pb-40 bg-primary overflow-hidden">
         {/* Background Layer */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-10 w-fit"
+              className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-10 w-fit"
             >
               Institutional Platform
             </motion.div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.6 }}
                 className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[1rem] p-5 relative overflow-hidden"
               >
-                <div className="absolute top-0 left-0 w-1 h-full bg-accent" />
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary/30" />
 
                 <p className="text-white text-xl font-serif leading-tight italic mb-4">
                   &ldquo;We don&apos;t just build sheds. We engineer structured
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 <div className="flex items-center gap-4 mt-8">
                   <div className="h-px w-8 bg-[rgba(212,175,55,0.5)]" />
 
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em] text-accent">
+                  <span className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40">
                     Core Philosophy
                   </span>
                 </div>
@@ -151,8 +151,8 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="h-[2px] w-12 bg-accent" />
-                  <span className="text-[11px] font-black uppercase tracking-[0.6em] text-accent">Strategic Leadership</span>
+                  <div className="h-[2px] w-12 bg-primary/20" />
+                  <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40">Strategic Leadership</span>
                 </div>
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-black text-primary uppercase  leading-[0.9]">
                   Architecting <br />
@@ -170,7 +170,7 @@ export default function AboutPage() {
 
                 <div className="pt-10 flex flex-col gap-2 border-t border-gray-100">
                   <h3 className="text-3xl font-serif font-black text-primary uppercase tracking-tighter">Sandeep Chadha</h3>
-                  <span className="text-[11px] font-black uppercase tracking-[0.4em] text-accent">Founder & Managing Director</span>
+                  <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40">Founder & Managing Director</span>
                 </div>
               </div>
 
@@ -197,7 +197,7 @@ export default function AboutPage() {
       <Summary />
 
       {/* 8. FINAL PURPOSE CTA */}
-      <section className="py-40 bg-gray-50 relative overflow-hidden">
+      <section id="purpose" className="py-40 bg-gray-50 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#0A1428_1px,transparent_1px)] bg-[size:32px_32px]" />
         </div>
@@ -205,7 +205,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <div className="flex flex-col items-center gap-8">
             <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-xl mb-4">
-              <Activity className="text-accent" size={28} />
+              <Activity className="text-primary" size={28} />
             </div>
 
             <h2 className="text-5xl md:text-8xl font-serif font-black text-primary leading-[0.85] uppercase tracking-tighter">

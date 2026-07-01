@@ -43,7 +43,7 @@ export default function BlogSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="pill-tag border-[rgba(212,175,55,0.2)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
+              className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-8"
             >
               Latest Insights
             </motion.div>
@@ -86,16 +86,16 @@ export default function BlogSection() {
               <div className="p-10 flex flex-col flex-grow">
                 <div className="flex items-center gap-8 mb-6 text-[rgba(10,20,40,0.3)] text-[9px] font-black uppercase tracking-[0.4em] font-sans">
                   <div className="flex items-center gap-3">
-                    <Calendar size={14} className="text-accent" />
+                    <Calendar size={14} className="text-primary" />
                     {blog.date}
                   </div>
                   <div className="flex items-center gap-3">
-                    <User size={14} className="text-accent" />
+                    <User size={14} className="text-primary" />
                     {blog.author}
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-accent transition-colors">
+                <h3 className="text-2xl font-serif font-black text-primary mb-8 leading-tight group-hover:text-primary transition-colors">
                   {blog.title}
                 </h3>
 
@@ -105,9 +105,9 @@ export default function BlogSection() {
 
                 <Link
                   href={blog.href}
-                  className="mt-auto inline-flex items-center gap-4 text-[11px] font-black uppercase tracking-widest text-primary group-hover:text-accent transition-all transform group-hover:translate-x-4"
+                  className="mt-auto inline-flex items-center gap-4 text-[11px] font-black uppercase tracking-widest text-primary group-hover:text-primary transition-all transform group-hover:translate-x-4"
                 >
-                  Study Intelligence <ArrowRight size={16} className="text-accent" />
+                  Study Intelligence <ArrowRight size={16} className="text-primary" />
                 </Link>
               </div>
             </motion.div>

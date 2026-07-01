@@ -224,7 +224,7 @@ export default function NewsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-10"
+            className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-10"
           >
             Insights & Updates
           </motion.div>
@@ -236,7 +236,7 @@ export default function NewsPage() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section id="insights" className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-12">
             {news.map((item, i) => (
@@ -264,10 +264,10 @@ export default function NewsPage() {
 
                 <div className="p-12 flex flex-col flex-1">
                   <div className="flex items-center gap-6 text-[12px] font-bold uppercase tracking-[0.3em] text-[rgba(10,20,40,0.4)] mb-8">
-                    <span className="flex items-center gap-2"><Calendar size={12} className="text-accent" /> {item.date}</span>
+                    <span className="flex items-center gap-2"><Calendar size={12} className="text-primary" /> {item.date}</span>
                   </div>
                   
-                  <h2 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-6 group-hover:text-accent transition-colors">
+                  <h2 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter leading-tight mb-6 group-hover:text-primary transition-colors">
                     {item.title}
                   </h2>
                   
@@ -280,7 +280,7 @@ export default function NewsPage() {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.4em] text-primary hover:text-accent transition-all"
+                      className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.4em] text-primary hover:text-primary transition-all"
                     >
                       Full Report <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                     </Link>
@@ -289,7 +289,7 @@ export default function NewsPage() {
                       href={item.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-[9px] font-black uppercase tracking-[0.3em] px-5 py-2.5 rounded-full border border-gray-200 text-[rgba(10,20,40,0.4)] hover:border-accent hover:text-accent transition-all"
+                      className="flex items-center gap-3 text-[9px] font-black uppercase tracking-[0.3em] px-5 py-2.5 rounded-full border border-gray-200 text-[rgba(10,20,40,0.4)] hover:border-accent hover:text-primary transition-all"
                     >
                       PDF <ArrowRight size={12} />
                     </Link>

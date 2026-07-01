@@ -49,21 +49,21 @@ export default function CaseStudy() {
         {/* Section Header */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-[1px] bg-[#D4AF37]" />
-            <span className="text-[11px] font-black uppercase tracking-[0.5em] text-[#D4AF37]">
+            <div className="w-12 h-[1px] bg-primary/20" />
+            <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40">
               Execution Excellence
             </span>
           </div>
           <div className="flex gap-4">
             <button
               onClick={prev}
-              className="p-3 rounded-full border border-gray-200 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all bg-white"
+              className="p-3 rounded-full border border-gray-200 hover:border-accent hover:text-primary transition-all bg-white"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={next}
-              className="p-3 rounded-full border border-gray-200 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all bg-white"
+              className="p-3 rounded-full border border-gray-200 hover:border-accent hover:text-primary transition-all bg-white"
             >
               <ChevronRight size={20} />
             </button>
@@ -221,27 +221,27 @@ export default function CaseStudy() {
     </p>
   </div>
 
-  <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
+  <div className="bg-gray-50 rounded-xl py-4 px-3 border border-gray-100">
     <p className="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-2">
       Status
     </p>
 
-    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-200 rounded-full">
-      <CheckCircle2
-        size={12}
-        className="text-emerald-600"
-      />
-      <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">
-        {study.status}
-      </span>
-    </div>
+<div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5">
+  {/* <CheckCircle2
+    size={12}
+    className="shrink-0 text-emerald-600"
+  /> */}
+  <span className="min-w-0 break-words text-[11px] font-bold uppercase tracking-wider text-emerald-700">
+    {study.status}
+  </span>
+</div>
   </div>
 
 </div>
 
                   {/* Right Workflow */}
                   <div className="p-8 space-y-5">
-                    <div className="flex items-center gap-2 text-[#D4AF37] text-[11px] font-black uppercase tracking-widest">
+                    <div className="flex items-center gap-2 text-accent text-[11px] font-black uppercase tracking-widest">
                       <Settings size={14} /> End-to-End Execution Workflow
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -253,7 +253,7 @@ export default function CaseStudy() {
                           <span className="absolute top-3 right-3 text-[10px] font-black text-gray-200">
                             0{idx + 1}
                           </span>
-                          <div className="w-7 h-7 rounded-md bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center mb-3">
+                          <div className="w-7 h-7 rounded-md bg-accent/10 text-accent flex items-center justify-center mb-3">
                             <Navigation size={13} />
                           </div>
                           <h4 className="text-[11px] font-bold text-[#0A1428] mb-1 leading-tight">
@@ -268,12 +268,12 @@ export default function CaseStudy() {
 
                     {study.outcomes && study.outcomes.length > 0 && (
                       <div className="border border-gray-200 rounded-full px-5 py-2.5 flex flex-wrap items-center gap-x-5 gap-y-2">
-                        <span className="text-[10px] font-black text-[#D4AF37] uppercase tracking-widest">
+                        <span className="text-[10px] font-black text-accent uppercase tracking-widest">
                           Key Outcomes:
                         </span>
                         {study.outcomes.map((outcome, idx) => (
                           <div key={idx} className="flex items-center gap-1.5 text-[11px] font-semibold text-gray-600">
-                            <CheckCircle2 size={11} className="text-[#D4AF37]" /> {outcome}
+                            <CheckCircle2 size={11} className="text-primary" /> {outcome}
                           </div>
                         ))}
                       </div>
@@ -286,7 +286,7 @@ export default function CaseStudy() {
 
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gray-100 z-10">
-            <motion.div className="h-full bg-[#D4AF37]" style={{ width: `${progress}%` }} />
+            <motion.div className="h-full bg-accent" style={{ width: `${progress}%` }} />
           </div>
 
           {/* Dot Indicators */}
@@ -296,7 +296,7 @@ export default function CaseStudy() {
                 key={i}
                 onClick={(e) => { e.preventDefault(); goTo(i); }}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === cur ? "w-7 bg-[#D4AF37]" : "w-2 bg-gray-300"
+                  i === cur ? "w-7 bg-accent" : "w-2 bg-gray-300"
                 }`}
               />
             ))}

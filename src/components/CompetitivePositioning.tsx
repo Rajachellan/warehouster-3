@@ -70,7 +70,7 @@ export default function CompetitivePositioning() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-serif font-black text-[#0A1428] uppercase tracking-light mb-6"
           >
-            Competitive <span className="text-[#D4AF37]">Positioning</span>
+            Competitive <span className="text-accent">Positioning</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ export default function CompetitivePositioning() {
               <div className="p-8 text-[10px] font-black uppercase tracking-[0.4em] text-white/30 flex items-center">
                 Key Parameter
               </div>
-              <div className="p-8 bg-white/5 text-[10px] font-black uppercase tracking-[0.5em] text-[#D4AF37] text-center border-x border-white/10">
+              <div className="p-8 bg-white/5 text-[10px] font-black uppercase tracking-[0.35em] text-primary/40 text-center border-x border-white/10">
                 Warehouster
               </div>
               <div className="p-8 text-[10px] font-black uppercase tracking-[0.4em] text-white/30 text-center">
@@ -113,7 +113,7 @@ export default function CompetitivePositioning() {
               >
                 {/* Parameter Column */}
                 <div className="p-8 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/40 group-hover:text-[#D4AF37] transition-all duration-500 group-hover:scale-110">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/40 group-hover:text-primary transition-all duration-500 group-hover:scale-110">
                     <row.icon size={20} />
                   </div>
                   <span className="text-sm font-sans font-black uppercase tracking-wider text-white/80">
@@ -122,8 +122,8 @@ export default function CompetitivePositioning() {
                 </div>
 
                 {/* Warehouster Column */}
-                <div className="p-8 bg-[#D4AF37]/5 border-x border-white/5 flex items-center justify-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37]">
+                <div className="p-8 bg-accent/5 border-x border-white/5 flex items-center justify-center gap-3">
+                  <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                     <Check size={14} strokeWidth={3} />
                   </div>
                   <span className="text-sm md:text-base font-serif font-black text-white">
@@ -145,7 +145,7 @@ export default function CompetitivePositioning() {
           </motion.div>
 
           {/* Background Highlight Blur */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#D4AF37]/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
         </div>
 
         {/* Bottom Highlight Metrics */}
@@ -157,9 +157,9 @@ export default function CompetitivePositioning() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 + index * 0.1 }}
-              className="bg-white p-10 rounded-[1.5rem] border border-gray-100 shadow-xl shadow-black/5 hover:border-[#D4AF37]/30 transition-all duration-500 group"
+              className="bg-white p-10 rounded-[1.5rem] border border-gray-100 shadow-xl shadow-black/5 hover:border-primary/20 transition-all duration-500 group"
             >
-              <div className="text-5xl lg:text-6xl font-serif font-black text-[#0A1428] mb-4 group-hover:text-[#D4AF37] transition-colors duration-500">
+              <div className="text-5xl lg:text-6xl font-serif font-black text-[#0A1428] mb-4 group-hover:text-primary transition-colors duration-500">
                 {stat.value}
               </div>
               <div className="text-[13px] font-black tracking-[0.2em] text-[#0A1428]/40 leading-relaxed whitespace-pre-line group-hover:text-[#0A1428]/60 transition-colors duration-500">

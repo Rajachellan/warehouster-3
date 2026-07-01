@@ -51,7 +51,7 @@ const SectionHeading = ({ label, title, light = false }: { label: string, title:
 
 const InfoCard = ({ title, content, icon: Icon }: { title: string; content: string; icon: any }) => (
   <div className="p-8 rounded-[2rem] bg-white border border-gray-100 hover:border-[rgba(212,175,55,0.4)] transition-all duration-500 group shadow-sm">
-    <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-accent mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all">
+    <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-accent mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all">
       <Icon size={24} />
     </div>
     <h4 className="text-lg font-serif font-black text-primary uppercase tracking-tight mb-3">{title}</h4>
@@ -124,10 +124,10 @@ export default function ProjectDetailPage() {
           <div className="bg-[#0A1428] rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-white/5 flex flex-wrap items-center justify-around gap-12">
             {data.stats.map((stat, i) => (
               <div key={i} className="text-center group">
-                <div className="text-4xl md:text-6xl font-serif font-black text-white mb-2 tracking-tighter group-hover:text-accent transition-colors">
+                <div className="text-4xl md:text-6xl font-serif font-black text-white mb-2 tracking-tighter group-hover:text-primary transition-colors">
                   <CountUp value={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-[10px] font-black uppercase tracking-[0.4em] text-[rgba(212,175,55,0.5)] group-hover:text-accent transition-colors">{stat.label}</div>
+                <div className="text-[10px] font-black uppercase tracking-[0.4em] text-[rgba(212,175,55,0.5)] group-hover:text-primary transition-colors">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -170,12 +170,12 @@ export default function ProjectDetailPage() {
 
             <div className="bg-white p-12 rounded-[3.5rem] shadow-sm border border-gray-100">
               <h4 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter mb-10 flex items-center gap-4">
-                <Globe className="text-accent" /> Connectivity & Infra
+                <Globe className="text-primary" /> Connectivity & Infra
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {data.connectivity?.map((item, i) => (
                   <div key={i}>
-                    <div className="text-[10px] font-black uppercase tracking-[0.3em] text-accent mb-2">{item.label}</div>
+                    <div className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40 mb-2">{item.label}</div>
                     <p className="text-sm text-[rgba(10,20,40,0.6)] font-medium leading-relaxed">{item.detail}</p>
                   </div>
                 ))}
@@ -231,7 +231,7 @@ export default function ProjectDetailPage() {
 
             <div className="p-12 md:p-16 rounded-[4rem] bg-white/5 border border-white/10 backdrop-blur-xl relative">
               <div className="absolute top-0 right-0 p-12 opacity-5">
-                <TrendingUp size={200} className="text-accent" />
+                <TrendingUp size={200} className="text-primary" />
               </div>
               <h4 className="text-2xl font-serif font-black text-accent uppercase tracking-tighter mb-8">Future Growth Potential</h4>
               <p className="text-xl text-white/70 font-serif leading-relaxed italic">
@@ -288,7 +288,7 @@ export default function ProjectDetailPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
             <SectionHeading label="Ecosystem" title="Related <span className='text-accent'>Assets</span>" />
-            <Link href="/projects" className="group flex items-center gap-4 text-xs font-black uppercase tracking-[0.4em] text-[rgba(10,20,40,0.4)] hover:text-accent transition-colors mb-12">
+            <Link href="/projects" className="group flex items-center gap-4 text-xs font-black uppercase tracking-[0.4em] text-[rgba(10,20,40,0.4)] hover:text-primary transition-colors mb-12">
               All Projects <ChevronRight size={16} />
             </Link>
           </div>

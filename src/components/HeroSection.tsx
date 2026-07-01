@@ -28,7 +28,7 @@ export default function HeroSection() {
 
         {/* Sophisticated Texture Overlay */}
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
-          style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }} />
+          style={{ backgroundImage: 'radial-gradient(circle, #0A1428 0.5px, transparent 0.5px)', backgroundSize: '30px 30px' }} />
       </div>
 
       {/* Grid-Based Hero Content */}
@@ -42,8 +42,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-4 mb-8"
           >
-            <div className="h-[1px] w-8 bg-[rgba(212,175,55,0.6)] shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
-            <span className="text-[12px] font-black uppercase tracking-[0.3em] text-[rgba(212,175,55,0.8)]">
+            <div className="h-[1px] w-8 bg-white/30" />
+            <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.25em] text-accent">
               Institutional Logistics Platform
             </span>
           </motion.div>
@@ -69,7 +69,7 @@ export default function HeroSection() {
             transition={{ delay: 0.4, duration: 1 }}
             className="max-w-2xl pl-0 md:pl-1 mb-16 relative"
           >
-            <div className="absolute left-[-24px] top-0 bottom-0 w-[1px] bg-[rgba(212,175,55,0.2)] hidden md:block" />
+            <div className="absolute left-[-24px] top-0 bottom-0 w-[1px] bg-white/15 hidden md:block" />
             <p className="text-base md:text-lg text-white/70 font-sans font-medium leading-relaxed tracking-wide ">
               Warehouster is a next-generation industrial and logistics real estate platform
               focused on developing <span className="text-white font-bold">Grade-A warehousing</span> and industrial infrastructure.
@@ -107,16 +107,16 @@ export default function HeroSection() {
           transition={{ delay: 1.2, duration: 1 }}
           className="hidden xl:flex col-span-3 flex-col justify-end gap-16 pb-20 items-end"
         >
-          <div className="text-right border-r border-[rgba(212,175,55,0.3)] pr-6">
-            <div className="text-accent text-2xl font-serif font-black mb-1">19+</div>
+          <div className="text-right border-r border-white/20 pr-6">
+            <div className="text-white text-2xl font-serif font-black mb-1">19+</div>
             <div className="text-[9px] font-black uppercase tracking-widest text-white/40">Acres Developed</div>
           </div>
-          <div className="text-right border-r border-[rgba(212,175,55,0.3)] pr-6">
-            <div className="text-accent text-2xl font-serif font-black mb-1">Grade-A</div>
+          <div className="text-right border-r border-white/20 pr-6">
+            <div className="text-white text-2xl font-serif font-black mb-1">Grade-A</div>
             <div className="text-[9px] font-black uppercase tracking-widest text-white/40">Asset Quality</div>
           </div>
-          <div className="text-right border-r border-[rgba(212,175,55,0.3)] pr-6">
-            <div className="text-accent text-2xl font-serif font-black mb-1">Institutional</div>
+          <div className="text-right border-r border-white/20 pr-6">
+            <div className="text-white text-2xl font-serif font-black mb-1">Institutional</div>
             <div className="text-[9px] font-black uppercase tracking-widest text-white/40">Standard Platform</div>
           </div>
         </motion.div>

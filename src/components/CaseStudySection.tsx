@@ -127,7 +127,7 @@ export default function CaseStudySection({ data }: { data: CaseStudyProps }) {
                 <ul className="space-y-3">
                   {[...data.solution, ...data.execution].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-[14px] text-primary/80 leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0 mt-2" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -146,7 +146,7 @@ export default function CaseStudySection({ data }: { data: CaseStudyProps }) {
                 <div className="grid sm:grid-cols-2 gap-3">
                   {data.outcomes.map((outcome, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-accent shrink-0 mt-0.5" size={16} />
+                      <CheckCircle2 className="text-primary shrink-0 mt-0.5" size={16} />
                       <span className="text-[13px] font-bold text-primary">{outcome}</span>
                     </div>
                   ))}
@@ -175,7 +175,7 @@ export default function CaseStudySection({ data }: { data: CaseStudyProps }) {
 
               {/* Testimonial */}
               <div className="flex gap-6 mt-12 bg-blue-50/30 p-8 border-l-4 border-accent">
-                <Quote className="text-accent shrink-0" size={32} />
+                <Quote className="text-primary shrink-0" size={32} />
                 <div>
                   <p className="text-lg md:text-xl font-serif font-medium text-primary leading-relaxed mb-4">
                     "{data.testimonial.quote}"
@@ -195,19 +195,19 @@ export default function CaseStudySection({ data }: { data: CaseStudyProps }) {
         {/* Navigation */}
         <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-6">
           {data.prevCaseStudyLink ? (
-            <Link href={data.prevCaseStudyLink} className="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-primary/50 hover:text-accent transition-colors">
+            <Link href={data.prevCaseStudyLink} className="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-primary/50 hover:text-primary transition-colors">
               <ChevronLeft size={14} /> Previous Case Study
             </Link>
           ) : <div />}
           
           {data.relatedServicesLink && (
-            <Link href={data.relatedServicesLink} className="text-xs font-black uppercase tracking-widest text-primary hover:text-accent transition-colors">
+            <Link href={data.relatedServicesLink} className="text-xs font-black uppercase tracking-widest text-primary hover:text-primary transition-colors">
               View All Services
             </Link>
           )}
 
           {data.nextCaseStudyLink ? (
-            <Link href={data.nextCaseStudyLink} className="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-primary/50 hover:text-accent transition-colors">
+            <Link href={data.nextCaseStudyLink} className="flex items-center gap-3 text-xs font-black uppercase tracking-widest text-primary/50 hover:text-primary transition-colors">
               Next Case Study <ChevronRight size={14} />
             </Link>
           ) : <div />}

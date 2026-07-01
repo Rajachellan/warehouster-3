@@ -32,7 +32,7 @@ export default function ContactPage() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="pill-tag border-[rgba(212,175,55,0.2)] text-accent bg-[rgba(212,175,55,0.05)] mb-6"
+            className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-6"
           >
             Global Reach
           </motion.div>

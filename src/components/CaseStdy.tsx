@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
 /* ────────────────────────────────────────────────────────────────
    DESIGN TOKENS
 ──────────────────────────────────────────────────────────────── */
-const GOLD = "#F59E0B";
+const GOLD = "#D4AF37";
 const DARK = "#0A1428";
 const SURFACE = "#F9FAFB";
 const SURFACE_WARM = "#FFFBF0";
@@ -498,7 +498,7 @@ const CASES: CaseData[] = [
     corridor: "Puducherry corridor, South India",
     client: "Britannia Industries",
     period: "2025-2026",
-    img: "https://images.unsplash.com/photo-1553446396-7f0a4c3e2a16?w=1400&q=85&auto=format&fit=crop",
+    img: "/images/warehouse/britania-ase-study.jpg",
     imgCaption: "Delivering a 72,000 sq ft built-to-suit facility under an aggressive 10-month timeline.",
     stats: [
       { val: "72K",  lbl: "sq ft" },
@@ -535,7 +535,7 @@ const CASES: CaseData[] = [
     corridor: "Chengalpattu corridor, South Chennai",
     client: "Horizon Industrial Parks",
     period: "Jan – Oct 2024",
-    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&auto=format&fit=crop",
+    img: "/images/warehouse/industrial-park.jpg",
     imgCaption: "Creating an institution-ready 52-acre industrial park through structured acquisition and pre-leasing.",
     stats: [
       { val: "52",    lbl: "Acres" },
@@ -678,19 +678,28 @@ const CASES: CaseData[] = [
 ──────────────────────────────────────────────────────────────── */
 function Hero() {
   return (
-    <section
+   <section
       style={{
         minHeight: "100vh",
-        background: DARK,
+        position: "relative",
+        overflow: "hidden",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        position: "relative",
-        overflow: "hidden",
         padding: "120px 48px 80px",
+        backgroundImage: `
+          linear-gradient(
+            rgba(8,12,20,0.65),
+            rgba(8,12,20,0.75)
+          ),
+          url("/images/warehouse/warehouster-land (1).jpg")
+        `,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="wh-hero-grid" />
+      {/* <div className="wh-hero-grid" /> */}
 
       {/* ambient glows */}
       <div style={{ position:"absolute", top:"20%", right:"15%", width:400, height:400, borderRadius:"50%", background:"rgba(245,158,11,.06)", filter:"blur(80px)", pointerEvents:"none" }} />
@@ -709,11 +718,11 @@ function Hero() {
            <Pill label=" Case Studies · Real Transactions" />
 
         <h1
-          className="wh-fu2 text-6xl"
+          className="wh-fu2 text-6xl text-white"
           style={{
             fontFamily:"'Playfair Display',serif",
             fontWeight:800,
-            color:"#fff",
+            color:"accent",
             lineHeight:1.05,
             letterSpacing:"-.02em",
             marginBottom:32,
@@ -727,8 +736,8 @@ function Hero() {
         </h1>
 
         <p
-          className="wh-fu3"
-          style={{ fontSize:18, lineHeight:1.7, color:"rgba(255,255,255,.55)", maxWidth:560, marginBottom:48 }}
+          className=" text-gray-300 "
+          style={{ fontSize:18, lineHeight:1.7, maxWidth:560, marginBottom:48, color:"white"}}
         >
           Three anonymous mandates. The same purpose that closed Rs&nbsp;700Cr+ in South
           India&apos;s most demanding capital-allocating environments.
@@ -739,7 +748,7 @@ function Hero() {
           <button className="wh-btn-outline">Request NDA Package <ArrowUpRight size={15} /></button>
         </div>
 
-        <div className="wh-fu5" style={{ marginTop:80, display:"flex", gap:56, flexWrap:"wrap" }}>
+        <div className="wh-fu5 text-gray-200" style={{ marginTop:80, display:"flex", gap:56, flexWrap:"wrap" }}>
           {[
             { val:"Rs 700Cr+", lbl:"Transactions closed" },
             { val:"25+",       lbl:"Acres originated" },
@@ -747,7 +756,7 @@ function Hero() {
           ].map((s) => (
             <div key={s.lbl}>
               <div style={{ fontFamily:"'Playfair Display',serif", fontSize:"2.8rem", fontWeight:800, color:GOLD, lineHeight:1 }}>{s.val}</div>
-              <div style={{ fontSize:11, fontWeight:600, letterSpacing:".14em", textTransform:"uppercase", color:"rgba(255,255,255,.35)", marginTop:8 }}>{s.lbl}</div>
+              <div style={{ fontSize:11, fontWeight:600, letterSpacing:".14em", textTransform:"uppercase", color:"white", marginTop:8 }}>{s.lbl}</div>
             </div>
           ))}
         </div>
@@ -787,7 +796,7 @@ function CaseStudy({ data }: { data: CaseData }) {
   const leftPanel = (
     <div
       className="wh-col-left "
-      style={{ alignSelf: "flex-start" }}  /* belt-and-suspenders */
+      style={{ alignSelf: "flex-start" }}   id={`case-${num}`} /* belt-and-suspenders */
     >
       <span className="wh-case-num-deco">{num}</span>
 

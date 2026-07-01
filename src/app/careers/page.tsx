@@ -53,7 +53,7 @@ export default function CareersPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
+            className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-8"
           >
             Human Capital
           </motion.div>
@@ -113,14 +113,14 @@ export default function CareersPage() {
                             className="group p-12 rounded-[3.5rem] bg-gray-50 border border-gray-100 hover:bg-primary hover:border-primary transition-all duration-700 flex flex-col md:flex-row md:items-center justify-between gap-12"
                         >
                             <div className="flex gap-10 items-center">
-                                <div className="w-20 h-20 rounded-[2rem] bg-white flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all shadow-xl shadow-gray-200/50">
+                                <div className="w-20 h-20 rounded-[2rem] bg-white flex items-center justify-center text-white/60 group-hover:bg-white/10 group-hover:text-white transition-all shadow-xl shadow-gray-200/50">
                                     <Briefcase size={32} />
                                 </div>
                                 <div className="space-y-4">
                                     <h3 className="text-3xl font-serif font-bold text-primary group-hover:text-white transition-colors">{job.title}</h3>
                                     <div className="flex flex-wrap gap-8 items-center text-[rgba(10,20,40,0.4)] group-hover:text-white/40 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors">
-                                        <div className="flex items-center gap-3"><MapPin size={14} className="text-accent" /> {job.location}</div>
-                                        <div className="flex items-center gap-3"><Clock size={14} className="text-accent" /> {job.type}</div>
+                                        <div className="flex items-center gap-3"><MapPin size={14} className="text-primary" /> {job.location}</div>
+                                        <div className="flex items-center gap-3"><Clock size={14} className="text-primary" /> {job.type}</div>
                                         <div className="px-5 py-2 rounded-full border border-[rgba(10,20,40,0.1)] group-hover:border-white/10">{job.category}</div>
                                     </div>
                                 </div>

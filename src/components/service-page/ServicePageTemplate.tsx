@@ -171,8 +171,8 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 function Badge({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-8 flex items-center gap-4">
-      <div className="h-px w-8 bg-accent/60 shadow-[0_0_8px_rgba(212,175,55,0.2)]" />
-      <span className="text-[11px] font-black uppercase tracking-[0.3em] text-accent">
+      <div className="h-px w-8 bg-primary/20" />
+      <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40">
         {children}
       </span>
     </div>
@@ -180,7 +180,7 @@ function Badge({ children }: { children: React.ReactNode }) {
 }
 
 function GoldRule() {
-  return <div className="mb-6 h-0.5 w-10 bg-accent" />;
+  return <div className="mb-6 h-px w-10 bg-primary/15" />;
 }
 
 function SectionHeading({
@@ -198,7 +198,7 @@ function SectionHeading({
 }) {
   return (
     <div className={className}>
-      <p className="mb-3 text-[10px] font-black uppercase tracking-[0.28em] text-accent">
+      <p className="mb-3 text-[10px] font-black uppercase tracking-[0.28em] text-primary/40">
         {eyebrow}
       </p>
       <GoldRule />
@@ -251,7 +251,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: "radial-gradient(#D4AF37 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(#0A1428 0.5px, transparent 0.5px)",
             backgroundSize: "40px 40px",
           }}
         />
@@ -273,16 +273,10 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                   {hero.title}{" "}
                   <span className="text-accent relative inline-block">
                     {hero.titleAccent}
-                    <motion.span 
-                      className="absolute -bottom-2 left-0 h-1 bg-accent"
-                      initial={{ width: 0 }}
-                      animate={{ width: "100%" }}
-                      transition={{ delay: 1, duration: 0.8 }}
-                    />
                   </span>
                 </motion.h1>
               </div>
-              <p className="mt-8 max-w-lg font-sans text-base font-medium leading-relaxed text-[#0A1428]/60 md:text-lg">
+              <p className="mt-8 max-w-4xl font-sans text-base font-medium leading-relaxed text-[#0A1428]/60 md:text-lg">
                 {hero.description}
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
@@ -298,7 +292,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                 </Link>
                 <Link
                   href={hero.secondaryCta.href}
-                  className="group inline-flex items-center gap-3 rounded-xl border border-[#0A1428]/10 bg-white px-8 py-4 text-[11px] font-black uppercase tracking-[0.2em] text-[#0A1428] transition-all hover:border-accent hover:text-accent shadow-sm"
+                  className="group inline-flex items-center gap-3 rounded-xl border border-primary/15 bg-white px-8 py-4 text-[11px] font-black uppercase tracking-[0.2em] text-primary transition-all hover:border-primary hover:bg-primary hover:text-white shadow-sm"
                 >
                   {hero.secondaryCta.label}
                   <ArrowRight
@@ -365,7 +359,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
           >
             {content.stats.map(({ n, suffix, label }) => (
               <div key={label}>
-                <p className="font-serif text-4xl font-black text-accent md:text-5xl">
+                <p className="font-serif text-4xl font-black text-primary md:text-5xl">
                   <Counter to={n} suffix={suffix} />
                 </p>
                 <p className="mt-2 text-[11px] font-black uppercase tracking-[0.18em] text-primary/40">
@@ -434,8 +428,6 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
 
       {/* Pillars */}
       <section className="bg-white py-16 md:py-20 relative">
-        {/* Abstract Background Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="mx-auto max-w-7xl px-6 relative z-10">
           <div className="mb-12 grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:items-end lg:gap-20">
             <motion.div {...fadeUp}>
@@ -454,7 +446,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                 onMouseLeave={() => setPillarHover(-1)}
                 className={`group flex flex-col overflow-hidden rounded-2xl border transition-all duration-500 relative ${
                   pillarHover === i
-                    ? "border-accent/40 bg-white/40 backdrop-blur-md shadow-[0_16px_48px_rgba(212,175,55,0.14)]"
+                    ? "border-primary/20 bg-white shadow-[0_16px_48px_rgba(10,20,40,0.08)]"
                     : "border-stone-200 bg-white hover:shadow-lg"
                 }`}
               >
@@ -468,23 +460,15 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                       pillarHover === i ? "scale-110" : "scale-100"
                     }`}
                   />
-                  {pillarHover === i && (
-                    <motion.div 
-                      layoutId="pillar-glow"
-                      className="absolute inset-0 bg-accent/10 mix-blend-overlay"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                    />
-                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-7 relative z-10">
                   <div className="mb-4 flex items-center gap-3">
-                    <span className="text-[9px] font-black tracking-[0.25em] text-accent">
+                    <span className="text-[9px] font-black tracking-[0.25em] text-primary/35">
                       {tag}
                     </span>
                     <div
                       className={`h-px flex-1 transition-colors duration-300 ${
-                        pillarHover === i ? "bg-accent" : "bg-stone-200"
+                        pillarHover === i ? "bg-primary/25" : "bg-stone-200"
                       }`}
                     />
                   </div>
@@ -494,11 +478,6 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                   <p className="flex-1 text-sm font-medium leading-relaxed text-primary/60">
                     {body}
                   </p>
-                  <div
-                    className={`mt-6 h-0.5 bg-accent transition-all duration-500 ${
-                      pillarHover === i ? "w-full" : "w-0"
-                    }`}
-                  />
                 </div>
               </motion.article>
             ))}
@@ -523,7 +502,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                 onMouseEnter={() => setArchetypeActive(i)}
                 className={`grid overflow-hidden rounded-2xl border transition-all duration-500 sm:grid-cols-[150px_1fr] ${
                   archetypeActive === i
-                    ? "border-accent/50 bg-white shadow-[0_12px_48px_rgba(212,175,55,0.12)]"
+                    ? "border-primary/20 bg-white shadow-[0_12px_48px_rgba(10,20,40,0.08)]"
                     : "border-stone-200 bg-white/70"
                 }`}
               >
@@ -539,12 +518,9 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                         : "scale-100 grayscale brightness-90"
                     }`}
                   />
-                  {archetypeActive === i && (
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
-                  )}
                 </div>
                 <div className="p-7 sm:p-8">
-                  <p className="mb-2 text-[9px] font-black uppercase tracking-[0.22em] text-accent">
+                  <p className="mb-2 text-[9px] font-black uppercase tracking-[0.22em] text-primary/35">
                     {tag}
                   </p>
                   <h3 className="mb-3 font-serif text-2xl font-black uppercase tracking-tight text-primary">
@@ -570,7 +546,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                 {/* Vertical timeline line */}
                 <div className="absolute left-6 top-10 bottom-10 w-[2px] bg-stone-100 hidden sm:block z-0" />
                 <motion.div 
-                  className="absolute left-6 top-10 w-[2px] bg-accent hidden sm:block z-10 transition-all duration-500 origin-top"
+                  className="absolute left-6 top-10 w-[2px] bg-primary hidden sm:block z-10 transition-all duration-500 origin-top"
                   style={{ height: `${(processActive / (content.steps.length - 1)) * 100}%` }}
                 />
 
@@ -586,7 +562,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                     onClick={() => setProcessActive(i)}
                     className={`w-full rounded-2xl p-6 text-left transition-all duration-400 relative z-20 ${
                       processActive === i
-                        ? "bg-accent/5 shadow-sm border border-accent/20 translate-x-2"
+                        ? "bg-primary/5 shadow-sm border border-primary/15 translate-x-2"
                         : "bg-transparent hover:bg-stone-50 border border-transparent"
                     }`}
                   >
@@ -595,7 +571,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                         <span className={`text-[10px] font-black tracking-[0.2em] transition-colors duration-300 ${processActive === i ? "text-accent" : "text-stone-400"}`}>
                           {n}
                         </span>
-                        <div className={`w-2 h-2 rounded-full transition-all duration-300 hidden sm:block ${processActive === i ? "bg-accent scale-150" : "bg-stone-300"}`} />
+                        <div className={`w-2 h-2 rounded-full transition-all duration-300 hidden sm:block ${processActive === i ? "bg-primary scale-150" : "bg-stone-300"}`} />
                       </div>
                       <div>
                         <p className={`mb-1.5 font-serif text-lg font-black uppercase tracking-tight transition-colors duration-300 ${processActive === i ? "text-primary" : "text-primary/60"}`}>
@@ -630,11 +606,9 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                     }`}
                   />
                 ))}
-                <div className="pointer-events-none absolute inset-0 border border-accent/20" />
-                <div className="pointer-events-none absolute left-0 top-0 h-8 w-8 border-l-2 border-t-2 border-accent" />
-                <div className="pointer-events-none absolute bottom-0 right-0 h-8 w-8 border-b-2 border-r-2 border-accent" />
+                <div className="pointer-events-none absolute inset-0 border border-primary/10" />
                 <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between bg-gradient-to-t from-white via-white/80 to-transparent px-6 py-5">
-                  <p className="text-[10px] font-black uppercase tracking-[0.25em] text-accent">
+                  <p className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/45">
                     Step {String(processActive + 1).padStart(2, "0")} /{" "}
                     {String(content.steps.length).padStart(2, "0")}
                   </p>
@@ -685,14 +659,9 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                       corridorHover === i ? "scale-110" : "scale-100"
                     }`}
                   />
-                  <div
-                    className={`absolute inset-x-0 top-0 h-1 bg-accent transition-transform duration-400 origin-left ${
-                      corridorHover === i ? "scale-x-100" : "scale-x-0"
-                    }`}
-                  />
                 </div>
                 <div className="p-7">
-                  <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-accent">
+                  <p className="mb-2 text-[9px] font-black uppercase tracking-[0.28em] text-primary/35">
                     {role}
                   </p>
                   <h3 className="mb-4 font-serif text-3xl font-black uppercase tracking-tight text-primary">
@@ -705,7 +674,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                       </li>
                     ))}
                   </ul>
-                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-accent">
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-primary/45">
                     {sector}
                   </p>
                 </div>
@@ -719,13 +688,13 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
       <section className="border-y border-stone-200 bg-white py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <motion.div {...fadeUp}>
-            <div className="mb-6 font-serif text-4xl font-black leading-none text-accent md:text-5xl">
+            <div className="mb-6 font-serif text-4xl font-black leading-none text-primary/15 md:text-5xl">
               &ldquo;
             </div>
             <p className="mb-8 font-serif text-xl font-medium italic leading-relaxed text-primary md:text-2xl">
               {content.quote.text}
             </p>
-            <div className="mx-auto mb-5 h-px w-10 bg-accent" />
+            <div className="mx-auto mb-5 h-px w-10 bg-primary/15" />
             <p className="text-xs font-black uppercase tracking-[0.18em] text-primary/40">
               {content.quote.author}
             </p>
@@ -743,7 +712,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
             <motion.a
               {...fadeUp}
               href="/blogs"
-              className="shrink-0 border-b border-accent/30 pb-1 text-[11px] font-black uppercase tracking-[0.18em] text-accent transition-colors hover:border-accent"
+              className="shrink-0 border-b border-primary/20 pb-1 text-[11px] font-black uppercase tracking-[0.18em] text-primary/50 transition-colors hover:border-primary hover:text-primary"
             >
               View all →
             </motion.a>
@@ -770,23 +739,18 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
                       insightHover === i ? "scale-110" : "scale-100"
                     }`}
                   />
-                  <div
-                    className={`absolute bottom-0 left-0 right-0 h-1 bg-accent transition-transform duration-400 origin-left ${
-                      insightHover === i ? "scale-x-100" : "scale-x-0"
-                    }`}
-                  />
                 </div>
-                <p className="mb-2 text-[9px] font-black uppercase tracking-[0.22em] text-accent">
+                <p className="mb-2 text-[9px] font-black uppercase tracking-[0.22em] text-primary/35">
                   {tag}
                 </p>
-                <h3 className="mb-4 font-serif text-lg font-black uppercase leading-snug tracking-tight text-primary transition-colors group-hover:text-accent">
+                <h3 className="mb-4 font-serif text-lg font-black uppercase leading-snug tracking-tight text-primary transition-colors group-hover:text-primary/80">
                   {title}
                 </h3>
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-primary/40">{date}</span>
                   <ArrowRight
                     size={14}
-                    className={`text-accent transition-transform duration-300 ${
+                    className={`text-primary/30 transition-transform duration-300 group-hover:text-accent ${
                       insightHover === i ? "translate-x-1" : ""
                     }`}
                   />
@@ -837,7 +801,7 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
               <ul className="mt-10 space-y-5">
                 {valueProp.offers.map((offer) => (
                   <li key={offer} className="flex items-start gap-4">
-                    <CheckCircle2 size={16} className="mt-1 shrink-0 text-accent" />
+                    <CheckCircle2 size={16} className="mt-1 shrink-0 text-primary/50" />
                     <span className="text-sm font-medium leading-relaxed text-primary/70">
                       {offer}
                     </span>
@@ -854,9 +818,9 @@ export default function ServicePageTemplate({ content }: { content: ServicePageC
             transition={{ duration: 0.7 }}
             className="mx-auto mt-16 max-w-3xl overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-[0_24px_64px_rgba(0,0,0,0.08)]"
           >
-            <div className="h-1 bg-accent" />
+            <div className="h-1 bg-primary" />
             <div className="p-8 md:p-10">
-              <p className="mb-3 text-[10px] font-black uppercase tracking-[0.28em] text-accent">
+              <p className="mb-3 text-[10px] font-black uppercase tracking-[0.28em] text-primary/40">
                 {valueProp.cta.eyebrow}
               </p>
               <h3 className="mb-4 font-serif text-2xl font-black uppercase tracking-tight text-primary md:text-3xl">

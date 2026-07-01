@@ -29,8 +29,8 @@ export default function AboutSection() {
 
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-px bg-gradient-to-r from-[#D4AF37] to-transparent" />
-              <span className="text-[10px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
+              <div className="w-10 h-px bg-gradient-to-r from-accent to-transparent" />
+              <span className="text-[10px] font-black uppercase tracking-[0.35em] text-primary/40">
                 About Us
               </span>
             </div>

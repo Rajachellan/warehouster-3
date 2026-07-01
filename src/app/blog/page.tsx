@@ -105,12 +105,12 @@ export default function BlogPage() {
                     
                     <div className="p-10 flex flex-col flex-1">
                         <div className="flex items-center gap-6 text-[rgba(10,20,40,0.4)] text-[11px] font-bold uppercase tracking-widest mb-6">
-                            <span className="flex items-center gap-2"><Clock size={16} className="text-accent" /> {post.date}</span>
-                            <span className="flex items-center gap-2"><User size={16} className="text-accent" /> {post.author}</span>
+                            <span className="flex items-center gap-2"><Clock size={16} className="text-primary" /> {post.date}</span>
+                            <span className="flex items-center gap-2"><User size={16} className="text-primary" /> {post.author}</span>
                         </div>
                         
                         <Link href={`/blog/${post.slug}`}>
-                            <h2 className="text-2xl font-display font-black text-primary mb-4 leading-tight group-hover:text-accent transition-colors">
+                            <h2 className="text-2xl font-display font-black text-primary mb-4 leading-tight group-hover:text-primary transition-colors">
                                 {post.title}
                             </h2>
                         </Link>
@@ -121,7 +121,7 @@ export default function BlogPage() {
                         
                         <Link 
                             href={`/blog/${post.slug}`} 
-                            className="inline-flex items-center gap-3 font-black text-primary group-hover:text-accent transition-all tracking-tighter uppercase"
+                            className="inline-flex items-center gap-3 font-black text-primary group-hover:text-primary transition-all tracking-tighter uppercase"
                         >
                             Read More
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />

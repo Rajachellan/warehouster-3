@@ -24,7 +24,7 @@ export default function BlogPostDetail() {
         <div className="max-w-4xl mx-auto px-6">
             <Link 
                 href="/blog" 
-                className="inline-flex items-center gap-3 text-[rgba(10,20,40,0.4)] font-black uppercase text-sm tracking-widest mb-12 hover:text-accent transition-colors group"
+                className="inline-flex items-center gap-3 text-[rgba(10,20,40,0.4)] font-black uppercase text-sm tracking-widest mb-12 hover:text-primary transition-colors group"
             >
                 <ArrowLeft size={18} className="group-hover:-translate-x-2 transition-transform" />
                 Back to Insights
@@ -55,7 +55,7 @@ export default function BlogPostDetail() {
                         <span>Published March 15, 2026</span>
                    </div>
                    <div className="ml-auto">
-                        <button className="flex items-center gap-2 hover:text-accent transition-colors">
+                        <button className="flex items-center gap-2 hover:text-primary transition-colors">
                             <Share2 size={20} />
                             <span>Share</span>
                         </button>

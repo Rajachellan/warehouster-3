@@ -42,7 +42,7 @@ export default function EventsPage() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="pill-tag border-[rgba(212,175,55,0.3)] text-accent bg-[rgba(212,175,55,0.05)] mb-8"
+            className="pill-tag border-primary/15 text-primary/60 bg-primary/[0.03] mb-8"
           >
             Engagement
           </motion.div>
@@ -80,10 +80,10 @@ export default function EventsPage() {
                         
                         <div className="space-y-3">
                             <div className="flex items-center gap-3 text-white/60 text-[11px] font-bold uppercase tracking-widest">
-                                <Calendar size={14} className="text-accent" /> {event.date}
+                                <Calendar size={14} className="text-primary" /> {event.date}
                             </div>
                             <div className="flex items-center gap-3 text-white/40 text-[11px] font-bold uppercase tracking-widest">
-                                <MapPin size={14} className="text-accent" /> {event.location}
+                                <MapPin size={14} className="text-primary" /> {event.location}
                             </div>
                         </div>
                     </div>

@@ -14,12 +14,12 @@ export default function VisionMission() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="group p-12 bg-white border border-gray-100 hover:border-[#D4AF37]/50 transition-all duration-700 shadow-xl"
+                        className="group p-12 bg-white border border-gray-100 hover:border-primary/20 transition-all duration-700 shadow-xl"
                     >
-                        <div className="w-16 h-16 rounded-sm bg-primary text-white flex items-center justify-center mb-8 group-hover:bg-[#D4AF37] transition-colors">
+                        <div className="w-16 h-16 rounded-sm bg-primary text-white flex items-center justify-center mb-8 group-hover:bg-accent transition-colors">
                             <Target size={28} />
                         </div>
-                        <h3 className="text-3xl font-serif font-black text-primary uppercase tracking-tighter mb-6 group-hover:text-[#D4AF37] transition-colors">
+                        <h3 className="text-3xl font-serif font-black text-primary uppercase tracking-tighter mb-6 group-hover:text-primary transition-colors">
                             Our Mission
                         </h3>
                         <p className="text-sm font-medium text-[rgba(10,20,40,0.5)] leading-relaxed max-w-sm">
@@ -33,14 +33,14 @@ export default function VisionMission() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="group p-12 bg-primary border border-primary hover:border-[#D4AF37]/50 transition-all duration-700 shadow-2xl relative overflow-hidden"
+                        className="group p-12 bg-primary border border-primary hover:border-primary/20 transition-all duration-700 shadow-2xl relative overflow-hidden"
                     >
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 transform rotate-45 translate-x-16 -translate-y-16" />
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 transform rotate-45 translate-x-16 -translate-y-16" />
 
-                        <div className="w-16 h-16 rounded-sm bg-[#D4AF37] text-primary flex items-center justify-center mb-8 group-hover:bg-white transition-colors">
+                        <div className="w-16 h-16 rounded-sm bg-accent text-primary flex items-center justify-center mb-8 group-hover:bg-white transition-colors">
                             <Rocket size={28} />
                         </div>
-                        <h3 className="text-3xl font-serif font-black text-white uppercase tracking-tighter mb-6 group-hover:text-[#D4AF37] transition-colors">
+                        <h3 className="text-3xl font-serif font-black text-white uppercase tracking-tighter mb-6 group-hover:text-primary transition-colors">
                             Our Vision
                         </h3>
                         <p className="text-sm font-medium text-white/50 leading-relaxed max-w-sm group-hover:text-white transition-colors">

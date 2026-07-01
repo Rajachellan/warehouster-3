@@ -200,12 +200,12 @@ export default function ServiceDetailPage() {
                 {/* Features Grid */}
                 <div className="bg-gray-50 rounded-[3rem] p-12 border border-gray-100">
                    <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tight mb-10 flex items-center gap-4">
-                      <TrendingUp className="text-accent" /> Key Features
+                      <TrendingUp className="text-primary" /> Key Features
                    </h3>
                    <div className="space-y-6">
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex gap-4 group">
-                           <CheckCircle2 className="text-accent shrink-0 mt-1" size={20} />
+                           <CheckCircle2 className="text-primary shrink-0 mt-1" size={20} />
                            <p className="text-lg font-bold text-[rgba(10,20,40,0.7)] group-hover:text-primary transition-colors">{feature}</p>
                         </div>
                       ))}
@@ -215,12 +215,12 @@ export default function ServiceDetailPage() {
                 {/* Benefits / Stats */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                    <div className="p-10 rounded-[2.5rem] bg-primary text-white space-y-6">
-                      <BarChart3 className="text-accent" size={32} />
+                      <BarChart3 className="text-white" size={32} />
                       <h4 className="text-xl font-serif font-black uppercase tracking-tight">Strategic Benefits</h4>
                       <ul className="space-y-4 text-white/50 text-sm font-medium">
                          {service.benefits.map((benefit, i) => (
                            <li key={i} className="flex gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-primary/40 mt-1.5" />
                               {benefit}
                            </li>
                          ))}

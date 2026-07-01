@@ -44,7 +44,7 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-[rgba(10,20,40,0.8)] to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-12 flex flex-col justify-end">
           <div className="mb-4 flex items-center gap-2">
-            <div className="h-px w-8 bg-accent" />
+            <div className="h-px w-8 bg-primary/20" />
             <span className="text-accent text-[10px] font-black uppercase tracking-widest">Institutional Asset</span>
           </div>
           <h4 className="text-3xl font-serif font-black text-white uppercase tracking-tighter mb-6 leading-tight">{project.title}</h4>
@@ -63,7 +63,7 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
           <MapPin size={12} />
           {project.location}
         </div>
-        <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter mb-4 group-hover:text-accent transition-colors">
+        <h3 className="text-2xl font-serif font-black text-primary uppercase tracking-tighter mb-4 group-hover:text-primary transition-colors">
           {project.title}
         </h3>
         
@@ -90,7 +90,7 @@ const SectionHeader = ({ id, tag, title, subtitle }: { id: string; tag: string; 
       viewport={{ once: true }}
       className="flex items-center gap-4 mb-10"
     >
-      <div className="h-[2px] w-8 bg-accent" />
+      <div className="h-[2px] w-8 bg-primary/20" />
       <span className="text-accent text-[12px] font-black uppercase tracking-[0.4em]">{tag}</span>
     </motion.div>
     
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
             className="text-5xl md:text-7xl lg:text-8xl font-serif font-black text-white leading-[0.9] uppercase tracking-tighter"
           >
             Industrial <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-gold-light to-white">Landmarks</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent/30 to-white">Landmarks</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

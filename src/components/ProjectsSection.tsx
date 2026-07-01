@@ -99,7 +99,7 @@ const ProjectCard = ({ project, index }: { project: ProjectContent; index: numbe
  
       <Link
         href={`/projects/${project.slug}`}
-        className="inline-flex items-center gap-4 text-white text-[10px] font-black uppercase tracking-[0.4em] hover:text-accent transition-colors"
+        className="inline-flex items-center gap-4 text-white text-[10px] font-black uppercase tracking-[0.4em] hover:text-primary transition-colors"
       >
         View Case Study <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform" />
       </Link>
@@ -129,8 +129,8 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4 mb-8"
             >
-              <div className="h-[2px] w-8 bg-accent" />
-              <span className="text-[11px] font-black uppercase tracking-[0.5em] text-accent">
+              <div className="h-[2px] w-8 bg-primary/20" />
+              <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40">
                 Asset Portfolio
               </span>
             </motion.div>

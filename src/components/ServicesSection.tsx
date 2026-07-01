@@ -61,8 +61,8 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4 mb-8"
             >
-              <div className="h-[2px] w-8 bg-accent" />
-              <span className="text-[11px] font-black uppercase tracking-[0.5em] text-accent">
+              <div className="h-[2px] w-8 bg-primary/20" />
+              <span className="text-[11px] font-black uppercase tracking-[0.5em] text-primary/40">
                 Core Capabilities
               </span>
             </motion.div>
@@ -115,7 +115,7 @@ export default function ServicesSection() {
               {/* Content */}
               <div className="relative z-10 transform group-hover:translate-y-[-10px] transition-transform duration-700">
                 <div className="mb-6">
-                    <h3 className="text-3xl font-serif font-black text-white group-hover:text-accent transition-colors leading-[0.9] uppercase tracking-tighter">
+                    <h3 className="text-3xl font-serif font-black text-white group-hover:text-primary transition-colors leading-[0.9] uppercase tracking-tighter">
                       {service.title}
                     </h3>
                 </div>
@@ -127,7 +127,7 @@ export default function ServicesSection() {
                 {/* Features List */}
                 <div className="flex flex-wrap gap-2 mb-10">
                   {service.features.map((feature, fIdx) => (
-                    <span key={fIdx} className="text-[9px] font-black uppercase tracking-widest text-white/20 border border-white/10 px-3 py-1.5 rounded-full group-hover:border-accent group-hover:text-accent transition-all duration-500">
+                    <span key={fIdx} className="text-[9px] font-black uppercase tracking-widest text-white/20 border border-white/10 px-3 py-1.5 rounded-full group-hover:border-accent group-hover:text-primary transition-all duration-500">
                       {feature}
                     </span>
                   ))}
@@ -135,7 +135,7 @@ export default function ServicesSection() {
 
                 <Link 
                     href={service.href}
-                    className="inline-flex items-center gap-4 text-white text-[10px] font-black uppercase tracking-[0.4em] hover:text-accent transition-colors"
+                    className="inline-flex items-center gap-4 text-white text-[10px] font-black uppercase tracking-[0.4em] hover:text-primary transition-colors"
                 >
                     Learn Strategy <ChevronRight size={14} className="group-hover:translate-x-2 transition-transform" />
                 </Link>

@@ -445,26 +445,16 @@ export default function PlatformContent() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A1428]/25 via-[#0A1428]/35 to-[#0A1428]/50" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1428] via-transparent to-[#0A1428]/40" />
 
-        {/* Subtle golden light leak */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_50%_at_75%_40%,rgba(212,175,55,0.05),transparent)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_50%_at_75%_40%,rgba(255,255,255,0.04),transparent)] pointer-events-none" />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-3xl">
             <motion.div initial="hidden" animate="visible" variants={stagger}>
               <motion.div variants={fadeUp} className="mb-6">
-                <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-[#D4AF37]/25 bg-[#D4AF37]/8 backdrop-blur-md">
-                  <motion.div
-                    animate={{ rotate: [0, 360] }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                  >
-                    <Sparkles size={14} className="text-[#D4AF37]" />
-                  </motion.div>
-                  <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#D4AF37]">
+                <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-md">
+                  <Sparkles size={14} className="text-white/50" />
+                  <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-primary/40">
                     Platform Intelligence
                   </span>
                 </div>
@@ -472,25 +462,10 @@ export default function PlatformContent() {
 
              <motion.h1
   variants={fadeUp}
-  className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-serif font-black leading-[1.08] mb-8 bg-gradient-to-r from-white via-slate-200 to-[#D4AF37] bg-clip-text text-transparent"
+  className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-serif font-black leading-[1.08] mb-8 text-white"
 >
   The data and AI layer making South India industrial real estate{" "}
-  <span className="relative inline-block">
-    <span className="relative z-10 italic bg-gradient-to-r from-[#D4AF37] via-[#F0E2A1] to-[#D4AF37] bg-clip-text text-transparent">
-      finally legible.
-    </span>
-
-    <motion.span
-      className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      transition={{
-        delay: 1,
-        duration: 1.2,
-        ease: easeOut,
-      }}
-    />
-  </span>
+  <span className="italic text-accent">finally legible.</span>
 </motion.h1>
               <motion.p
                 variants={fadeUp}
@@ -509,7 +484,7 @@ export default function PlatformContent() {
               >
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#c9a632] text-[#0A1428] text-[12px] font-black uppercase tracking-[0.2em] shadow-[0_8px_30px_rgba(212,175,55,0.35)] hover:shadow-[0_12px_44px_rgba(212,175,55,0.55)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98]"
+                  className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-[#0A1428] text-[12px] font-black uppercase tracking-[0.2em] shadow-[0_8px_30px_rgba(212,175,55,0.35)] hover:shadow-[0_12px_44px_rgba(212,175,55,0.55)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98]"
                 >
                   Request platform access
                   <ArrowRight
@@ -519,9 +494,9 @@ export default function PlatformContent() {
                 </Link>
                 <Link
                   href="#calculator"
-                  className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl border border-white/15 bg-white/5 backdrop-blur-md text-white text-[12px] font-black uppercase tracking-[0.2em] hover:border-[#D4AF37]/40 hover:bg-[#D4AF37]/8 transition-all duration-500"
+                  className="group inline-flex items-center gap-3 px-8 py-4 rounded-xl border border-white/15 bg-white/5 backdrop-blur-md text-white text-[12px] font-black uppercase tracking-[0.2em] hover:border-white/30 hover:bg-white/10 transition-all duration-500"
                 >
-                  <Calculator size={16} className="text-[#D4AF37]" />
+                  <Calculator size={16} className="text-white/60" />
                   Try BTS Calculator
                 </Link>
               </motion.div>
@@ -551,7 +526,7 @@ export default function PlatformContent() {
                 <div className="absolute inset-0 bg-white/15 rounded-full" />
                 {currentSlide === idx && (
                   <motion.div
-                    className="absolute inset-0 bg-[#D4AF37] rounded-full"
+                    className="absolute inset-0 bg-accent rounded-full"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 5, ease: "linear" }}
@@ -576,7 +551,7 @@ export default function PlatformContent() {
           <span className="text-xs font-black text-white tracking-widest">
             0{currentSlide + 1}
           </span>
-          <div className="w-px h-10 bg-gradient-to-b from-[#D4AF37]/40 to-white/10" />
+          <div className="w-px h-10 bg-gradient-to-b from-white/20 to-white/10" />
           <span className="text-xs font-black text-white/25 tracking-widest">
             0{HERO_SLIDES.length}
           </span>
@@ -610,15 +585,15 @@ export default function PlatformContent() {
             {/* Section header */}
             <motion.div variants={fadeUp} className="mb-16">
               <div className="flex items-center gap-4 mb-5">
-                <div className="h-[2px] w-10 bg-[#D4AF37]" />
-                <span className="text-[11px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
+                <div className="h-[2px] w-10 bg-primary/15" />
+                <span className="text-[11px] font-black uppercase tracking-[0.35em] text-primary/40">
                   Feasibility Engine
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-[#0A1428] leading-[1.05]">
                   BTS Calculator.{" "}
-                  <span className="italic text-[#D4AF37]">
+                  <span className="italic text-accent">
                     Run feasibility
                     <br className="hidden md:block" /> in seconds.
                   </span>
@@ -637,8 +612,8 @@ export default function PlatformContent() {
                   {/* ─── LEFT: Inputs ─── */}
                   <div className="bg-white p-8 md:p-10">
                     <div className="flex items-center gap-3 mb-8">
-                      <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
-                      <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#D4AF37]">
+                      <div className="w-2 h-2 rounded-full bg-primary/30" />
+                      <span className="text-[10px] font-black uppercase tracking-[0.25em] text-primary/40">
                         Inputs
                       </span>
                     </div>
@@ -704,7 +679,7 @@ export default function PlatformContent() {
                             }}
                             step={field.step}
                             min={field.min}
-                            className="w-full bg-[#F8F9FA] border border-stone-200 rounded-xl px-5 py-3.5 text-[#0A1428] font-bold text-[15px] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all hover:border-stone-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                            className="w-full bg-[#F8F9FA] border border-stone-200 rounded-xl px-5 py-3.5 text-[#0A1428] font-bold text-[15px] focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary/25 transition-all hover:border-stone-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                           />
                         </div>
                       ))}
@@ -715,8 +690,8 @@ export default function PlatformContent() {
                   <div className="bg-[#0A1428] p-8 md:p-10 relative flex flex-col justify-between">
                     <div className="bg-[#0A1428] pb-6 rounded-xl">
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-2 h-2 rounded-full bg-[#D4AF37]" />
-                        <span className="text-[10px] font-black uppercase tracking-[0.25em] text-[#D4AF37]">
+                        <div className="w-2 h-2 rounded-full bg-white/30" />
+                        <span className="text-[10px] font-black uppercase tracking-[0.25em] text-white/40">
                           Indicative Output
                         </span>
                       </div>
@@ -752,7 +727,7 @@ export default function PlatformContent() {
                           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
                             Stabilised NOI (Annual)
                           </p>
-                          <p className="text-2xl md:text-3xl font-serif font-black text-[#D4AF37] leading-none">
+                          <p className="text-2xl md:text-3xl font-serif font-black text-white leading-none">
                             {formatCr(stabilisedNOI)}
                           </p>
                         </div>
@@ -762,7 +737,7 @@ export default function PlatformContent() {
                           <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
                             Yield on Cost
                           </p>
-                          <p className="text-2xl md:text-3xl font-serif font-black text-[#D4AF37] leading-none">
+                          <p className="text-2xl md:text-3xl font-serif font-black text-white leading-none">
                             {isFinite(yieldOnCost)
                               ? `${(Math.round(yieldOnCost * 100) / 100).toFixed(2)}%`
                               : "—"}
@@ -775,7 +750,7 @@ export default function PlatformContent() {
                         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 mb-3">
                           Indicative Exit Value
                         </p>
-                        <p className="text-3xl md:text-5xl font-serif font-black text-[#D4AF37] leading-none">
+                        <p className="text-3xl md:text-5xl font-serif font-black text-white leading-none">
                           {formatCr(exitValue)}
                         </p>
                       </div>
@@ -796,9 +771,9 @@ export default function PlatformContent() {
                       <button
                         onClick={exportPDF}
                         disabled={isExporting}
-                        className="w-full group flex items-center justify-center gap-3 px-6 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-[#D4AF37] hover:border-[#D4AF37] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full group flex items-center justify-center gap-3 px-6 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-accent hover:border-accent transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <Download size={16} className="text-[#D4AF37] group-hover:text-[#0A1428] transition-colors" />
+                        <Download size={16} className="text-white/60 group-hover:text-[#0A1428] transition-colors" />
                         <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white group-hover:text-[#0A1428] transition-colors">
                           {isExporting ? "Generating PDF..." : "Export as PDF"}
                         </span>
@@ -843,7 +818,7 @@ export default function PlatformContent() {
                   <motion.article
                     key={mod.title}
                     variants={fadeUp}
-                    whileHover={{ backgroundColor: "rgba(212,175,55,0.03)" }}
+                    whileHover={{ backgroundColor: "rgba(10,20,40,0.02)" }}
                     transition={{ duration: 0.35 }}
                     className={`group border-stone-200 p-8 md:p-10 lg:p-12 ${
                       i < EIGHT_MODULES.length - 1 ? "border-b" : ""
@@ -852,20 +827,20 @@ export default function PlatformContent() {
                     }`}
                   >
                   <div className="mb-8 flex items-start justify-between gap-4">
-                    <span className="text-[11px] font-black tracking-[0.2em] text-[#B8922A]/70">
+                    <span className="text-[11px] font-black tracking-[0.2em] text-primary/35">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span
                       className={`shrink-0 border px-2.5 py-1 text-[8px] font-black uppercase tracking-[0.18em] ${
                         mod.tag === "LIVE"
-                          ? "border-[#D4AF37]/40 text-[#D4AF37]"
+                          ? "border-accent/40 text-accent"
                           : "border-stone-300 text-[#0A1428]/40"
                       }`}
                     >
                       {mod.tag}
                     </span>
                   </div>
-                  <h3 className="mb-4 font-serif text-xl font-black leading-snug text-[#0A1428] transition-colors duration-300 group-hover:text-[#B8922A] md:text-2xl">
+                  <h3 className="mb-4 font-serif text-xl font-black leading-snug text-[#0A1428] transition-colors duration-300 group-hover:text-primary md:text-2xl">
                     {mod.title}
                   </h3>
                   <p className="text-sm font-medium leading-relaxed text-[#0A1428]/45">
@@ -883,7 +858,7 @@ export default function PlatformContent() {
           THE AI LAYER — Dark grid with six agents
           ════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-[#0A0F14] py-24 md:py-32">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_20%_0%,rgba(212,175,55,0.06),transparent)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_20%_0%,rgba(255,255,255,0.03),transparent)]" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <motion.div
@@ -893,12 +868,12 @@ export default function PlatformContent() {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="mb-14 md:mb-20">
-              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.35em] text-[#D4AF37]">
+              <p className="mb-4 text-[10px] font-black uppercase tracking-[0.35em] text-white/40">
                 The AI Layer
               </p>
               <h2 className="max-w-2xl font-sans text-3xl font-black leading-[1.12] text-white md:text-4xl lg:text-5xl">
                 Six agents.{" "}
-                <span className="font-serif italic text-[#D4AF37]">
+                <span className="font-serif italic text-primary/50">
                   One operating system.
                 </span>
               </h2>
@@ -914,7 +889,7 @@ export default function PlatformContent() {
                       i < 2 ? "md:border-r" : ""
                     } transition-colors duration-400 hover:bg-white/[0.02]`}
                   >
-                    <p className="mb-5 text-[9px] font-black uppercase tracking-[0.28em] text-[#D4AF37]">
+                    <p className="mb-5 text-[9px] font-black uppercase tracking-[0.28em] text-white/35">
                       Agent
                     </p>
                     <h3 className="mb-4 font-serif text-lg font-black leading-snug text-white md:text-xl">
@@ -935,7 +910,7 @@ export default function PlatformContent() {
                       i < 2 ? "md:border-r" : ""
                     } transition-colors duration-400 hover:bg-white/[0.02]`}
                   >
-                    <p className="mb-5 text-[9px] font-black uppercase tracking-[0.28em] text-[#D4AF37]">
+                    <p className="mb-5 text-[9px] font-black uppercase tracking-[0.28em] text-white/35">
                       Agent
                     </p>
                     <h3 className="mb-4 font-serif text-lg font-black leading-snug text-white md:text-xl">
@@ -952,7 +927,7 @@ export default function PlatformContent() {
             <motion.div variants={fadeUp} className="mt-12 md:mt-16">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 bg-[#D4AF37] px-8 py-4 text-[11px] font-black uppercase tracking-[0.22em] text-[#0A0F14] transition-all duration-400 hover:bg-[#e0c04a] hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] active:scale-[0.98]"
+                className="group inline-flex items-center gap-3 bg-accent px-8 py-4 text-[11px] font-black uppercase tracking-[0.22em] text-[#0A0F14] transition-all duration-400 hover:bg-accent hover:shadow-[0_12px_40px_rgba(212,175,55,0.25)] active:scale-[0.98]"
               >
                 Request platform access
                 <ArrowRight
@@ -970,8 +945,8 @@ export default function PlatformContent() {
           ════════════════════════════════════════════════════ */}
       <section className="relative py-28 md:py-36 bg-[#0A1428] overflow-hidden">
         {/* Decorative light */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_70%_40%,rgba(212,175,55,0.05),transparent)] pointer-events-none" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/10 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_70%_40%,rgba(255,255,255,0.03),transparent)] pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <motion.div
@@ -983,15 +958,15 @@ export default function PlatformContent() {
           >
             <motion.div variants={slideLeft} className="md:col-span-7">
               <div className="flex items-center gap-4 mb-6">
-                <div className="h-[2px] w-10 bg-[#D4AF37]/40" />
-                <span className="text-[11px] font-black uppercase tracking-[0.35em] text-[#D4AF37]/70">
+                <div className="h-[2px] w-10 bg-white/20" />
+                <span className="text-[11px] font-black uppercase tracking-[0.35em] text-white/40">
                   Compounding Advantage
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-white leading-[1.15] mb-6">
                 Every deal we touch compounds the dataset. Every dataset
                 improvement sharpens the next{" "}
-                <span className="text-[#D4AF37]">deal.</span>
+                <span className="text-accent">deal.</span>
               </h2>
               <p className="text-base text-white/35 max-w-lg font-medium leading-relaxed">
                 Our closed-loop intelligence engine transforms every
@@ -1006,7 +981,7 @@ export default function PlatformContent() {
             >
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-4 px-10 py-5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#c9a632] text-[#0A1428] text-[12px] font-black uppercase tracking-[0.2em] shadow-[0_8px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.5)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98] whitespace-nowrap"
+                className="group inline-flex items-center gap-4 px-10 py-5 rounded-xl bg-accent text-[#0A1428] text-[12px] font-black uppercase tracking-[0.2em] shadow-[0_8px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_16px_48px_rgba(212,175,55,0.5)] transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98] whitespace-nowrap"
               >
                 Join the platform
                 <ArrowRight
